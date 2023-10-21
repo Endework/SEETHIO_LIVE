@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/Css/Signup.css">
+    <link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+		/>
+    <title>Sign up</title>
+</head>
+<body>
+    <main>
+        <div class="left">
+            
+        </div>
+        <div class="right">
+            <div class="content">
+                <div class="logo-div">
+                    <img src="/images/seethio_logo.png" alt="">
+                </div>
+                <h1>Explore Ethiopia</h1>
+                <h2>Create an account to get started</h2>
+                <form action="SignUp.html@"
+                method="post"
+                id="myForm">
+                    
+                        <div class="name">
+                            <div class="half-width">
+                                <label for="firstname">First Name</label>
+                                <input type="text" id="firstname" style="text-align: center;" placeholder="Sara" required style="text-align: center;">
+                            </div>
+                            <div class="half-width">
+                                <label for="lastname">Last Name</label>
+                                <input type="text" id="lastname" style="text-align: center;" placeholder="Jon" required style="text-align: center;">
+                            </div>
+                        </div>
+                    
+                        <div class="full-width">
+                            <label for="username">User Name</label>
+                            <input type="text" id="username" style="text-align: center;" placeholder="Username is Optional" required style="text-align: center;">
+                        </div>
+                        <div class="full-width">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" style="text-align: center;" placeholder="example@gmail.com" required style="text-align: center;">
+                        </div>
+                        <div class="full-width">
+                            <label for="password1">Password</label>
+                            <input type="password" id="password1"  placeholder="********" required style="text-align: center;">
+                            <i class="fa-regular fa-eye-slash" id="eye"></i>
+                        </div>
+                        <div class="full-width">
+                            <label for="password2">confirm password</label>
+                            <input type="password" id="password2"  placeholder="********" required style="text-align: center;">
+                        </div>
+
+                        <center>
+                            <div class="terms" >
+                                <input type="checkbox" id="terms">
+                                <label  for="check">I have read and accepted SEETHIO <span>Terms</span>  & <span>Policy</span>.</label>
+                            </div>
+                        </center>
+                        
+                            <center><a href="/Html/Signup/sign_up_successful.html"><button type="submit" id="submit">Sign up</button></a></center>
+                        
+                        
+                </form>
+                
+                    <div class="horizontal">
+                        <img src="/images/horizontal.svg" alt="">
+                        <p> Or continue with</p>
+                        <img src="/images/horizontal.svg" alt="">
+                    </div>
+                    <div id="message"></div>
+                    <div class="other">
+                        <a href=""><img src="/images/google.svg" alt=""></a>
+                        <a href=""><img src="/images/facebook.png" alt=""></a>
+                    </div>
+                    <p>Already have an account? <span><a href="/Html/Login/login.html">Log in</a></span></p>
+            </div>
+        </div>
+    </main>
+
+    <script src="signup.js"></script>
+</body>
+</html>
