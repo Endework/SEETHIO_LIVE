@@ -60,17 +60,18 @@ button{
 }
 .left{
     width: 726px;
-    height: 1154px;
-    background-image: url('/images/signupimage.jpeg');
+    height: auto;
+    /* background-image: url('/images/signupimage.jpeg');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
 }
 .right{
     width: 726px;
-    height: 1154px;
+    height: auto;
 
 }
 .right .content{
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
