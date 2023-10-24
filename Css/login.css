@@ -60,23 +60,28 @@ button{
 }
 .left{
     width: 726px;
-    height: 1154px;
-    background-image: url('/images/loginpage.jpeg');
+    /* height: 1154px; */
+    height: auto;
+    /* background-image: url('/images/loginpage.jpeg');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: cover; */
 }
 .right{
     width: 726px;
-    height: 1154px;
+    height: auto;
+    /* height: 1154px; */
 
 }
 .right .content{
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 24px;
+    
 }
+
 .right .content .name {
     display: flex;
     gap: 20px;
