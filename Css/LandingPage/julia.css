@@ -1,0 +1,174 @@
+/* GOOGLE FONT FAMILY NUNITO */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900;1000&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    font-family: 'Nunito', sans-serif;
+}
+
+/* RECURRING STYLES */
+h2
+{
+    font-size: 2rem;
+    font-weight: 500;
+    color: #006167;
+}
+
+p
+{
+    color: #006167;
+}
+
+.button
+{
+    text-decoration: none;
+    background: #006167;
+    box-shadow: 0px 16px 24px 2px rgba(0, 0, 0, 0.14);
+    padding: 0.8rem 1.6rem;
+    display: block;
+    border-radius: 8px;
+    color: #fff;
+    transition: 0.3s ease-in-out;
+    width: 6rem;
+    text-align: center;
+}
+
+.button:hover
+{
+    background: #FABF00;
+    color: #006167;
+}
+
+/* DISCOVER ETHIOPIA */
+.discover_ethiopia
+{
+    width: 100%;
+    height: auto;
+    background: rgba(0, 97, 103, 0.25);
+}
+
+.discover_ethiopia .discover_ethiopia_div
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+    padding-block: 1.1rem;
+    width: 70%;
+    margin: auto;
+    text-align: center;
+}
+
+.discover_ethiopia .discover_ethiopia_div h2
+{
+    font-size: 2rem;
+    font-weight: 500;
+}
+.discover_ethiopia .discover_ethiopia_div h2, .discover_ethiopia .discover_ethiopia_div p
+{
+    color: #000;
+}
+
+.discover_ethiopia .discover_ethiopia_div a
+{
+    text-decoration: none;
+    background: #006167;
+    box-shadow: 0px 16px 24px 2px rgba(0, 0, 0, 0.14);
+    padding: 1rem 1.3rem;
+    border-radius: 8px;
+    color: #fff;
+    transition: 0.3s ease-in-out;;
+}
+
+.discover_ethiopia .discover_ethiopia_div a:hover
+{
+    background: #FABF00;
+    color: #006167;
+}
+
+
+
+/* LIGHT BLUE BACKGROUND SECTIONS */
+.light_blue_bg
+{
+    background: #eef8ef;
+    width: 100%;
+    height: auto;
+    padding-top: 7rem;
+}
+
+
+
+/* BOOK YOUR FLIGHT */
+.book_your_flight
+{
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin-inline: auto;
+    padding: 2rem;
+}
+
+.text_side
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: left;
+    gap: 2rem;
+    width: 30%;
+}
+
+.text_side p
+{
+    width: 50%;
+    font-size: 1.2rem;
+}
+
+
+
+
+/* RESPONSIVENESS */
+/* SCREEN SIZES LESSER THAN OR EQUAL TO 320px */
+@media (max-width: 320px)
+{
+    .discover_ethiopia .discover_ethiopia_div h2
+    {
+        font-size: 1.5rem;
+    }
+
+    .discover_ethiopia .discover_ethiopia_div p
+    {
+        font-size: 14px;
+    }
+}
+
+
+
+/* SCREEN SIZES LESSER THAN OR EQUAL TO 768px */
+@media (max-width: 768px)
+{
+    .text_side
+    {
+        width: 50%;
+    }
+
+    .text_side P
+    {
+        width: 100%;
+    }
+
+        .book_your_flight img
+    {
+        width: 2%;
+    }
+}
