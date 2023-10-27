@@ -20,6 +20,9 @@ main{
     height: 450px;
     
 }
+a{
+    text-decoration: none;
+}
 
 span{
     color: var(--Secondary-Colour, #006167);
