@@ -523,6 +523,12 @@ p
         height: 300px;
     }
 
+    .client_reviews .review_card
+    {
+        flex-direction: column;
+        gap: 4rem;
+    }
+
 }
 
 
