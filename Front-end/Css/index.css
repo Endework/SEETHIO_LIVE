@@ -277,6 +277,10 @@ body{
     text-align: justify;
 
 }
+.book_your_flight a , .book_hotels a, .see_how a{
+    padding: 1rem 1.25rem;
+    width: 200px;
+}
 
 .see_how iframe
 {
@@ -766,6 +770,7 @@ footer form input{
     {
         margin-inline: auto;
     }
+    
     footer .container {
         flex-direction: column;
         
@@ -865,6 +870,9 @@ footer form input{
         align-items: center;
         gap: 2rem;
     }
+    .be_the_first .be_the_first_div h2{
+        font-size: 2.5rem;
+    }
 
     .take_a_bold_step .individual_card img
     {
@@ -876,6 +884,9 @@ footer form input{
         width: 100%;
         font-size: 16px;
         padding: 1rem;
+    }
+    .be_the_first::before {
+        background-image: none;
     }
     .client_reviews .review_card
     {
