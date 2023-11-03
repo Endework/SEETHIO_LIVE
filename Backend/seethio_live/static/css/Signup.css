@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800&display=swap');
+* {
+	margin: 0 !important;
+	padding: 0 !important;
+	box-sizing: border-box;
+	font-family: 'Nunito', sans-serif;
+	color: var(--secondary);
+}
+:root{
+    --secondary:#006167;
+	--PRIMARY-CONTAINER:#D7EFDA;
+	--UNPRIMARY-COLOUR: #FFF;
+	--Error-Colour-Style: #E41D1D;
+
+}
+main{
+    display: flex;
+	border-radius: 5px;
+	background: var(--PRIMARY-CONTAINER);
+    
+}
+h1{
+    color: var(--Secondary-Colour, #006167);
+    text-align: center;
+    font-family: Nunito;
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 36px; /* 80% */
+}
+p{
+    color: black;
+}
+a{
+    text-decoration: none;
+}
+p span{
+    color: var(--Secondary-Colour, #006167);
+    
+}
+button{
+    display: flex;
+    width: 300px;
+    height: 56px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--Secondary-Colour, #006167);
+    background: var(--Secondary-Colour, #006167);
+    color: var(--UNPRIMARY-COLOUR, #FFF);
+    text-align: center;
+    font-family: Nunito;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+    letter-spacing: 0.4px;
+}
+.left{
+    width: 726px;
+    height: auto;
+    /* background-image: url('/images/signupimage.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover; */
+}
+.right{
+    width: 726px;
+    height: auto;
+
+}
+.right .content{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+.right .content .name {
+    display: flex;
+    gap: 20px;
+}
+.right .content .half-width input{
+    width: 238.523px;
+    display: flex;
+    height: 50px;
+    padding: 10px;
+    gap: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--Secondary-Colour, #006167);
+    background: var(--UNPRIMARY-COLOUR, #FFF);
+}
+.right .content .full-width input{
+    display: flex;
+    width: 500px;
+    height: 50px;
+    padding: 10px;
+    align-items: center;
+    gap: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--Secondary-Colour, #006167);
+    background: var(--UNPRIMARY-COLOUR, #FFF);
+}
+.right .content .horizontal{
+    padding-top: 3rem;
+}
+.horizontal{
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+.other{
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+.terms{
+    margin: 30px;
+    color: var(--Secondary-Colour, #006167);
+    text-align: center;
+    font-family: Nunito;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+    letter-spacing: 0.024px;
+    
+}
+.terms span{
+    color: var(--Error-Colour-Style, #E41D1D);
+    font-family: Nunito;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.024px;
+}
+.other{
+    gap: 25px;
+}
+.other img{
+    display: flex;
+    width: 80px;
+    height: 50px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 5px;
+    border: 1px solid var(--Secondary-Colour, #006167);
+    background: var(--UNPRIMARY-COLOUR, #FFF);
+}
+::placeholder{ /* Chrome, Firefox, Opera, Safari 10.2+ */
+    color: #A9ABAF;
+    text-align: justify;
+    font-family: Nunito;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 12px; /* 75% */
+    letter-spacing: 0.4px;
+    padding-left: 10px;
+}
+#message{
+	margin:1rem !important;
+	color: var(--Error-Colour-Style) !important;
+}
+.border_invalid {
+	border: 1px solid var(--Error-Colour-Style) !important;
+	
+}
+.full-width #password1{
+	position: relative;
+}
+.fa-eye-slash{
+	position: absolute;
+	top: 495px;
+	right: 100px;
+}

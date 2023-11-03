@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'css/login.css' %}" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <title>Log in</title>
+  </head>
+  <body>
+    <main>
+      <div class="left">
+        <img src="{% static 'images/login_new.jpg' %}" alt="" />
+      </div>
+      <div class="right">
+        <div class="content">
+          <div class="logo-div">
+            <img
+              src="{% static 'images/seethio_logo.png' %}"
+              alt=""
+              style="width: 100%; height: 100%"
+            />
+          </div>
+          <h1>Welcome!</h1>
+          <h2>Login to your account</h2>
+          {% if messages %} {% for message in messages %}
+          <div id="alert" class="alert alert-{{message.tags}}">
+            <strong>{{ message }}</strong>
+          </div>
+          {% endfor %} {% endif %}
+          <script>
+            setTimeout(() => {
+              $("#alert").alert("close");
+            }, 3000);
+          </script>
+          <form action="" method="post" id="myForm">
+            {% csrf_token %}
+            <div class="full-width">
+              <label for="email">Email</label>
+              <input
+                name="email"
+                type="email"
+                id="email"
+                placeholder="example@gmail.com"
+                required
+              />
+            </div>
+            <div class="full-width">
+              <label for="password1">Password</label>
+              <input
+                name="password"
+                type="password"
+                id="password1"
+                style="padding-left: 30px"
+                placeholder="********"
+                required
+              />
+              <i class="fa-regular fa-eye-slash" id="eye"></i>
+            </div>
+            <span
+              ><a href="/Front-end/Html/Login/forgot.html"
+                >Forgot Password?</a
+              ></span
+            >
+            <div class="terms">
+              <input type="checkbox" id="terms" />
+              <label for="check"
+                >I have read and accepted SEETHIO <span>Terms</span> &
+                <span>Policy</span>.</label
+              >
+            </div>
+
+            <center><button type="submit" id="submit">log in</button></center>
+          </form>
+
+          <div class="horizontal">
+            <img src="{% static 'images/horizontal.svg' %}" alt="" />
+            <p>Or continue with</p>
+            <img src="{% static 'images/horizontal.svg' %}" alt="" />
+          </div>
+          <div id="message"></div>
+          <div class="other">
+            <a href=""><img src="{% static 'images/google.svg' %}" alt="" /></a>
+            <a href=""
+              ><img src="{% static 'images/facebook.png' %}" alt=""
+            /></a>
+          </div>
+          <p>
+            Already have an account?
+            <span
+              ><a href="/Front-end/Html/Signup/Signup.html">Sign up</a></span
+            >
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <script src="login.js"></script>
+  </body>
+</html>
