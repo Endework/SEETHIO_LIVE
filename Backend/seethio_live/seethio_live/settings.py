@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "userauthentication",
+    'social_django', #ogo added configuration
 ]
 
 MIDDLEWARE = [
@@ -49,6 +50,8 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    'social_django.middleware.SocialAuthExceptionMiddleware', # ogo add this    
+
 ]
 
 ROOT_URLCONF = "seethio_live.urls"
@@ -64,6 +67,8 @@ TEMPLATES = [
                 "django.template.context_processors.request",
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
+                'social_django.context_processors.login_redirect', # ogo added this
+                'social_django.context_processors.backends', # ogo added this
             ],
         },
     },
@@ -138,6 +143,35 @@ EMAIL_HOST_USER = ""
 EMAIL_HOST_PASSWORD = ""
 DEFAULT_FROM_EMAIL = "TestSite Team <noreply@example.com>"
 
+#social app custom settings added by ogo
+AUTHENTICATION_BACKENDS = [
+    'social_core.backends.facebook.FacebookOAuth2',  #add this
+    'social_core.backends.google.GoogleOAuth2',       #add this
+    'django.contrib.auth.backends.ModelBackend',
+]
+#social app URLS custom settings added by ogo
+LOGIN_URL = 'login'   #add this
+LOGIN_REDIRECT_URL = '/' #'home'   #add this
+LOGOUT_URL = 'logout'   #add this
+LOGOUT_REDIRECT_URL = 'login'   #add this
+LOGIN_ERROR_URL = 'login'
+
+#APIS keys and ID settings added by ogo
+SOCIAL_AUTH_FACEBOOK_KEY = '863786055075073'   #add this
+SOCIAL_AUTH_FACEBOOK_SECRET = 'e026b8ff13c7d3ca71e5acb6eab264e4'    #add this
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '1088080566509-7l4qpm8us2os6tf1ud0tpe39cdakjtl9.apps.googleusercontent.com'   #add this
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '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'    #add this
+
+# Add the following name by ogo
+SOCIAL_AUTH_URL_NAMESPACE = 'social'
+
+# external information by ogo
+SOCIAL_AUTH_FACEBOOK_SCOPE = [    #add this
+    'email',    
+]
+SOCIAL_AUTH_GOOGLE_SCOPE = [   #add this
+    'email',    
+]
 # django_project/settings.py
 # EMAIL_BACKEND = "django.core.mail.backends.filebased.EmailBackend"
 # EMAIL_FILE_PATH = BASE_DIR / "sent_emails"
