@@ -76,7 +76,3 @@ def google_callback(request):
     return redirect('Html/index.html')  # Redirect to your desired page after login.
 
 
-@login_required
-def home(request):
-    return render(request, 'Html/index.html')
-

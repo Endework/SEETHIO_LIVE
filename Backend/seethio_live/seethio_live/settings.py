@@ -9,6 +9,10 @@ https://docs.djangoproject.com/en/4.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 from pathlib import Path
 import os
@@ -154,13 +158,12 @@ LOGIN_URL = 'login'   #add this
 LOGIN_REDIRECT_URL = '/' #'home'   #add this
 LOGOUT_URL = 'logout'   #add this
 LOGOUT_REDIRECT_URL = 'login'   #add this
-#LOGIN_ERROR_URL = 'login'
 
 #APIS keys and ID settings added by ogo
-SOCIAL_AUTH_FACEBOOK_KEY = '863786055075073'   #add this
-SOCIAL_AUTH_FACEBOOK_SECRET = 'e026b8ff13c7d3ca71e5acb6eab264e4'    #add this
-SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '1088080566509-7l4qpm8us2os6tf1ud0tpe39cdakjtl9.apps.googleusercontent.com'   #add this
-SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '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'    #add this
+SOCIAL_AUTH_FACEBOOK_KEY = os.environ.get('SOCIAL_AUTH_FACEBOOK_KEY')  #add this
+SOCIAL_AUTH_FACEBOOK_SECRET = os.environ.get('SOCIAL_AUTH_FACEBOOK_SECRET')   #add this
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = os.environ.get('SOCIAL_AUTH_GOOGLE_OAUTH2_KEY')   #add this
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = os.environ.get('SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET')   #add this
 
 # Add the following name by ogo
 SOCIAL_AUTH_URL_NAMESPACE = 'social'
