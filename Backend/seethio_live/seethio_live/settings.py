@@ -154,7 +154,7 @@ LOGIN_URL = 'login'   #add this
 LOGIN_REDIRECT_URL = '/' #'home'   #add this
 LOGOUT_URL = 'logout'   #add this
 LOGOUT_REDIRECT_URL = 'login'   #add this
-LOGIN_ERROR_URL = 'login'
+#LOGIN_ERROR_URL = 'login'
 
 #APIS keys and ID settings added by ogo
 SOCIAL_AUTH_FACEBOOK_KEY = '863786055075073'   #add this

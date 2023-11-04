@@ -9,9 +9,10 @@
 			rel="stylesheet"
 			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
 		/>
-    <title>Sign up</title>
-</head>
+        <title>signup in </title>
+    </head>
 <body>
+    {% block content %}
     <main>
         <div class="left">
             <img  src="{% static 'images/signupimage.jpeg' %}" alt="" style="width: 100%; height: 100%;">
@@ -119,14 +120,15 @@
                         <img src="{% static 'images/horizontal.svg' %}" alt="">
                     </div>
                     <div id="message"></div>
+                    {% comment %} added social AUTHORIZATIONs here {% endcomment %}
                     <div class="other">
-                        <a href=""><img src="{% static 'images/google.svg' %}" alt=""></a>
-                        <a href=""><img src="{% static 'images/facebook.png' %}" alt=""></a>
+                        <a href="{% url 'social:begin' 'google-oauth2' %}"><img src="{% static 'images/google.svg' %}" alt="Sign up with google"/></a>
+                        <a href="{% url 'social:begin' 'facebook' %}"><img src="{% static 'images/facebook.png' %}" alt="Sign up with facebook"/></a>
                     </div>
                     <p>Already have an account? <span><a href="{% url 'userauthentication:sign_success' %}">Log in</a></span></p>
             </div> 
     </main>
-
+    {% endblock content %}
     {% comment %} <script src="{% static 'js/signup.js' %}"></script> {% endcomment %}
 </body>
 </html>
