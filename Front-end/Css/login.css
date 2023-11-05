@@ -13,12 +13,22 @@
 	--Error-Colour-Style: #E41D1D;
 
 }
+body{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
 main{
     display: flex;
 	border-radius: 5px;
 	background: var(--PRIMARY-CONTAINER);
+    position: absolute;
+    width: 85%;
+    left: 9%;
+    
     
 }
+
 h1{
     color: var(--Secondary-Colour, #006167);
     text-align: center;
@@ -180,5 +190,5 @@ button{
 .fa-eye-slash{
 	position: absolute;
 	top: 350px;
-	right: 100px;
+	right: 180px;
 }
