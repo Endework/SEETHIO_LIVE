@@ -104,6 +104,7 @@ input{
 .check{
     width: 100%;
     display: flex;
+    margin-top: 5%;
     
 }
 .check span{
@@ -133,7 +134,7 @@ input[type='password']{
 .fa-eye-slash{
     position: absolute;
     right: 20%;
-    top: 54.5%;
+    top: 48.5%;
 }
 input:not([type='checkbox']):not([type='button']) {
     padding: 5% ;
@@ -146,7 +147,7 @@ input[type='button']{
     width: 100%;
     padding: 5%;
     border-radius: 10px;
-    margin-top: 1.5%;
+    margin-top: 5%;
     background: var(--Secondary-Colour, #006167);
     color: white;
     font-size: 1.25rem;
@@ -162,10 +163,16 @@ input[type='button']{
   }
   .horizontal{
     display: flex;
-    margin-top: 0.75%;
+    flex-direction: row;
+    margin-top: 2%;
     justify-content: space-evenly;
   }
   
+  .social{
+    display: flex;
+    gap: 15px;
+    margin-top: 2.5%;
+  }
   .social img:nth-child(1), .social img:nth-child(2){
     border: 1px solid var(--Secondary-Colour, #006167);
     border-radius: 10px;

@@ -168,7 +168,11 @@ input[type='button']{
     margin-top: 0.75%;
     justify-content: space-evenly;
   }
-  
+  .social{
+    display: flex;
+    gap: 15px;
+    margin-top: 2%;
+  }
   .social img:nth-child(1), .social img:nth-child(2){
     border: 1px solid var(--Secondary-Colour, #006167);
     border-radius: 10px;
