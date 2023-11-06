@@ -29,9 +29,9 @@ main{
     /* padding-bottom: 0px; */
     
 }
-.right .content {
+/* .right .content {
     /* padding: 60px 107px 46px 107px; */
-}
+*/
 .right{
     width: 49%;
     height: auto;
@@ -40,7 +40,7 @@ main{
 .right .content .logo-div{
     /* margin-bottom: 24px; */
     width: 313.875px;
-height: 5%;
+    height: 5%;
 }
 .right .content{
     display: flex;
