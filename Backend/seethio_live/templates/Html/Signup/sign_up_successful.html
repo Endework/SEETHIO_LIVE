@@ -48,11 +48,13 @@
         <h3>Please check your email for verification code</h3>
         <p>
           Not the correct email?
-          <a href="./Signup.html"><span>Change email address</span></a>
+          <a href="'userauthentication:signup'"
+            ><span>Change email address</span></a
+          >
         </p>
-        <button onclick="window.location.href='verification.html'">
-          Continue verification
-        </button>
+        <a href="{% url 'userauthentication:verify_email' uidb64=uidb64 %}">
+          <button>Continue verification</button>
+        </a>
         <p>
           Email not received? <a href="#"><span>Resend email</span></a>
         </p>

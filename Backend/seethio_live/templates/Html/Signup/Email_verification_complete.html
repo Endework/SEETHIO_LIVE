@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -10,7 +11,10 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="/Front-end/Css/verification_complete.css" />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/verification_complete.css' %}"
+    />
     <title>Verificatio Complete</title>
   </head>
   <body>
@@ -32,7 +36,9 @@
           </svg>
         </div>
         <h3>Email Verification Successful</h3>
-        <a href="/Front-end/Html/Login/login.html"><button type="submit">Log in</button></a>
+        <a href="{% url 'userauthentication:signin' %}"
+          ><button type="submit">Log in</button></a
+        >
       </div>
     </main>
   </body>

@@ -23,14 +23,9 @@
                 </div>
                 <h1>Explore Ethiopia</h1>
                 <h2>Create an account to get started</h2>
+                {{form.errors}}
                 <div class="error">
-                    {% if form.errors %}
-                        {% for field in form %}
-                            {% for error in field.errors %}
-                                <p style="color: red;">{{ error }}</p>
-                            {% endfor %}
-                        {% endfor %}
-                    {% endif %}
+                    
                     <form method="post" id="myForm">
                         {% csrf_token %}
                         <div class="name">
@@ -123,7 +118,7 @@
                         <a href=""><img src="{% static 'images/google.svg' %}" alt=""></a>
                         <a href=""><img src="{% static 'images/facebook.png' %}" alt=""></a>
                     </div>
-                    <p>Already have an account? <span><a href="{% url 'userauthentication:sign_success' %}">Log in</a></span></p>
+                    <p>Already have an account? <span><a href="{% url 'userauthentication:signin' %}">Log in</a></span></p>
             </div> 
     </main>
 

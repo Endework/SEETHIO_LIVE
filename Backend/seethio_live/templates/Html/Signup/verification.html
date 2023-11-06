@@ -1,98 +1,108 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="/Front-end/Css/verification.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="{% static 'css/verification.css' %}" />
     <title>Verification</title>
-</head>
-<body>
+  </head>
+  <body>
     <main>
-        
-            
-            <div class="content">
-             
-             <h4>Enter the 8-digits code that was sent to your mail</h4>
-             <div class="input">
-                <input type="text" name="text" id="text" class="input-text">
-                <input type="text" name="text" id="text1" class="input-text">
-                <input type="text" name="text" id="text2" class="input-text">
-                <input type="text" name="text" id="text3" class="input-text">
-                <input type="text" name="text" id="text4" class="input-text">
-                <input type="text" name="text" id="text5" class="input-text">
-                <input type="text" name="text" id="text6" class="input-text">
-                <input type="text" name="text" id="text7" class="input-text">
-             </div>
-            <h3>RESEND CODE</h3> 
-             <div class="timer">
+      <div class="content">
+        <h4>Enter the 6-digit code that was sent to your email</h4>
+        <form method="post">
+          <!-- Add the 'method' attribute to the form -->
+          {% csrf_token %}
+          <div class="input">
+            <input
+              type="text"
+              name="otp1"
+              id="text1"
+              class="input-text"
+              maxlength="1"
+            />
+            <input
+              type="text"
+              name="otp2"
+              id="text2"
+              class="input-text"
+              maxlength="1"
+            />
+            <input
+              type="text"
+              name="otp3"
+              id="text3"
+              class="input-text"
+              maxlength="1"
+            />
+            <input
+              type="text"
+              name="otp4"
+              id="text4"
+              class="input-text"
+              maxlength="1"
+            />
+            <input
+              type="text"
+              name="otp5"
+              id="text5"
+              class="input-text"
+              maxlength="1"
+            />
+            <input
+              type="text"
+              name="otp6"
+              id="text6"
+              class="input-text"
+              maxlength="1"
+            />
+          </div>
+          <button type="submit" class="submit-button">Submit</button>
+          <!-- Add the submit button -->
+        </form>
+        <h3>RESEND CODE</h3>
+        <div class="timer">
+          <p id="demo"></p>
+          <script>
+            // Set the countdown time in seconds
+            var time = 59;
 
-                <!-- Display the countdown timer in an element -->
-<p id="demo"></p>
+            // Get the timer element
+            var timerElement = document.getElementById("demo");
 
-<!-- <script>
-// Set the date we're counting down to
-var countDownDate = new Date("Jan 5, 2024 15:37:25").getTime();
+            // Create a countdown interval
+            var countdown = setInterval(function () {
+              // Calculate minutes and seconds
+              var minutes = Math.floor(time / 60);
+              var seconds = time % 60;
 
-// Update the count down every 1 second
-var x = setInterval(function() {
+              // Add leading zeros if necessary
+              minutes = minutes < 10 ? "0" + minutes : minutes;
+              seconds = seconds < 10 ? "0" + seconds : seconds;
 
-  // Get today's date and time
-  var now = new Date().getTime();
+              // Update the timer element text
+              timerElement.textContent = minutes + ":" + seconds;
 
-  // Find the distance between now and the count down date
-  var distance = countDownDate - now;
+              // Decrease the time
+              time--;
 
-  // Time calculations for days, hours, minutes and seconds
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-  // Display the result in the element with id="demo"
-  document.getElementById("demo").innerHTML = minutes + "m " + seconds + "s";
-
-  // If the count down is finished, write some text
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("demo").innerHTML = "EXPIRED";
-  }
-}, 1000);
-</script> -->
-<script>
-  // Set the countdown time in seconds
-var time = 59;
-
-// Get the timer element
-var timerElement = document.getElementById('demo');
-
-// Create a countdown interval
-var countdown = setInterval(function() {
-    // Calculate minutes and seconds
-    var minutes = Math.floor(time / 60);
-    var seconds = time % 60;
-
-    // Add leading zeros if necessary
-    minutes = (minutes < 10) ? '0' + minutes : minutes;
-    seconds = (seconds < 10) ? '0' + seconds : seconds;
-
-    // Update the timer element text
-    timerElement.textContent = minutes + ':' + seconds;
-
-    // Decrease the time
-    time--;
-
-    // Check if the countdown has finished
-    if (time < 0) {
-        // Clear the countdown interval
-        clearInterval(countdown);
-    }
-}, 1000);
-
-</script>            
-</div>
-             
-            
-            </div>
-        
+              // Check if the countdown has finished
+              if (time < 0) {
+                // Clear the countdown interval
+                clearInterval(countdown);
+              }
+            }, 1000);
+          </script>
+        </div>
+      </div>
     </main>
-</body>
+  </body>
 </html>

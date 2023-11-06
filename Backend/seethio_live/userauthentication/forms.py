@@ -1,5 +1,7 @@
 from django import forms
 from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.forms import SetPasswordForm
+from django.contrib.auth.password_validation import validate_password
 
 from userauthentication.models import User
 
@@ -32,3 +34,41 @@ class UserRegisterForm(UserCreationForm):
     class Meta:
         model = User
         fields = ["first_name", "last_name", "username", "email"]
+
+
+class CustomSetPasswordForm(SetPasswordForm):
+    new_password1 = forms.CharField(
+        widget=forms.PasswordInput(
+            attrs={
+                "placeholder": "New Password",
+                "class": "custom-input-class",  # Add your custom CSS class here
+                "id": "password",
+            }
+        ),
+        validators=[validate_password],
+    )
+    new_password2 = forms.CharField(
+        widget=forms.PasswordInput(
+            attrs={
+                "placeholder": "Re-type Password",
+                "class": "custom-input-class",  # Add your custom CSS class here
+                "id": "password",
+            }
+        ),
+        validators=[validate_password],
+    )
+    error_messages = {
+        "password_mismatch": ("The two password fields didn't match."),
+    }
+
+
+
+
+class OTPVerificationForm(forms.Form):
+    otp = forms.CharField(
+        label="Enter OTP",
+        widget=forms.TextInput(
+            attrs={"placeholder": "Enter the OTP sent to your email"}
+        ),
+        max_length=6,
+    )

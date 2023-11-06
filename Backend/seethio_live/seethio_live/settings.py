@@ -12,6 +12,9 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 import os
+from decouple import config
+from dotenv import load_dotenv
+load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -21,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-prs+%oud^uy1)kv5c6yqm4eg(2n#6ujtdor91k(d1^w)z*0$!q"
+SECRET_KEY = str(os.getenv('SECRET_KEY'))
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -39,6 +42,8 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "userauthentication",
+    "anymail",
+    # 'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -130,14 +135,20 @@ MEDIA_URL = "images/"
 MEDIA_ROOT = os.path.join(BASE_DIR, "static/images")
 
 # SMTP configuration
-EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
-EMAIL_HOST = "smtp.gmail.com"
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-EMAIL_HOST_USER = ""
-EMAIL_HOST_PASSWORD = ""
-DEFAULT_FROM_EMAIL = "TestSite Team <noreply@example.com>"
+
 
 # django_project/settings.py
 # EMAIL_BACKEND = "django.core.mail.backends.filebased.EmailBackend"
 # EMAIL_FILE_PATH = BASE_DIR / "sent_emails"
+
+# Brevo
+EMAIL_BACKEND = "anymail.backends.sendinblue.EmailBackend"
+ANYMAIL = {
+    "SENDINBLUE_API_KEY": config("SENDINBLUE_API_KEY"),
+}
+SENDINBLUE_API_URL = "https://api.brevo.com/v3/"
+# ANYMAIL = {
+#     "MAILGUN_API_KEY": "<your Mailgun key>",
+# }
+# DEFAULT_FROM_EMAIL = ""
+# CRISPY_TEMPLATE_PACK = 'bootstrap4'

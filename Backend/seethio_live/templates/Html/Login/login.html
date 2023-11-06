@@ -62,7 +62,7 @@
               <i class="fa-regular fa-eye-slash" id="eye"></i>
             </div>
             <span
-              ><a href="/Front-end/Html/Login/forgot.html"
+              ><a href="{% url 'userauthentication:password_reset' %}"
                 >Forgot Password?</a
               ></span
             >
@@ -92,13 +92,13 @@
           <p>
             Already have an account?
             <span
-              ><a href="/Front-end/Html/Signup/Signup.html">Sign up</a></span
+              ><a href="{% url 'userauthentication:signup' %}">Sign up</a></span
             >
           </p>
         </div>
       </div>
     </main>
 
-    <script src="login.js"></script>
+    <script src="{% static 'js/login.js' %}"></script>
   </body>
 </html>
