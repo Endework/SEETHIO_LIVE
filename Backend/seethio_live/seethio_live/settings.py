@@ -178,3 +178,8 @@ SOCIAL_AUTH_GOOGLE_SCOPE = [   #add this
 # django_project/settings.py
 # EMAIL_BACKEND = "django.core.mail.backends.filebased.EmailBackend"
 # EMAIL_FILE_PATH = BASE_DIR / "sent_emails"
+
+# MAILCHIMP CREDENTIALS added by ple
+MAILCHIMP_API_KEY = "3302bf16458c150292c961daf1d466ae-us21"
+MAILCHIMP_DATA_CENTER = "s21"
+MAILCHIMP_EMAIL_LIST_ID = "73c65915b1"

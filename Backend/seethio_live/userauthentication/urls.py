@@ -1,6 +1,7 @@
 from django.urls import path
 from userauthentication.views import *
 from django.contrib.auth import views as auth_views
+from . import views #added by ple
 
 app_name = "userauthentication"
 urlpatterns = [
@@ -26,5 +27,8 @@ urlpatterns = [
         "password_reset_complete",
         auth_views.PasswordResetCompleteView.as_view(),
         name="password_reset_complete",
+    ),
+    path(
+        "subscription/", views.subscription, name="subscription"  #added by ple
     ),
 ]
