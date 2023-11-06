@@ -4,6 +4,7 @@
     --secondary:#006167;
     --PRIMARY-CONTAINER:#D7EFDA;
     --NPRIMARY-COLOUR:#fff;
+    --PRIMARY-COLOUR:#FABF00;
   }
 main{
     display: flex;
@@ -13,7 +14,7 @@ main{
     gap: 20px;
     background: var(--PRIMARY-CONTAINER, #D7EFDA);
     padding: 20px 135px 66px 135px;
-    margin-left: 200px;
+    margin-left: 250px;
     margin-right: 200px;
     margin-top: 50px;
     width: 700px;
@@ -54,6 +55,10 @@ button{
     border-radius: 10px;
     background: var(--Secondary-Colour, #006167);
     border: none;
+}
+button:hover{
+    color:var(--secondary);
+    background: var(--PRIMARY-COLOUR)
 }
 .input-text{
     border-radius: 12px;

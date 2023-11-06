@@ -6,6 +6,13 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <link rel="stylesheet" href="../Css/home.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+
+  <!--  -->
+  
+
+  
+
   <title>landing page</title>
   
 </head>
@@ -43,7 +50,10 @@
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#">Logging</a>
+                <a class="nav-link" aria-current="page" href="#">Lodging</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">Flight</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" aria-current="page" href="#">Find Rides</a>
@@ -59,8 +69,21 @@
                       Sarah Jone
                   </a>
                   <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">profile</a></li>
-                    <li><a class="dropdown-item" href="#">setting</a></li>
+                    <div class="d-flex align-items-center tx">
+                      <i class="fa-solid fa-gear"></i>
+                      <li><a class="dropdown-item " href="#"></i> Account Settings</a></li>
+                    </div>
+                    <hr class="bg-light">
+                    <div class="d-flex align-items-center tx">
+                      <i class="fa-solid fa-rectangle-list"></i> 
+                      <li><a class="dropdown-item " href="#">Bucket list</a></li>
+                    </div>
+                    <hr>
+                    <div class="d-flex align-items-center tx">
+                      <i class="fa-solid fa-book"></i>
+                      <li><a class="dropdown-item " href="#"> Bookings and Trip History</a></li>
+                    </div>
+                    <hr>
                     
                   </ul>
                 </li>
@@ -219,9 +242,12 @@
               id="checkin"
               class="border rounded w-100 py-2 ps-4"
               required
+              placeholder="dd, mm, yyyy"
             />
           </div>
         </div>
+        
+
         <!-- CHECKOUT -->
         <div class="col-lg-2">
           <div class="form-div mb-3">
@@ -356,10 +382,10 @@
     <p class="info">Activities to Explore!</p>
     <div class="row">
       <div class="col-lg-4">
-        <div class="card">
+        <div class="card" >
         <img src="../images/activities1.jpg" class="card-img-top" alt="...">
-        <button class="bucket-list">Add to Bucketlist</button>
-        <div class="card-body">
+        <input class="bucket-list" type="submit" value="Add to Bucketlist"></input>
+        <div class= "card-body">
           <h4 class="card-title">Hiking and Trekking</h4>
           <p class="card-text">Explore the stunning landscapes of the Simien Mountains, Bale Mountains, or the Gheralta Mountains in Tigray for exceptional trekking experiences.</p>
         </div>
@@ -368,7 +394,7 @@
       <div class="col-lg-4">
         <div class="card" >
         <img src="../images/activities2.jpg" class="card-img-top" alt="...">
-        <button class="bucket-list">Add to Bucketlist</button>
+        <input class="bucket-list " type="submit" value="Add to Bucketlist"></input>
         <div class="card-body">
           <h4 class="card-title">White-Water Rafting</h4>
           <p class="card-text">The Omo River and Blue Nile offer thrilling white-water rafting experiences, with varying levels of difficulty.</p>
@@ -378,7 +404,7 @@
       <div class="col-lg-4">
         <div class="card">
         <img src="../images/activities3.jpg" class="card-img-top" alt="...">
-        <button class="bucket-list">Add to Bucketlist</button>
+        <input class="bucket-list" type="submit" value="Add to Bucketlist"></input>
         <div class="card-body">
           <h4 class="card-title">Birdwatching</h4>
           <p class="card-text">Ethiopia is a birdwatcher's paradise with diverse bird species. Visit the Rift Valley Lakes or the Bale Mountains for birdwatching excursions..</p>
@@ -392,7 +418,7 @@
     <p class="info">Top Rated Lodge</p>
     <div class="row">
       <div class="col-lg-4 top" >
-        <div class="card" style="width: 18rem;">
+        <div class="card">
           <div id="carouselExampleIndicators" class="carousel slide">
             <div class="carousel-indicators">
               <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -410,7 +436,7 @@
                 <img src="../images/Radison_blu3.png" class="d-block w-100" alt="...">
               </div>
             </div>
-            <button class="bucket-list">Add to Bucketlist</button>
+            <input class="bucket-list" type="submit" value="Add to Bucketlist"></input>
           </div>
           <div class="card-body">
             <h5 class="card-title">Radisson Blu Hotel</h5>
@@ -446,7 +472,7 @@
         
     </div>
       <div class="col-lg-4">
-        <div class="card" style="width: 18rem;">
+        <div class="card">
           <div id="carouselExampleIndicators1" class="carousel slide">
             <div class="carousel-indicators">
               <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -464,7 +490,7 @@
                 <img src="../images/hayat3.png" class="d-block w-100" alt="...">
               </div>
             </div>
-            <button class="bucket-list">Add to Bucketlist</button>
+            <input class="bucket-list" type="submit" value="Add to Bucketlist"></input>
           </div>
           <div class="card-body">
             <h5 class="card-title">Hyatt Regency</h5>
@@ -499,7 +525,7 @@
         </div>
     </div>
       <div class="col-lg-4">
-        <div class="card" style="width: 18rem;">
+        <div class="card">
           <div id="carouselExampleIndicators2" class="carousel slide">
             <div class="carousel-indicators">
               <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -517,7 +543,7 @@
                 <img src="../images/haile3.png" class="d-block w-100" alt="...">
               </div>
             </div>
-            <button class="bucket-list">Add to Bucketlist</button>
+            <input class="bucket-list" type="submit" value="Add to Bucketlist"></input>
           </div>
           <div class="card-body">
             <h5 class="card-title">Haile Resort</h5>
@@ -559,7 +585,7 @@
     <p class="info">Restaurants and Dinings</p>
     <div class="row">
       <div class="col-lg-4 top" >
-        <div class="card" style="width: 18rem;">
+        <div class="card">
           <div id="carouselExampleIndicators3" class="carousel slide">
             <div class="carousel-indicators">
               <button type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -577,7 +603,7 @@
                 <img src="../images/yodAbyssinia2.png" class="d-block w-100" alt="...">
               </div>
             </div>
-            <button class="bucket-list">Add to Bucketlist</button>
+            <input class="bucket-list" type="submit" value="Add to Bucketlist"></input>
           </div>
           <div class="card-body">
             <h5 class="card-title">Yod Abyssinia</h5>
@@ -613,7 +639,7 @@
         
     </div>
       <div class="col-lg-4">
-        <div class="card" style="width: 18rem;">
+        <div class="card">
           <div id="carouselExampleIndicators4" class="carousel slide">
             <div class="carousel-indicators">
               <button type="button" data-bs-target="#carouselExampleIndicators4" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -631,7 +657,7 @@
                 <img src="../images/Verres3.png" class="d-block w-100" alt="...">
               </div>
             </div>
-            <button class="bucket-list">Add to Bucketlist</button>
+            <input class="bucket-list" type="submit" value="Add to Bucketlist"></input>
           </div>
           <div class="card-body">
             <h5 class="card-title">Verres en Vers</h5>
@@ -668,7 +694,7 @@
         </div>
     </div>
       <div class="col-lg-4">
-        <div class="card" style="width: 18rem;">
+        <div class="card">
           <div id="carouselExampleIndicators5" class="carousel slide">
             <div class="carousel-indicators">
               <button type="button" data-bs-target="#carouselExampleIndicators5" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -686,7 +712,7 @@
                 <img src="../images/kategna3.png" class="d-block w-100" alt="...">
               </div>
             </div>
-            <button class="bucket-list">Add to Bucketlist</button>
+            <input class="bucket-list" type="submit" value="Add to Bucketlist"></input>
           </div>
           <div class="card-body">
             <h5 class="card-title">Kategna Restaurant</h5>
@@ -737,7 +763,7 @@
       <p class="info">Featured Deals</p>
       <p>Showing deals for Oct 30, 2023 to Nov 10, 2023.</p>
       <div class="row">
-        <div class="col-lg-4 top" >
+        <div class="col-lg-4 top " >
           <div class="card" >
             <div id="carouselExampleIndicators8" class="carousel slide">
               <div class="carousel-indicators">
@@ -756,7 +782,7 @@
                   <img src="../images/debredamo3.png" class="d-block w-100" alt="...">
                 </div>
               </div>
-              <button class="bucket-list">Add to Bucketlist</button>
+              <input class="bucket-list" type="submit" value="Add to Bucketlist"></input>
             </div>
             <div class="card-body">
               <h5 class="card-title">Debre Damo Hotel</h5>
@@ -789,11 +815,12 @@
     
           </div>
           
+        
       </div>
       <div class="col-lg-4">
         <div class="card">
         <img src="../images/ethiopian_airlines.jpg" class="card-img-top" alt="...">
-        <button class="bucket-list">Add to Bucketlist</button>
+        <input class="bucket-list" type="submit" value="Add to Bucketlist"></input>
         <div class="card-body">
           <h5 class="card-title">Ethiopian Airlines</h5>
           <div>
@@ -826,10 +853,13 @@
       </div>
       
     </div>
+   
+  
+   
     <div class="col-lg-4">
       <div class="card">
       <img src="../images/ethiopian_airlines.jpg" class="card-img-top" alt="...">
-      <button class="bucket-list">Add to Bucketlist</button>
+      <input class="bucket-list" type="submit" value="Add to Bucketlist"></input>
       <div class="card-body" >
         <h5 class="card-title">Ethiopian Airlines</h5>
         <div>
@@ -1061,6 +1091,10 @@
       texts[index].classList.add('active');
     }, 3000);  // Change every 3 seconds
     
+   
+ 
+
       </script>
+      
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </html>

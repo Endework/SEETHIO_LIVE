@@ -1,191 +1,181 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Nunito+Sans:opsz,wght@6..12,200;6..12,300;6..12,400;6..12,500&family=Roboto:wght@400;500;700&display=swap');
 * {
-	margin: 0 !important;
-	padding: 0 !important;
+	margin: 0;
+	padding: 0;
 	box-sizing: border-box;
 	font-family: 'Nunito', sans-serif;
 	color: var(--secondary);
+ 
 }
 :root{
     --secondary:#006167;
 	--PRIMARY-CONTAINER:#D7EFDA;
 	--UNPRIMARY-COLOUR: #FFF;
 	--Error-Colour-Style: #E41D1D;
+   
 
 }
 body{
-    position: relative;
     width: 100%;
     height: 100vh;
+    position: relative;
 }
 main{
-    display: flex;
-	border-radius: 5px;
-	background: var(--PRIMARY-CONTAINER);
-    position: absolute;
     width: 85%;
-    left: 9%;
-    
-    
+    height: 98%;
+    background: #FFF;
+    position: absolute;
+    top: 5%;
+    left: 8%;
+    display: flex;
+    border-radius: 1.5%;
+    box-shadow: 0px 4px 20px 0px rgba(125, 239, 218, 0.80);
+
 }
-h1{
+h3{
     color: var(--Secondary-Colour, #006167);
     text-align: center;
-    font-family: Nunito;
-    font-size: 45px;
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 2.2rem; 
+    margin-top: 2%;
+}
+h4{
+    color: var(--Secondary-Colour, #006167);
+    text-align: center;
+    font-size: 1.5rem;
     font-style: normal;
     font-weight: 400;
-    line-height: 36px; /* 80% */
-}
-p{
-    color: black;
+    line-height: 1rem; /* 120% */
+    margin-top: 2%;
 }
 a{
     text-decoration: none;
 }
-p span{
-    color: var(--Secondary-Colour, #006167);
-    
+input{
+    border: 1px solid var(--Secondary-Colour,#006167);
 }
-button{
-    display: flex;
-    width: 300px;
-    height: 56px;
-    padding: 10px;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    border-radius: 5px;
-    border: 1px solid var(--Secondary-Colour, #006167);
-    background: var(--Secondary-Colour, #006167);
-    color: var(--UNPRIMARY-COLOUR, #FFF);
-    text-align: center;
-    font-family: Nunito;
-    font-size: 16px;
+::placeholder{
+    color: var(--Subwords, rgba(18, 18, 18, 0.70));
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.75rem;
     font-style: normal;
     font-weight: 400;
-    line-height: 24px; /* 150% */
-    letter-spacing: 0.4px;
+    line-height: 20px; /* 142.857% */
+    letter-spacing: 0.035px;
 }
-.left{
+.left, .right{
     width: 50%;
-    height: auto;
-    /* background-image: url('/images/signupimage.jpeg');
-    background-repeat: no-repeat;
-    background-size: cover; */
 }
-.right{
-    width: 50%;
-    height: auto;
 
+.img-div {
+    width: 100%;
+    height: 92%;
+    background-image: url('../images/signup_new.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    border-bottom-left-radius: 1.5%;
+    border-top-left-radius: 1.5%;
 }
-.right .content{
-    
+
+
+.content{
+    padding: 2%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 24px;
+    gap: 5%;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    
+}
+
+.content .logo{
+    width: 30%;
+}
+.content .logo img{
+    width: 100%;
+    
+}
+.half-width{
+    width: 30%;
+    gap: 1.5%;
+    margin-top: 5%;
+}
+.half-width input{
     width: 100%;
 }
-.right .content .name {
+.half-width, .check{
+    width: 100%;
     display: flex;
-    gap: 20px;
-}
-.right .content .half-width input{
-    width: 238.523px;
-    display: flex;
-    height: 50px;
-    padding: 10px;
-    gap: 10px;
-    border-radius: 5px;
-    border: 1px solid var(--Secondary-Colour, #006167);
-    background: var(--UNPRIMARY-COLOUR, #FFF);
-}
-.right .content .full-width input{
-    display: flex;
-    width: 500px;
-    height: 50px;
-    padding: 10px;
-    align-items: center;
-    gap: 10px;
-    border-radius: 5px;
-    border: 1px solid var(--Secondary-Colour, #006167);
-    background: var(--UNPRIMARY-COLOUR, #FFF);
-}
-.right .content .horizontal{
-    padding-top: 3rem;
-}
-.horizontal{
-    display: flex;
-    justify-content: space-between;
-    gap: 10px;
-}
-.other{
-    display: flex;
-    justify-content: space-evenly;
     
 }
-.terms{
-    margin: 30px;
-    color: var(--Secondary-Colour, #006167);
-    text-align: center;
-    font-family: Nunito;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 24px; /* 150% */
-    letter-spacing: 0.024px;
-    
+.check span{
+    color: var(--Error-Colour-Style);
 }
-.terms span{
-    color: var(--Error-Colour-Style, #E41D1D);
-    font-family: Nunito;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 24px;
-    letter-spacing: 0.024px;
+form span{
+    color: var(--secondary);
 }
-.other{
-    gap: 25px;
+#account{
+  
+    color: #272727;
+    font-family: 'Lato', sans-serif;
 }
-.other img{
+
+.full_width{
     display: flex;
-    width: 80px;
-    height: 50px;
-    padding: 10px;
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 0;
-    border-radius: 5px;
-    border: 1px solid var(--Secondary-Colour, #006167);
-    background: var(--UNPRIMARY-COLOUR, #FFF);
+    flex-direction: column;
+    width: 100%;
 }
-::placeholder{ /* Chrome, Firefox, Opera, Safari 10.2+ */
-    color: #A9ABAF;
-    text-align: justify;
-    font-family: Nunito;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 12px; /* 75% */
-    letter-spacing: 0.4px;
-    padding-left: 10px;
-}
-#message{
-	margin:1rem !important;
-	color: var(--Error-Colour-Style) !important;
-}
-.border_invalid {
-	border: 1px solid var(--Error-Colour-Style) !important;
-	
-}
-.full-width #password1{
-	position: relative;
+input[type='password']{
+    position: relative;
 }
 .fa-eye-slash{
-	position: absolute;
-	top: 495px;
-	right: 180px;
+    position: absolute;
+    right: 25%;
+    top: 50.5%;
 }
+input:not([type='checkbox']):not([type='button']) {
+    padding: 5%;
+    border-radius: 10px;
+    margin-bottom: 5.5%;
+    width: 100%;
+    
+  }
+input[type='button']{
+    width: 100%;
+    padding: 5%;
+    border-radius: 10px;
+    margin-top: 1.5%;
+    background: var(--Secondary-Colour, #006167);
+    color: white;
+    font-size: 1.25rem;
+    border: none;
+
+  }
+  input[type='button']:hover{
+    color: var(--secondary);
+    background: #FABF00;
+  }
+  input[type='check']{
+    border-radius: 3px;
+  }
+  .horizontal{
+    display: flex;
+    margin-top: 0.75%;
+    justify-content: space-evenly;
+  }
+  
+  .social img:nth-child(1), .social img:nth-child(2){
+    border: 1px solid var(--Secondary-Colour, #006167);
+    border-radius: 10px;
+    margin-right: 5%;
+    padding: 0.5%;
+    margin-top: 1%;
+    
+  }
+  
+ 
