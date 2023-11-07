@@ -107,14 +107,17 @@ input{
     
     gap: 10px;
     margin-top: 4%;
+    width: 90%;
 }
 .half-width input{
     width: 80%;
     
 
 }
-.half-width, .check{
-    width: 80%;
+
+
+ .check{
+    width: 100%;
     display: flex;
 }
 .check{
