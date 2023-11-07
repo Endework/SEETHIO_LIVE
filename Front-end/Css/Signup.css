@@ -22,7 +22,7 @@ body{
 }
 main{
     width: 85%;
-    height: 98%;
+    height: 99.5%;
     background: #FFF;
     position: absolute;
     top: 3.5%;
@@ -140,9 +140,9 @@ input[type='password']{
     top: 50.5%;
 }
 input:not([type='checkbox']):not([type='button']) {
-    padding: 5%;
+    padding: 4.5%;
     border-radius: 10px;
-    margin-bottom: 5.5%;
+    margin-bottom: 4.5%;
     width: 100%;
     
   }
@@ -150,7 +150,7 @@ input[type='button']{
     width: 100%;
     padding: 5%;
     border-radius: 10px;
-    margin-top: 1.5%;
+    margin-top: 1.25%;
     background: var(--Secondary-Colour, #006167);
     color: white;
     font-size: 1.25rem;
@@ -166,13 +166,13 @@ input[type='button']{
   }
   .horizontal{
     display: flex;
-    margin-top: 0.75%;
+    margin-top: 0.5%;
     justify-content: space-evenly;
   }
   .social{
     display: flex;
     gap: 15px;
-    margin-top: 1.5%;
+    margin-top: 1.25%;
   }
   .social img:nth-child(1), .social img:nth-child(2){
     border: 1px solid var(--Secondary-Colour, #006167);
