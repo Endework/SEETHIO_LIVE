@@ -268,13 +268,19 @@ input[type='button']{
   .popup1 .popup .close:hover , .popup2 .popup .close:hover{
     color: var(--PRIMARY-COLOUR);
   }
-  .popup .content1 , .popup .content1p {
+  .popup .content1 .popup .content1p {
     
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 50vh;
     
+    
+  }
+  .popup .content1p{
+    height: 50vh;
+  }
+  .popup .content1{
+    height: 60vh;
   }
   .content_reset, .content_success{
     display: flex;
