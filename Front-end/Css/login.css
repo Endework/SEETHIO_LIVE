@@ -5,6 +5,7 @@
 	box-sizing: border-box;
 	font-family: 'Nunito', sans-serif;
 	color: var(--secondary);
+    
  
 }
 :root{
@@ -12,6 +13,7 @@
 	--PRIMARY-CONTAINER:#D7EFDA;
 	--UNPRIMARY-COLOUR: #FFF;
 	--Error-Colour-Style: #E41D1D;
+    --PRIMARY-COLOUR:#FABF00;
    
 
 }
@@ -102,13 +104,13 @@ input{
     
 }
 
-.check{
+.checkbutton{
     width: 100%;
     display: flex;
     margin-top: 5%;
     
 }
-.check span{
+.checkbutton span{
     color: var(--Error-Colour-Style);
 }
 form span{
@@ -134,8 +136,8 @@ input[type='password']{
 }
 .fa-eye-slash{
     position: absolute;
-    right: 20%;
-    top: 48.5%;
+    right: 21%;
+    top: 48%;
 }
 input:not([type='checkbox']):not([type='button']) {
     padding: 5% ;
@@ -215,6 +217,123 @@ input[type='button']{
     right: -60px;
     z-index: -10;
 }
+/* pop up */
+
+.overlay {
+    position: fixed;
+    top: 0%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+
+  }
+  .overlay:target {
+    visibility: visible;
+    opacity: 1;
+  }
+  .popup {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 70px auto;
+    padding: 25px;
+    background: linear-gradient(180deg, rgba(215, 229, 239, 0.548) 0%, #D7EFDA 100%);
+    border-radius: 5px;
+    width: 60%;
+    position: relative;
+    transition: all 1s ease-in-out;
+    color:  #121212;
+    border-radius: 15px;
+  }
+  
+  .popup h2 {
+    margin-top: 0;
+    color:  #121212
+  }
+  .popup .close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    transition: all 200ms;
+    font-size: 40px;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--secondary)
+  }
+  .popup1 .popup .close:hover , .popup2 .popup .close:hover{
+    color: var(--PRIMARY-COLOUR);
+  }
+  .popup .content1 , .popup .content1p {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 50vh;
+    
+  }
+  .content_reset, .content_success{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .check {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .check input , .content_reset input{
+    padding: 4%;
+    height: 10%;
+    width: 80%;
+    margin-top: 3%;
+  }
+   .content1 button  , .content1p button , .content_reset button , .content_success button {
+    padding: 3% 5%;
+    width: 30%;
+    margin-top: 3.5%;
+    margin-bottom: 2.5%;
+    background: var(--secondary);
+    color: var(--UNPRIMARY-COLOUR);
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 500;
+  }
+  .content_success button {
+    width: 50%;
+   
+
+  }
+  .content1p .button-container {
+        display: flex;
+        column-gap: 100px;
+        justify-content: space-evenly;
+        color: var(--UNPRIMARY-COLOUR);
+        margin-bottom: 30px;
+        margin-top: 50px;
+  }
+  .content1p .button-container button {
+    height: 50px;
+    width: 150px;
+    margin-bottom: 15px;
+    padding: 15px;
+  }
+  .content1 button:hover , .content1p .button-container button:hover, .content1p button:hover , .content_reset button:hover , .content_success button:hover{
+    background: var(--PRIMARY-COLOUR);
+    color: var(--secondary);
+  }
+  .post{
+    display: flex;
+    justify-content: center;
+    align-self: center;
+  }
+
 /* RESPONSIVNESS */
 @media(max-width:1024px){
     input[type='button']{
