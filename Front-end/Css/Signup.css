@@ -108,6 +108,7 @@ input{
     gap: 10px;
     margin-top: 4%;
     width: 90%;
+    display: flex;
 }
 .half-width input{
     width: 80%;
