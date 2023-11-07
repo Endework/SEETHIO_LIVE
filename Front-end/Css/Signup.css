@@ -105,11 +105,11 @@ input{
 }
 .half-width{
     width: 30%;
-   
+    gap: 10px;
     margin-top: 4%;
 }
 .half-width input{
-    width: 100%;
+    width: 80%;
     
 
 }
