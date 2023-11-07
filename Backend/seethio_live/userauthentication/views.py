@@ -7,8 +7,8 @@ from social_django.utils import psa #added by ogo
 from django.contrib.auth import logout as auth_logout  # Renamed to avoid conflict
 from django.contrib import messages
 from django.conf import settings
-from mailchimp_marketing import Client #added by ple
-from mailchimp_marketing.api_client import ApiClientError #added by ple
+#from mailchimp_marketing import Client #added by ple
+#from mailchimp_marketing.api_client import ApiClientError #added by ple
 from .models import User
 
 # User = settings.AUTH_USER_MODEL

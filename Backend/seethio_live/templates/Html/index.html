@@ -4,7 +4,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    {% block title %}Landing page{% endblock title %}
+    <title> Landing page </title>
 
     <!-- STYLE SHEETS -->
     <link rel="stylesheet" href="{% static 'css/index.css' %}" />
@@ -478,7 +478,7 @@
         <form action="#" method="post">
           <input type="text" name="name" id="name" placeholder="Name" />
           <input type="email" name="email" id="email" placeholder="Email" />
-          <input type="button" value="Subscribe" />
+          <input type="button" value="Subscribe" onclick="showThanks();" />
         </form>
       </div>
       <!-- message if email is sent --> 
@@ -653,7 +653,7 @@
           <p><span>Subscribe to receive new deals</span></p>
           <div class="form">
             <input type="text" placeholder="Email Address" />
-            <button>Send</button>
+            <input type="button" value="send" onclick="showThanks();" />
           </div>
         </div>
         <!-- message if email is sent -->
@@ -690,6 +690,6 @@
       crossorigin="anonymous"
     ></script>
 
-    <script src="./home.js"></script>
+    <script src="home.js"></script>
   </body>
 </html>
