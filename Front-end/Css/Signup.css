@@ -216,3 +216,57 @@ input[type='button']{
     right: -60px;
     z-index: -10;
 }
+/* RESPONSIVNESS */
+@media(max-width:1024px){
+    input[type='button']{
+        width:80%
+    }
+    .fa-eye-slash{
+        right: 13%;
+        top: 49%;
+    }
+    .green{
+        width: 150px;
+        height: 150px;
+        right: -30px;
+    }
+    .yellow{
+        width: 250px;
+        height: 250px;
+        right: -80px;
+    }
+}
+@media (max-width: 768px) {
+    .left, .green,.yellow{
+        display: none;
+
+    }
+    .right{
+        width: 100%;
+    }
+    main{
+        position: static;
+        width: 100%;
+        height: 100vh;
+        box-shadow: none;
+        overflow-x: hidden;
+        margin-inline: 0;
+    }
+    .fa-eye-slash{
+        right: 28%;
+        top: 51%;
+    }
+  }
+  @media (max-width: 425px) {
+    .fa-eye-slash{
+        right: 10%;
+        top: 48%;
+    }
+  }
+  @media (max-width: 375px) {
+    main{
+        width: 90%;
+        padding: 1%;
+        overflow-x: hidden;
+    }
+  }
