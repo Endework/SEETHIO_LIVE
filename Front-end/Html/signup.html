@@ -22,7 +22,7 @@
                 </div>
                 <h3>Explore Ethiopia</h3>
                 <h4>Create an account to get started</h4>
-                <form action="">
+                <form action="" id="myForm">
                     <div class="half-width">
                         <input type="text" name="firstname" id="firstname" placeholder="First Name">
                         <input type="text" name="lastname" id="lastname" placeholder="Last Name">
@@ -31,16 +31,17 @@
                         <input type="text" name="username" id="username" placeholder="User Name (optional)">
                         <input type="email" name="email" id="email" placeholder="Email Address">
                         <input type="password" name="Password" id="Password" placeholder="Password">
-                        <i class="fa-regular fa-eye-slash" id="eye"></i>
+                        <i  class="fa-regular fa-eye-slash" id="eye"></i>
                     </div>
                     <div class="check">
                         <input type="checkbox" name="checkbox" id="terms">
                         <p>I have read and accepted SEETHIO <a href=""><span>Terms</span> $ <span>Policy</span></a></p>
                     </div>
-                    <a href="#popup1"><input type="button" type="submit" value="Sign Up"></a>
+                    <a href="#popup1"><input id="submit" type="button" type="submit" value="Sign Up"></a>
                     
                     
                 </form>
+                <div id="message"></div>
 
                 <div class="horizontal">
                     <img src="../images/horizontal.svg" alt="">

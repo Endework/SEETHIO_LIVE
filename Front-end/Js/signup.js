@@ -4,15 +4,15 @@ document.getElementById('myForm').addEventListener('submit', function(event) {
     var firstName = document.getElementById('firstname');
     var lastName = document.getElementById('lastname');
     var email = document.getElementById('email');
-    var password = document.getElementById('password1');
-    var confirmPassword = document.getElementById('password2');
+    var password = document.getElementById('password');
+    // var confirmPassword = document.getElementById('password2');
     var terms = document.getElementById('terms');
     var message = document.getElementById('message');
 
     // Clear previous messages and borders
     message.innerHTML = '';
     password.style.border = '';
-    confirmPassword.style.border = '';
+    // confirmPassword.style.border = '';
     terms.style.border = '';
 
     // Check if all fields are filled
@@ -58,7 +58,7 @@ document.getElementById('myForm').addEventListener('submit', function(event) {
 });
 
 document.getElementById('eye').addEventListener('click', function() {
-  var password = document.getElementById('password1');
+  var password = document.getElementById('Password');
   if (password.type === 'password') {
       password.type = 'text';
   } else {

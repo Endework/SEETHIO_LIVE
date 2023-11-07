@@ -42,7 +42,7 @@ document.getElementById('myForm').addEventListener('submit', function(event) {
 });
 
 document.getElementById('eye').addEventListener('click', function() {
-  var password = document.getElementById('password1');
+  var password = document.getElementById('Password');
   if (password.type === 'password') {
       password.type = 'text';
   } else {

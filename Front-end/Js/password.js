@@ -1,8 +1,8 @@
 // Get the password input fields, submit button and message paragraph
-var password1 = document.getElementById('password');
+var password1 = document.getElementById('password3');
 var password2 = document.getElementById('password-confirm');
 var submitButton = document.getElementById('submit');
-var message = document.getElementById('message');
+var message = document.getElementById('message2');
 
 // Add event listener to the submit button
 submitButton.addEventListener('click', function(event) {

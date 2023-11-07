@@ -22,7 +22,7 @@
                 </div>
                 <h3>Welcome</h3>
                 <h4>Login to your account</h4>
-                <form action="">
+                <form action="" id="myForm">
                     
                     <div class="full_width">
                         
@@ -41,6 +41,7 @@
                     <input type="button" type="submit" value="Login">
                     
                 </form>
+                <div id="message"></div>
                 <div class="horizontal">
                     <img src="../images/horizontal.svg" alt="">
                     <p> Or </p>
@@ -73,7 +74,7 @@
                     <div class="check">
                      <h1>Forgot Password?</h1>
                      <h3>Enter your email address to reset your password</h3>
-                     <input type="email" name="email" id="email" placeholder="Email Address">
+                     <input type="email" name="email" id="email_forgot" placeholder="Email Address">
                     </div>
                     
                     <button onclick="window.location.href='#popup2'">Submit</button>
@@ -114,7 +115,7 @@
                        
                           <h3>Click on the link to reset your password</h3>
                         
-                        <p>Didn’t receive the email?</p>
+                        <p style="text-align: center ; margin-top: 5%;">Didn’t receive the email?</p>
                         <div class="button-container">
                          <button onclick="window.location.href='#popup1'">Resend email</button>
                           <button onclick="window.location.href='#popup3'">Proceed</button>
@@ -136,15 +137,16 @@
         <a class="close" href="#">&times;</a>
         <div class="content_reset">
                      
-                        <div class="check">
+                        <div class="content_reset1">
                          <h1>Reset Password</h1>
                          <h3>Create a  new password</h3>
                          <div class="button-div">
-                           <input type="password" name="password" id="password" placeholder="New Password" required >
+                           <input type="password" name="password" id="password3" placeholder="New Password" required >
                            <input type="password" name="password" id="password-confirm" placeholder="Re-type Password"  required>
                            <div id="message"></div>
                          </div>
                         </div>
+                        <div id="message2"></div>
                         <button type="submit" onclick="window.location.href='#popup4'" id="submit">Reset</button></a>
         
         </div>
@@ -182,6 +184,7 @@
     </div>
   </div>
     <script src="../Js/login.js"></script>
+    <script src="../js/password.js"></script>
 </body>
 
 

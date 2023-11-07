@@ -108,8 +108,12 @@ input{
     width: 100%;
     display: flex;
     margin-top: 5%;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
     
 }
+
 .checkbutton span{
     color: var(--Error-Colour-Style);
 }
@@ -147,7 +151,7 @@ input:not([type='checkbox']):not([type='button']) {
     
   }
 input[type='button']{
-    width: 100%;
+    width: 90%;
     padding: 5%;
     border-radius: 10px;
     margin-top: 5%;
@@ -265,15 +269,38 @@ input[type='button']{
     text-decoration: none;
     color: var(--secondary)
   }
+  .popup .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+  }
+  #email_forgot{
+    width: 90%;
+    padding: 4% 5%;
+  }
   .popup1 .popup .close:hover , .popup2 .popup .close:hover{
     color: var(--PRIMARY-COLOUR);
   }
-  .popup .content1 .popup .content1p {
+  .popup .content1 .popup .content1p  {
     
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 80%;
     
+    
+  }
+  .content_reset1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  .content_reset1 input{
+    width: 100%;
     
   }
   .popup .content1p{
