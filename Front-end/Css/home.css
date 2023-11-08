@@ -187,7 +187,7 @@ header{
     position: relative;
 }
 .lodge{
-    width: 85%;
+    width: 87%;
     position: absolute;
     top:80%;
     left: 7%;
@@ -196,24 +196,22 @@ header{
 }
 
 
-#lodge,#flight{
+#lodgeButton,#flightButton{
     width: 200px;
     height: 50px;
     flex-shrink: 0;
-    border-radius: 20px 0px 0px 0px;
-    border-top: 2px solid var(--Secondary-Colour, #006167);
-    border-left: 2px solid var(--Secondary-Colour, #006167);
+    
     background: var(--UNPRIMARY-COLOUR, #FFF);
     border-right: none;
     border-bottom: none;
-    color: var(--Secondary-Colour, #006167);
+    
     font-size: 24px;
     font-weight: 600;
     line-height: 32px; /* 133.333% */
     }
-.green{
+.green , .flight1{
     background: var(--Secondary-Colour);
-    padding: 5% ;
+    padding: 3% ;
     border-radius: 20px 20px 20px 0px;
     box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.15);
     flex-shrink: 0;
@@ -223,15 +221,29 @@ header{
     font-weight: 400;
     line-height: 32px; /* 160% */
     height: 70%;
-    width: 100% !important;
-
-
-    
-    
- 
-   
+    width: 100% !important;  
 }
-
+#lodgecontainer{
+    display: block;
+}
+/* .green{
+    display: none;
+} */
+.containerd {
+    display: none;
+  }
+  .button1 {
+    border: none;
+    color:var(--Search-Bar-Colour, rgba(0, 0, 0, 0.50));
+  }
+  .button1.active {
+    border-radius: 20px 0px 0px 0px;
+    border-top: 2px solid var(--Secondary-Colour, #006167);
+    border-left: 2px solid var(--Secondary-Colour, #006167);
+    border-bottom: none;
+    border-right: none;
+    color: var(--Secondary-Colour, #006167);
+  }
 .flex_item{
     display: flex;
     /* margin-left: 10%; */
@@ -366,6 +378,82 @@ header{
     text-align: center;
 }
 
+.group input {
+    width: 50px;
+    height: 30px;
+}
+
+.flight1{
+    background-color: #006167;
+    padding: 10px;
+    color: #fff;
+}
+.flight1 form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.flight1 form div {
+    flex: 1 0 10%; /* This will make the divs take up ~1/5 of the container width, and wrap to the next line if there's not enough space */
+    margin: 10px;
+    
+}
+.flight1 form div input {
+    width: 100%; /* adjust as needed */
+    height: 35px; /* adjust as needed */
+    border-radius: 10px;
+}
+.flight1 form div#passengers input {
+    width: auto; /* reset to default or adjust as needed */
+    height: auto; /* reset to default or adjust as needed */
+}
+.flight1 form .passengers{
+    display: flex;
+    flex-direction: row;
+}
+/* calander */
+.custom-datepicker {
+    position: relative;
+    display: inline-block;
+}
+.custom-datepicker input {
+    padding-right: 15px;
+    text-align: center;
+}
+.custom-datepicker i {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+    color: rgba(14, 14, 19, 0.651)
+}
+::placeholder{
+    text-align: center;
+    color: var(--Search-Bar-Colour, rgba(0, 0, 0, 0.50));
+}
+.flight1 form .passengers .flex-container .adult ,.children ,.infants{
+    display: flex;
+    flex-direction: column;
+    
+   
+}
+.flight1 form .passengers .flex-container input{
+   width: 40%;
+}
+
+.searchbutton1, .searchbutton {
+    display: block;
+    margin-left:600px;
+    padding: 0.5% 3.5%;
+    color: var(--Secondary-Colour);
+    font-size: 18px;
+    font-weight: 500;
+   border: none;
+}
+.searchbutton:hover ,.searchbutton1:hover{
+    color: var(--Secondary-Colour);
+    background: var(--PRIMARY-COLOUR);
+}
 
 /* LIGHT BLUE */
 .light_blue{

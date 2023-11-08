@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="../Css/home.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
-
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <!--  -->
   
 
@@ -146,131 +146,181 @@
   </header>
 
   <div class="lodge">
-    <button id="lodge">Lodge</button>
-    <!-- <button id="flight">Flights</button> -->
-    <div class="green">
-     <form action="" >
+    <button id="lodgeButton" class="button1">Lodge</button>
+    <button id="flightButton" class="button1">Flights</button>
+    <div class="green containerd" id="lodgecontainer" >
+      <form action="" >
+        <div class="row">
+         <!-- DESTINATION -->
+         <div class="col-lg-2">
+           <div class="form-div mb-3 ">
+             <p class="fw-medium mb-2 text-center"> <i class="fa-solid fa-location-dot"></i> Destinaton</p>
+             <div class="flex-container">
+               <select
+                 name="Destinaton"
+                 id="Destinaton"
+                 class="border rounded py-2 ps-4 w-100 text-body-secondary"
+               >
+                 <option
+                   value=""
+                   selected
+                   disabled
+                 >
+                 --Select--
+                 </option>
+                 <option value="">Addis Ababa</option>
+                 <option value="">Axum</option>
+                 <option value="">Arba Minch</option>
+                 <option value="">Awasa</option>
+                 <option value="">Bahir Dar</option>
+                 <option value="">Dallol</option>
+                 <option value="">Gojjam</option>
+                 <option value="">Gondar</option>
+                 <option value="">Lalibela</option>
+                 <option value="">Mekele</option>
+               </select>
+             </div>
+           </div>
+         </div>
+         <!-- GUESTS -->
+         <div class="col-lg-4">
+           <div class="form-div mb-3 ">
+             <p class="fw-medium mb-2 text-center"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+               <path d="M2 22C2 17.5817 5.58172 14 10 14C14.4183 14 18 17.5817 18 22H2ZM10 13C6.685 13 4 10.315 4 7C4 3.685 6.685 1 10 1C13.315 1 16 3.685 16 7C16 10.315 13.315 13 10 13ZM17.3628 15.2332C20.4482 16.0217 22.7679 18.7235 22.9836 22H20C20 19.3902 19.0002 17.0139 17.3628 15.2332ZM15.3401 12.9569C16.9728 11.4922 18 9.36607 18 7C18 5.58266 17.6314 4.25141 16.9849 3.09687C19.2753 3.55397 21 5.57465 21 8C21 10.7625 18.7625 13 16 13C15.7763 13 15.556 12.9853 15.3401 12.9569Z" fill="#FABF00"/>
+             </svg>
+               Guests</p>
+               <div class="row g-0">
+                <div class="col-3">
+                    <input type="number" class="w-75" placeholder="1">
+                </div>
+                <div class="col-3">
+                    <p>Adult(s)</p>
+                </div>
+                <div class="col-3">
+                  <input type="number" name="" id="" class="w-75" placeholder="0"></div>
+                <div class="col-3">
+                    <p>Children <br>(2-11yrs)</p>
+                </div>
+              </div>
+           </div>
+         </div>
+         <!-- ROOM -->
+         <div class="col-lg-2">
+           <div class="form-div mb-3">
+             <p class="fw-medium mb-2 "><i class="fa-solid fa-house"></i> Room </p>
+             <div class="count"  style="height: 50px;">
+               <p  style="padding-top: 10%;" onclick="incrementValue()">+</p>
+               <p id="number10" style="border-left:1px solid black; border-right:1px solid black; padding-inline: 10% ;  height: 100%;" >0</p>
+               <p style="padding-top: 10%;" onclick="decrementValue()">-</p>
+             </div>
+           </div>
+         </div>
+         <!-- CHECKIN -->
+         <div class="col-lg-2">
+           <div class="form-div mb-3">
+             <p class="fw-medium mb-2  "><i class="fa-solid fa-clock"></i> Check-In</p>
+             <div class="custom-datepicker">
+              <input type="text" id="datepicker3" placeholder="dd-mm-yyyy"  style="width: 120px; height: 40px;">
+              <i class="fa fa-calendar" aria-hidden="true" id="calendar-icon2"></i>
+          </div>
+           </div>
+         </div>
+         
+  
+         <!-- CHECKOUT -->
+         <div class="col-lg-2">
+           <div class="form-div mb-3">
+             <p class="fw-medium mb-2 "> <i class="fa-solid fa-clock"></i> Check-Out</p>
+             <div class="custom-datepicker">
+              <input type="text" id="datepicker4" placeholder="dd-mm-yyyy" style="width: 120px; height: 40px;">
+              <i class="fa fa-calendar" aria-hidden="true" id="calendar-icon3"></i>
+          </div>
+           </div>
+         </div>
+       </div>
+       
+       
+       
+       
+       
+      </form>
+       <button class="searchbutton mt-5">Search</button>
+     </div>
+    <!-- flight -->
+    <div class="flight1 containerd" id="flightcontainer">
+      <form action="">
        <div class="row">
-        <!-- DESTINATION -->
-        <div class="col-lg-2">
-          <div class="form-div mb-3">
-            <p class="fw-medium mb-2"> <i class="fa-solid fa-location-dot"></i> Destinaton</p>
-            <div class="flex-container">
-              <select
-                name="Destinaton"
-                id="Destinaton"
-                class="border rounded py-2 ps-4 w-100 text-body-secondary"
-              >
-                <option
-                  value=""
-                  selected
-                  disabled
-                >
-                --Select--
-                </option>
-                <option value="">Addis Ababa</option>
-                <option value="">Axum</option>
-                <option value="">Arba Minch</option>
-                <option value="">Awasa</option>
-                <option value="">Bahir Dar</option>
-                <option value="">Dallol</option>
-                <option value="">Gojjam</option>
-                <option value="">Gondar</option>
-                <option value="">Lalibela</option>
-                <option value="">Mekele</option>
-              </select>
+        <div class="col">
+          <div class="input-group mt-5">
+            
+            <select class="custom-select border rounded py-2 px-2" id="inputGroupSelect01">
+              <option selected>Round Trip</option>
+              <option value="1">One Way</option>
+            </select>
+          </div>
+        </div>
+        <div class="col" >
+          <p class="text-center"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M2 22C2 17.5817 5.58172 14 10 14C14.4183 14 18 17.5817 18 22H2ZM10 13C6.685 13 4 10.315 4 7C4 3.685 6.685 1 10 1C13.315 1 16 3.685 16 7C16 10.315 13.315 13 10 13ZM17.3628 15.2332C20.4482 16.0217 22.7679 18.7235 22.9836 22H20C20 19.3902 19.0002 17.0139 17.3628 15.2332ZM15.3401 12.9569C16.9728 11.4922 18 9.36607 18 7C18 5.58266 17.6314 4.25141 16.9849 3.09687C19.2753 3.55397 21 5.57465 21 8C21 10.7625 18.7625 13 16 13C15.7763 13 15.556 12.9853 15.3401 12.9569Z" fill="#FABF00"/>
+          </svg> Passengers</p>
+          <div class="passengers">
+            <div class="input-group">
+                <input type="number" placeholder="1" class="border rounded py-2 px-2">
+                <p class="fs-6">Adult(s)</p>
             </div>
-          </div>
-        </div>
-        <!-- GUESTS -->
-        <div class="col-lg-4">
-          <div class="form-div mb-3">
-            <p class="fw-medium mb-2 text-center"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-              <path d="M2 22C2 17.5817 5.58172 14 10 14C14.4183 14 18 17.5817 18 22H2ZM10 13C6.685 13 4 10.315 4 7C4 3.685 6.685 1 10 1C13.315 1 16 3.685 16 7C16 10.315 13.315 13 10 13ZM17.3628 15.2332C20.4482 16.0217 22.7679 18.7235 22.9836 22H20C20 19.3902 19.0002 17.0139 17.3628 15.2332ZM15.3401 12.9569C16.9728 11.4922 18 9.36607 18 7C18 5.58266 17.6314 4.25141 16.9849 3.09687C19.2753 3.55397 21 5.57465 21 8C21 10.7625 18.7625 13 16 13C15.7763 13 15.556 12.9853 15.3401 12.9569Z" fill="#FABF00"/>
-            </svg>
-              Guests</p>
-            <div class="row ">
-              <div class="col-12">
-                <div class="row">
-                  <label for="" class="col-4">Adult(s)</label>
-                  <input
-                    type="number"
-                    name="Adult"
-                    id="Adult"
-                    placeholder="0"
-                    class="border rounded col-8 w-25 py-2 ps-4 mb-3"
-                    style="height: 40px;"
-                    required
-                  />
-                </div>
-              </div>
-              <div class="col-12">
-                <div class="row">
-                  <label for="" class="col-4">Children <br> (0-11yrs)</label>
-                  <input
-                    type="number"
-                    name="Children"
-                    id="Children"
-                    placeholder="1"
-                    class="border rounded col-8 w-25 py-2 ps-4"
-                    style="height: 40px;"
-                    required
-                  />
-                </div>
-              </div>
+            <div class="input-group">
+                <input type="number" placeholder="0" class="border rounded py-2 px-2">
+                <p class="fs-6 ">Children <br>(2-11yrs)</p>
             </div>
-          </div>
-        </div>
-        <!-- ROOM -->
-        <div class="col-lg-2">
-          <div class="form-div mb-3">
-            <p class="fw-medium mb-2"><i class="fa-solid fa-house"></i> Room </p>
-            <div class="count"  style="height: 50px;">
-              <p style="padding-top: 10%;">+</p>
-              <p style="border-left:1px solid black; border-right:1px solid black; padding-inline: 10% ;  height: 100%;" >0</p>
-              <p style="padding-top: 10%;">-</p>
+            <div class="input-group">
+                <input type="number" placeholder="1" class="border rounded py-2 px-2" >
+                <p class="fs-6 ">Infants <br> (0-2yrs)</p> >
             </div>
+        </div>
+        </div>
+        <div class="col mt-4">
+          <p class="text-center"><i class="fa-solid fa-location-dot"></i> From</p>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control px-3"  placeholder="Type your location" style="height: 40px;">
           </div>
         </div>
-        <!-- CHECKIN -->
-        <div class="col-lg-2">
-          <div class="form-div mb-3">
-            <p class="fw-medium mb-2"><i class="fa-solid fa-clock"></i> Check-In</p>
-            <input
-              type="Date"
-              name="checkin"
-              id="checkin"
-              class="border rounded w-100 py-2 ps-4"
-              required
-              placeholder="dd, mm, yyyy"
-            />
+        <div class="col mt-4">
+          <p class="text-center"><i class="fa-solid fa-location-dot"></i> To</p>
+          <div class="input-group mb-3">
+            
+            <select class="custom-select border rounded py-2 px-2" id="inputGroupSelect01" >
+              <option selected>--Select--</option>
+              <option value="1">One</option>
+              <option value="2">Two</option>
+              <option value="3">Three</option>
+            </select>
           </div>
         </div>
-        
-
-        <!-- CHECKOUT -->
-        <div class="col-lg-2">
-          <div class="form-div mb-3">
-            <p class="fw-medium mb-2"> <i class="fa-solid fa-clock"></i> Check-Out</p>
-            <input
-              type="Date"
-              name="Checkout"
-              id="Checkout"
-              class="border rounded w-100 py-2 ps-4"
-              required
-            />
-          </div>
+        <div class="col "> 
+          <div class="departure">
+          <p  class="text-center fs-6"><i class="fa-solid fa-clock"></i> Departure Date</p>
+          <div class="custom-datepicker">
+            <input type="text" id="datepicker1" placeholder="dd-mm-yyyy" style="width: 120px; height: 40px;">
+            <i class="fa fa-calendar" aria-hidden="true" id="calendar-icon1"></i>
         </div>
-      </div>
-      
-      
-      
-      
-      
-     </form>
-      <button class="search">Search</button>
+        </div></div>
+        <div class="col">
+          <div class="return">
+            <p class="text-center"><i class="fa-solid fa-clock"></i> Return Date</p>
+            <div class="custom-datepicker">
+                <input type="text" id="datepicker" placeholder="dd-mm-yyyy" style="width: 120px; height: 40px;">
+                <i class="fa fa-calendar" aria-hidden="true" id="calendar-icon"></i>
+            </div>
+        </div>
+        </div>
+       </div>
+       
+      </form>
+      <button class="searchbutton1">Search</button>
     </div>
   </div>
+  
+  
 
   <div class="light_blue">
     <!-- TRIP PLANNER -->
@@ -282,7 +332,7 @@
       <div class="row">
         <div class="col">
           <div class="form-div mb-3">
-            <p class="fw-medium mb-2"> <i class="fa-solid fa-location-dot"></i> Destination</p>
+            <p class="fw-medium mb-2 text-start"> <i class="fa-solid fa-location-dot"></i> Destination</p>
             <div class="flex-container">
                 <select
                   name="Destination"
@@ -295,10 +345,16 @@
                     disabled
                   >
                  --Select--
-                  </option>
-                  <option value="">option 1</option>
-                  <option value="">option 2</option>
-                  <option value="">option 2</option>
+                 <option value="">Addis Ababa</option>
+                 <option value="">Axum</option>
+                 <option value="">Arba Minch</option>
+                 <option value="">Awasa</option>
+                 <option value="">Bahir Dar</option>
+                 <option value="">Dallol</option>
+                 <option value="">Gojjam</option>
+                 <option value="">Gondar</option>
+                 <option value="">Lalibela</option>
+                 <option value="">Mekele</option>
                 </select>
       
             </div>
@@ -306,7 +362,7 @@
         </div>
         <div class="col">
           <div class="form-div mb-3">
-            <p class="fw-medium mb-2"><i class="fa-solid fa-clock"></i> Trip Duration  </p>
+            <p class="fw-medium mb-2 text-start"><i class="fa-solid fa-clock"></i> Trip Duration  </p>
             <input
               type="datetime-local"
               name="time"
@@ -320,8 +376,8 @@
       </div>
       <div class="row">
         <div class="col">
-          <div class="form-div mb-3">
-            <p class="fw-medium mb-2"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <div class="form-div mb-3 ">
+            <p class="fw-medium mb-2 text-start"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
               <path d="M11.9991 8.5L14.1151 13.5875L19.6075 14.0279L15.4229 17.6125L16.7013 22.9721L11.9991 20.1L7.29679 22.9721L8.57527 17.6125L4.39062 14.0279L9.88306 13.5875L11.9991 8.5ZM7.99907 2V11H5.99907V2H7.99907ZM17.9991 2V11H15.9991V2H17.9991ZM12.9991 2V7H10.9991V2H12.9991Z" fill="#FABF00"/>
             </svg> Interests</p>
             <div class="flex-container">
@@ -337,9 +393,15 @@
                   >
                  --Select--
                   </option>
-                  <option value="">option 1</option>
-                  <option value="">option 1</option>
-                  <option value="">option 1</option>
+                  <option value="">Adventure</option>
+                  <option value="">Festivals</option>
+                  <option value="">Food and Dinning</option>
+                  <option value="">Historical Centers</option>
+                  <option value="">Local Markets</option>
+                  <option value="">Mountains</option>
+                  <option value="">Parks</option>
+                  <option value="">Religious Place</option>
+                  <option value="">Wild Life</option>
                 </select>
       
             </div>
@@ -347,7 +409,7 @@
         </div>
         <div class="col">
           <div class="form-div mb-3">
-            <p class="fw-medium mb-2"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <p class="fw-medium mb-2 text-start"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
               <path d="M2 22C2 17.5817 5.58172 14 10 14C14.4183 14 18 17.5817 18 22H2ZM10 13C6.685 13 4 10.315 4 7C4 3.685 6.685 1 10 1C13.315 1 16 3.685 16 7C16 10.315 13.315 13 10 13ZM17.3628 15.2332C20.4482 16.0217 22.7679 18.7235 22.9836 22H20C20 19.3902 19.0002 17.0139 17.3628 15.2332ZM15.3401 12.9569C16.9728 11.4922 18 9.36607 18 7C18 5.58266 17.6314 4.25141 16.9849 3.09687C19.2753 3.55397 21 5.57465 21 8C21 10.7625 18.7625 13 16 13C15.7763 13 15.556 12.9853 15.3401 12.9569Z" fill="#FABF00"/>
             </svg> Traveler Type </p>
             <div class="flex-container">
@@ -363,9 +425,11 @@
                   >
                  --Select--
                   </option>
-                  <option value="">option 1</option>
-                  <option value="">option 2</option>
-                  <option value="">option 3</option>
+                  <option value="">Business</option>
+                  <option value="">Couples</option>
+                  <option value="">Families</option>
+                  <option value="">Friends</option>
+                  <option value="">Solo</option>
                 </select>
       
             </div>
@@ -968,6 +1032,7 @@
       <button onclick="window.location.href='#popup1'">Locate a Bank near you</button>
     </form>
   </div>
+    <!-- Popup page for the locate bank button -->
   <div id="popup1" class="overlay">
     <div class="popup">
       
@@ -1063,7 +1128,7 @@
       </div>
     </div>
   </div>
-  <!-- Popup page for the locate bank button -->
+
   
   
   <!-- WATER DROP -->
@@ -1170,29 +1235,14 @@
           </div>
       </div>
 </footer>
-</body>
-<script>
-    var index = 0;
-    var images = document.querySelectorAll('#carousel img');
-    var texts = document.querySelectorAll('#text p');
-    
-    setInterval(function() {
-      // Remove the 'active' class from the current elements
-      images[index].classList.remove('active');
-      texts[index].classList.remove('active');
-    
-      // Increment the index, and loop back to 0 if we've reached the end
-      index = (index + 1) % images.length;
-    
-      // Add the 'active' class to the new elements
-      images[index].classList.add('active');
-      texts[index].classList.add('active');
-    }, 3000);  // Change every 3 seconds
-    
-   
- 
 
-      </script>
-      
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="../Js/home.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+
+  
 </html>
