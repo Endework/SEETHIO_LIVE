@@ -699,7 +699,7 @@ header{
     justify-content: center;
     align-items: center;
     /* margin: 70px auto; */
-    margin: 45px auto;
+    margin: 35px auto;
     padding: 30px 25px;
     /* background: linear-gradient(180deg, rgba(215, 229, 239, 0.548) 0%, #D7EFDA 100%); */
     max-width: 45%;
@@ -718,9 +718,9 @@ header{
   }
   
   
-  .popup h2 {
-    margin-top: 2%;
-    color:  #121212
+  .popup h5{
+    margin-top: 5%;
+    color:  var(--Secondary-Colour)
   }
   .popup .close {
     position: absolute;
@@ -736,7 +736,7 @@ header{
     color: var(--PRIMARY-COLOUR);
   }
   .popup .content {
-    height: 70vh;
+    height: 75vh;
     /* overflow: auto; */
     overflow: hidden;
     width: 85%;
@@ -749,7 +749,7 @@ header{
   }
   .popup .content .row{
     padding-left: 8%;
-    margin-top: 5%;
+    margin-top: 4%;
   }
   .popup .content .row .bank a{
     color: var(--Secondary-Colour);
@@ -757,7 +757,11 @@ header{
   }
   
 
-  
+  #back{
+    position: absolute;
+    left: 12%;
+    top: 5%;
+  }
 
 
 /* FOOTER */
