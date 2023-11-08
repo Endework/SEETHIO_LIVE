@@ -443,7 +443,7 @@ header{
 
 .searchbutton1, .searchbutton {
     display: block;
-    margin-left:600px;
+    margin-left:520px;
     padding: 0.5% 3.5%;
     color: var(--Secondary-Colour);
     font-size: 18px;
@@ -454,7 +454,9 @@ header{
     color: var(--Secondary-Colour);
     background: var(--PRIMARY-COLOUR);
 }
-
+.searchbutton1{
+    margin-left: 560px;
+}
 /* LIGHT BLUE */
 .light_blue{
     width: 100%;
