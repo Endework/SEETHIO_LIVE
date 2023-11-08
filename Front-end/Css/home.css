@@ -677,6 +677,84 @@ header{
 }
 /* pop up */
 
+.overlay {
+    position: fixed;
+    top: 10%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+
+  }
+  .overlay:target {
+    visibility: visible;
+    opacity: 1;
+  }
+  .popup {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* margin: 70px auto; */
+    margin: 45px auto;
+    padding: 30px 25px;
+    /* background: linear-gradient(180deg, rgba(215, 229, 239, 0.548) 0%, #D7EFDA 100%); */
+    max-width: 45%;
+    position: relative;
+    transition: all 1s ease-in-out;
+    color:  #121212;
+    border-radius: 15px;
+    border: 2px solid var(--Secondary-Colour, #006167);
+    background-image: url('/Front-end/images/Polygon\ 10.svg'), url('/Front-end/images/Polygon\ 9.svg'), url('/Front-end/images/Polygon\ 13.svg'), url('/Front-end/images/Polygon\ 12.svg'), url('/Front-end/images/Polygon\ 11.svg'), url('/Front-end/images/Polygon\ 14.svg');
+    background-color:#D7EFDA;
+    /* Position and size of the images */
+    background-position: 0% 60%,  100% 15%, 5% 0%, 100% 95%,50% 100%, 80% 5%;
+    /* background-size: 25px 50px, 75px,25px, 15px 20px ,10px 12px ,18px 20px , 25px 12px;   */
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
+  
+  
+  .popup h2 {
+    margin-top: 2%;
+    color:  #121212
+  }
+  .popup .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--Secondary-Colour)
+  }
+  .popup .close:hover {
+    color: var(--PRIMARY-COLOUR);
+  }
+  .popup .content {
+    height: 70vh;
+    /* overflow: auto; */
+    overflow: hidden;
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--UNPRIMARY-COLOUR, #FFF);
+    
+  }
+  .popup .content .row{
+    padding-left: 8%;
+    margin-top: 5%;
+  }
+  .popup .content .row .bank a{
+    color: var(--Secondary-Colour);
+    text-decoration: underline;
+  }
   
 
   
