@@ -710,7 +710,7 @@ header{
     padding: 2% 2%;
     position: absolute;
     top: 45%;
-    width: 325px;
+    width: 319px;
     background-color: var(--PRIMARY-COLOUR, #FABF00);
     backdrop-filter: blur(4px); 
     height: 70px;
