@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  <link rel="stylesheet" href="../Css/home.css">
+  <link rel="stylesheet" href="../Css/Home.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
@@ -148,179 +148,141 @@
   <div class="lodge">
     <button id="lodgeButton" class="button1">Lodge</button>
     <button id="flightButton" class="button1">Flights</button>
-    <div class="green containerd" id="lodgecontainer" >
+    <div class="flight1 containerd" id="lodgecontainer" >
       <form action="" >
-        <div class="row">
-         <!-- DESTINATION -->
-         <div class="col-lg-2">
-           <div class="form-div mb-3 ">
-             <p class="fw-medium mb-2 text-center"> <i class="fa-solid fa-location-dot"></i> Destinaton</p>
-             <div class="flex-container">
-               <select
-                 name="Destinaton"
-                 id="Destinaton"
-                 class="border rounded py-2 ps-4 w-100 text-body-secondary"
-               >
-                 <option
-                   value=""
-                   selected
-                   disabled
-                 >
-                 --Select--
-                 </option>
-                 <option value="">Addis Ababa</option>
-                 <option value="">Axum</option>
-                 <option value="">Arba Minch</option>
-                 <option value="">Awasa</option>
-                 <option value="">Bahir Dar</option>
-                 <option value="">Dallol</option>
-                 <option value="">Gojjam</option>
-                 <option value="">Gondar</option>
-                 <option value="">Lalibela</option>
-                 <option value="">Mekele</option>
-               </select>
-             </div>
-           </div>
-         </div>
-         <!-- GUESTS -->
-         <div class="col-lg-4">
-           <div class="form-div mb-3 ">
-             <p class="fw-medium mb-2 text-center"> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-               <path d="M2 22C2 17.5817 5.58172 14 10 14C14.4183 14 18 17.5817 18 22H2ZM10 13C6.685 13 4 10.315 4 7C4 3.685 6.685 1 10 1C13.315 1 16 3.685 16 7C16 10.315 13.315 13 10 13ZM17.3628 15.2332C20.4482 16.0217 22.7679 18.7235 22.9836 22H20C20 19.3902 19.0002 17.0139 17.3628 15.2332ZM15.3401 12.9569C16.9728 11.4922 18 9.36607 18 7C18 5.58266 17.6314 4.25141 16.9849 3.09687C19.2753 3.55397 21 5.57465 21 8C21 10.7625 18.7625 13 16 13C15.7763 13 15.556 12.9853 15.3401 12.9569Z" fill="#FABF00"/>
-             </svg>
-               Guests</p>
-               <div class="row g-0">
-                <div class="col-3">
-                    <input type="number" class="w-75 border rounded" placeholder="1" >
+        <div class="containerflight">
+          <!-- destination -->
+            <div >
+                <label for=""><i class="fa-solid fa-location-dot"></i> Destination</label>
+                <select >
+                    <option value="">--Select--</option>
+                    <option value="">Addis Ababa</option>
+                    <option value="">Arba Minch</option>
+                    <option value="">Awasa</option>
+                    <option value="">Axum</option>
+                    <option value="">Bahirdar</option>
+                    <option value="">Dallol</option>
+                    <option value="">Gojjam</option>
+                    <option value="">Gondar</option>
+                    <option value="">Lalibela</option>
+                    <option value="">Mekele</option>
+                  </select>
+            </div>
+            <!-- guests -->
+            <div style="margin-top: 2%;" >
+                <label for=""> <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M2 22C2 17.5817 5.58172 14 10 14C14.4183 14 18 17.5817 18 22H2ZM10 13C6.685 13 4 10.315 4 7C4 3.685 6.685 1 10 1C13.315 1 16 3.685 16 7C16 10.315 13.315 13 10 13ZM17.3628 15.2332C20.4482 16.0217 22.7679 18.7235 22.9836 22H20C20 19.3902 19.0002 17.0139 17.3628 15.2332ZM15.3401 12.9569C16.9728 11.4922 18 9.36607 18 7C18 5.58266 17.6314 4.25141 16.9849 3.09687C19.2753 3.55397 21 5.57465 21 8C21 10.7625 18.7625 13 16 13C15.7763 13 15.556 12.9853 15.3401 12.9569Z" fill="#FABF00"/>
+                  </svg> Guests</label>
+                <div class="passengers">
+                   <div style="display: flex; flex-direction: column; ">
+                      <input type="number" placeholder="1" style="width: 100%; border: none;">
+                      <label style="text-align: left;" for="">Adult(s)</label>
+                   </div>
+                   <div style="display: flex; flex-direction: column;">
+                      <input type="number" placeholder="0" style="width: 100%; border: none;">
+                      <label style="text-align: left;" for="">Children</label>
+                   </div>
+                   
                 </div>
-                <div class="col-3">
-                    <p>Adult(s)</p>
-                </div>
-                <div class="col-3">
-                  <input type="number" name="" id="" class="w-75 border rounded" placeholder="0"></div>
-                <div class="col-3">
-                    <p>Children <br>(2-11yrs)</p>
-                </div>
+            </div>
+            <!-- room -->
+         <div>
+             <label for=""><i class="fa-solid fa-house"> </i> Room</label>
+             <div class="count"  style="height: 30px;">
+                <p  style="padding-top: 10%;" onclick="incrementValue()">+</p>
+                <p id="number10" style="border-left:1px solid black; border-right:1px solid black; padding-inline: 10% ;  height: 100%;" >0</p>
+                <p style="padding-top: 10%;" onclick="decrementValue()">-</p>
               </div>
-           </div>
          </div>
-         <!-- ROOM -->
-         <div class="col-lg-2">
-           <div class="form-div mb-3">
-             <p class="fw-medium mb-2 "><i class="fa-solid fa-house"></i> Room </p>
-             <div class="count"  style="height: 50px;">
-               <p  style="padding-top: 10%;" onclick="incrementValue()">+</p>
-               <p id="number10" style="border-left:1px solid black; border-right:1px solid black; padding-inline: 10% ;  height: 100%;" >0</p>
-               <p style="padding-top: 10%;" onclick="decrementValue()">-</p>
-             </div>
-           </div>
+<!-- check in -->
+         <div class="date">
+             <label for=""><i class="fa-solid fa-clock"> </i> Check-In</label>
+            <input  type="date" placeholder="dd-mm-yy" id="checkin">
          </div>
-         <!-- CHECKIN -->
-         <div class="col-lg-2">
-           <div class="form-div mb-3">
-             <p class="fw-medium mb-2  "><i class="fa-solid fa-clock"></i> Check-In</p>
-             <div class="custom-datepicker">
-              <input type="text" id="datepicker3" placeholder="dd-mm-yyyy" class="border rounded"  style="width: 120px; height: 40px;">
-              <i class="fa fa-calendar" aria-hidden="true" id="calendar-icon2"></i>
-          </div>
-           </div>
+         <!-- check out -->
+         <div class="date">
+             <label for=""><i class="fa-solid fa-clock"></i> Check out</label>
+            <input type="date" placeholder="dd-mm-yyyy" id="checkout">
          </div>
          
-  
-         <!-- CHECKOUT -->
-         <div class="col-lg-2">
-           <div class="form-div mb-3">
-             <p class="fw-medium mb-2 "> <i class="fa-solid fa-clock"></i> Check-Out</p>
-             <div class="custom-datepicker">
-              <input type="text" id="datepicker4" placeholder="dd-mm-yyyy" class="border rounded" style="width: 120px; height: 40px;">
-              <i class="fa fa-calendar" aria-hidden="true" id="calendar-icon3"></i>
-          </div>
-           </div>
-         </div>
-       </div>
-       
-       
-       
-       
-       
+         <button class="search-btn">Search</button> 
+        </div>
       </form>
-       <button class="searchbutton mt-5">Search</button>
+       
      </div>
     <!-- flight -->
-    <div class="flight1 containerd" id="flightcontainer">
+    <div class="flight1 containerd text-center" id="flightcontainer" >
       <form action="">
-       <div class="row">
-        <div class="col">
-          <div class="input-group mt-5">
-            
-            <select class="custom-select border rounded py-2 px-2" id="inputGroupSelect01" style="color: rgba(0, 0, 0, 0.50);">
-              <option selected >Round Trip</option>
-              <option value="1">One Way</option>
+        <div class="containerflight">
+          <!-- round trip -->
+            <div style="margin-top: 1.75%;">
+                <select >
+                    <option value="">Round Trip</option>
+                    <option value="">One Way</option>
+                  </select>
+            </div>
+            <!-- passengers -->
+            <div style="margin-top: 1.5%;" >
+                <label for=""><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M2 22C2 17.5817 5.58172 14 10 14C14.4183 14 18 17.5817 18 22H2ZM10 13C6.685 13 4 10.315 4 7C4 3.685 6.685 1 10 1C13.315 1 16 3.685 16 7C16 10.315 13.315 13 10 13ZM17.3628 15.2332C20.4482 16.0217 22.7679 18.7235 22.9836 22H20C20 19.3902 19.0002 17.0139 17.3628 15.2332ZM15.3401 12.9569C16.9728 11.4922 18 9.36607 18 7C18 5.58266 17.6314 4.25141 16.9849 3.09687C19.2753 3.55397 21 5.57465 21 8C21 10.7625 18.7625 13 16 13C15.7763 13 15.556 12.9853 15.3401 12.9569Z" fill="#FABF00"/>
+                  </svg>Passengers</label>
+                <div class="passengers">
+                   <div style="display: flex; flex-direction: column; ">
+                      <input type="number" placeholder="1" style="width: 100%; border: none;">
+                      <label style="text-align: left;" for="">Adult</label>
+                   </div>
+                   <div style="display: flex; flex-direction: column;">
+                      <input type="number" placeholder="0" style="width: 100%; border: none;">
+                      <label style="text-align: left;" for="">Children</label>
+                   </div>
+                   <div style="display: flex; flex-direction: column;">
+                      <input type="number" placeholder="2" style="width: 100%; border: none;">
+                      <label style="text-align: left;" for="">Infants</label>
+                   </div>
+                </div>
+            </div>
+<!-- your location -->
+         <div>
+             <label for=""><i class="fa-solid fa-location-dot"></i> From</label>
+            <input type="text" placeholder="Type your location" id="location">
+         </div>
+         <div>
+        <!-- your destination -->
+             <label for=""><i class="fa-solid fa-location-dot"></i> To</label>
+            <select>
+              <option value="">--Select--</option>
+                    <option value="">Addis Ababa</option>
+                    <option value="">Arba Minch</option>
+                    <option value="">Awasa</option>
+                    <option value="">Axum</option>
+                    <option value="">Bahirdar</option>
+                    <option value="">Dallol</option>
+                    <option value="">Gojjam</option>
+                    <option value="">Gondar</option>
+                    <option value="">Lalibela</option>
+                    <option value="">Mekele</option>
             </select>
-          </div>
+         </div>
+         <!-- departure date -->
+         <div class="date">
+             <label for=""><i class="fa-solid fa-clock"></i> Departure date</label>
+            <input type="date" placeholder="dd-mm-yy" id="departure">
+         </div>
+         <!-- return date -->
+         <div class="date">
+             <label for=""> <i class="fa-solid fa-clock"></i> Return date</label>
+            <input type="date" placeholder="Return date" id="return">
+         </div>
+         
+         <button class="search-btn">Search</button> 
         </div>
-        <div class="col" >
-          <p class="text-center fs-6 "><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <path d="M2 22C2 17.5817 5.58172 14 10 14C14.4183 14 18 17.5817 18 22H2ZM10 13C6.685 13 4 10.315 4 7C4 3.685 6.685 1 10 1C13.315 1 16 3.685 16 7C16 10.315 13.315 13 10 13ZM17.3628 15.2332C20.4482 16.0217 22.7679 18.7235 22.9836 22H20C20 19.3902 19.0002 17.0139 17.3628 15.2332ZM15.3401 12.9569C16.9728 11.4922 18 9.36607 18 7C18 5.58266 17.6314 4.25141 16.9849 3.09687C19.2753 3.55397 21 5.57465 21 8C21 10.7625 18.7625 13 16 13C15.7763 13 15.556 12.9853 15.3401 12.9569Z" fill="#FABF00"/>
-          </svg> Passengers</p>
-          <div class="passengers">
-            <div class="input-group">
-                <input type="number" placeholder="1" class="border rounded py-2 px-2">
-                <p class="fs-6">Adult(s)</p>
-            </div>
-            <div class="input-group">
-                <input type="number" placeholder="0" class="border rounded py-2 px-2">
-                <p class="fs-6 ">Children</p>
-            </div>
-            <div class="input-group">
-                <input type="number" placeholder="1" class="border rounded py-2 px-2" >
-                <p class="fs-6 ">Infants <br></p> 
-            </div>
-        </div>
-        </div>
-        <div class="col mt-4">
-          <p class="text-center"><i class="fa-solid fa-location-dot"></i> From</p>
-          <div class="input-group mb-3">
-            <input type="text" class="form-control "  placeholder="Type your location" style="height: 35px;">
-          </div>
-        </div>
-        <div class="col mt-4">
-          <p class="text-center"><i class="fa-solid fa-location-dot"></i> To</p>
-          <div class="input-group mb-3">
-            
-            <select class="custom-select border rounded py-2 px-2" id="inputGroupSelect01" style="color:rgba(136, 133, 133, 0.39)">
-              <option selected >--Select--</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
-            </select>
-          </div>
-        </div>
-        <div class="col "> 
-          <div class="departure">
-          <p  class="text-center fs-6"><i class="fa-solid fa-clock"></i> Departure Date</p>
-          <div class="custom-datepicker">
-            <input type="text" id="datepicker1" style=" height: 40px; padding-inline: 25px;">
-            <i class="fa fa-calendar" aria-hidden="true" id="calendar-icon1"></i>
-        </div>
-        </div></div>
-        <div class="col">
-          <div class="return">
-            <p class="text-center fs-6"><i class="fa-solid fa-clock"></i> Return Date</p>
-            <div class="custom-datepicker">
-                <input type="text" id="datepicker"  style=" height: 40px; padding-inline: 25px;">
-                <i class="fa fa-calendar" aria-hidden="true" id="calendar-icon"></i>
-            </div>
-        </div>
-        </div>
-       </div>
        
       </form>
-      <button class="searchbutton1">Search</button>
+      
     </div>
   </div>
   
-  
+  <!-- the lodge/flight container ends here -->
 
   <div class="light_blue">
     <!-- TRIP PLANNER -->
@@ -1039,7 +1001,7 @@
       
       <a class="close" href="#">&times;</a>
       <div class="content">
-        <p id="back" onclick="window.location.href='#currency'"><i class="fa-solid fa-arrow-left"></i> Back</p>
+        
         <h5>Click on a Bank  to find its Branches in Ethiopia</h5>
         <div class="row" >
           <div class="col">

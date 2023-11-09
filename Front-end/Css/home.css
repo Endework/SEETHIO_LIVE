@@ -209,7 +209,7 @@ header{
     font-weight: 600;
     line-height: 32px; /* 133.333% */
     }
-.green , .flight1{
+.green , .flightcontainer{
     background: var(--Secondary-Colour);
     padding: 3% ;
     border-radius: 20px 20px 20px 0px;
@@ -223,9 +223,93 @@ header{
     height: 78%;
     width: 100% !important;  
 }
+.room {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.add-room, .subtract-room {
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+.room-number {
+    font-size: 1.2em;
+    border-right: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    padding: 0 5px;
+}
+
 #lodgecontainer{
     display: block;
 }
+
+/* flight container */
+
+.containerflight {
+    width: 80%;
+    height: 250px;
+    margin: 0 auto;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    position: relative; /* Add this */
+    
+    border-radius: 20px 20px 20px 0px;
+    
+ }
+
+.date input , option{
+    text-align: center;
+    border: none;
+}
+ .containerflight > div {
+    margin: 5px;
+ }
+
+ .containerflight > div > input, .containerflight > div > select ,input {
+    width: 100%;
+    margin-bottom: 5px;
+    border-radius: 10px; /* Add this */
+    height: 30px; /* Add this */
+ }
+
+ .containerflight > div > label {
+    display: block;
+    text-align: center;
+ }
+
+ .passengers {
+    display: flex;
+    justify-content: space-around;
+ }
+
+ .passengers > div {
+    text-align: center;
+ }
+
+ .search-btn {
+    width: 120px;
+    height: 40px;
+    position: absolute; /* Add this */
+    bottom: 10px; /* Add this */
+    left: 50%; /* Add this */
+    transform: translateX(-50%); /* Add this */
+    background-color: #FFF;
+    color: var(--Secondary-Colour);
+    text-align: center;
+    border: none;
+    cursor: pointer;
+ }
+ .search-btn:hover{
+    background: var(--PRIMARY-COLOUR);
+
+ }
+
 /* .green{
     display: none;
 } */
@@ -317,6 +401,7 @@ header{
     justify-content: space-evenly;
     color: black;
     padding: 0 3%;
+    cursor: pointer;
 }
 .count p{
     display: flex;
@@ -387,6 +472,7 @@ header{
     background-color: #006167;
     padding: 10px;
     color: #fff;
+    border-radius: 20px 20px 20px 0px;
 }
 .flight1 form {
     display: flex;
