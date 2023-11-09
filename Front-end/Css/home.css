@@ -767,6 +767,17 @@ header{
     left: 15%;
    
 }
+#deal1 ,#deal2{
+    position: relative;
+}
+#deal11, #deal12{
+    position: absolute;
+    top: 0;
+    left: 0;
+    fill: #D9D9D9;
+    filter: drop-shadow(0px 8px 10px rgba(0, 0, 0, 0.20));
+
+}
 
 .currency{
     background: var(--Secondary-Colour, #006167);
