@@ -1,3 +1,5 @@
+import numpy as np
+import pandas as pd
 import random  
 
 class TripItineraryGenerator:
@@ -40,8 +42,8 @@ class TripItineraryGenerator:
                 "Lalibela": {
                     'Sights & Landmarks': ['Lalibela Rock Churches Guided Tour', 'Visit Monastery of Naakuto Laab', 'Visit The Tomb of Adam', 'Visit Bilbala St George Rock Hewn Church', 'Visit Biete Medhane Alem', 'Visit Rock Hewn Churches'],
                     'History': ['Visit The church of Yemrehanna Kristos is one of Ethiopias best preserved late Axumite churches', '3 days tour to Lalibela Asheton Maryam Monastery'],
-                    'Nature & Wildlife': ['4 Day Abune Yosef Conservation Area Trekking Tour from Lalibela'],
-                    'Adventure': ['Adventure Theme Park at Kuriftu Resort Entoto', '15 Days trekking To Simen Mountains', 'Lalibela Eco Trekking Tours', 'Some outdoor activities with Abyssinia Balloon rides'],
+                    'Nature & Wildlife': ['Abune Yosef Conservation Area Trekking Tour from Lalibela'],
+                    'Adventure': ['Adventure Theme Park at Kuriftu Resort Entoto', 'Have fun trekking To Simen Mountains with Lalibela Eco Trekking Tours', 'Some outdoor activities with Abyssinia Balloon rides'],
                 },
                 "Adigrat": {
                     'Sights & Landmarks': ['Trip interest not found for this location'],
@@ -73,7 +75,7 @@ class TripItineraryGenerator:
 
         self.activities = {
             "Addis Ababa": ['Visit to Entoto Maryam Church', 'Addis Ababa Guided City Tour With Airport & Hotel Pick Up', 'Discover Red Terror Martyrs Memorial Museum', 'See Zoma Museum', 'Mount Entoto Full Day Tour with Hotel Pickup and Dropoff', 'Explore the Danakil Depression in 6 Days', 'Full Day Tour of National Museum of Ethiopia with Hotel Pickup and Dropoff', 'Horseriding experience in the hills surrounding Addis Ababa Come to the ranch to explore nature in its best on trails through the forest learn how to ride or simply get away from the city for a bit Nestled in the Sululta hills 4 kilometers above the capital city with 5 hectares of land', 'Learn about nature and Ethiopian history and culture at Unity Park Addis Ababa with Hotel Pickup & Dropoff Included', 'Visit Karls Square', 'Visit The Mausoleum of Menelik II', 'Rent a car and drive to Portuguese Bridge (110km from Addis Ababa)', 'Day Trip To Menagesha Suba Forest', 'Addis Ababa City Danakil Depression Tours', 'Ethio North Trekking Come and discover the thrills of Ethiopia with Bale Mountains', 'Day Trip To Gullele Botanical Garden', 'Addis Ababa Ethnological Museum Tour', 'Addis Ababa City Tour to Menelik palace', 'Day trip to Adadi Mariyam and Melka kunture', 'Addis Ababa Guided Museum Tour With Hotel Pick Up', 'Full Day Tour of Yekatit 12 Martyrs Square with Hotel Pickup and Dropoff', 'Adventure Theme Park at Kuriftu Resort Entoto', 'Full Day Private Tour of to Meskel Square', 'Discover the Specialty PanAfrican museum located in Addis Ababas historic Arada district Expect a truly one of a kind memorable experience', 'Some outdoor activities with Abyssinia Balloon rides'],
-            "Mekele": ['Four (4) Days tour of Lake Assale', 'Ethio Cycling Tour', 'Two Days Tour of Gheralta Rock', 'Go see The Martyrs Memorial Monument', 'Visit to Emperor Yohannes IV Palace'],
+            "Mekele": ['A day tour of Lake Assale', 'Ethio Cycling Tour', 'Two Days Tour of Gheralta Rock', 'Go see The Martyrs Memorial Monument', 'Visit to Emperor Yohannes IV Palace'],
             "Axum": ['Discover Ezana Park', 'Explore Church of Our Lady Mary of Zion rumored to be the hiding place of the biblical "Lost Ark', 'Day Trip in Axum to discover the remains of once powerful royal capital contain impressive tombs and stelae Ruins of Aksum', 'Explore North Ethiopia Discover King Ezanas Inscription', 'Discover The Tombs of Kings Kaleb and Gebre Meskal', '15 Days trekking To Simen Mountains', 'Explore North Ethiopia Visit Church of Our Lady Mary of Zion', 'Discover Queen of Shebas Palace in Axum tall carved obelisks relics of the ancient Kingdom of Aksum'],
             "Harar": ['Explore Casa Museo di Rimbaud', 'Visit Harar Museum Eastern Ethiopia', 'Visit Joel Harar Tour', 'Lalibela Omo Valley and Harrar tour to see Harar Jegol Wall'],
             "Bahirdar": ['Bahir Dar Bike Tour', 'Explore Church of Debre Sina Maryam', 'Visit Monastery of Debre Mariam', 'Day trip to Bahir dar To visit lake tana monasteries and Blue Nile Falls', 'Bahir Dar Tour of Lake Tana', 'Visit Azwa Mariam Monastery'],
@@ -138,32 +140,57 @@ class TripItineraryGenerator:
             itinerary.append(day_itinerary)
 
         return itinerary
-def recommend_activity(activities_matrix, cosine_similarities, trip_interest, chosen_activities, activities_for_location, trip_interests_mapping):
-    interest_index = trip_interests.index(trip_interest) 
 
-    # Calculate location similarity
-    location_similarity = cosine_similarities[interest_index]
-    location_sorted_indices = location_similarity.argsort()[::-1]
+    def recommend_hotels(self, location):
+        Hotel = pd.read_csv("hotels_in_ethiopia_data.csv")
 
-    # Calculate interest similarity
-    interest_similarity = cosine_similarities[:, interest_index]
-    interest_sorted_indices = interest_similarity.argsort()[::-1]
+        # Make sure 'Location' column is in lowercase for comparison
+        Hotel['Location'] = Hotel['Location'].str.lower()
+        Hotel['Amenities'] = Hotel['Amenities'].str.replace(',', '')
+        Hotel['Amenities'] = Hotel['Amenities'].str.lower()
 
-    for index in location_sorted_indices:
-        activity = activities_for_location[index]
-        if activity not in chosen_activities:
-            if index in interest_sorted_indices:
-                return index
+        # Filter hotels for the specified location
+        citybase = Hotel[Hotel['Location'] == location.lower()]
+        citybase = citybase.sort_values(by='Star', ascending=False)
 
-    return -1
+        if not citybase.empty:
+            print(f"🌟 Top 5 Hotels Around {location} 🌟\n")
+            for idx, row in citybase.head(5).iterrows():
+                print(f"{idx + 1}. **{row['Hotel']}**")
+                print(f"   - Star Rating: {'⭐' * int(row['Star'])} ({row['Star']})")
+                print(f"   - Price Per Night: ${row['Price Per Night']}")
+                amenities = row['Amenities'].split()
+                print(f"   - Amenities: {', '.join(amenities)}\n")
+                print("-" * 40)
+        else:
+            print('No Hotels Available')
+        return citybase.head(5)['Hotel'].tolist()
+
+    def recommend_restaurants(self, location):
+        Restaurant = pd.read_csv("restaurants_in_ethiopia.csv")
+        
+        Restaurant['city']=Restaurant['city'].str.lower()
+        
+        citybase=Restaurant[Restaurant['city']==location.lower()]
+        citybase=citybase.sort_values(by='rating',ascending=False)
+        if not citybase.empty:
+            print(f"🍽️ Top 5 Restaurants Around {location} 🍽️\n")
+            for idx, row in citybase.head(5).iterrows():
+                print(f"{idx + 1}. **{row['Restaurant']}**")
+                print(f"   - Rating: {'⭐' * int(row['rating'])} ({row['rating']:.1f})\n")
+                print(f"   - Cuisine: {row['cuisine']}\n")
+        else:
+            print('No Restaurants Available')
+        return citybase.head(5)['Restaurant'].tolist()
+
+
+itinerary_generator = TripItineraryGenerator()
 
 # User input
-location = "Lalibela"  
+location = "Mekele"  
 trip_length = 3  
 trip_interest = "Adventure"  
 
-# Create an instance of the TripItineraryGenerator
-itinerary_generator = TripItineraryGenerator()
 
 # Generate the itinerary
 itinerary = itinerary_generator.generate_itinerary(location, trip_length, trip_interest)
@@ -182,3 +209,8 @@ for day in itinerary:
     print("-" * 40)
 
 print("Enjoy your journey and make wonderful memories! 😊")
+print("-" * 40)
+
+# Recommend hotels for the same location
+recommended_hotels = itinerary_generator.recommend_hotels(location)
+recommended_restaurants = itinerary_generator.recommend_restaurants(location)
