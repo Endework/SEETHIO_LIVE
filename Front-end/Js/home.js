@@ -63,68 +63,68 @@ var lodgeButton = document.getElementById('lodgeButton');
 
 // flight section
 // for Departure date
-$( function() {
-    var $datepicker = $( "#datepicker" );
-    $datepicker.datepicker({
-        dateFormat: "dd-mm-yy"
-    });
+// $( function() {
+//     var $datepicker = $( "#datepicker" );
+//     $datepicker.datepicker({
+//         dateFormat: "dd-mm-yy"
+//     });
 
-    $( "#calendar-icon" ).click(function() {
-        if ($datepicker.datepicker('widget').is(':visible')) {
-            $datepicker.datepicker('hide');
-        } else {
-            $datepicker.datepicker('show');
-        }
-    });
-} );
+//     $( "#calendar-icon" ).click(function() {
+//         if ($datepicker.datepicker('widget').is(':visible')) {
+//             $datepicker.datepicker('hide');
+//         } else {
+//             $datepicker.datepicker('show');
+//         }
+//     });
+// } );
 
-// for the return date
-$( function() {
-    var $datepicker1 = $( "#datepicker1" );
-    $datepicker1.datepicker({
-        dateFormat: "dd-mm-yy"
-    });
+// // for the return date
+// $( function() {
+//     var $datepicker1 = $( "#datepicker1" );
+//     $datepicker1.datepicker({
+//         dateFormat: "dd-mm-yy"
+//     });
 
-    $( "#calendar-icon1" ).click(function() {
-        if ($datepicker1.datepicker('widget').is(':visible')) {
-            $datepicker1.datepicker('hide');
-        } else {
-            $datepicker1.datepicker('show');
-        }
-    });
-} );
+//     $( "#calendar-icon1" ).click(function() {
+//         if ($datepicker1.datepicker('widget').is(':visible')) {
+//             $datepicker1.datepicker('hide');
+//         } else {
+//             $datepicker1.datepicker('show');
+//         }
+//     });
+// } );
 
-// check in
-$( function() {
-    var $datepicker2 = $( "#datepicker3" );
-    $datepicker2.datepicker({
-        dateFormat: "dd-mm-yy"
-    });
+// // check in
+// $( function() {
+//     var $datepicker2 = $( "#datepicker3" );
+//     $datepicker2.datepicker({
+//         dateFormat: "dd-mm-yy"
+//     });
 
-    $( "#calendar-icon2" ).click(function() {
-        if ($datepicker2.datepicker('widget').is(':visible')) {
-            $datepicker2.datepicker('hide');
-        } else {
-            $datepicker2.datepicker('show');
-        }
-    });
-} );
+//     $( "#calendar-icon2" ).click(function() {
+//         if ($datepicker2.datepicker('widget').is(':visible')) {
+//             $datepicker2.datepicker('hide');
+//         } else {
+//             $datepicker2.datepicker('show');
+//         }
+//     });
+// } );
 
-// checkout
-$( function() {
-    var $datepicker3 = $( "#datepicker4" );
-    $datepicker3.datepicker({
-        dateFormat: "dd-mm-yy"
-    });
+// // checkout
+// $( function() {
+//     var $datepicker3 = $( "#datepicker4" );
+//     $datepicker3.datepicker({
+//         dateFormat: "dd-mm-yy"
+//     });
 
-    $( "#calendar-icon3" ).click(function() {
-        if ($datepicker3.datepicker('widget').is(':visible')) {
-            $datepicker3.datepicker('hide');
-        } else {
-            $datepicker3.datepicker('show');
-        }
-    });
-} );
+//     $( "#calendar-icon3" ).click(function() {
+//         if ($datepicker3.datepicker('widget').is(':visible')) {
+//             $datepicker3.datepicker('hide');
+//         } else {
+//             $datepicker3.datepicker('show');
+//         }
+//     });
+// } );
 
 
 
