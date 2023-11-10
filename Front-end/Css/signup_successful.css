@@ -4,6 +4,7 @@
     --secondary:#006167;
     --PRIMARY-CONTAINER:#D7EFDA;
     --NPRIMARY-COLOUR:#fff;
+    --PRIMARY-COLOUR:#FABF00;
   }
 main{
     display: flex;
@@ -51,6 +52,10 @@ button{
     border-radius: 10px;
     background: var(--Secondary-Colour, #006167);
     border: none;
+}
+button:hover{
+    background: var(--PRIMARY-COLOUR);
+    color: var(--secondary);
 }
 svg{
     margin-top: 2.5rem;

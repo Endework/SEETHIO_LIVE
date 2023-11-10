@@ -1,24 +1,40 @@
 document.getElementById('myForm').addEventListener('submit', function(event) {
     event.preventDefault();
+
+    var firstName = document.getElementById('firstname');
+    var lastName = document.getElementById('lastname');
     var email = document.getElementById('email');
-    var password = document.getElementById('password1');
+    var password = document.getElementById('password');
+    // var confirmPassword = document.getElementById('password2');
     var terms = document.getElementById('terms');
     var message = document.getElementById('message');
 
     // Clear previous messages and borders
     message.innerHTML = '';
     password.style.border = '';
+    // confirmPassword.style.border = '';
     terms.style.border = '';
 
     // Check if all fields are filled
-    if ( !email.value ||  !password.value || !terms.checked) {
+    if (!firstName.value || !lastName.value || !email.value ||  !password.value || !confirmPassword.value || !terms.checked) {
         message.innerHTML += 'Please fill in all fields and agree to the terms and conditions.<br>';
         password.style.border = password.value ? '' : 'red';
+        confirmPassword.style.border = confirmPassword.value ? '' : 'red';
         terms.style.border = terms.checked ? '' : '1px solid red';
         return false;
     }
 
-    
+    // Check if passwords match
+    if (password.value !== confirmPassword.value) {
+        message.innerHTML += 'Your passwords do not match.<br>';
+        password.classList.add("border_invalid");
+        confirmPassword.classList.add("border_invalid")
+        
+        return false;
+    } else {
+        password.classList.remove("border_invalid");
+        confirmPassword.classList.remove("border_invalid")
+    }
 
     // Check password strength
     if (password.value.length < 8) {
@@ -42,7 +58,7 @@ document.getElementById('myForm').addEventListener('submit', function(event) {
 });
 
 document.getElementById('eye').addEventListener('click', function() {
-  var password = document.getElementById('password1');
+  var password = document.getElementById('Password');
   if (password.type === 'password') {
       password.type = 'text';
   } else {
