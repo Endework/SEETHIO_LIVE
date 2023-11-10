@@ -6,8 +6,8 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <link rel="stylesheet" href="../Css/Home.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
-  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> -->
   <!--  -->
   
 
@@ -20,6 +20,7 @@
   <header>
     <nav class="navbar navbar-expand-lg fixed-top">
       <div class="container-fluid">
+      
         <img src="../images/navlogo.png" alt="nav logo">
         <button
             type="button"
@@ -71,7 +72,7 @@
                   <ul class="dropdown-menu">
                     <div class="d-flex align-items-center tx">
                       <i class="fa-solid fa-gear"></i>
-                      <li><a class="dropdown-item " href="#"></i> Account Settings</a></li>
+                      <li><a class="dropdown-item accountsetting"  href="#"></i> Account Settings</a></li>
                     </div>
                     <hr class="bg-light">
                     <div class="d-flex align-items-center tx">
@@ -133,29 +134,29 @@
                     Explore<span id="Unique">Addis Ababa</span><br><span class="location" style="margin-left: 30%; font-size: 30px;">(Sheger River)</span></p>
       </div>
       <div id="carousel">
-        <img src="../images/southMan.png" class="active">
-        <img src="../images/rockchurchside.png">
-        <img src="../images/nile river.png">
-        <img src="../images/ertale.png">
-        <img src="../images/semen_mountains.png">
-        <img src="../images/lineofJudha.png">
-        <img src="../images/harar.png">
-        <img src="../images/sheger river.png">
+        <img src="../images/southMan.png" class="active" alt="south man image">
+        <img src="../images/rockchurchside.png" alt="Rock church">
+        <img src="../images/nile river.png" alt="Nile river">
+        <img src="../images/ertale.png" alt="Erta Ale">
+        <img src="../images/semen_mountains.png" alt="Semen Mountains">
+        <img src="../images/lineofJudha.png" alt="Lion of Judha">
+        <img src="../images/harar.png" alt="Harar">
+        <img src="../images/sheger river.png" alt="Sheger River">
       </div>
     </div>
   </header>
 
   <div class="lodge">
-    <button id="lodgeButton" class="button1">Lodge</button>
-    <button id="flightButton" class="button1">Flights</button>
+    <button id="lodgeButton" type="button" class="button1">Lodge</button>
+    <button id="flightButton" type="button" class="button1">Flights</button>
     <div class="flight1 containerd" id="lodgecontainer" >
       <form action="" >
         <div class="containerflight">
           <!-- destination -->
             <div >
                 <label for=""><i class="fa-solid fa-location-dot"></i> Destination</label>
-                <select >
-                    <option value="">--Select--</option>
+                <select name="Destination" id="destination">
+                  <option value="">--Select--</option>
                     <option value="">Addis Ababa</option>
                     <option value="">Arba Minch</option>
                     <option value="">Awasa</option>
@@ -166,7 +167,8 @@
                     <option value="">Gondar</option>
                     <option value="">Lalibela</option>
                     <option value="">Mekele</option>
-                  </select>
+                </select>
+                
             </div>
             <!-- guests -->
             <div style="margin-top: 2%;" >
@@ -216,10 +218,11 @@
         <div class="containerflight">
           <!-- round trip -->
             <div style="margin-top: 1.75%;">
-                <select >
-                    <option value="">Round Trip</option>
+              <select name="Roundtrip" id="roundtrip">
+                <option value="">Round Trip</option>
                     <option value="">One Way</option>
-                  </select>
+              </select>
+                
             </div>
             <!-- passengers -->
             <div style="margin-top: 1.5%;" >
@@ -243,13 +246,13 @@
             </div>
 <!-- your location -->
          <div>
-             <label for=""><i class="fa-solid fa-location-dot"></i> From</label>
+             <label for="location"><i class="fa-solid fa-location-dot"></i> From</label>
             <input style="border: none;" type="text" placeholder="Type your location" id="location" >
          </div>
          <div>
         <!-- your destination -->
-             <label for=""><i class="fa-solid fa-location-dot"></i> To</label>
-            <select>
+             <label for="to"><i class="fa-solid fa-location-dot"></i> To</label>
+            <select name="To" id="to" aria-label="To">
               <option value="">--Select--</option>
                     <option value="">Addis Ababa</option>
                     <option value="">Arba Minch</option>
@@ -1241,11 +1244,11 @@
       </div>
 </footer>
 
-<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script> -->
 <script src="../Js/home.js"></script>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<!-- <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 
