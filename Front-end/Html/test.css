@@ -144,28 +144,30 @@ li{
 
 #text {
     width: 50%;
-    padding-top: 2rem;
+    padding-top: 1rem;
     position: relative;
         
 }
 #text .top{
     position: absolute;
     top: 10%;
+    z-index: -10;
 }
 #text .bottom{
     position: absolute;
     bottom: 20%;
     right:10% ;
+    z-index: -10;
 }
 #text p{
-    width: 500px;
+    width: 650px;
     height: 200px;
     flex-shrink: 0;
     color: var(--Secondary-Colour);
     font-size: 2.9rem;
     font-weight: 800;
     line-height: 96px;
-    padding: 5.5rem 1.5rem;
+    padding: 5.5rem 1rem;
 }
 #ethiopia{
     color: var(--Secondary-Colour);
@@ -608,7 +610,7 @@ header{
     justify-content: space-around;
     padding: 3% 2%;
     width: 100%;
-    height: 13vh; 
+    height: 15vh; 
     line-height: 12px;
 }
 .price .left {
