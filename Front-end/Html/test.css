@@ -164,19 +164,19 @@ li{
     height: 200px;
     flex-shrink: 0;
     color: var(--Secondary-Colour);
-    font-size: 2.9rem;
+    font-size: 2.3rem;
     font-weight: 800;
     line-height: 96px;
     padding: 5.5rem 1rem;
 }
 #ethiopia{
     color: var(--Secondary-Colour);
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 800;
     line-height: 96px;
 }
 #Unique{
-    font-size: 3.2rem;
+    font-size: 2.8rem;
     color: var(--PRIMARY-COLOUR);
 }
 .location{
