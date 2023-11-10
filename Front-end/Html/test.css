@@ -494,7 +494,7 @@ header{
     background: var(--PRIMARY-COLOUR);
 }
 .trip_planner form .search_btn{
-    margin-left: 40%;
+    margin-left: 36%;
     margin-top: 5%;
     display: flex;
     width: 290px;
@@ -823,7 +823,7 @@ currency button{
     color: var(--PRIMARY-COLOUR);
   }
   .popup .content {
-    height: 75vh;
+    height: 80vh;
     /* overflow: auto; */
     overflow: hidden;
     width: 85%;
