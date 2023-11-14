@@ -30,6 +30,10 @@ User = get_user_model()
 def index(request):
     return render(request, "Html/index.html")
 
+def home(request):
+    return render(request, "Html/home.html")
+
+
 
 def register_view(request):
     if request.method == "POST":
@@ -81,7 +85,7 @@ def login_view(request):
                 if user is not None:
                     login(request, user)
                     messages.success(request, "You are logged in successfully")
-                    return redirect("userauthentication:index")
+                    return redirect("userauthentication:home")
                 else:
                     messages.warning(request, "Incorrect password")
             else:
