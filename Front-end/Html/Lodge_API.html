@@ -10,7 +10,7 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="../Html/test.css" />
+    <link rel="stylesheet" href="../Css/Lodge_api.css" />
     <!-- FONT AWESOME -->
     <link
       rel="stylesheet"
@@ -20,7 +20,7 @@
       referrerpolicy="no-referrer"
     />
 
-    <title>Seethio Home</title>
+    <title>Lodge Trip Planner API</title>
   </head>
   <body>
     <header>
@@ -486,443 +486,46 @@
   </div>
 
 <!-- MAIN CONTAINER -->
-    <div class="container1">
+    <div class="container1" id="cont1">
+      <h5 class="description" style="font-style: italic;"></h5>
         <!-- TRIP PLANNER -->
-        <div class="trip_planner">
-            <h3 style="color: #006167;">Trip Planner</h3>
-            <p style="color: #006167;">Welcome to Seethio Trip Planner</p>
-            <p> Whether you're drawn to the ancient rock-hewn churches of Lalibela, the stunning Simien Mountains, or the bustling markets of Addis Ababa, our trip planner is your gateway to crafting an unforgettable adventure. </p>
-                <form action="" class="mt-5">
-                    <div class="row">
-                        <div class="col g-5">
-                            <label for="destination1"><i class="fa-solid fa-location-dot"></i> Destination</label>
-                            <select
-                            name="Destination"
-                            id="destination1"
-                            class="border rounded "
-                            aria-label="destination1"
-                          >
-                            <option value="" selected disabled>--Select--</option>
         
-                            <option value="">Addis Ababa</option>
-                            <option value="">Axum</option>
-                            <option value="">Arba Minch</option>
-                            <option value="">Awasa</option>
-                            <option value="">Bahir Dar</option>
-                            <option value="">Dallol</option>
-                            <option value="">Gojjam</option>
-                            <option value="">Gondar</option>
-                            <option value="">Lalibela</option>
-                            <option value="">Mekele</option>
-                          </select>
-                        </div>
-                        <div class="col g-5">
-                            <label for="trip1"><i class="fa-solid fa-clock"></i> Trip Duration</label>
-                            <input type="datetime-local" id="trip1" class="border rounded text-center" >
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col g-5">
-                            <label for="interest1"><svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                              >
-                                <path
-                                  d="M11.9991 8.5L14.1151 13.5875L19.6075 14.0279L15.4229 17.6125L16.7013 22.9721L11.9991 20.1L7.29679 22.9721L8.57527 17.6125L4.39062 14.0279L9.88306 13.5875L11.9991 8.5ZM7.99907 2V11H5.99907V2H7.99907ZM17.9991 2V11H15.9991V2H17.9991ZM12.9991 2V7H10.9991V2H12.9991Z"
-                                  fill="#FABF00"
-                                />
-                              </svg> Interests</label>
-                              <select
-                              name="Interests"
-                              id="Interests"
-                              class="border rounded "
-                              aria-label="Interests"
-                            >
-                              <option value="" selected disabled>--Select--</option>
-                              <option value="">Adventure</option>
-                              <option value="">Festivals</option>
-                              <option value="">Food and Dinning</option>
-                              <option value="">Historical Centers</option>
-                              <option value="">Local Markets</option>
-                              <option value="">Mountains</option>
-                              <option value="">Parks</option>
-                              <option value="">Religious Place</option>
-                              <option value="">Wild Life</option>
-                            </select>
-                        </div>
-                        <div class="col g-5">
-                            <label for="travelertype"><svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                              >
-                                <path
-                                  d="M2 22C2 17.5817 5.58172 14 10 14C14.4183 14 18 17.5817 18 22H2ZM10 13C6.685 13 4 10.315 4 7C4 3.685 6.685 1 10 1C13.315 1 16 3.685 16 7C16 10.315 13.315 13 10 13ZM17.3628 15.2332C20.4482 16.0217 22.7679 18.7235 22.9836 22H20C20 19.3902 19.0002 17.0139 17.3628 15.2332ZM15.3401 12.9569C16.9728 11.4922 18 9.36607 18 7C18 5.58266 17.6314 4.25141 16.9849 3.09687C19.2753 3.55397 21 5.57465 21 8C21 10.7625 18.7625 13 16 13C15.7763 13 15.556 12.9853 15.3401 12.9569Z"
-                                  fill="#FABF00"
-                                />
-                              </svg> Traveler Type </label>
-                              <select
-                              name="Traveler"
-                              id="Traveler"
-                              class="border rounded "
-                              aria-label="Traveler"
-                            >
-                              <option value="" selected disabled>--Select--</option>
-                              <option value="">Business</option>
-                              <option value="">Couples</option>
-                              <option value="">Families</option>
-                              <option value="">Friends</option>
-                              <option value="">Solo</option>
-                            </select>
-                        </div>
-                    </div>
-                    <button  class="search_btn">Plan</button>
-                </form>
-                
+
+        <!-- buttons for AI planner -->
+
+        <div class="buttons">
+            <button class="add-to-bucket" style="color: #fff; background:#006167" onclick="window.location.href='#popup3'">Add to Bucketlist</button>
+            <button class="cancelButton" style="color: #E41D1D;" onclick="window.location.href='../Html/API_trip_planner.html'">Cancel</button>
         </div>
-        <!-- Activities to Explore! -->
-        
-        <div class="activites_to_explore">
-            <h4>Activities to explore !</h4>
-                    <div class="card_div">
-                        <div class="card " >
-                            <button   class="bucket">Add to Bucketlist</button>
-                            <img src="../images/activities1.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                              <h5 class="card-title">Hiking and Trekking</h5>
-                              <p class="card-text">Explore the stunning landscapes of the Simien Mountains, Bale Mountains, or the Gheralta Mountains in Tigray for exceptional trekking experiences.</p>
-                        
-                            </div>
-                          </div>
-                        <div class="card">
-                            <button class="bucket">Add to Bucketlist</button>
-                            <img src="../images/activities2.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                              <h5 class="card-title">White-Water Rafting</h5>
-                              <p class="card-text">The Omo River and Blue Nile offer thrilling white-water rafting experiences, with varying levels of difficulty.</p>
-                        
-                            </div>
-                          </div>
-                        <div class="card">
-                            <button class="bucket">Add to Bucketlist</button>
-                            <img src="../images/activities3.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                              <h5 class="card-title">Birdwatching</h5>
-                              <p class="card-text">Ethiopia is a birdwatcher's paradise with diverse bird species. Visit the Rift Valley Lakes or the Bale Mountains for birdwatching excursions..</p>
-                        
-                            </div>
-                          </div>
-                    </div>
-                
-            
-        </div>
-        <!-- Top Rated Lodge -->
-       
-        <div class="top_rated_lodge">
-            <h4>Top Rated Lodge</h4>
-            <div class="card_div">
-                <div class="card" >
-                    <button  class="bucket">Add to Bucketlist</button>
-                    <div id="carouselExampleIndicators" class="carousel slide">
-                        <div class="carousel-indicators">
-                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                        </div>
-                        <div class="carousel-inner" >
-                          <div class="carousel-item active">
-                            <img src="../images/Radison_blu1.jpg" class="d-block w-100" alt="...">
-                          </div>
-                          <div class="carousel-item">
-                            <img src="../images/Radison_blu2.png" class="d-block w-100" alt="...">
-                          </div>
-                          <div class="carousel-item">
-                            <img src="../images/Radison_blu3.png" class="d-block w-100" alt="...">
-                          </div>
-                        </div>
-                      </div>
-                      <div class="price">
-                        <div class="left">
-                            <h6>Location:</h6>
-                            <p>Kirkos, Addis Ababa</p>
-                            <a href="">View on Map</a>
-                        </div>
-                        <div class="right">
-                            <h6>Price:</h6>
-                            <p>$180/night</p>
-                        </div>
-                      </div>
-                    <div class="card-body">
-                      <h5 class="card-title">Radisson Blu Hotel</h5>
-                      <p class="card-text "><div class="d-flex">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star-half"></i>
-                        <p>4.5 (800 Reviews)</p>
-                      </div></p>
-                      <p class="card-text">The hotel has a terrace, spa center, bar and guests can enjoy a meal at the restaurant. The Rooms include deep soaking bathtubs and pillow-top beds.</p>
-                
-                    </div>
-                  </div>
-                  <div class="card">
-                    <button   class="bucket">Add to Bucketlist</button>
-                    <div id="carouselExampleIndicators1" class="carousel slide">
-                        <div class="carousel-indicators">
-                          <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                          <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                          <button type="button" data-bs-target="#carouselExampleIndicators1" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                        </div>
-                        <div class="carousel-inner">
-                          <div class="carousel-item active">
-                            <img src="../images/hayat1.jpg" class="d-block w-100" alt="...">
-                          </div>
-                          <div class="carousel-item">
-                            <img src="../images/hayat2.png" class="d-block w-100" alt="...">
-                          </div>
-                          <div class="carousel-item">
-                            <img src="../images/hayat3.png" class="d-block w-100" alt="...">
-                          </div>
-                        </div>
-                      </div>
-                      <div class="price">
-                        <div class="left">
-                            <h6>Location:</h6>
-                            <p>Kirkos, Addis Ababa</p>
-                            <a href="">View on Map</a>
-                        </div>
-                        <div class="right">
-                            <h6>Price:</h6>
-                            <p>$231/night</p>
-                        </div>
-                      </div>
-                    <div class="card-body">
-                      <h5 class="card-title">Hyatt Regency</h5>
-                      <p class="card-text"><div class="d-flex">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <p>5.0 (425 Reviews)</p>
-                      </div></p>
-                      <p class="card-text">Hyatt Regency Addis Ababa offers accommodations with a restaurant, free private parking, an outdoor swimming pool and a fitness</p>
-                
-                    </div>
-                  </div>
-                  <div class="card">
-                    <button   class="bucket">Add to Bucketlist</button>
-                    <div id="carouselExampleIndicators2" class="carousel slide">
-                        <div class="carousel-indicators">
-                          <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                          <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                          <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                        </div>
-                        <div class="carousel-inner">
-                          <div class="carousel-item active">
-                            <img src="../images/haile1.jpg" class="d-block w-100" alt="...">
-                          </div>
-                          <div class="carousel-item">
-                            <img src="../images/haile2.png" class="d-block w-100" alt="...">
-                          </div>
-                          <div class="carousel-item">
-                            <img src="../images/haile3.png" class="d-block w-100" alt="...">
-                          </div>
-                        </div>
-                      </div>
-                      <div class="price">
-                        <div class="left">
-                            <h6>Location:</h6>
-                            <p>Hawassa, Hawassa</p>
-                            <a href="">View on Map</a>
-                        </div>
-                        <div class="right">
-                            <h6>Price:</h6>
-                            <p>$125/night</p>
-                        </div>
-                      </div>
-                    <div class="card-body">
-                      <h5 class="card-title">Haile Resort</h5>
-                      <p class="card-text">
-                        <div class="d-flex">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <p>4.0 (512 Reviews)</p>
-                          </div>
-                      </p>
-                      <p class="card-text">The hotel gives a spectacular view of the lake Hawassa that blends the rich mosaic cultural with southern warm hospitality.</p>
-                
-                    </div>
-                  </div>
+        <!-- Popup for the lodge and flight api -->
+        <div id="popup3" class="overlay overlaylodge">
+            <div class="popup_lodge">
+                <svg xmlns="http://www.w3.org/2000/svg" width="210" height="215" viewBox="0 0 210 215" fill="none">
+                    <g filter="url(#filter0_d_2532_7902)">
+                      <circle cx="105" cy="100" r="100" fill="white"/>
+                      <path d="M143.973 50.0178C142.136 48.9958 140.116 48.3459 138.028 48.1052C135.94 47.8645 133.825 48.0378 131.804 48.6151C129.783 49.1924 127.896 50.1624 126.25 51.4697C124.604 52.777 123.232 54.3959 122.213 56.2338L92.5086 109.69L75.5086 92.6898C74.0327 91.1616 72.2671 89.9427 70.3151 89.1042C68.363 88.2656 66.2635 87.8242 64.139 87.8058C62.0146 87.7873 59.9077 88.1921 57.9413 88.9966C55.975 89.8011 54.1886 90.9892 52.6863 92.4915C51.184 93.9937 49.996 95.7802 49.1915 97.7465C48.387 99.7129 47.9821 101.82 48.0006 103.944C48.0191 106.069 48.4604 108.168 49.299 110.12C50.1375 112.072 51.3564 113.838 52.8846 115.314L84.8846 147.314C87.9086 150.346 91.9886 152.01 96.1966 152.01L98.4126 151.85C100.865 151.507 103.204 150.599 105.246 149.198C107.288 147.798 108.977 145.942 110.181 143.778L150.181 71.7778C151.202 69.9414 151.851 67.9218 152.092 65.8344C152.333 63.747 152.16 61.6326 151.583 59.612C151.007 57.5914 150.038 55.7041 148.732 54.0579C147.426 52.4117 145.809 51.0389 143.973 50.0178Z" fill="#006167"/>
+                    </g>
+                    <defs>
+                      <filter id="filter0_d_2532_7902" x="0" y="0" width="210" height="215" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                        <feOffset dy="10"/>
+                        <feGaussianBlur stdDeviation="2.5"/>
+                        <feComposite in2="hardAlpha" operator="out"/>
+                        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0"/>
+                        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2532_7902"/>
+                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2532_7902" result="shape"/>
+                      </filter>
+                    </defs>
+                  </svg>
+              <a class="close" href="#">&times;</a>
+              <div class="content_lodge">
+                <p>Itinerary saved to Bucketlist</p>
+                <button class="continue" onclick="window.location.href='#cont1'">Continue</button>
+
+              </div>
             </div>
-       
-
-
-        </div>
-
-
-        <!-- Restaurants and Dinings -->
-        <div class="restaurants_and_dinings">
-            <h4>Top Rated Restaurants</h4>
-            <div class="card_div">
-                <div class="card">
-                    <button  class="bucket">Add to Bucketlist</button>
-                    <div id="carouselExampleIndicators3" class="carousel slide">
-                        <div class="carousel-indicators">
-                          <button type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                          <button type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                          <button type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                        </div>
-                        <div class="carousel-inner">
-                          <div class="carousel-item active">
-                            <img src="../images/yodAbyssinia.png" class="d-block w-100" alt="...">
-                          </div>
-                          <div class="carousel-item">
-                            <img src="../images/yodAbyssinia1.png" class="d-block w-100" alt="...">
-                          </div>
-                          <div class="carousel-item">
-                            <img src="../images/yodAbyssinia2.png" class="d-block w-100" alt="...">
-                          </div>
-                        </div>
-                      </div>
-                      <div class="price">
-                        <div class="left">
-                            <h6>Location:</h6>
-                            <p>Kirkos, Addis Ababa</p>
-                            <a href="">View on Map</a>
-                        </div>
-                        <div class="right">
-                            <h6>Price:</h6>
-                            <p>From $20</p>
-                        </div>
-                      </div>
-                    <div class="card-body">
-                      <h5 class="card-title">Yod Abyssinia</h5>
-                      <p class="card-text"> <div class="d-flex">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star-half"></i>
-                        <p>4.5 (800 Reviews)</p>
-                      </div></p>
-                      <p class="card-text">CUISINES <br>
-                        African, Healthy, Ethiopian</p>
-                        <a
-                        href="https://yodabissiniaethiopiantraditionalrestaurant.com/"
-                        >View all details</a
-                      >
-                    </div>
-                  </div>
-                  <div class="card">
-                    <button  class="bucket">Add to Bucketlist</button>
-                    <div id="carouselExampleIndicators4" class="carousel slide">
-                        <div class="carousel-indicators">
-                          <button type="button" data-bs-target="#carouselExampleIndicators4" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                          <button type="button" data-bs-target="#carouselExampleIndicators4" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                          <button type="button" data-bs-target="#carouselExampleIndicators4" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                        </div>
-                        <div class="carousel-inner">
-                          <div class="carousel-item active">
-                            <img src="../images/Verres1.jpg" class="d-block w-100" alt="...">
-                          </div>
-                          <div class="carousel-item">
-                            <img src="../images/Verres2.png" class="d-block w-100" alt="...">
-                          </div>
-                          <div class="carousel-item">
-                            <img src="../images/Verres3.png" class="d-block w-100" alt="...">
-                          </div>
-                        </div>
-                      </div>
-                      <div class="price">
-                        <div class="left">
-                            <h6>Location:</h6>
-                            <p>Kirkos, Addis Ababa</p>
-                            <a href="">View on Map</a>
-                        </div>
-                        <div class="right">
-                            <h6>Price:</h6>
-                            <p>From $30</p>
-                        </div>
-                      </div>
-                    <div class="card-body">
-                      <h5 class="card-title">Verres en Vers</h5>
-                      <p class="card-text">
-                        <div class="d-flex">
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <i class="fa-solid fa-star"></i>
-                            <p>5.0 (425 Reviews)</p>
-                          </div>
-                      </p>
-                      <p class="card-text">CUISINES <br>
-                        African, International, Ethiopian</p>
-                        <a
-                        href="https://www.radissonhotels.com/en-us/hotels/radisson-blu-addis-ababa"
-                        >View all details</a
-                      >
-                
-                    </div>
-                  </div>
-                  <div class="card">
-                    <button  class="bucket">Add to Bucketlist</button>
-                    <div id="carouselExampleIndicators5" class="carousel slide">
-                        <div class="carousel-indicators">
-                          <button type="button" data-bs-target="#carouselExampleIndicators5" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                          <button type="button" data-bs-target="#carouselExampleIndicators5" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                          <button type="button" data-bs-target="#carouselExampleIndicators5" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                        </div>
-                        <div class="carousel-inner">
-                          <div class="carousel-item active">
-                            <img src="../images/kategna1.jpg" class="d-block w-100" alt="...">
-                          </div>
-                          <div class="carousel-item">
-                            <img src="../images/kategna2.png" class="d-block w-100" alt="...">
-                          </div>
-                          <div class="carousel-item">
-                            <img src="../images/kategna3.png" class="d-block w-100" alt="...">
-                          </div>
-                        </div>
-                      </div>
-                      <div class="price">
-                        <div class="left">
-                            <h6>Location:</h6>
-                            <p>Kirkos, Addis Ababa</p>
-                            <a href="">View on Map</a>
-                        </div>
-                        <div class="right">
-                            <h6>Price:</h6>
-                            <p>From $30</p>
-                        </div>
-                      </div>
-                    <div class="card-body">
-                      <h5 class="card-title">Kategna Restaurant</h5>
-                      <p class="card-text">          <div class="d-flex">
-                          <i class="fa-solid fa-star"></i>
-                          <i class="fa-solid fa-star"></i>
-                          <i class="fa-solid fa-star"></i>
-                          <i class="fa-solid fa-star"></i>
-                
-                          <p>4.0 (512 Reviews)</p>
-                        </div></p>
-                        <p class="card-text">CUISINES <br>
-                          African, Ethiopian</p>
-                          <a href="https://kategnarestaurant.com/">View all details</a>
-                    </div>
-                  </div>
-            </div>
-       
-        </div>
+          </div>
     </div>
 
     <div class="container2">
@@ -1565,7 +1168,7 @@
       </div>
     </div>
   </footer>
-    <script src="../Js/home.js"></script>
+    <script src="../Js/API_trip.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"

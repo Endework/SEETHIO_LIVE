@@ -1,0 +1,714 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Nunito+Sans:opsz,wght@6..12,200;6..12,300;6..12,400;6..12,500&family=Public+Sans:wght@200;300;400&family=Roboto:wght@400;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito Sans', sans-serif;
+    
+    
+}
+/* ROOT VARIABLES */
+:root{
+    --Secondary-Colour:#006167;
+    --PRIMARY-COLOUR:#FABF00;
+    --Unsecondary-Colour:#FFF;
+}
+
+a{
+  text-decoration: none;
+}
+li{
+  list-style: none;
+}
+header{
+  width: 100%;
+  background: #EBF7EC;
+  position: relative;
+  /* z-index: -1; */
+}
+header .middle{
+  position: absolute;
+  top:-10%;
+  left: 50%;
+
+}
+header .end{
+  position: absolute;
+  top:-10%;
+  right: 0%;
+}
+.container1{
+    background: var(--Secondary-Colour);
+    width: 100%;
+    height: 150vh;
+    position: relative;
+    
+
+}
+.trip_planner{
+    background-color: var(--Unsecondary-Colour);
+   
+    width: 80%;
+    position: absolute;
+    left: 10%;
+    top: 10%;
+    bottom: 15%;
+    border-radius: 15px;
+    background: var(--UNPRIMARY-COLOUR, #FFF);
+    padding: 5% 8%;
+    box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.15);
+  
+    
+}
+.trip_planner form .search_btn , .featured_deals .search-btn{
+    margin-left: 36%;
+    margin-top: 5%;
+    display: flex;
+    width: 290px;
+    height: 70px;
+    padding: 12px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    background: var(--Secondary-Colour, #006167);
+    border: none;
+    color: var(--Unsecondary-Colour);
+    font-weight: 500;
+    font-size: 20px;
+
+}
+.trip_planner form .search_btn:hover , .currency form .search_btn:hover , .featured_deals .search-btn:hover{
+    color: var(--Secondary-Colour);
+    background: var(--PRIMARY-COLOUR);
+}
+.trip_planner .card{
+    margin: 1% 1%;
+}
+.trip_planner p , .trip_planner h3{
+    text-align: center;
+}
+.trip_planner p{
+  color: var(--Subwords, rgba(18, 18, 18, 0.70));
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.15px;
+}
+.trip_planner h3{
+color: var(--Secondary-Colour, #006167);
+text-align: center;
+font-size: 2rem;
+font-style: normal;
+font-weight: 500;
+line-height: 32px; /* 100% */
+margin-bottom: 5%;
+}
+.trip_planner label{
+  color: var(--Secondary-Colour, #006167);
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: 24px; /* 120% */
+}
+.trip_planner select, .trip_planner input{
+    width: 100%;
+    height: 6vh;
+    border-radius: 10px;
+    border: 2px solid var(--Line-Colour, rgba(137, 137, 137, 0.50));
+    background: var(--UNPRIMARY-COLOUR, #FFF);
+}
+.trip_planner .share{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    cursor: pointer;
+    
+}
+.trip_planner .share p{
+  font-size: 1rem;
+}
+
+.carousel-indicators button {
+    border-radius: 100% !important; /* This makes the indicator round */
+    padding: 5px !important;
+    width: 5px !important;
+    height: 5px !important;
+    color: var(--Secondary-Colour) !important;
+    
+}
+.container2 .buttons .share svg{
+  cursor: pointer;
+}
+
+.trip_planner .share .fa-share{
+    color: var(--Secondary-Colour);
+    font-size: 2rem;
+}
+/* Trip planner Popup */
+/* Trip planner Popup */
+.overlay {
+  position: fixed;
+  top: 10%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 100;
+
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+.popup_trip {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 70px auto;
+  padding: 25px;
+  background: linear-gradient(180deg, rgba(215, 229, 239, 0.548) 0%, #D7EFDA 100%);
+  border-radius: 5px;
+  width: 40%;
+  position: relative;
+  transition: all 1s ease-in-out;
+  color:  #121212;
+  border-radius: 15px;
+}
+.fa-solid{
+  color: var(--PRIMARY-COLOUR);
+}
+ hr{
+  border: 1px solid black;
+  width: 100%;
+ }
+.popup_trip p {
+  color:  #121212
+}
+.popup_trip .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--Secondary-Colour)
+}
+.popup_trip .close:hover  {
+  color: var(--PRIMARY-COLOUR);
+}
+.popup_trip .content_trip .invite #copylink:hover{
+  background: var(--PRIMARY-COLOUR);
+  color: var(--Secondary-Colour);
+}
+.popup_trip .content_trip {
+  max-height: 30%;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.popup_trip .content_trip .invite{
+  margin-top: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.popup_trip .content_trip .invite .message{
+  display: none;
+}
+.popup_trip .content_trip .invite .message .fa-circle-check{
+  color: green;
+  margin-top: 5px;
+}
+.popup_trip .content_trip .invite .message p{
+  color: var(--Secondary-Colour);
+}
+.popup_trip .content_trip .invite #copylink{
+  display: flex;
+  width: 40%;
+  height: 15%;
+  padding: 12px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  border-radius: 5px;
+  background: var(--Secondary-Colour, #006167);
+  border: none;
+  color: var(--Unsecondary-Colour);
+  font-size: 20px;
+}
+.content_trip .continue{
+  background: var(--Secondary-Colour);
+  color: var(--Unsecondary-Colour);
+  border: none;
+  width: 70%;
+  height: 50px;
+  border: none;
+  font-family: Nunito;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+ .container2 .buttons{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  position: absolute;
+  bottom: 7%;
+  left: 30%;
+}
+.container2 .buttons button{
+  display: flex;
+  width: 290px;
+  height: 70px;
+  padding: 12px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border: none;
+  font-family: Nunito;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.container2{
+  background: var(--Unsecondary-Colour);
+  height: 4494px;
+  position: relative;
+}
+
+
+
+.card_div{
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  gap: 2%;
+}
+ .featured_deals{
+  margin: 10%;
+  
+}
+.price{
+  background-color: #FABF00;
+  border-radius: 15px;
+  display: flex;
+  justify-content: space-around;
+  padding: 3% 2%;
+  width: 100%;
+  height: 15vh; 
+  line-height: 12px;
+}
+.price .left {
+  border-right: 1px solid black;
+  padding-right: 10%;
+}
+.bucket{
+  display: flex;
+  width: 170px;
+  height: 40px;
+  padding: 12px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  border-radius: 5px 15px 5px 5px;
+  margin-left:55.5%;
+  background: var(--Secondary-Colour, #006167);
+  border: none;
+  color: var(--Unsecondary-Colour);
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+}
+.bucket:hover{
+  color: var(--Secondary-Colour);
+  background: var(--PRIMARY-COLOUR);
+}
+
+.container3 h4 {
+  color: var(--Text-Colour, #121212);
+  font-family: Nunito;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px; /* 100% */
+}
+.container3{
+  width:100%;
+  background-color: white;
+}
+.rivan{
+  background: var(--Secondary-Colour, #006167);
+  position: relative;
+}
+.rivan svg{
+  font-size: 5rem;
+  position: absolute;
+  top: -50%;
+  left: 15%;
+ 
+}
+.rivan p{
+  display: flex;
+  text-align: center;
+  padding-left: 30%;
+  padding-right: 10%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  color: var(--UNPRIMARY-COLOUR, #FFF);
+  text-align: center;;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 32px; /* 160% */
+  
+}
+#deal1 ,#deal2{
+  position: relative;
+}
+#deal11, #deal12{
+  position: absolute;
+  top: 0;
+  left: 0;
+  fill: #D9D9D9;
+  filter: drop-shadow(0px 8px 10px rgba(0, 0, 0, 0.20));
+
+}
+.deal svg{
+  font-size: 5rem;
+  position: absolute;
+  top: -50%;
+  left: 15%;
+ 
+}
+.card {
+  width: 100%;
+  box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.15);
+  border-radius: 15px;
+  position: relative;
+}
+.card-title{
+  color: var(--Secondary-Colour);
+}
+.card img{
+  width: 100%;
+  height: 50vh;
+  border-radius: 15px;
+  
+}
+.currency{
+  background: var(--Secondary-Colour, #006167);
+  height: 641px;
+  padding-top: 5%;
+  padding-bottom: 5%;
+  padding-inline: 20%;
+  text-align: center;
+  color: var(--UNPRIMARY-COLOUR, #FFF);
+  
+}
+.currency .row{
+  margin-bottom: 5% !important;
+
+}
+.currency button{
+  display: flex;
+  width: 335px;
+  height: 70px;
+  padding: 12px 24px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  border: none;
+  border-radius: 5px;
+  background: var(--UNPRIMARY-COLOUR, #FFF);
+  margin-inline: 30% ;
+  color: var(--Secondary-Colour, #006167);;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: normal;
+}
+.currency button:hover
+{
+  background: #FABF00;
+  color: #006167;
+}
+.currency .row .col{
+  color: black;
+
+}
+.currency .money{
+  border-radius: 10px;
+  border: 2px solid var(--Line-Colour, rgba(137, 137, 137, 0.50));
+  background: var(--UNPRIMARY-COLOUR, #FFF);
+  width: 335px;
+  height: 60px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.currency .money .right select{
+  border: none !important;
+  
+}
+.currency .money .right .form-div{
+  padding-top: 8% !important;
+
+}
+/* Water drop */
+.water_drop{
+  background: #EBF7EC;
+  position: relative;
+ 
+  height: 280px;
+  flex-shrink: 0;
+}
+.water_drop .left{
+  position: absolute;
+  left: 10%;
+  top: 30%;
+}
+.water_drop .top{
+  position: absolute;
+  left: 50%;
+  top: 15%;
+}
+.water_drop .right{
+  position: absolute;
+  right: 15%;
+  top: 55%;
+}
+/* pop up */
+
+.overlay {
+  position: fixed;
+  top: 10%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+.popup {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* margin: 70px auto; */
+  margin: 35px auto;
+  padding: 30px 25px;
+  /* background: linear-gradient(180deg, rgba(215, 229, 239, 0.548) 0%, #D7EFDA 100%); */
+  max-width: 45%;
+  position: relative;
+  transition: all 1s ease-in-out;
+  color:  #121212;
+  border-radius: 15px;
+  border: 2px solid var(--Secondary-Colour, #006167);
+  background-image: url('/Front-end/images/Polygon\ 10.svg'), url('/Front-end/images/Polygon\ 9.svg'), url('/Front-end/images/Polygon\ 13.svg'), url('/Front-end/images/Polygon\ 12.svg'), url('/Front-end/images/Polygon\ 11.svg'), url('/Front-end/images/Polygon\ 14.svg');
+  background-color:#D7EFDA;
+  /* Position and size of the images */
+  background-position: 0% 60%,  100% 15%, 5% 0%, 100% 95%,50% 100%, 80% 5%;
+  /* background-size: 25px 50px, 75px,25px, 15px 20px ,10px 12px ,18px 20px , 25px 12px;   */
+  background-repeat: no-repeat;
+  z-index: -1;
+}
+
+
+.popup h5{
+  margin-top: 8%;
+  color:  var(--Secondary-Colour)
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--Secondary-Colour)
+}
+.popup .close:hover {
+  color: var(--PRIMARY-COLOUR);
+}
+.popup .content {
+  height: 80vh;
+  /* overflow: auto; */
+  overflow: hidden;
+  width: 85%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--UNPRIMARY-COLOUR, #FFF);
+  
+}
+.popup .content .row{
+  padding-left: 8%;
+  margin-top: 4%;
+}
+.popup .content .row .bank a{
+  color: var(--Secondary-Colour);
+  text-decoration: underline;
+}
+
+/* footer */
+
+/* FOOTER */
+footer span{
+  color: var(--PRIMARY-COLOUR)
+}
+
+footer .help {
+  line-height: 30px;
+
+}
+footer .help p{
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--Unsecondary-Colour);
+  
+}
+
+footer .help p span{
+  font-size: 22px;
+  font-weight: 500;
+ 
+}
+.fa-brands {
+  color: var(--PRIMARY-COLOUR);
+  font-size: 25px;
+  
+}
+.title{
+  font-size: 18px;
+  text-transform: uppercase;
+}
+footer{
+  background-color: var(--Secondary-Colour);
+  width: 100%;
+  
+
+}
+footer .container{
+  padding: 3% 5.25% 0.75% 5.25%;
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+}
+.container .help .social-icon{
+  margin-top: 15px;
+display: flex;
+justify-content: space-between;
+}
+
+footer .container .links{
+  display: flex;
+  /* justify-content: space-between; */
+  gap: 3.5%;
+  align-items: flex-start;
+ line-height: 10px;
+ width: 463px;
+
+}
+footer .container .links p{
+  color: var(--Unsecondary-Colour);
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 250%; /* 40px */
+}
+footer .container .subscribe p span{
+  color: var(--PRIMARY-COLOUR);
+  font-family: 'Nunito Sans', sans-serif;
+  font-weight: 400;
+}
+footer .footer-wrapper , footer .footer{
+  padding: 3% 5.25% 0.75% 5.25%;
+}
+footer .footer {
+  display: flex;
+  justify-content: space-between;
+}
+footer .content{
+  display: flex;
+  justify-content: space-between;
+  
+}
+footer .subscribe input{
+  display: flex;
+  width: 249px;
+  height: 43px;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  border-radius: 5px;
+  background: var(--Unsecondary-Colour);
+  border: none;
+  
+}
+.form{
+  position: relative;
+}
+.subscribe button{
+  display: flex;
+ color: black;
+  width: 50px;
+  height: 43px;
+  padding: 13px 8px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  border-radius: 5px;
+  border: 1px solid var(--Unsecondary-Colour);
+  background: var(--PRIMARY-COLOUR);
+}
+.subscribe button:hover{
+  color: white;
+  background-color: var(--Secondary-Colour);
+}
+footer ::placeholder{
+  width: 224px;
+  padding: 5px 15px 5px 5px;
+  height: 24px;
+  flex-shrink: 0;
+  color: #CECBC2;
+}
+footer form input{
+  background-color: var(--Unsecondary-Colour) !important;
+}
+
+
+.copyright p{
+  font-family: 'Public Sans', sans-serif;
+}

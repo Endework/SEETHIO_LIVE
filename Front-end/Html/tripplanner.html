@@ -1,0 +1,1150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../Css/tripplanner.css" />
+    <!-- FONT AWESOME -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <title>Seethio Trip Planner</title>
+  </head>
+
+  <body>
+    <!-- header -->
+    <header>
+      <img src="../images/seethio_logo.png" width="15%" alt="" />
+
+      <img class="middle" src="../images/Polygon 10.svg" alt="" />
+      <img class="end" src="../images/Polygon 13.svg" alt="" />
+    </header>
+    <!-- MAIN CONTAINER -->
+
+    <div class="container1">
+      <div class="back" style="color: #fff; padding: 2%; cursor: pointer">
+        <p onclick="window.location.href='../Html/API_trip_planner.html'">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+          >
+            <path
+              d="M19 11H7.14L10.77 6.63997C10.9397 6.43575 11.0214 6.17247 10.997 5.90805C10.9726 5.64362 10.8442 5.39971 10.64 5.22997C10.4358 5.06023 10.1725 4.97857 9.90808 5.00295C9.64365 5.02733 9.39974 5.15575 9.23 5.35997L4.23 11.36C4.19636 11.4077 4.16628 11.4578 4.14 11.51C4.14 11.56 4.14 11.59 4.07 11.64C4.02467 11.7546 4.00094 11.8767 4 12C4.00094 12.1233 4.02467 12.2453 4.07 12.36C4.07 12.41 4.07 12.44 4.14 12.49C4.16628 12.5421 4.19636 12.5922 4.23 12.64L9.23 18.64C9.32402 18.7529 9.44176 18.8436 9.57485 18.9059C9.70793 18.9681 9.85309 19.0002 10 19C10.2337 19.0004 10.4601 18.9191 10.64 18.77C10.7413 18.686 10.825 18.5829 10.8863 18.4666C10.9477 18.3502 10.9855 18.2229 10.9975 18.0919C11.0096 17.961 10.9957 17.8289 10.9567 17.7033C10.9176 17.5777 10.8542 17.461 10.77 17.36L7.14 13H19C19.2652 13 19.5196 12.8946 19.7071 12.7071C19.8946 12.5195 20 12.2652 20 12C20 11.7348 19.8946 11.4804 19.7071 11.2929C19.5196 11.1053 19.2652 11 19 11Z"
+              fill="white"
+            />
+          </svg>
+          Back
+        </p>
+      </div>
+      <div class="trip_planner">
+        <h3 style="color: #006167">Trip Planner</h3>
+        <p style="color: #006167">Welcome to Seethio Trip Planner</p>
+        <p>
+          Whether you're drawn to the ancient rock-hewn churches of Lalibela,
+          the stunning Simien Mountains, or the bustling markets of Addis Ababa,
+          our trip planner is your gateway to crafting an unforgettable
+          adventure.
+        </p>
+        <form action="" class="mt-5">
+          <div class="row">
+            <div class="col g-5">
+              <label for="destination1"
+                ><i class="fa-solid fa-location-dot"></i> Destination</label
+              >
+              <select
+                name="Destination"
+                id="destination1"
+                class="border rounded text-center"
+                aria-label="destination1"
+                style="color:rgba(0, 0, 0, 0.50)"
+              >
+                <option value="" selected disabled>--Select--</option>
+
+                <option value="">Addis Ababa</option>
+                <option value="">Axum</option>
+                <option value="">Arba Minch</option>
+                <option value="">Awasa</option>
+                <option value="">Bahir Dar</option>
+                <option value="">Dallol</option>
+                <option value="">Gojjam</option>
+                <option value="">Gondar</option>
+                <option value="">Lalibela</option>
+                <option value="">Mekele</option>
+              </select>
+            </div>
+            <div class="col g-5">
+              <label for="trip1"
+                ><i class="fa-solid fa-clock"></i> Trip Duration</label
+              >
+              <input
+                type="datetime-local"
+                id="trip1"
+                class="border rounded text-center"
+                style="color:rgba(0, 0, 0, 0.50)"
+              />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col g-5">
+              <label for="interest1"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <path
+                    d="M11.9991 8.5L14.1151 13.5875L19.6075 14.0279L15.4229 17.6125L16.7013 22.9721L11.9991 20.1L7.29679 22.9721L8.57527 17.6125L4.39062 14.0279L9.88306 13.5875L11.9991 8.5ZM7.99907 2V11H5.99907V2H7.99907ZM17.9991 2V11H15.9991V2H17.9991ZM12.9991 2V7H10.9991V2H12.9991Z"
+                    fill="#FABF00"
+                  />
+                </svg>
+                Interests</label
+              >
+              <select
+                name="Interests"
+                id="Interests"
+                class="border rounded text-center"
+                aria-label="Interests"
+                style="color:rgba(0, 0, 0, 0.50)"
+              >
+                <option value="" selected disabled>--Select--</option>
+                <option value="">Adventure</option>
+                <option value="">Festivals</option>
+                <option value="">Food and Dinning</option>
+                <option value="">Historical Centers</option>
+                <option value="">Local Markets</option>
+                <option value="">Mountains</option>
+                <option value="">Parks</option>
+                <option value="">Religious Place</option>
+                <option value="">Wild Life</option>
+              </select>
+            </div>
+            <div class="col g-5">
+              <label for="travelertype"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <path
+                    d="M2 22C2 17.5817 5.58172 14 10 14C14.4183 14 18 17.5817 18 22H2ZM10 13C6.685 13 4 10.315 4 7C4 3.685 6.685 1 10 1C13.315 1 16 3.685 16 7C16 10.315 13.315 13 10 13ZM17.3628 15.2332C20.4482 16.0217 22.7679 18.7235 22.9836 22H20C20 19.3902 19.0002 17.0139 17.3628 15.2332ZM15.3401 12.9569C16.9728 11.4922 18 9.36607 18 7C18 5.58266 17.6314 4.25141 16.9849 3.09687C19.2753 3.55397 21 5.57465 21 8C21 10.7625 18.7625 13 16 13C15.7763 13 15.556 12.9853 15.3401 12.9569Z"
+                    fill="#FABF00"
+                  />
+                </svg>
+                Traveler Type
+              </label>
+              <select
+                name="Traveler"
+                id="Traveler"
+                class="border rounded text-center "
+                aria-label="Traveler"
+                style="color:rgba(0, 0, 0, 0.50)"
+              >
+                <option value="" selected disabled>--Select--</option>
+                <option value="">Business</option>
+                <option value="">Couples</option>
+                <option value="">Families</option>
+                <option value="">Friends</option>
+                <option value="">Solo</option>
+              </select>
+            </div>
+          </div>
+          <button class="search_btn">Plan</button>
+        </form>
+        <div class="share">
+          <svg
+            onclick="window.location.href='#popup2'"
+            class="fa-share"
+            xmlns="http://www.w3.org/2000/svg"
+            width="28"
+            height="23"
+            viewBox="0 0 28 23"
+            fill="none"
+          >
+            <path
+              d="M27.5 11L17 0.5V6.5C6.5 8 2 15.5 0.5 23C4.25 17.75 9.5 15.35 17 15.35V21.5L27.5 11Z"
+              fill="#006167"
+            />
+          </svg>
+
+          <p>Share Tour Planner</p>
+        </div>
+
+        <!-- Share popup -->
+        <div id="popup2" class="overlay">
+          <div class="popup_trip">
+            <a class="close" href="#">&times;</a>
+            <div class="content_trip">
+              <div class="invite">
+                <p>
+                  Sarah is inviting you to try out the Seethio AI planner
+                  feature. <br />
+                  Plan your trip to Ethiopia with Ease!
+                </p>
+                <button id="copylink">Copy Link</button>
+                <div class="message">
+                  <p>
+                    <i class="fa-solid fa-circle-check"></i> Link Copied to
+                    Clipboard
+                  </p>
+                </div>
+              </div>
+              <hr>
+              <div class="share_platform">
+                <h6>Select your preferred sharing platform</h6>
+                <div class="icons">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="72"
+                    height="72"
+                    viewBox="0 0 72 72"
+                    fill="none"
+                  >
+                    <g clip-path="url(#clip0_2596_6615)">
+                      <path
+                        d="M64.6593 11.9996C64.3867 11.9715 64.1119 11.9715 63.8393 11.9996H7.8393C7.48038 12.0051 7.12385 12.0589 6.7793 12.1596L35.6793 40.9396L64.6593 11.9996Z"
+                        fill="#006167"
+                      />
+                      <path
+                        d="M67.6194 14.7793L38.4994 43.7793C37.7499 44.5243 36.7361 44.9425 35.6794 44.9425C34.6226 44.9425 33.6088 44.5243 32.8594 43.7793L3.99938 14.9993C3.91065 15.3254 3.86361 15.6614 3.85938 15.9993V55.9993C3.85938 57.0602 4.2808 58.0776 5.03095 58.8277C5.78109 59.5779 6.79851 59.9993 7.85938 59.9993H63.8594C64.9202 59.9993 65.9377 59.5779 66.6878 58.8277C67.438 58.0776 67.8594 57.0602 67.8594 55.9993V15.9993C67.8435 15.5826 67.7625 15.171 67.6194 14.7793ZM10.5994 55.9993H7.81938V53.1393L22.3594 38.7193L25.1794 41.5393L10.5994 55.9993ZM63.8194 55.9993H61.0194L46.4394 41.5393L49.2594 38.7193L63.7994 53.1393L63.8194 55.9993Z"
+                        fill="#006167"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_2596_6615">
+                        <rect width="72" height="72" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="60"
+                    height="60"
+                    viewBox="0 0 60 60"
+                    fill="none"
+                  >
+                    <path
+                      d="M34.8525 25.98L53.8388 3.75H49.3388L32.8575 23.0512L19.6875 3.75H4.5L24.4125 32.94L4.5 56.25H9L26.4075 35.865L40.3163 56.25H55.5038L34.8525 25.98ZM28.6913 33.195L26.6738 30.2887L10.62 7.1625H17.5313L30.4838 25.8263L32.5013 28.7325L49.3425 52.995H42.4313L28.6913 33.195Z"
+                      fill="black"
+                    />
+                  </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="60"
+                    height="60"
+                    viewBox="0 0 60 60"
+                    fill="none"
+                  >
+                    <g clip-path="url(#clip0_2596_6619)">
+                      <path
+                        d="M45.9375 0H14.0625C6.296 0 0 6.296 0 14.0625V45.9375C0 53.704 6.296 60 14.0625 60H45.9375C53.704 60 60 53.704 60 45.9375V14.0625C60 6.296 53.704 0 45.9375 0Z"
+                        fill="url(#paint0_radial_2596_6619)"
+                      />
+                      <path
+                        d="M45.9375 0H14.0625C6.296 0 0 6.296 0 14.0625V45.9375C0 53.704 6.296 60 14.0625 60H45.9375C53.704 60 60 53.704 60 45.9375V14.0625C60 6.296 53.704 0 45.9375 0Z"
+                        fill="url(#paint1_radial_2596_6619)"
+                      />
+                      <path
+                        d="M30.0021 6.5625C23.637 6.5625 22.838 6.59039 20.3381 6.70406C17.843 6.81844 16.1398 7.21336 14.6496 7.79297C13.1079 8.39156 11.8003 9.19242 10.4977 10.4955C9.19383 11.7984 8.39297 13.106 7.7925 14.647C7.21125 16.1377 6.81586 17.8416 6.70359 20.3355C6.5918 22.8356 6.5625 23.6348 6.5625 30.0002C6.5625 36.3656 6.59063 37.162 6.70406 39.6619C6.81891 42.157 7.21383 43.8602 7.79297 45.3504C8.39203 46.8921 9.19289 48.1997 10.496 49.5023C11.7984 50.8062 13.106 51.6089 14.6466 52.2075C16.1379 52.7871 17.8413 53.182 20.336 53.2964C22.8361 53.4101 23.6344 53.438 29.9993 53.438C36.3652 53.438 37.1616 53.4101 39.6614 53.2964C42.1566 53.182 43.8616 52.7871 45.353 52.2075C46.894 51.6089 48.1997 50.8062 49.5019 49.5023C50.8057 48.1997 51.6063 46.8921 52.207 45.3511C52.7831 43.8602 53.1787 42.1566 53.2959 39.6623C53.4082 37.1625 53.4375 36.3656 53.4375 30.0002C53.4375 23.6348 53.4082 22.8361 53.2959 20.336C53.1787 17.8409 52.7831 16.1379 52.207 14.6477C51.6063 13.106 50.8057 11.7984 49.5019 10.4955C48.1983 9.19195 46.8945 8.39109 45.3516 7.7932C43.8574 7.21336 42.1533 6.8182 39.6581 6.70406C37.158 6.59039 36.3621 6.5625 29.9948 6.5625H30.0021ZM27.8995 10.7862C28.5237 10.7852 29.22 10.7862 30.0021 10.7862C36.2602 10.7862 37.0017 10.8087 39.473 10.9209C41.7581 11.0255 42.9984 11.4073 43.8246 11.7281C44.9184 12.1528 45.6982 12.6607 46.518 13.4812C47.3384 14.3016 47.846 15.0827 48.2719 16.1766C48.5927 17.0016 48.975 18.2419 49.0791 20.527C49.1913 22.9978 49.2157 23.7398 49.2157 29.9948C49.2157 36.2498 49.1913 36.9921 49.0791 39.4627C48.9745 41.7478 48.5927 42.9881 48.2719 43.8134C47.8472 44.9072 47.3384 45.686 46.518 46.5059C45.6977 47.3262 44.9189 47.8338 43.8246 48.2587C42.9994 48.581 41.7581 48.9619 39.473 49.0664C37.0022 49.1787 36.2602 49.203 30.0021 49.203C23.7438 49.203 23.002 49.1787 20.5315 49.0664C18.2463 48.9609 17.006 48.5791 16.1791 48.2583C15.0855 47.8334 14.3041 47.3257 13.4838 46.5054C12.6635 45.6851 12.1559 44.9058 11.73 43.8115C11.4091 42.9862 11.0269 41.7459 10.9228 39.4608C10.8105 36.99 10.788 36.248 10.788 29.989C10.788 23.7302 10.8105 22.992 10.9228 20.5212C11.0273 18.236 11.4091 16.9957 11.73 16.1695C12.1549 15.0757 12.6635 14.2945 13.4841 13.4742C14.3044 12.6539 15.0855 12.146 16.1794 11.7204C17.0055 11.3981 18.2463 11.0173 20.5315 10.9123C22.6936 10.8145 23.5315 10.7852 27.8995 10.7803V10.7862ZM42.5131 14.6777C40.9603 14.6777 39.7006 15.9363 39.7006 17.4893C39.7006 19.042 40.9603 20.3018 42.5131 20.3018C44.0658 20.3018 45.3256 19.042 45.3256 17.4893C45.3256 15.9366 44.0658 14.6768 42.5131 14.6768V14.6777ZM30.0021 17.9639C23.3552 17.9639 17.966 23.3531 17.966 30.0002C17.966 36.6473 23.3552 42.034 30.0021 42.034C36.6492 42.034 42.0366 36.6473 42.0366 30.0002C42.0366 23.3534 36.6488 17.9639 30.0016 17.9639H30.0021ZM30.0021 22.1876C34.3167 22.1876 37.8148 25.6852 37.8148 30.0002C37.8148 34.3148 34.3167 37.8129 30.0021 37.8129C25.6873 37.8129 22.1897 34.3148 22.1897 30.0002C22.1897 25.6852 25.6873 22.1876 30.0021 22.1876Z"
+                        fill="white"
+                      />
+                    </g>
+                    <defs>
+                      <radialGradient
+                        id="paint0_radial_2596_6619"
+                        cx="0"
+                        cy="0"
+                        r="1"
+                        gradientUnits="userSpaceOnUse"
+                        gradientTransform="translate(15.9375 64.6212) rotate(-90) scale(59.4645 55.3066)"
+                      >
+                        <stop stop-color="#FFDD55" />
+                        <stop offset="0.1" stop-color="#FFDD55" />
+                        <stop offset="0.5" stop-color="#FF543E" />
+                        <stop offset="1" stop-color="#C837AB" />
+                      </radialGradient>
+                      <radialGradient
+                        id="paint1_radial_2596_6619"
+                        cx="0"
+                        cy="0"
+                        r="1"
+                        gradientUnits="userSpaceOnUse"
+                        gradientTransform="translate(-10.0502 4.32211) rotate(78.681) scale(26.5809 109.567)"
+                      >
+                        <stop stop-color="#3771C8" />
+                        <stop offset="0.128" stop-color="#3771C8" />
+                        <stop
+                          offset="1"
+                          stop-color="#6600FF"
+                          stop-opacity="0"
+                        />
+                      </radialGradient>
+                      <clipPath id="clip0_2596_6619">
+                        <rect width="60" height="60" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="60"
+                    height="60"
+                    viewBox="0 0 60 60"
+                    fill="none"
+                  >
+                    <g clip-path="url(#clip0_2596_6624)">
+                      <path
+                        d="M60 30C60 13.4316 46.5684 0 30 0C13.4316 0 0 13.4313 0 30C0 44.9738 10.9706 57.3851 25.3125 59.6355V38.6719H17.6953V30H25.3125V23.3906C25.3125 15.8719 29.7914 11.7188 36.6438 11.7188C39.9263 11.7188 43.3594 12.3047 43.3594 12.3047V19.6875H39.5766C35.8495 19.6875 34.6875 22.0001 34.6875 24.3727V30H43.0078L41.6777 38.6719H34.6875V59.6355C49.0294 57.3851 60 44.974 60 30Z"
+                        fill="#1877F2"
+                      />
+                      <path
+                        d="M41.6777 38.6719L43.0078 30H34.6875V24.3727C34.6875 21.9998 35.8498 19.6875 39.5766 19.6875H43.3594V12.3047C43.3594 12.3047 39.9263 11.7188 36.6438 11.7188C29.7914 11.7188 25.3125 15.8719 25.3125 23.3906V30H17.6953V38.6719H25.3125V59.6355C26.8632 59.8786 28.4304 60.0004 30 60C31.5696 60.0005 33.1368 59.8786 34.6875 59.6355V38.6719H41.6777Z"
+                        fill="white"
+                      />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_2596_6624">
+                        <rect width="60" height="60" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- share for the ai response -->
+        
+      </div>
+    </div>
+    <div class="container2" id="cont2">
+      <h5 style="font-style: italic; padding: 10px;" >(Tour Planner API search results/Interface)</h5>
+      <div class="buttons">
+        <button
+          class="add-to-bucket"
+          style="color: #fff; background: #006167"
+          onclick="window.location.href='#popup3'"
+        >
+          Add to Bucketlist
+        </button>
+        <div
+          class="share"
+          style="display: flex; flex-direction: column; align-items: center"
+        >
+          <svg
+            onclick="window.location.href='#popup2'"
+            xmlns="http://www.w3.org/2000/svg"
+            width="60"
+            height="60"
+            viewBox="0 0 60 60"
+            fill="none"
+          >
+            <path
+              d="M52.5 30L35 12.5V22.5C17.5 25 10 37.5 7.5 50C13.75 41.25 22.5 37.25 35 37.25V47.5L52.5 30Z"
+              fill="#545454"
+            />
+          </svg>
+          <p>Share Itinerary</p>
+        </div>
+      </div>
+
+      <!-- popup -->
+      <div id="popup3" class="overlay overlaylodge">
+        <div class="popup_trip">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="210"
+            height="215"
+            viewBox="0 0 210 215"
+            fill="none"
+          >
+            <g filter="url(#filter0_d_2532_7902)">
+              <circle cx="105" cy="100" r="100" fill="white" />
+              <path
+                d="M143.973 50.0178C142.136 48.9958 140.116 48.3459 138.028 48.1052C135.94 47.8645 133.825 48.0378 131.804 48.6151C129.783 49.1924 127.896 50.1624 126.25 51.4697C124.604 52.777 123.232 54.3959 122.213 56.2338L92.5086 109.69L75.5086 92.6898C74.0327 91.1616 72.2671 89.9427 70.3151 89.1042C68.363 88.2656 66.2635 87.8242 64.139 87.8058C62.0146 87.7873 59.9077 88.1921 57.9413 88.9966C55.975 89.8011 54.1886 90.9892 52.6863 92.4915C51.184 93.9937 49.996 95.7802 49.1915 97.7465C48.387 99.7129 47.9821 101.82 48.0006 103.944C48.0191 106.069 48.4604 108.168 49.299 110.12C50.1375 112.072 51.3564 113.838 52.8846 115.314L84.8846 147.314C87.9086 150.346 91.9886 152.01 96.1966 152.01L98.4126 151.85C100.865 151.507 103.204 150.599 105.246 149.198C107.288 147.798 108.977 145.942 110.181 143.778L150.181 71.7778C151.202 69.9414 151.851 67.9218 152.092 65.8344C152.333 63.747 152.16 61.6326 151.583 59.612C151.007 57.5914 150.038 55.7041 148.732 54.0579C147.426 52.4117 145.809 51.0389 143.973 50.0178Z"
+                fill="#006167"
+              />
+            </g>
+            <defs>
+              <filter
+                id="filter0_d_2532_7902"
+                x="0"
+                y="0"
+                width="210"
+                height="215"
+                filterUnits="userSpaceOnUse"
+                color-interpolation-filters="sRGB"
+              >
+                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <feColorMatrix
+                  in="SourceAlpha"
+                  type="matrix"
+                  values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                  result="hardAlpha"
+                />
+                <feOffset dy="10" />
+                <feGaussianBlur stdDeviation="2.5" />
+                <feComposite in2="hardAlpha" operator="out" />
+                <feColorMatrix
+                  type="matrix"
+                  values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0"
+                />
+                <feBlend
+                  mode="normal"
+                  in2="BackgroundImageFix"
+                  result="effect1_dropShadow_2532_7902"
+                />
+                <feBlend
+                  mode="normal"
+                  in="SourceGraphic"
+                  in2="effect1_dropShadow_2532_7902"
+                  result="shape"
+                />
+              </filter>
+            </defs>
+          </svg>
+          <a class="close" href="#">&times;</a>
+          <div class="content_trip">
+            <p>Itinerary saved to Bucketlist</p>
+            <button class="continue" onclick="window.location.href='#cont2'">Continue</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container3">
+      <div class="rivan">
+        <p>
+          Discover unbeatable savings on accommodation and flights with our
+          exclusive deals, making your dream getaway both affordable and
+          memorable
+        </p>
+        <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+          <polygon points="100,10 40,198 190,78 10,78 160,198" fill="gold" />
+          <text
+            x="50%"
+            y="50%"
+            dominant-baseline="middle"
+            text-anchor="middle"
+            fill="#9B0606"
+            font-size="30px"
+            font-family="Verdana"
+          >
+            30%
+          </text>
+          <text
+            x="50%"
+            y="70%"
+            dominant-baseline="middle"
+            text-anchor="middle"
+            fill="#9B0606"
+            font-size="30px"
+            font-family="Verdana"
+          >
+            OFF
+          </text>
+        </svg>
+      </div>
+      <!-- Featured Deals -->
+      <div class="featured_deals">
+        <h4>Featured Deals</h4>
+        <h6>Showing deals for Oct 30, 2023 to Nov 10, 2023.</h6>
+        <div class="card_div">
+          <div class="card">
+            <button class="bucket">Add to Bucketlist</button>
+            <div id="carouselExampleIndicators6" class="carousel slide">
+              <div class="carousel-indicators">
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators6"
+                  data-bs-slide-to="0"
+                  class="active"
+                  aria-current="true"
+                  aria-label="Slide 1"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators6"
+                  data-bs-slide-to="1"
+                  aria-label="Slide 2"
+                ></button>
+                <button
+                  type="button"
+                  data-bs-target="#carouselExampleIndicators6"
+                  data-bs-slide-to="2"
+                  aria-label="Slide 3"
+                ></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="../images/debredamo1.jpg"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="../images/debredamo2.png"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="../images/debredamo3.png"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="price">
+              <div class="left">
+                <h6>Location:</h6>
+                <p>Kirkos, Addis Ababa</p>
+                <a href="">View on Map</a>
+              </div>
+              <div class="right">
+                <h6>Price:</h6>
+                <p>
+                  <span style="text-decoration: line-through">$180</span>
+                  $150/night
+                </p>
+                <a href="">Book Now</a>
+              </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Debredamo Hotel</h5>
+              <div class="card-text">
+                <div class="d-flex">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star-half"></i>
+                  <p>4.5 (800 Reviews)</p>
+                </div>
+              </div>
+              <p class="card-text">
+                The hotel has a terrace, spa center, bar and guests can enjoy a
+                meal at the restaurant. The Rooms include deep soaking bathtubs
+                and pillow-top beds.
+              </p>
+            </div>
+          </div>
+          <div class="card" id="deal1">
+            <button class="bucket">Add to Bucketlist</button>
+            <svg
+              id="deal11"
+              xmlns="http://www.w3.org/2000/svg"
+              width="126"
+              height="112"
+              viewBox="0 0 126 112"
+              fill="none"
+            >
+              <g filter="url(#filter0_d_1648_12270)">
+                <path
+                  d="M56.0501 6.1904C59.1194 0.806677 66.8806 0.806674 69.9499 6.19039L80.7092 25.0626C81.9566 27.2507 84.1616 28.7235 86.6606 29.0379L108.608 31.7986C115.525 32.6687 118.097 41.3542 112.769 45.8502L98.4654 57.9195C96.241 59.7965 95.2115 62.7335 95.7771 65.5885L99.3513 83.628C100.618 90.0197 94.1206 95.1633 88.19 92.4642L66.3138 82.5082C64.2085 81.55 61.7915 81.55 59.6862 82.5082L37.81 92.4642C31.8794 95.1633 25.3824 90.0197 26.6487 83.628L30.2229 65.5885C30.7885 62.7335 29.759 59.7965 27.5346 57.9195L13.2314 45.8502C7.90328 41.3542 10.4751 32.6687 17.3922 31.7986L39.3394 29.0379C41.8384 28.7235 44.0434 27.2507 45.2908 25.0626L56.0501 6.1904Z"
+                  fill="#D9D9D9"
+                />
+              </g>
+              <text
+                x="50%"
+                y="40%"
+                dominant-baseline="middle"
+                text-anchor="middle"
+                fill="red"
+                font-size="12"
+              >
+                Lock this Fare:
+              </text>
+              <text
+                x="50%"
+                y="55%"
+                dominant-baseline="middle"
+                text-anchor="middle"
+                fill="red"
+                font-size="13"
+              >
+                $120
+              </text>
+              <defs>
+                <filter
+                  id="filter0_d_1648_12270"
+                  x="0.382812"
+                  y="0.152344"
+                  width="125.234"
+                  height="111.047"
+                  filterUnits="userSpaceOnUse"
+                  color-interpolation-filters="sRGB"
+                >
+                  <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                  <feColorMatrix
+                    in="SourceAlpha"
+                    type="matrix"
+                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                    result="hardAlpha"
+                  />
+                  <feOffset dy="8" />
+                  <feGaussianBlur stdDeviation="5" />
+                  <feComposite in2="hardAlpha" operator="out" />
+                  <feColorMatrix
+                    type="matrix"
+                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"
+                  />
+                  <feBlend
+                    mode="normal"
+                    in2="BackgroundImageFix"
+                    result="effect1_dropShadow_1648_12270"
+                  />
+                  <feBlend
+                    mode="normal"
+                    in="SourceGraphic"
+                    in2="effect1_dropShadow_1648_12270"
+                    result="shape"
+                  />
+                </filter>
+              </defs>
+            </svg>
+            <img
+              src="../images/ethiopian_airlines.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="price">
+              <div class="left">
+                <h6>Location:</h6>
+                <p>Kirkos, Addis Ababa</p>
+                <a href="">View on Map</a>
+              </div>
+              <div class="right">
+                <h6>Price:</h6>
+                <p>
+                  <span style="text-decoration: line-through">$900</span> $750
+                </p>
+                <a href="">Book Now</a>
+              </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Ethiopian Airlines</h5>
+              <div class="card-text">
+                <div class="d-flex">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <p>5.0 (425 Reviews)</p>
+                </div>
+              </div>
+              <p class="card-text">
+                Ethiopian Airlines, known as the "Pride of Africa," is the
+                flagship carrier of Ethiopia. Ethiopian Airlines connects
+                passengers to over 120 destinations globally
+              </p>
+            </div>
+          </div>
+          <div class="card" id="deal2">
+            <button class="bucket">Add to Bucketlist</button>
+            <svg
+              id="deal12"
+              xmlns="http://www.w3.org/2000/svg"
+              width="126"
+              height="112"
+              viewBox="0 0 126 112"
+              fill="none"
+            >
+              <g filter="url(#filter0_d_1648_12270)">
+                <path
+                  d="M56.0501 6.1904C59.1194 0.806677 66.8806 0.806674 69.9499 6.19039L80.7092 25.0626C81.9566 27.2507 84.1616 28.7235 86.6606 29.0379L108.608 31.7986C115.525 32.6687 118.097 41.3542 112.769 45.8502L98.4654 57.9195C96.241 59.7965 95.2115 62.7335 95.7771 65.5885L99.3513 83.628C100.618 90.0197 94.1206 95.1633 88.19 92.4642L66.3138 82.5082C64.2085 81.55 61.7915 81.55 59.6862 82.5082L37.81 92.4642C31.8794 95.1633 25.3824 90.0197 26.6487 83.628L30.2229 65.5885C30.7885 62.7335 29.759 59.7965 27.5346 57.9195L13.2314 45.8502C7.90328 41.3542 10.4751 32.6687 17.3922 31.7986L39.3394 29.0379C41.8384 28.7235 44.0434 27.2507 45.2908 25.0626L56.0501 6.1904Z"
+                  fill="#D9D9D9"
+                />
+              </g>
+              <text
+                x="50%"
+                y="40%"
+                dominant-baseline="middle"
+                text-anchor="middle"
+                fill="red"
+                font-size="12"
+              >
+                Lock this Fare:
+              </text>
+              <text
+                x="50%"
+                y="55%"
+                dominant-baseline="middle"
+                text-anchor="middle"
+                fill="red"
+                font-size="13"
+              >
+                $120
+              </text>
+              <defs>
+                <filter
+                  id="filter0_d_1648_12270"
+                  x="0.382812"
+                  y="0.152344"
+                  width="125.234"
+                  height="111.047"
+                  filterUnits="userSpaceOnUse"
+                  color-interpolation-filters="sRGB"
+                >
+                  <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                  <feColorMatrix
+                    in="SourceAlpha"
+                    type="matrix"
+                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                    result="hardAlpha"
+                  />
+                  <feOffset dy="8" />
+                  <feGaussianBlur stdDeviation="5" />
+                  <feComposite in2="hardAlpha" operator="out" />
+                  <feColorMatrix
+                    type="matrix"
+                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"
+                  />
+                  <feBlend
+                    mode="normal"
+                    in2="BackgroundImageFix"
+                    result="effect1_dropShadow_1648_12270"
+                  />
+                  <feBlend
+                    mode="normal"
+                    in="SourceGraphic"
+                    in2="effect1_dropShadow_1648_12270"
+                    result="shape"
+                  />
+                </filter>
+              </defs>
+            </svg>
+            <img
+              src="../images/ethiopian_airlines.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="price">
+              <div class="left">
+                <h6>Location:</h6>
+                <p>Kirkos, Addis Ababa</p>
+                <a href="">View on Map</a>
+              </div>
+              <div class="right">
+                <h6>Price:</h6>
+                <p>
+                  <span style="text-decoration: line-through">$700</span> $550
+                </p>
+                <a href="">Book Now</a>
+              </div>
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Ethiopian Airlines</h5>
+              <div class="card-text">
+                <div class="d-flex">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <p>5.0 (425 Reviews)</p>
+                </div>
+              </div>
+              <p class="card-text">
+                Ethiopian Airlines, known as the "Pride of Africa," is the
+                flagship carrier of Ethiopia. Ethiopian Airlines connects
+                passengers to over 120 destinations globally
+              </p>
+            </div>
+          </div>
+        </div>
+        <button
+          onclick="window.location.href='../Html/API_trip_planner.html'"
+          class="search-btn"
+        >
+          Back to Home
+        </button>
+      </div>
+    </div>
+
+    <!-- CURRENCY CONVERTOR -->
+    <div class="currency" id="currency">
+      <h3>Currency Convertor</h3>
+      <p>
+        Easily convert your currency to Ethiopian Birr, so you can explore this
+        beautiful country without any financial hassles. Discover the latest
+        exchange rates and ensure you get the most out of your budget
+      </p>
+      <form action="">
+        <div class="row">
+          <div class="col-lg-6 col-sm-12">
+            <p class="fw-medium mb-2">
+              <i class="fa-solid fa-money-bill"></i> Your Currency
+            </p>
+            <div class="money">
+              <div class="left">
+                <span class="text-dark"
+                  ><img src="../images/USA_flag.svg" alt="" />USD</span
+                >
+              </div>
+              <div class="right">
+                <div class="form-div mb-3 w-100">
+                  <div class="flex-container">
+                    <select
+                      name="usa"
+                      id="usa"
+                      class="border rounded py-2 ps-4 w-100 text-body-secondary"
+                      aria-label="usa"
+                    >
+                      <option value="" selected disabled>US Dollar</option>
+                      <option value="">Australian Dollar (AUD)</option>
+                      <option value="">Canadian Dollar (CAD)</option>
+                      <option value="">Euro (EUR)</option>
+                      <option value="">Japanese Yen (JPY)</option>
+                      <option value="">Kenyan Shilling (KES)</option>
+                      <option value="">Nigerian Naira (NGN)</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-sm-12">
+            <p class="fw-medium mb-2">
+              <i class="fa-solid fa-money-bill"></i> Ethiopia Currency
+            </p>
+            <div class="money">
+              <div class="left">
+                <span class="text-dark"
+                  ><img src="../images/ETB_flag.png" alt="" />ETB</span
+                >
+              </div>
+              <div class="right">
+                <div class="form-div mb-3">
+                  <p class="pt-2 text-dark">Ethiopian Birr</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 col-sm-12">
+            <div class="money">
+              <input
+                type="number"
+                name=""
+                id=""
+                placeholder="1"
+                style="border: none; text-align: center"
+              />
+            </div>
+          </div>
+          <div class="col-lg-6 col-sm-12">
+            <div class="money">
+              <p style="color: black">55.3312</p>
+            </div>
+          </div>
+        </div>
+        <button class="search_btn" onclick="window.location.href='#popup1'">
+          Locate a Bank near you
+        </button>
+      </form>
+    </div>
+    <!-- popup -->
+    <div id="popup1" class="overlay">
+      <div class="popup">
+        <a class="close" href="#">&times;</a>
+        <div class="content">
+          <h5>Click on a Bank to find its Branches in Ethiopia</h5>
+          <div class="row">
+            <div class="col">
+              <div class="bank" style="display: flex; flex-direction: column">
+                <img style="width: 40%" src="../images/Abyssinia.svg" alt="" />
+                <a href="https://www.bankofabyssinia.com/branch-atm-locations/"
+                  >Abyssinia Bank</a
+                >
+              </div>
+            </div>
+            <div class="col">
+              <div class="bank" style="display: flex; flex-direction: column">
+                <img style="width: 40%" src="../images/Awash.svg" alt="" />
+                <a href="https://awashbank.com/awash-branch-atm-agent-network/"
+                  >Awash Bank</a
+                >
+              </div>
+            </div>
+            <div class="col">
+              <div class="bank" style="display: flex; flex-direction: column">
+                <img style="width: 40%" src="../images/berihan.svg" alt="" />
+                <a href="https://berhanbanksc.com/location-2/">Berhan Bank</a>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="bank" style="display: flex; flex-direction: column">
+                <img style="width: 40%" src="../images/cbe.svg" alt="" />
+                <a href="https://www.combanketh.et/en/branch-network/"
+                  >Commercial Bank of Ethiopia</a
+                >
+              </div>
+            </div>
+            <div class="col">
+              <div class="bank" style="display: flex; flex-direction: column">
+                <img style="width: 40%" src="../images/Dashen.svg" alt="" />
+                <a href="https://dashenbanksc.com/find-a-branch/"
+                  >Dashen Bank</a
+                >
+              </div>
+            </div>
+            <div class="col">
+              <div class="bank" style="display: flex; flex-direction: column">
+                <img style="width: 40%" src="../images/NIB.svg" alt="" />
+                <a href="https://www.nibbanksc.com/branch-atms-pos/"
+                  >NIB International Bank</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="bank" style="display: flex; flex-direction: column">
+                <img style="width: 40%" src="../images/oromia.svg" alt="" />
+                <a href="https://www.oromiabank.com/branches/">Oromia Bank</a>
+              </div>
+            </div>
+            <div class="col">
+              <div class="bank" style="display: flex; flex-direction: column">
+                <img style="width: 40%" src="../images/united.svg" alt="" />
+                <a href="https://www.hibretbank.com.et/branch-and-atm-locator/"
+                  >United Bank</a
+                >
+              </div>
+            </div>
+            <div class="col">
+              <div class="bank" style="display: flex; flex-direction: column">
+                <img style="width: 40%" src="../images/wegagen.svg" alt="" />
+                <a href="https://www.wegagen.com/contact/contact-us/"
+                  >Wegagen Bank</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col" style="display: none">
+              <div class="bank" style="display: flex; flex-direction: column">
+                <img style="width: 40%" src="../images/Abyssinia.svg" alt="" />
+                <a href="">Abyssinia</a>
+              </div>
+            </div>
+            <div class="col">
+              <div
+                class="bank"
+                style="display: flex; flex-direction: column; margin-bottom: 5%"
+              >
+                <img style="width: 40%" src="../images/zemen.svg" alt="" />
+                <a href="https://www.zemenbank.com/regional-offices"
+                  >Zemen Bank</a
+                >
+              </div>
+            </div>
+            <div class="col" style="display: none">
+              <div class="bank" style="display: flex; flex-direction: column">
+                <img style="width: 40%" src="../images/Abyssinia.svg" alt="" />
+                <a href="">Abyssinia</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Water drop -->
+    <div class="water_drop">
+      <svg
+        class="left"
+        xmlns="http://www.w3.org/2000/svg"
+        width="107"
+        height="100"
+        viewBox="0 0 107 100"
+        fill="none"
+      >
+        <path
+          d="M106.187 39.1694C109.932 6.88835 69.6689 -11.5833 40.0645 8.83398L18.3051 23.8408C-6.83172 41.1768 -5.3381 74.6801 21.1126 86.815L40.1194 95.5349C66.5701 107.67 100.255 90.3055 103.434 62.896L106.187 39.1694Z"
+          fill="url(#paint0_linear_1650_6812)"
+        />
+        <defs>
+          <linearGradient
+            id="paint0_linear_1650_6812"
+            x1="115.762"
+            y1="-43.3725"
+            x2="28.0299"
+            y2="147.859"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stop-color="#00B7AF" />
+            <stop offset="0.651042" stop-color="#F2F2F2" />
+          </linearGradient>
+        </defs>
+      </svg>
+
+      <svg
+        class="top"
+        xmlns="http://www.w3.org/2000/svg"
+        width="97"
+        height="100"
+        viewBox="0 0 97 100"
+        fill="none"
+      >
+        <path
+          d="M1.3628 37.9976C1.98372 8.46891 34.5792 -9.09425 59.5822 6.62769L79.0326 18.8581C103.677 34.3545 102.458 70.6709 76.8299 84.4798L56.8965 95.2203C31.2686 109.029 0.267751 90.0737 0.879765 60.9686L1.3628 37.9976Z"
+          fill="url(#paint0_linear_1650_6810)"
+        />
+        <defs>
+          <linearGradient
+            id="paint0_linear_1650_6810"
+            x1="2.77358"
+            y1="-29.0937"
+            x2="88.2264"
+            y2="129.498"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stop-color="#00B7AF" />
+            <stop offset="0.651042" stop-color="#F2F2F2" />
+          </linearGradient>
+        </defs>
+      </svg>
+
+      <svg
+        class="right"
+        xmlns="http://www.w3.org/2000/svg"
+        width="57"
+        height="56"
+        viewBox="0 0 57 56"
+        fill="none"
+      >
+        <path
+          d="M0.505173 27.9496C0.602629 5.85125 25.1323 -7.36588 43.6418 4.70664C61.3706 16.27 60.2681 42.591 41.6344 52.6313C23.0008 62.6715 0.411827 49.1159 0.505173 27.9496Z"
+          fill="url(#paint0_linear_1650_6811)"
+        />
+        <defs>
+          <linearGradient
+            id="paint0_linear_1650_6811"
+            x1="0.731105"
+            y1="-23.2811"
+            x2="55.2689"
+            y2="77.9354"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stop-color="#00B7AF" />
+            <stop offset="0.651042" stop-color="#F2F2F2" />
+          </linearGradient>
+        </defs>
+      </svg>
+    </div>
+
+    <!-- footter -->
+    <footer>
+      <div class="container">
+        <div class="help">
+          <p class="title">Need any help?</p>
+          <p>
+            Call 24/7 for any help <br />
+            <span> +00 123 456 789</span>
+          </p>
+          <p>
+            Mail to our support team <br />
+            <span>support@Seethio.com</span>
+          </p>
+          <p>Follow us on</p>
+          <div class="social-icon">
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+            <a href=""> <i class="fa-brands fa-facebook"></i></a>
+            <a href=""> <i class="fa-brands fa-twitter"></i></a>
+            <a href=""><i class="fa-brands fa-youtube"></i></a>
+            <a href=""><i class="fa-brands fa-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="links">
+          <div>
+            <p class="title">Company</p>
+            <p>Home</p>
+            <p>Testimonials</p>
+            <p>About Us</p>
+            <p>Work with Us</p>
+            <p>Partners</p>
+          </div>
+          <div>
+            <p class="title">Support</p>
+            <p>Account</p>
+            <p>FAQ</p>
+            <p>Legal</p>
+            <p>Contact us</p>
+            <p>Privacy Policy</p>
+          </div>
+          <div>
+            <p class="title">Services</p>
+            <p>Discover place</p>
+            <p>Plan a trip</p>
+            <p>Booking</p>
+            <p>Get Deals</p>
+            <p>Currency exchange</p>
+          </div>
+        </div>
+        <div class="subscribe">
+          <p><span>Subscribe to receive new deals</span></p>
+          <div class="form">
+            <input type="text" placeholder="Email Address" />
+            <button>Send</button>
+          </div>
+        </div>
+      </div>
+      <div class="footer-wrapper">
+        <hr style="border: 1px solid white" />
+      </div>
+      <div class="footer">
+        <div class="logo">
+          <a href="/index.html"
+            ><img src="../images/footer_logo.png" alt=""
+          /></a>
+        </div>
+        <div class="copyright">
+          <p><span>Copyright © 2023 Kunturi Design</span></p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+            document.querySelector('#copylink').addEventListener('click', function() {
+        document.querySelector('.message').style.display = 'block';
+      });
+      document.querySelector('.close').addEventListener('click', function() {
+    document.querySelector('.message').style.display = 'none';
+  });
+      
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
