@@ -16,6 +16,8 @@
 }
 body{
   font-family: 'Nunito Sans', sans-serif;
+  text-size-adjust: 100%;  /*modern browsers*/
+  
 }
 a{
   text-decoration: none;
@@ -94,7 +96,7 @@ header .end{
 }
 .trip_planner p{
   color: var(--Subwords, rgba(18, 18, 18, 0.70));
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   font-weight: 400;
   line-height: 24px;
   letter-spacing: 0.15px;
