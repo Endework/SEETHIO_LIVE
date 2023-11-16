@@ -509,8 +509,12 @@ header{
     top: 5%;
     right: 5%;
     cursor: pointer;
+    
 }
 
+.share-icon:hover{
+    fill:var(--PRIMARY-COLOUR);
+}
 .trip_planner .share .fa-share{
     color: var(--Secondary-Colour);
     font-size: 2rem;
@@ -657,7 +661,7 @@ header{
 }
 .bucket{
     display: flex;
-    width: 170px;
+    width: 190px;
     height: 40px;
     padding: 12px 24px;
     justify-content: center;

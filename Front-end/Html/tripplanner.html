@@ -71,7 +71,7 @@
                 id="destination1"
                 class="border rounded text-center"
                 aria-label="destination1"
-                style="color:rgba(0, 0, 0, 0.50)"
+                style="color: rgba(0, 0, 0, 0.5)"
               >
                 <option value="" selected disabled>--Select--</option>
 
@@ -95,7 +95,7 @@
                 type="datetime-local"
                 id="trip1"
                 class="border rounded text-center"
-                style="color:rgba(0, 0, 0, 0.50)"
+                style="color: rgba(0, 0, 0, 0.5)"
               />
             </div>
           </div>
@@ -121,7 +121,7 @@
                 id="Interests"
                 class="border rounded text-center"
                 aria-label="Interests"
-                style="color:rgba(0, 0, 0, 0.50)"
+                style="color: rgba(0, 0, 0, 0.5)"
               >
                 <option value="" selected disabled>--Select--</option>
                 <option value="">Adventure</option>
@@ -154,15 +154,11 @@
               <select
                 name="Traveler"
                 id="Traveler"
-                class="border rounded text-center "
+                class="border rounded text-center"
                 aria-label="Traveler"
-                style="color:rgba(0, 0, 0, 0.50)"
+                style="color: rgba(0, 0, 0, 0.5)"
               >
                 <option value="" selected disabled>--Select--</option>
-                <option value="">Business</option>
-                <option value="">Couples</option>
-                <option value="">Families</option>
-                <option value="">Friends</option>
                 <option value="">Solo</option>
               </select>
             </div>
@@ -171,33 +167,32 @@
         </form>
         <div class="share">
           <svg
-            onclick="window.location.href='#popup2'"
-            class="fa-share"
+          onclick="window.location.href='#popup2'"
             xmlns="http://www.w3.org/2000/svg"
-            width="28"
-            height="23"
-            viewBox="0 0 28 23"
+            width="48"
+            height="48"
+            viewBox="0 0 48 48"
             fill="none"
           >
-            <path
-              d="M27.5 11L17 0.5V6.5C6.5 8 2 15.5 0.5 23C4.25 17.75 9.5 15.35 17 15.35V21.5L27.5 11Z"
+            <path class="share-icon"
+              d="M35.25 16.5H25.5V30.0938C25.5 30.4916 25.342 30.8731 25.0607 31.1544C24.7794 31.4358 24.3978 31.5938 24 31.5938C23.6022 31.5938 23.2206 31.4358 22.9393 31.1544C22.658 30.8731 22.5 30.4916 22.5 30.0938V16.5H12.75C11.3581 16.5015 10.0236 17.0551 9.03933 18.0394C8.05509 19.0236 7.50149 20.3581 7.5 21.75V39.75C7.50149 41.142 8.05509 42.4765 9.03933 43.4607C10.0236 44.4449 11.3581 44.9985 12.75 45H35.25C36.6419 44.9985 37.9764 44.4449 38.9607 43.4607C39.9449 42.4765 40.4985 41.142 40.5 39.75V21.75C40.4985 20.3581 39.9449 19.0236 38.9607 18.0394C37.9764 17.0551 36.6419 16.5015 35.25 16.5ZM25.5 8.1216L30.4397 13.0603C30.7233 13.3298 31.1009 13.4778 31.4921 13.4728C31.8832 13.4678 32.2569 13.3101 32.5335 13.0335C32.8101 12.7569 32.9677 12.3832 32.9727 11.9921C32.9777 11.6009 32.8297 11.2233 32.5603 10.9397L25.0603 3.43972C24.779 3.15863 24.3977 3.00073 24 3.00073C23.6023 3.00073 23.221 3.15863 22.9397 3.43972L15.4397 10.9397C15.1703 11.2233 15.0223 11.6009 15.0273 11.9921C15.0323 12.3832 15.1899 12.7569 15.4665 13.0335C15.7431 13.3101 16.1168 13.4678 16.508 13.4728C16.8991 13.4778 17.2767 13.3298 17.5603 13.0603L22.5 8.1216V16.5H25.5V8.1216Z"
               fill="#006167"
             />
           </svg>
 
-          <p>Share Tour Planner</p>
+         
         </div>
 
         <!-- Share popup -->
         <div id="popup2" class="overlay">
           <div class="popup_trip">
-            <a class="close" href="#">&times;</a>
+            <a class="close" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+              <path d="M18 33C9.71572 33 3 26.2842 3 18C3 9.71572 9.71572 3 18 3C26.2842 3 33 9.71572 33 18C33 26.2842 26.2842 33 18 33ZM18 15.8787L13.7574 11.636L11.636 13.7574L15.8787 18L11.636 22.2426L13.7574 24.3639L18 20.1213L22.2426 24.3639L24.3639 22.2426L20.1213 18L24.3639 13.7574L22.2426 11.636L18 15.8787Z" fill="#006167"/>
+            </svg></a>
             <div class="content_trip">
               <div class="invite">
                 <p>
-                  Sarah is inviting you to try out the Seethio AI planner
-                  feature. <br />
-                  Plan your trip to Ethiopia with Ease!
+                  Invite Others to try out Seethio tour planner with you for free
                 </p>
                 <button id="copylink">Copy Link</button>
                 <div class="message">
@@ -207,7 +202,7 @@
                   </p>
                 </div>
               </div>
-              <hr>
+              <hr />
               <div class="share_platform">
                 <h6>Select your preferred sharing platform</h6>
                 <div class="icons">
@@ -332,38 +327,27 @@
         </div>
 
         <!-- share for the ai response -->
-        
       </div>
     </div>
     <div class="container2" id="cont2">
-      <h5 style="font-style: italic; padding: 10px;" >(Tour Planner API search results/Interface)</h5>
+      <h5 style="font-style: italic; padding: 10px">
+        (Tour Planner API search results/Interface)
+      </h5>
       <div class="buttons">
         <button
-          class="add-to-bucket"
+          id="addtobucket"
           style="color: #fff; background: #006167"
           onclick="window.location.href='#popup3'"
         >
           Add to Bucketlist
         </button>
-        <div
-          class="share"
-          style="display: flex; flex-direction: column; align-items: center"
+        <button
+          onclick="window.location.href='../Html/API_trip_planner.html'"
+          class="search-btn"
+          style="background: transparent; color:#006167"
         >
-          <svg
-            onclick="window.location.href='#popup2'"
-            xmlns="http://www.w3.org/2000/svg"
-            width="60"
-            height="60"
-            viewBox="0 0 60 60"
-            fill="none"
-          >
-            <path
-              d="M52.5 30L35 12.5V22.5C17.5 25 10 37.5 7.5 50C13.75 41.25 22.5 37.25 35 37.25V47.5L52.5 30Z"
-              fill="#545454"
-            />
-          </svg>
-          <p>Share Itinerary</p>
-        </div>
+          Back to Home
+        </button>
       </div>
 
       <!-- popup -->
@@ -421,561 +405,22 @@
               </filter>
             </defs>
           </svg>
-          <a class="close" href="#">&times;</a>
+          <a class="close" href="#"><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36" fill="none">
+            <path d="M18 33C9.71572 33 3 26.2842 3 18C3 9.71572 9.71572 3 18 3C26.2842 3 33 9.71572 33 18C33 26.2842 26.2842 33 18 33ZM18 15.8787L13.7574 11.636L11.636 13.7574L15.8787 18L11.636 22.2426L13.7574 24.3639L18 20.1213L22.2426 24.3639L24.3639 22.2426L20.1213 18L24.3639 13.7574L22.2426 11.636L18 15.8787Z" fill="#006167"/>
+          </svg></a>
           <div class="content_trip">
             <p>Itinerary saved to Bucketlist</p>
-            <button class="continue" onclick="window.location.href='#cont2'">Continue</button>
+            <button class="continue" onclick="window.location.href='#cont2'">
+              Continue
+            </button>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="container3">
-      <div class="rivan">
-        <p>
-          Discover unbeatable savings on accommodation and flights with our
-          exclusive deals, making your dream getaway both affordable and
-          memorable
-        </p>
-        <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
-          <polygon points="100,10 40,198 190,78 10,78 160,198" fill="gold" />
-          <text
-            x="50%"
-            y="50%"
-            dominant-baseline="middle"
-            text-anchor="middle"
-            fill="#9B0606"
-            font-size="30px"
-            font-family="Verdana"
-          >
-            30%
-          </text>
-          <text
-            x="50%"
-            y="70%"
-            dominant-baseline="middle"
-            text-anchor="middle"
-            fill="#9B0606"
-            font-size="30px"
-            font-family="Verdana"
-          >
-            OFF
-          </text>
-        </svg>
-      </div>
-      <!-- Featured Deals -->
-      <div class="featured_deals">
-        <h4>Featured Deals</h4>
-        <h6>Showing deals for Oct 30, 2023 to Nov 10, 2023.</h6>
-        <div class="card_div">
-          <div class="card">
-            <button class="bucket">Add to Bucketlist</button>
-            <div id="carouselExampleIndicators6" class="carousel slide">
-              <div class="carousel-indicators">
-                <button
-                  type="button"
-                  data-bs-target="#carouselExampleIndicators6"
-                  data-bs-slide-to="0"
-                  class="active"
-                  aria-current="true"
-                  aria-label="Slide 1"
-                ></button>
-                <button
-                  type="button"
-                  data-bs-target="#carouselExampleIndicators6"
-                  data-bs-slide-to="1"
-                  aria-label="Slide 2"
-                ></button>
-                <button
-                  type="button"
-                  data-bs-target="#carouselExampleIndicators6"
-                  data-bs-slide-to="2"
-                  aria-label="Slide 3"
-                ></button>
-              </div>
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img
-                    src="../images/debredamo1.jpg"
-                    class="d-block w-100"
-                    alt="..."
-                  />
-                </div>
-                <div class="carousel-item">
-                  <img
-                    src="../images/debredamo2.png"
-                    class="d-block w-100"
-                    alt="..."
-                  />
-                </div>
-                <div class="carousel-item">
-                  <img
-                    src="../images/debredamo3.png"
-                    class="d-block w-100"
-                    alt="..."
-                  />
-                </div>
-              </div>
-            </div>
-            <div class="price">
-              <div class="left">
-                <h6>Location:</h6>
-                <p>Kirkos, Addis Ababa</p>
-                <a href="">View on Map</a>
-              </div>
-              <div class="right">
-                <h6>Price:</h6>
-                <p>
-                  <span style="text-decoration: line-through">$180</span>
-                  $150/night
-                </p>
-                <a href="">Book Now</a>
-              </div>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Debredamo Hotel</h5>
-              <div class="card-text">
-                <div class="d-flex">
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star-half"></i>
-                  <p>4.5 (800 Reviews)</p>
-                </div>
-              </div>
-              <p class="card-text">
-                The hotel has a terrace, spa center, bar and guests can enjoy a
-                meal at the restaurant. The Rooms include deep soaking bathtubs
-                and pillow-top beds.
-              </p>
-            </div>
-          </div>
-          <div class="card" id="deal1">
-            <button class="bucket">Add to Bucketlist</button>
-            <svg
-              id="deal11"
-              xmlns="http://www.w3.org/2000/svg"
-              width="126"
-              height="112"
-              viewBox="0 0 126 112"
-              fill="none"
-            >
-              <g filter="url(#filter0_d_1648_12270)">
-                <path
-                  d="M56.0501 6.1904C59.1194 0.806677 66.8806 0.806674 69.9499 6.19039L80.7092 25.0626C81.9566 27.2507 84.1616 28.7235 86.6606 29.0379L108.608 31.7986C115.525 32.6687 118.097 41.3542 112.769 45.8502L98.4654 57.9195C96.241 59.7965 95.2115 62.7335 95.7771 65.5885L99.3513 83.628C100.618 90.0197 94.1206 95.1633 88.19 92.4642L66.3138 82.5082C64.2085 81.55 61.7915 81.55 59.6862 82.5082L37.81 92.4642C31.8794 95.1633 25.3824 90.0197 26.6487 83.628L30.2229 65.5885C30.7885 62.7335 29.759 59.7965 27.5346 57.9195L13.2314 45.8502C7.90328 41.3542 10.4751 32.6687 17.3922 31.7986L39.3394 29.0379C41.8384 28.7235 44.0434 27.2507 45.2908 25.0626L56.0501 6.1904Z"
-                  fill="#D9D9D9"
-                />
-              </g>
-              <text
-                x="50%"
-                y="40%"
-                dominant-baseline="middle"
-                text-anchor="middle"
-                fill="red"
-                font-size="12"
-              >
-                Lock this Fare:
-              </text>
-              <text
-                x="50%"
-                y="55%"
-                dominant-baseline="middle"
-                text-anchor="middle"
-                fill="red"
-                font-size="13"
-              >
-                $120
-              </text>
-              <defs>
-                <filter
-                  id="filter0_d_1648_12270"
-                  x="0.382812"
-                  y="0.152344"
-                  width="125.234"
-                  height="111.047"
-                  filterUnits="userSpaceOnUse"
-                  color-interpolation-filters="sRGB"
-                >
-                  <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                  <feColorMatrix
-                    in="SourceAlpha"
-                    type="matrix"
-                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                    result="hardAlpha"
-                  />
-                  <feOffset dy="8" />
-                  <feGaussianBlur stdDeviation="5" />
-                  <feComposite in2="hardAlpha" operator="out" />
-                  <feColorMatrix
-                    type="matrix"
-                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"
-                  />
-                  <feBlend
-                    mode="normal"
-                    in2="BackgroundImageFix"
-                    result="effect1_dropShadow_1648_12270"
-                  />
-                  <feBlend
-                    mode="normal"
-                    in="SourceGraphic"
-                    in2="effect1_dropShadow_1648_12270"
-                    result="shape"
-                  />
-                </filter>
-              </defs>
-            </svg>
-            <img
-              src="../images/ethiopian_airlines.jpg"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="price">
-              <div class="left">
-                <h6>Location:</h6>
-                <p>Kirkos, Addis Ababa</p>
-                <a href="">View on Map</a>
-              </div>
-              <div class="right">
-                <h6>Price:</h6>
-                <p>
-                  <span style="text-decoration: line-through">$900</span> $750
-                </p>
-                <a href="">Book Now</a>
-              </div>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Ethiopian Airlines</h5>
-              <div class="card-text">
-                <div class="d-flex">
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <p>5.0 (425 Reviews)</p>
-                </div>
-              </div>
-              <p class="card-text">
-                Ethiopian Airlines, known as the "Pride of Africa," is the
-                flagship carrier of Ethiopia. Ethiopian Airlines connects
-                passengers to over 120 destinations globally
-              </p>
-            </div>
-          </div>
-          <div class="card" id="deal2">
-            <button class="bucket">Add to Bucketlist</button>
-            <svg
-              id="deal12"
-              xmlns="http://www.w3.org/2000/svg"
-              width="126"
-              height="112"
-              viewBox="0 0 126 112"
-              fill="none"
-            >
-              <g filter="url(#filter0_d_1648_12270)">
-                <path
-                  d="M56.0501 6.1904C59.1194 0.806677 66.8806 0.806674 69.9499 6.19039L80.7092 25.0626C81.9566 27.2507 84.1616 28.7235 86.6606 29.0379L108.608 31.7986C115.525 32.6687 118.097 41.3542 112.769 45.8502L98.4654 57.9195C96.241 59.7965 95.2115 62.7335 95.7771 65.5885L99.3513 83.628C100.618 90.0197 94.1206 95.1633 88.19 92.4642L66.3138 82.5082C64.2085 81.55 61.7915 81.55 59.6862 82.5082L37.81 92.4642C31.8794 95.1633 25.3824 90.0197 26.6487 83.628L30.2229 65.5885C30.7885 62.7335 29.759 59.7965 27.5346 57.9195L13.2314 45.8502C7.90328 41.3542 10.4751 32.6687 17.3922 31.7986L39.3394 29.0379C41.8384 28.7235 44.0434 27.2507 45.2908 25.0626L56.0501 6.1904Z"
-                  fill="#D9D9D9"
-                />
-              </g>
-              <text
-                x="50%"
-                y="40%"
-                dominant-baseline="middle"
-                text-anchor="middle"
-                fill="red"
-                font-size="12"
-              >
-                Lock this Fare:
-              </text>
-              <text
-                x="50%"
-                y="55%"
-                dominant-baseline="middle"
-                text-anchor="middle"
-                fill="red"
-                font-size="13"
-              >
-                $120
-              </text>
-              <defs>
-                <filter
-                  id="filter0_d_1648_12270"
-                  x="0.382812"
-                  y="0.152344"
-                  width="125.234"
-                  height="111.047"
-                  filterUnits="userSpaceOnUse"
-                  color-interpolation-filters="sRGB"
-                >
-                  <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                  <feColorMatrix
-                    in="SourceAlpha"
-                    type="matrix"
-                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                    result="hardAlpha"
-                  />
-                  <feOffset dy="8" />
-                  <feGaussianBlur stdDeviation="5" />
-                  <feComposite in2="hardAlpha" operator="out" />
-                  <feColorMatrix
-                    type="matrix"
-                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"
-                  />
-                  <feBlend
-                    mode="normal"
-                    in2="BackgroundImageFix"
-                    result="effect1_dropShadow_1648_12270"
-                  />
-                  <feBlend
-                    mode="normal"
-                    in="SourceGraphic"
-                    in2="effect1_dropShadow_1648_12270"
-                    result="shape"
-                  />
-                </filter>
-              </defs>
-            </svg>
-            <img
-              src="../images/ethiopian_airlines.jpg"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="price">
-              <div class="left">
-                <h6>Location:</h6>
-                <p>Kirkos, Addis Ababa</p>
-                <a href="">View on Map</a>
-              </div>
-              <div class="right">
-                <h6>Price:</h6>
-                <p>
-                  <span style="text-decoration: line-through">$700</span> $550
-                </p>
-                <a href="">Book Now</a>
-              </div>
-            </div>
-            <div class="card-body">
-              <h5 class="card-title">Ethiopian Airlines</h5>
-              <div class="card-text">
-                <div class="d-flex">
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <i class="fa-solid fa-star"></i>
-                  <p>5.0 (425 Reviews)</p>
-                </div>
-              </div>
-              <p class="card-text">
-                Ethiopian Airlines, known as the "Pride of Africa," is the
-                flagship carrier of Ethiopia. Ethiopian Airlines connects
-                passengers to over 120 destinations globally
-              </p>
-            </div>
-          </div>
-        </div>
-        <button
-          onclick="window.location.href='../Html/API_trip_planner.html'"
-          class="search-btn"
-        >
-          Back to Home
-        </button>
-      </div>
-    </div>
+    
 
-    <!-- CURRENCY CONVERTOR -->
-    <div class="currency" id="currency">
-      <h3>Currency Convertor</h3>
-      <p>
-        Easily convert your currency to Ethiopian Birr, so you can explore this
-        beautiful country without any financial hassles. Discover the latest
-        exchange rates and ensure you get the most out of your budget
-      </p>
-      <form action="">
-        <div class="row">
-          <div class="col-lg-6 col-sm-12">
-            <p class="fw-medium mb-2">
-              <i class="fa-solid fa-money-bill"></i> Your Currency
-            </p>
-            <div class="money">
-              <div class="left">
-                <span class="text-dark"
-                  ><img src="../images/USA_flag.svg" alt="" />USD</span
-                >
-              </div>
-              <div class="right">
-                <div class="form-div mb-3 w-100">
-                  <div class="flex-container">
-                    <select
-                      name="usa"
-                      id="usa"
-                      class="border rounded py-2 ps-4 w-100 text-body-secondary"
-                      aria-label="usa"
-                    >
-                      <option value="" selected disabled>US Dollar</option>
-                      <option value="">Australian Dollar (AUD)</option>
-                      <option value="">Canadian Dollar (CAD)</option>
-                      <option value="">Euro (EUR)</option>
-                      <option value="">Japanese Yen (JPY)</option>
-                      <option value="">Kenyan Shilling (KES)</option>
-                      <option value="">Nigerian Naira (NGN)</option>
-                    </select>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-6 col-sm-12">
-            <p class="fw-medium mb-2">
-              <i class="fa-solid fa-money-bill"></i> Ethiopia Currency
-            </p>
-            <div class="money">
-              <div class="left">
-                <span class="text-dark"
-                  ><img src="../images/ETB_flag.png" alt="" />ETB</span
-                >
-              </div>
-              <div class="right">
-                <div class="form-div mb-3">
-                  <p class="pt-2 text-dark">Ethiopian Birr</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-lg-6 col-sm-12">
-            <div class="money">
-              <input
-                type="number"
-                name=""
-                id=""
-                placeholder="1"
-                style="border: none; text-align: center"
-              />
-            </div>
-          </div>
-          <div class="col-lg-6 col-sm-12">
-            <div class="money">
-              <p style="color: black">55.3312</p>
-            </div>
-          </div>
-        </div>
-        <button class="search_btn" onclick="window.location.href='#popup1'">
-          Locate a Bank near you
-        </button>
-      </form>
-    </div>
-    <!-- popup -->
-    <div id="popup1" class="overlay">
-      <div class="popup">
-        <a class="close" href="#">&times;</a>
-        <div class="content">
-          <h5>Click on a Bank to find its Branches in Ethiopia</h5>
-          <div class="row">
-            <div class="col">
-              <div class="bank" style="display: flex; flex-direction: column">
-                <img style="width: 40%" src="../images/Abyssinia.svg" alt="" />
-                <a href="https://www.bankofabyssinia.com/branch-atm-locations/"
-                  >Abyssinia Bank</a
-                >
-              </div>
-            </div>
-            <div class="col">
-              <div class="bank" style="display: flex; flex-direction: column">
-                <img style="width: 40%" src="../images/Awash.svg" alt="" />
-                <a href="https://awashbank.com/awash-branch-atm-agent-network/"
-                  >Awash Bank</a
-                >
-              </div>
-            </div>
-            <div class="col">
-              <div class="bank" style="display: flex; flex-direction: column">
-                <img style="width: 40%" src="../images/berihan.svg" alt="" />
-                <a href="https://berhanbanksc.com/location-2/">Berhan Bank</a>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col">
-              <div class="bank" style="display: flex; flex-direction: column">
-                <img style="width: 40%" src="../images/cbe.svg" alt="" />
-                <a href="https://www.combanketh.et/en/branch-network/"
-                  >Commercial Bank of Ethiopia</a
-                >
-              </div>
-            </div>
-            <div class="col">
-              <div class="bank" style="display: flex; flex-direction: column">
-                <img style="width: 40%" src="../images/Dashen.svg" alt="" />
-                <a href="https://dashenbanksc.com/find-a-branch/"
-                  >Dashen Bank</a
-                >
-              </div>
-            </div>
-            <div class="col">
-              <div class="bank" style="display: flex; flex-direction: column">
-                <img style="width: 40%" src="../images/NIB.svg" alt="" />
-                <a href="https://www.nibbanksc.com/branch-atms-pos/"
-                  >NIB International Bank</a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col">
-              <div class="bank" style="display: flex; flex-direction: column">
-                <img style="width: 40%" src="../images/oromia.svg" alt="" />
-                <a href="https://www.oromiabank.com/branches/">Oromia Bank</a>
-              </div>
-            </div>
-            <div class="col">
-              <div class="bank" style="display: flex; flex-direction: column">
-                <img style="width: 40%" src="../images/united.svg" alt="" />
-                <a href="https://www.hibretbank.com.et/branch-and-atm-locator/"
-                  >United Bank</a
-                >
-              </div>
-            </div>
-            <div class="col">
-              <div class="bank" style="display: flex; flex-direction: column">
-                <img style="width: 40%" src="../images/wegagen.svg" alt="" />
-                <a href="https://www.wegagen.com/contact/contact-us/"
-                  >Wegagen Bank</a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="col" style="display: none">
-              <div class="bank" style="display: flex; flex-direction: column">
-                <img style="width: 40%" src="../images/Abyssinia.svg" alt="" />
-                <a href="">Abyssinia</a>
-              </div>
-            </div>
-            <div class="col">
-              <div
-                class="bank"
-                style="display: flex; flex-direction: column; margin-bottom: 5%"
-              >
-                <img style="width: 40%" src="../images/zemen.svg" alt="" />
-                <a href="https://www.zemenbank.com/regional-offices"
-                  >Zemen Bank</a
-                >
-              </div>
-            </div>
-            <div class="col" style="display: none">
-              <div class="bank" style="display: flex; flex-direction: column">
-                <img style="width: 40%" src="../images/Abyssinia.svg" alt="" />
-                <a href="">Abyssinia</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+   
 
     <!-- Water drop -->
     <div class="water_drop">
@@ -1132,15 +577,8 @@
       </div>
     </footer>
 
-    <script>
-            document.querySelector('#copylink').addEventListener('click', function() {
-        document.querySelector('.message').style.display = 'block';
-      });
-      document.querySelector('.close').addEventListener('click', function() {
-    document.querySelector('.message').style.display = 'none';
-  });
-      
-    </script>
+    
+    <script src="../Js/tripplanner.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"

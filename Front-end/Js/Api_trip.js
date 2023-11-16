@@ -60,7 +60,14 @@ var lodgeButton = document.getElementById('lodgeButton');
     document.querySelector('.description').innerHTML = '(Flight API search results/Interface)';
 
   });
-
+  var buckets = document.getElementsByClassName('bucket');
+  for(var i = 0; i < buckets.length; i++) {
+    buckets[i].addEventListener('click', function() {
+      this.innerHTML = 'Added to Bucketlist';
+      this.style.backgroundColor = '#FABF00';
+      this.style.color='#006167';
+    });
+  }
 // api pouup
 document.querySelector('#copylink').addEventListener('click', function() {
   document.querySelector('.message').style.display = 'block';
@@ -69,6 +76,11 @@ document.querySelector('#copylink').addEventListener('click', function() {
 document.querySelector('#copylink1').addEventListener('click', function() {
   document.querySelector('.message1').style.display = 'block';
 });
+
+// bucket list
+
+
+
 // lodge popup
 
 
