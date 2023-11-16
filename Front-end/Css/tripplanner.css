@@ -631,7 +631,9 @@ footer .container{
 display: flex;
 justify-content: space-between;
 }
-
+.container .help .social-icon a:hover{
+  opacity: 0.5;
+}
 footer .container .links{
   display: flex;
   /* justify-content: space-between; */
