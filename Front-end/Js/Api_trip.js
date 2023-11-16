@@ -68,6 +68,7 @@ var lodgeButton = document.getElementById('lodgeButton');
       this.style.color='#006167';
     });
   }
+  
 // api pouup
 document.querySelector('#copylink').addEventListener('click', function() {
   document.querySelector('.message').style.display = 'block';

@@ -240,6 +240,7 @@ margin-bottom: 5%;
 .popup_trip .content_trip .invite .message p{
   color: var(--Secondary-Colour);
 }
+
 .popup_trip .content_trip .invite #copylink{
   display: flex;
   width: 40%;
