@@ -316,6 +316,10 @@ header{
     background: var(--PRIMARY-COLOUR);
 
  }
+ hr{
+    border: 1px solid black;
+    width: 100%;
+   }
 
 /* .green{
     display: none;
@@ -489,11 +493,127 @@ header{
 .searchbutton1{
     margin-left: 560px;
 }
+.trip_planner{
+    position: relative;
+}
 .trip_planner form .search_btn:hover , .currency form .search_btn:hover{
     color: var(--Secondary-Colour);
     background: var(--PRIMARY-COLOUR);
 }
-.trip_planner form .search_btn{
+.trip_planner .share{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    cursor: pointer;
+    
+}
+
+.share-icon:hover{
+    fill:var(--PRIMARY-COLOUR);
+}
+.trip_planner .share .fa-share{
+    color: var(--Secondary-Colour);
+    font-size: 2rem;
+}
+/* Trip planner Popup */
+.overlay {
+    position: fixed;
+    top: 10%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+
+  }
+  .overlay:target {
+    visibility: visible;
+    opacity: 1;
+  }
+  .popup_trip {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 70px auto;
+    padding: 25px;
+    background: linear-gradient(180deg, rgba(215, 229, 239, 0.548) 0%, #D7EFDA 100%);
+    border-radius: 5px;
+    width: 40%;
+    position: relative;
+    transition: all 1s ease-in-out;
+    color:  #121212;
+    border-radius: 15px;
+  }
+  
+  .popup_trip p {
+    color:  #121212
+  }
+  .popup_trip .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--Secondary-Colour)
+  }
+  .popup_trip .close:hover  {
+    color: var(--PRIMARY-COLOUR);
+  }
+  .popup_trip .content_trip .invite #copylink:hover{
+    background: var(--PRIMARY-COLOUR);
+    color: var(--Secondary-Colour);
+  }
+  .popup_trip .content_trip {
+    max-height: 30%;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+ .popup_trip .content_trip .invite{
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+ }
+ .popup_trip .content_trip .invite .message{
+    display: none;
+ }
+ .popup_trip .content_trip .invite .message .fa-circle-check{
+    color: green;
+    margin-top: 5px;
+ }
+ .popup_trip .content_trip .invite .message p{
+    color: var(--Secondary-Colour);
+ }
+ .popup_trip .content_trip .invite #copylink{
+    display: flex;
+    width: 40%;
+    height: 15%;
+    padding: 12px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    background: var(--Secondary-Colour, #006167);
+    border: none;
+    color: var(--Unsecondary-Colour);
+    font-size: 20px;
+ }
+ 
+.trip_planner form .search_btn , .search_btn1{
     margin-left: 36%;
     margin-top: 5%;
     display: flex;
@@ -512,6 +632,7 @@ header{
     font-size: 20px;
 
 }
+
 .currency form .search_btn{
     border-radius: 5px;
     background: var(--UNPRIMARY-COLOUR, #FFF);
@@ -540,7 +661,7 @@ header{
 }
 .bucket{
     display: flex;
-    width: 170px;
+    width: 190px;
     height: 40px;
     padding: 12px 24px;
     justify-content: center;
@@ -878,6 +999,7 @@ footer .help p span{
 footer{
     background-color: var(--Secondary-Colour);
     width: 100%;
+   
     
 
 }
@@ -892,7 +1014,9 @@ footer .container{
   display: flex;
   justify-content: space-between;
 }
-
+.container .help .social-icon a:hover{
+    opacity: 0.5;
+}
 footer .container .links{
     display: flex;
     /* justify-content: space-between; */

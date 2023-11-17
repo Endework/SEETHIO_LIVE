@@ -38,88 +38,50 @@ function decrementValue()
     value--;
     document.getElementById('number10').innerText = value;
 }
-// // This code is to switch between lodge and flight pages
+// This code is to switch between lodge and flight pages
 
-// var lodgeButton = document.getElementById('lodgeButton');
-//   var flightButton = document.getElementById('flightButton');
-  
-//   lodgeButton.addEventListener('click', function() {
-//     document.getElementById('lodgecontainer').style.display = 'block';
-//     document.getElementById('flightcontainer').style.display = 'none';
-//     lodgeButton.classList.add('active');
-//     flightButton.classList.remove('active');
-//     document.querySelector('.description').innerHTML = '(Lodge API search results/Interface)';
-
-//   });
-  
-//   flightButton.addEventListener('click', function() {
-//     document.getElementById('flightcontainer').style.display = 'block';
-//     document.getElementById('lodgecontainer').style.display = 'none';
-//     flightButton.classList.add('active');
-//     lodgeButton.classList.remove('active');
-//     document.querySelector('.description').innerHTML = '(Flight API search results/Interface)';
-
-//   });
 var lodgeButton = document.getElementById('lodgeButton');
-var flightButton = document.getElementById('flightButton');
+  var flightButton = document.getElementById('flightButton');
+  
+  lodgeButton.addEventListener('click', function() {
+    document.getElementById('lodgecontainer').style.display = 'block';
+    document.getElementById('flightcontainer').style.display = 'none';
+    lodgeButton.classList.add('active');
+    flightButton.classList.remove('active');
+    document.querySelector('.description').innerHTML = '(Lodge API search results/Interface)';
 
-lodgeButton.addEventListener('click', function() {
-  document.getElementById('lodgecontainer').style.display = 'block';
-  document.getElementById('flightcontainer').style.display = 'none';
-  lodgeButton.classList.add('active');
-  flightButton.classList.remove('active');
-  document.querySelector('.description').innerHTML = '(Lodge API search results/Interface)';
-
-  document.querySelector('#lodgecontainer .search-btn').addEventListener('click', function(event){
-    event.preventDefault();
-    window.location.href = 'Lodge_API.html'; 
   });
-});
+  
+  flightButton.addEventListener('click', function() {
+    document.getElementById('flightcontainer').style.display = 'block';
+    document.getElementById('lodgecontainer').style.display = 'none';
+    flightButton.classList.add('active');
+    lodgeButton.classList.remove('active');
+    document.querySelector('.description').innerHTML = '(Flight API search results/Interface)';
 
-flightButton.addEventListener('click', function() {
-  document.getElementById('flightcontainer').style.display = 'block';
-  document.getElementById('lodgecontainer').style.display = 'none';
-  flightButton.classList.add('active');
-  lodgeButton.classList.remove('active');
-  document.querySelector('.description').innerHTML = '(Flight API search results/Interface)';
-
-  document.querySelector('#flightcontainer .search-btn').addEventListener('click', function(event){
-    event.preventDefault();
-    window.location.href = '/Front-end/Html/Flight.html'; 
   });
-});
-
-
+  var buckets = document.getElementsByClassName('bucket');
+  for(var i = 0; i < buckets.length; i++) {
+    buckets[i].addEventListener('click', function() {
+      this.innerHTML = 'Added to Bucketlist';
+      this.style.backgroundColor = '#FABF00';
+      this.style.color='#006167';
+    });
+  }
+  
 // api pouup
 document.querySelector('#copylink').addEventListener('click', function() {
   document.querySelector('.message').style.display = 'block';
 });
 
-// document.querySelector('#copylink1').addEventListener('click', function() {
-//   document.querySelector('.message1').style.display = 'block';
-// });
-
-
-// for the bucketlist button
-var buckets = document.getElementsByClassName('bucket');
-for(var i = 0; i < buckets.length; i++) {
-  buckets[i].addEventListener('click', function() {
-    this.innerHTML = 'Added to Bucketlist';
-    this.style.backgroundColor = '#FABF00';
-    this.style.color='#006167';
-  });
-}
-
-var btn = document.getElementById("search_btn1");
-
-btn.addEventListener('mouseover', function() {
-  btn.style.backgroundColor = '#FABF00';
-  btn.style.color='#006167';
+document.querySelector('#copylink1').addEventListener('click', function() {
+  document.querySelector('.message1').style.display = 'block';
 });
-btn.addEventListener('mouseout', function() {
-  btn.style.backgroundColor = '#006167'; // Reset the background color when the mouse is not over the button
-  btn.style.color='#fff'
-});
+
+// bucket list
+
+
+
 // lodge popup
 
 

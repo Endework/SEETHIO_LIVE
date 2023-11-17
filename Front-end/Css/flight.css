@@ -320,9 +320,9 @@ header{
 /* .green{
     display: none;
 } */
-.containerd {
+/* .containerd {
     display: none;
-  }
+  } */
   .button1 {
     border: none;
     color:var(--Search-Bar-Colour, rgba(0, 0, 0, 0.50));
@@ -393,6 +393,11 @@ header{
     font-weight: 500;
     line-height: 32px; /* 100% */
 }
+ 
+hr{
+    border: 1px solid black;
+    width: 100%;
+    }
   
 .search{
     display: flex;
@@ -489,10 +494,135 @@ header{
 .searchbutton1{
     margin-left: 560px;
 }
+.trip_planner{
+    position: relative;
+}
 .trip_planner form .search_btn:hover , .currency form .search_btn:hover{
     color: var(--Secondary-Colour);
     background: var(--PRIMARY-COLOUR);
 }
+.trip_planner .share{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    cursor: pointer;
+}
+
+.trip_planner .share .fa-share{
+    color: var(--Secondary-Colour);
+    font-size: 2rem;
+}
+/* Trip planner Popup */
+.overlay {
+    position: fixed;
+    top: 10%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+
+  }
+  .overlay:target {
+    visibility: visible;
+    opacity: 1;
+  }
+  .popup_trip ,.popup_lodge {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 70px auto;
+    padding: 25px;
+    background: linear-gradient(180deg, rgba(215, 229, 239, 0.548) 0%, #D7EFDA 100%);
+    border-radius: 5px;
+    width: 40%;
+    position: relative;
+    transition: all 1s ease-in-out;
+    color:  #121212;
+    border-radius: 15px;
+  }
+  
+  .popup_trip  p .popup_lodge p {
+    color:  #121212
+  }
+  .popup_trip .close , .popup_lodge .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--Secondary-Colour)
+  }
+  .popup_trip .close:hover  {
+    color: var(--PRIMARY-COLOUR);
+  }
+  .popup_trip .content_trip .invite #copylink:hover{
+    background: var(--PRIMARY-COLOUR);
+    color: var(--Secondary-Colour);
+  }
+  .content_lodge .continue{
+    background: var(--Secondary-Colour);
+    color: var(--Unsecondary-Colour);
+    border: none;
+    width: 70%;
+    height: 50px;
+    border: none;
+    font-family: Nunito;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  .popup_trip .content_trip , .popup_lodge .content_lodge {
+    max-height: 30%;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+ .popup_trip .content_trip .invite{
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+ }
+ .popup_trip .content_trip .invite .message{
+    display: none;
+ }
+ .popup_trip .content_trip .invite .message .fa-circle-check{
+    color: green;
+    margin-top: 5px;
+ }
+ .popup_trip .content_trip .invite .message p{
+    color: var(--Secondary-Colour);
+ }
+ .popup_trip .content_trip .invite #copylink{
+    display: flex;
+    width: 40%;
+    height: 15%;
+    padding: 12px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    background: var(--Secondary-Colour, #006167);
+    border: none;
+    color: var(--Unsecondary-Colour);
+    font-size: 20px;
+ }
+ 
 .trip_planner form .search_btn{
     margin-left: 36%;
     margin-top: 5%;
@@ -534,13 +664,42 @@ header{
     width: 100% !important;
     background: linear-gradient(180deg, rgba(215, 239, 218, 0.00) 0%, rgba(215, 239, 218, 0.00) 0%, rgba(215, 239, 218, 0.50) 0%), #FFF;
     margin-top: 20%;
+    height: 4494px;
+    background: var(--Unsecondary-Colour);
     
+    position: relative;
     
     
 }
+.container1 .buttons{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    position: absolute;
+    bottom: 7%;
+    left: 30%;
+}
+.container1 .buttons button{
+    display: flex;
+    width: 290px;
+    height: 70px;
+    padding: 12px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border: none;
+    font-family: Nunito;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
 .bucket{
     display: flex;
-    width: 170px;
+    width: 190px;
     height: 40px;
     padding: 12px 24px;
     justify-content: center;
@@ -576,7 +735,10 @@ header{
     background: var(--UNPRIMARY-COLOUR, #FFF);
     padding: 5% 8%;
     box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.15);
-    
+}
+.trip_planner ,.activites_to_explore, .top_rated_lodge , .restaurants_and_dinings{
+    display: none;
+
 }
 .card_div{
     border-radius: 15px;
@@ -892,7 +1054,9 @@ footer .container{
   display: flex;
   justify-content: space-between;
 }
-
+.container .help .social-icon a:hover{
+    opacity: 0.5;
+}
 footer .container .links{
     display: flex;
     /* justify-content: space-between; */
