@@ -231,8 +231,8 @@ input:not([type='checkbox']):not([type='button']) {
     right: 0;
     background: rgba(0, 0, 0, 0.7);
     transition: opacity 500ms;
-    visibility: hidden;
-    opacity: 0;
+    visibility: visible;
+    opacity: 1;
 
   }
   .overlay:target {
