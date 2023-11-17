@@ -38,28 +38,57 @@ function decrementValue()
     value--;
     document.getElementById('number10').innerText = value;
 }
-// This code is to switch between lodge and flight pages
+// // This code is to switch between lodge and flight pages
 
+// var lodgeButton = document.getElementById('lodgeButton');
+//   var flightButton = document.getElementById('flightButton');
+  
+//   lodgeButton.addEventListener('click', function() {
+//     document.getElementById('lodgecontainer').style.display = 'block';
+//     document.getElementById('flightcontainer').style.display = 'none';
+//     lodgeButton.classList.add('active');
+//     flightButton.classList.remove('active');
+//     document.querySelector('.description').innerHTML = '(Lodge API search results/Interface)';
+
+//   });
+  
+//   flightButton.addEventListener('click', function() {
+//     document.getElementById('flightcontainer').style.display = 'block';
+//     document.getElementById('lodgecontainer').style.display = 'none';
+//     flightButton.classList.add('active');
+//     lodgeButton.classList.remove('active');
+//     document.querySelector('.description').innerHTML = '(Flight API search results/Interface)';
+
+//   });
 var lodgeButton = document.getElementById('lodgeButton');
-  var flightButton = document.getElementById('flightButton');
-  
-  lodgeButton.addEventListener('click', function() {
-    document.getElementById('lodgecontainer').style.display = 'block';
-    document.getElementById('flightcontainer').style.display = 'none';
-    lodgeButton.classList.add('active');
-    flightButton.classList.remove('active');
-    document.querySelector('.description').innerHTML = '(Lodge API search results/Interface)';
+var flightButton = document.getElementById('flightButton');
 
-  });
-  
-  flightButton.addEventListener('click', function() {
-    document.getElementById('flightcontainer').style.display = 'block';
-    document.getElementById('lodgecontainer').style.display = 'none';
-    flightButton.classList.add('active');
-    lodgeButton.classList.remove('active');
-    document.querySelector('.description').innerHTML = '(Flight API search results/Interface)';
+lodgeButton.addEventListener('click', function() {
+  document.getElementById('lodgecontainer').style.display = 'block';
+  document.getElementById('flightcontainer').style.display = 'none';
+  lodgeButton.classList.add('active');
+  flightButton.classList.remove('active');
+  document.querySelector('.description').innerHTML = '(Lodge API search results/Interface)';
 
+  document.querySelector('#lodgecontainer .search-btn').addEventListener('click', function(event){
+    event.preventDefault();
+    window.location.href = 'Lodge_API.html'; 
   });
+});
+
+flightButton.addEventListener('click', function() {
+  document.getElementById('flightcontainer').style.display = 'block';
+  document.getElementById('lodgecontainer').style.display = 'none';
+  flightButton.classList.add('active');
+  lodgeButton.classList.remove('active');
+  document.querySelector('.description').innerHTML = '(Flight API search results/Interface)';
+
+  document.querySelector('#flightcontainer .search-btn').addEventListener('click', function(event){
+    event.preventDefault();
+    window.location.href = '/Front-end/Html/Flight.html'; 
+  });
+});
+
 
 // api pouup
 document.querySelector('#copylink').addEventListener('click', function() {
