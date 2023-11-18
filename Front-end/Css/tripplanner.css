@@ -65,6 +65,12 @@ header .end{
   
     
 }
+#tripTitle{
+  color: var(--Secondary-Colour);
+}
+#tripTitle:hover{
+  color: var(--PRIMARY-COLOUR);
+}
 .trip_planner form .search_btn , .featured_deals .search-btn{
     margin-left: 36%;
     margin-top: 5%;
