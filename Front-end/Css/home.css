@@ -757,6 +757,7 @@ header{
 .container2{
     width:100%;
     background-color: white;
+    margin-top:10%;
 }
 .rivan{
     background: var(--Secondary-Colour, #006167);
