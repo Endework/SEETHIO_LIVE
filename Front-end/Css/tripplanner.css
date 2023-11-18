@@ -72,7 +72,8 @@ header .end{
   color: var(--PRIMARY-COLOUR);
 }
 .trip_planner form .search_btn , .featured_deals .search-btn{
-    margin-left: 36%;
+    /* margin-left: 30%; */
+    margin-inline: auto;
     margin-top: 5%;
     display: flex;
     width: 290px;
