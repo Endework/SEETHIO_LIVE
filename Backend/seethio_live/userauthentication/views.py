@@ -45,9 +45,9 @@ def register_view(request):
             email_verification.save()
 
             # Send an email with OTP
-            subject = "Email Verification OTP"
-            message = f"Your OTP for email verification is: {email_verification.otp}"
-            from_email = "your_email@example.com"  # Update with your email
+            subject = "Verify Your Email And Join The Seethio Adventurers"
+            message = f"Hello {user.username} \n\n You're one step closer to joining our community of adventurers exploring Ethiopia's rich cultures and seeking thrilling experiences. \n\n To unlock your adventure, please Enter this verification code: {email_verification.otp} \n\n Once confirmed, you'll officially join the Seethio Adventurers, unlocking exclusive deals, discounts, and rewards. \n\n Don't miss out on this adventure of a lifetime. Confirm your email now for amazing fun! \n\n Thanks for choosing us, \n The Seethio Team."
+            from_email = "seethiolive@mail.com"  # Update with your email
             to_email = user.email
 
             try:
@@ -125,7 +125,7 @@ def password_reset_request(request):
                         send_mail(
                             subject,
                             email,
-                            "smartcash565@gmail.com",
+                            "seethiolive@mail.com",
                             [user.email],
                             fail_silently=False,
                         )
@@ -231,7 +231,7 @@ def resend_password_reset_email(request):
                         send_mail(
                             subject,
                             email,
-                            "smartcash565@gmail.com",  # Change to your email
+                            "seethiolive@mail.com",  # Change to your email
                             [user.email],
                             fail_silently=False,
                         )

@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -9,7 +10,9 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
-    {% comment %} <link rel="stylesheet" href="../Css/Home.css" /> {% endcomment %}
+    {% comment %}
+    <link rel="stylesheet" href="../Css/Home.css" />
+    {% endcomment %}
     <link rel="stylesheet" href="{% static 'css/home.css' %}" />
 
     <link
@@ -29,9 +32,10 @@
     <header>
       <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container-fluid">
-          {% comment %} <img src="../images/navlogo.png" alt="nav logo" /> {% endcomment %}
+          {% comment %}
+          <img src="../images/navlogo.png" alt="nav logo" /> {%endcomment %}
           <img src="{% static 'images/navlogo.png' %}" alt="nav logo" />
-          
+
           <button
             type="button"
             data-bs-toggle="collapse"
@@ -80,9 +84,14 @@
               </li>
 
               <div style="display: flex; justify-content: center">
-                {% comment %} <img class="w-25" src="../images/sarah_profile.svg" alt="" /> {% endcomment %}
-                <img src="{% static 'images/sarah_profile.svg' %}" alt="nav logo" />
-                
+                {% comment %}
+                <img class="w-25" src="../images/sarah_profile.svg" alt="" />
+                {%endcomment %}
+                <img
+                  src="{% static 'images/sarah_profile.svg' %}"
+                  alt="nav logo"
+                />
+
                 <li class="nav-item dropdown mt-2 pt-3">
                   <a
                     class="nav-link dropdown-toggle"
@@ -91,7 +100,7 @@
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
                   >
-                  {{user.first_name|capfirst}}{{user.last_name|capfirst}}
+                    {{user.first_name|capfirst}} {{user.last_name|capfirst}}
                   </a>
                   <ul class="dropdown-menu">
                     <div class="d-flex align-items-center tx">
@@ -258,17 +267,31 @@
           </p>
         </div>
         <div id="carousel">
-         
-          <img src="{% static 'images/southMan.png' %}" class="active" alt="south man image" />
-    
-          <img src="{% static 'images/rockchurchside.png' %}"  alt="Rock church" />
-          <img src="{% static 'images/nile river.png' %}"  alt="Nile river" />
-          <img src="{% static 'images/ertale.png' %}"  alt="Erta Ale" />
-          <img src="{% static 'images/Mountains.png' %}"  alt="Semen Mountains" />
-          <img src="{% static 'images/lineofJudha.png' %}"  alt="Lion of Judha" />
-          <img src="{% static 'images/harar.png' %}"  alt="Harar" />
-          <img src="{% static 'images/sheger river.png' %}"  alt="Sheger River" />
-          
+          <img
+            src="{% static 'images/southMan.png' %}"
+            class="active"
+            alt="south man image"
+          />
+
+          <img
+            src="{% static 'images/rockchurchside.png' %}"
+            alt="Rock church"
+          />
+          <img src="{% static 'images/nile river.png' %}" alt="Nile river" />
+          <img src="{% static 'images/ertale.png' %}" alt="Erta Ale" />
+          <img
+            src="{% static 'images/Mountains.png' %}"
+            alt="Semen Mountains"
+          />
+          <img
+            src="{% static 'images/lineofJudha.png' %}"
+            alt="Lion of Judha"
+          />
+          <img src="{% static 'images/harar.png' %}" alt="Harar" />
+          <img
+            src="{% static 'images/sheger river.png' %}"
+            alt="Sheger River"
+          />
         </div>
       </div>
     </header>
@@ -730,16 +753,25 @@
                 </div>
                 <div class="carousel-inner">
                   <div class="carousel-item active">
-                    
-                    <img src="{% static 'images/Radison_blu1.jpg' %}" class="d-block w-100"  alt="..." />
+                    <img
+                      src="{% static 'images/Radison_blu1.jpg' %}"
+                      class="d-block w-100"
+                      alt="..."
+                    />
                   </div>
                   <div class="carousel-item">
-                    
-                    <img src="{% static 'images/Radison_blu2.png' %}" class="d-block w-100"  alt="..." />
+                    <img
+                      src="{% static 'images/Radison_blu2.png' %}"
+                      class="d-block w-100"
+                      alt="..."
+                    />
                   </div>
                   <div class="carousel-item">
-                    
-                    <img src="{% static 'images/Radison_blu3.png' %}" class="d-block w-100"  alt="..." />
+                    <img
+                      src="{% static 'images/Radison_blu3.png' %}"
+                      class="d-block w-100"
+                      alt="..."
+                    />
                   </div>
                 </div>
                 <input
@@ -807,16 +839,25 @@
                 </div>
                 <div class="carousel-inner">
                   <div class="carousel-item active">
-                    
-                    <img src="{% static 'images/hayat1.jpg' %}" class="d-block w-100"  alt="..." />
+                    <img
+                      src="{% static 'images/hayat1.jpg' %}"
+                      class="d-block w-100"
+                      alt="..."
+                    />
                   </div>
                   <div class="carousel-item">
-                    
-                    <img src="{% static 'images/hayat2.png' %}" class="d-block w-100"  alt="..." />
+                    <img
+                      src="{% static 'images/hayat2.png' %}"
+                      class="d-block w-100"
+                      alt="..."
+                    />
                   </div>
                   <div class="carousel-item">
-                    
-                    <img src="{% static 'images/hayat3.png' %}" class="d-block w-100"  alt="..." />
+                    <img
+                      src="{% static 'images/hayat3.png' %}"
+                      class="d-block w-100"
+                      alt="..."
+                    />
                   </div>
                 </div>
                 <input
@@ -884,16 +925,25 @@
                 </div>
                 <div class="carousel-inner">
                   <div class="carousel-item active">
-                    
-                    <img src="{% static 'images/haile1.jpg' %}" class="d-block w-100"  alt="..." />
+                    <img
+                      src="{% static 'images/haile1.jpg' %}"
+                      class="d-block w-100"
+                      alt="..."
+                    />
                   </div>
                   <div class="carousel-item">
-                   
-                    <img src="{% static 'images/haile2.png' %}" class="d-block w-100"  alt="..." />
+                    <img
+                      src="{% static 'images/haile2.png' %}"
+                      class="d-block w-100"
+                      alt="..."
+                    />
                   </div>
                   <div class="carousel-item">
-                    
-                    <img src="{% static 'images/haile3.png' %}" class="d-block w-100"  alt="..." />
+                    <img
+                      src="{% static 'images/haile3.png' %}"
+                      class="d-block w-100"
+                      alt="..."
+                    />
                   </div>
                 </div>
                 <input
@@ -967,16 +1017,25 @@
                 </div>
                 <div class="carousel-inner">
                   <div class="carousel-item active">
-                    
-                    <img src="{% static 'images/yodAbyssinia.png' %}" class="d-block w-100"  alt="..." />
+                    <img
+                      src="{% static 'images/yodAbyssinia.png' %}"
+                      class="d-block w-100"
+                      alt="..."
+                    />
                   </div>
                   <div class="carousel-item">
-                    
-                    <img src="{% static 'images/yodAbyssinia1.png' %}" class="d-block w-100"  alt="..." />
+                    <img
+                      src="{% static 'images/yodAbyssinia1.png' %}"
+                      class="d-block w-100"
+                      alt="..."
+                    />
                   </div>
                   <div class="carousel-item">
-                    
-                    <img src="{% static 'images/yodAbyssinia2.png' %}" class="d-block w-100"  alt="..." />
+                    <img
+                      src="{% static 'images/yodAbyssinia2.png' %}"
+                      class="d-block w-100"
+                      alt="..."
+                    />
                   </div>
                 </div>
                 <input
@@ -1046,11 +1105,18 @@
                 </div>
                 <div class="carousel-inner">
                   <div class="carousel-item active">
-                    <img src="{% static 'images/Verres1.jpg' %}" class="d-block w-100"  alt="..." />
+                    <img
+                      src="{% static 'images/Verres1.jpg' %}"
+                      class="d-block w-100"
+                      alt="..."
+                    />
                   </div>
                   <div class="carousel-item">
-                   
-                    <img src="{% static 'images/Verres2.png' %}" class="d-block w-100"  alt="..." />
+                    <img
+                      src="{% static 'images/Verres2.png' %}"
+                      class="d-block w-100"
+                      alt="..."
+                    />
                   </div>
                   <div class="carousel-item">
                     <img
@@ -1058,7 +1124,11 @@
                       class="d-block w-100"
                       alt="..."
                     />
-                    <img src="{% static 'images/Verres3.png' %}" class="d-block w-100"  alt="..." />
+                    <img
+                      src="{% static 'images/Verres3.png' %}"
+                      class="d-block w-100"
+                      alt="..."
+                    />
                   </div>
                 </div>
                 <input
@@ -1127,16 +1197,25 @@
                 </div>
                 <div class="carousel-inner">
                   <div class="carousel-item active">
-                    
-                    <img src="{% static 'images/kategna1.jpg' %}" class="d-block w-100"  alt="..." />
+                    <img
+                      src="{% static 'images/kategna1.jpg' %}"
+                      class="d-block w-100"
+                      alt="..."
+                    />
                   </div>
                   <div class="carousel-item">
-                    
-                    <img src="{% static 'images/kategna2.png' %}" class="d-block w-100"  alt="..." />
+                    <img
+                      src="{% static 'images/kategna2.png' %}"
+                      class="d-block w-100"
+                      alt="..."
+                    />
                   </div>
                   <div class="carousel-item">
-                    
-                    <img src="{% static 'images/kategna3.png' %}" class="d-block w-100"  alt="..." />
+                    <img
+                      src="{% static 'images/kategna3.png' %}"
+                      class="d-block w-100"
+                      alt="..."
+                    />
                   </div>
                 </div>
                 <input
@@ -1244,16 +1323,25 @@
                 </div>
                 <div class="carousel-inner">
                   <div class="carousel-item active">
-                    
-                    <img src="{% static 'images/debredamo1.jpg' %}" class="d-block w-100"  alt="..." />
+                    <img
+                      src="{% static 'images/debredamo1.jpg' %}"
+                      class="d-block w-100"
+                      alt="..."
+                    />
                   </div>
                   <div class="carousel-item">
-                    
-                    <img src="{% static 'images/debredamo2.png' %}" class="d-block w-100"  alt="..." />
+                    <img
+                      src="{% static 'images/debredamo2.png' %}"
+                      class="d-block w-100"
+                      alt="..."
+                    />
                   </div>
                   <div class="carousel-item">
-                    
-                    <img src="{% static 'images/debredamo3.png' %}" class="d-block w-100"  alt="..." />
+                    <img
+                      src="{% static 'images/debredamo3.png' %}"
+                      class="d-block w-100"
+                      alt="..."
+                    />
                   </div>
                 </div>
                 <input
@@ -1372,8 +1460,11 @@
                 </defs>
               </svg>
 
-             
-              <img src="{% static 'images/ethiopian_airlines.jpg' %}" class="card-img-top"  alt="..." />
+              <img
+                src="{% static 'images/ethiopian_airlines.jpg' %}"
+                class="card-img-top"
+                alt="..."
+              />
               <input
                 class="bucket-list"
                 type="submit"
@@ -1489,8 +1580,12 @@
                   </filter>
                 </defs>
               </svg>
-              
-              <img src="{% static 'images/ethiopian_airlines.jpg' %}" class="card-img-top"  alt="..." />
+
+              <img
+                src="{% static 'images/ethiopian_airlines.jpg' %}"
+                class="card-img-top"
+                alt="..."
+              />
 
               <input
                 class="bucket-list"
@@ -1551,9 +1646,11 @@
             </p>
             <div class="money">
               <div class="left">
-                <span class="text-dark"
-                  >
-                  <img src="{% static 'images/USA_flag.svg' %}"   alt="" />USD</span
+                <span class="text-dark">
+                  <img
+                    src="{% static 'images/USA_flag.svg' %}"
+                    alt=""
+                  />USD</span
                 >
               </div>
               <div class="right">
@@ -1584,9 +1681,11 @@
             </p>
             <div class="money">
               <div class="left">
-                <span class="text-dark"
-                  >
-                  <img src="{% static 'images/ETB_flag.png' %}"   alt="" />ETB</span
+                <span class="text-dark">
+                  <img
+                    src="{% static 'images/ETB_flag.png' %}"
+                    alt=""
+                  />ETB</span
                 >
               </div>
               <div class="right">
@@ -1629,8 +1728,11 @@
           <div class="row">
             <div class="col">
               <div class="bank" style="display: flex; flex-direction: column">
-                
-                <img style="width: 40%" src="{% static 'images/Abyssinia.svg' %}"   alt="" />
+                <img
+                  style="width: 40%"
+                  src="{% static 'images/Abyssinia.svg' %}"
+                  alt=""
+                />
                 <a href="https://www.bankofabyssinia.com/branch-atm-locations/"
                   >Abyssinia Bank</a
                 >
@@ -1638,8 +1740,11 @@
             </div>
             <div class="col">
               <div class="bank" style="display: flex; flex-direction: column">
-      
-                <img style="width: 40%" src="{% static 'images/Awash.svg' %}"   alt="" />
+                <img
+                  style="width: 40%"
+                  src="{% static 'images/Awash.svg' %}"
+                  alt=""
+                />
                 <a href="https://awashbank.com/awash-branch-atm-agent-network/"
                   >Awash Bank</a
                 >
@@ -1647,8 +1752,11 @@
             </div>
             <div class="col">
               <div class="bank" style="display: flex; flex-direction: column">
-                
-                <img style="width: 40%" src="{% static 'images/berihan.svg' %}"   alt="" />
+                <img
+                  style="width: 40%"
+                  src="{% static 'images/berihan.svg' %}"
+                  alt=""
+                />
                 <a href="https://berhanbanksc.com/location-2/">Berhan Bank</a>
               </div>
             </div>
@@ -1656,8 +1764,11 @@
           <div class="row">
             <div class="col">
               <div class="bank" style="display: flex; flex-direction: column">
-                
-                <img style="width: 40%" src="{% static 'images/cbe.svg' %}"   alt="" />
+                <img
+                  style="width: 40%"
+                  src="{% static 'images/cbe.svg' %}"
+                  alt=""
+                />
                 <a href="https://www.combanketh.et/en/branch-network/"
                   >Commercial Bank of Ethiopia</a
                 >
@@ -1665,8 +1776,11 @@
             </div>
             <div class="col">
               <div class="bank" style="display: flex; flex-direction: column">
-                
-                <img style="width: 40%" src="{% static 'images/Dashen.svg' %}"   alt="" />
+                <img
+                  style="width: 40%"
+                  src="{% static 'images/Dashen.svg' %}"
+                  alt=""
+                />
                 <a href="https://dashenbanksc.com/find-a-branch/"
                   >Dashen Bank</a
                 >
@@ -1674,8 +1788,11 @@
             </div>
             <div class="col">
               <div class="bank" style="display: flex; flex-direction: column">
-              
-                <img style="width: 40%" src="{% static 'images/NIB.svg' %}"   alt="" />
+                <img
+                  style="width: 40%"
+                  src="{% static 'images/NIB.svg' %}"
+                  alt=""
+                />
                 <a href="https://www.nibbanksc.com/branch-atms-pos/"
                   >NIB International Bank</a
                 >
@@ -1685,15 +1802,21 @@
           <div class="row">
             <div class="col">
               <div class="bank" style="display: flex; flex-direction: column">
-                
-                <img style="width: 40%" src="{% static 'images/oromia.svg' %}"   alt="" />
+                <img
+                  style="width: 40%"
+                  src="{% static 'images/oromia.svg' %}"
+                  alt=""
+                />
                 <a href="https://www.oromiabank.com/branches/">Oromia Bank</a>
               </div>
             </div>
             <div class="col">
               <div class="bank" style="display: flex; flex-direction: column">
-                
-                <img style="width: 40%" src="{% static 'images/united.svg' %}"   alt="" />
+                <img
+                  style="width: 40%"
+                  src="{% static 'images/united.svg' %}"
+                  alt=""
+                />
                 <a href="https://www.hibretbank.com.et/branch-and-atm-locator/"
                   >United Bank</a
                 >
@@ -1701,8 +1824,11 @@
             </div>
             <div class="col">
               <div class="bank" style="display: flex; flex-direction: column">
-                
-                <img style="width: 40%" src="{% static 'images/wegagen.svg' %}"   alt="" />
+                <img
+                  style="width: 40%"
+                  src="{% static 'images/wegagen.svg' %}"
+                  alt=""
+                />
                 <a href="https://www.wegagen.com/contact/contact-us/"
                   >Wegagen Bank</a
                 >
@@ -1712,8 +1838,11 @@
           <div class="row">
             <div class="col" style="display: none">
               <div class="bank" style="display: flex; flex-direction: column">
-                
-                <img style="width: 40%" src="{% static 'images/Abyssinia.svg' %}"   alt="" />
+                <img
+                  style="width: 40%"
+                  src="{% static 'images/Abyssinia.svg' %}"
+                  alt=""
+                />
                 <a href="">Abyssinia</a>
               </div>
             </div>
@@ -1722,8 +1851,11 @@
                 class="bank"
                 style="display: flex; flex-direction: column; margin-bottom: 5%"
               >
-                
-                <img style="width: 40%" src="{% static 'images/zemen.svg' %}"   alt="" />
+                <img
+                  style="width: 40%"
+                  src="{% static 'images/zemen.svg' %}"
+                  alt=""
+                />
                 <a href="https://www.zemenbank.com/regional-offices"
                   >Zemen Bank</a
                 >
@@ -1731,8 +1863,11 @@
             </div>
             <div class="col" style="display: none">
               <div class="bank" style="display: flex; flex-direction: column">
-              
-                <img style="width: 40%" src="{% static 'images/Abyssinia.svg' %}"   alt="" />
+                <img
+                  style="width: 40%"
+                  src="{% static 'images/Abyssinia.svg' %}"
+                  alt=""
+                />
                 <a href="">Abyssinia</a>
               </div>
             </div>
@@ -1885,9 +2020,9 @@
       </div>
       <div class="footer">
         <div class="logo">
-          <a href="/index.html"
-            >
-          <img  src="{% static 'footer_logo.png' %}"   alt="" /></a>
+          <a href="/index.html">
+            <img src="{% static 'footer_logo.png' %}" alt=""
+          /></a>
         </div>
         <div class="copyright">
           <p><span>Copyright © 2023 Kunturi Design</span></p>
@@ -1898,9 +2033,9 @@
     <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script> -->
-    
+
     <script src="./home.js"></script>
-  
+
     <!-- <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"

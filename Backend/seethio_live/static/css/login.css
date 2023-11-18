@@ -276,8 +276,12 @@ input:not([type='checkbox']):not([type='button']) {
     align-items: center;
     width: 75%;
   }
-  #email{
-    width: 90%;
+  #id_email{
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    width: 300px;
+    height: 48px;
     padding: 4% 5%;
   }
   .popup1 .popup .close:hover , .popup2 .popup .close:hover{

@@ -43,7 +43,6 @@
           </script>
           <form action="" method="post" id="myForm">
             {% csrf_token %}
-
             <div class="full_width">
               <input
                 type="email"
@@ -52,10 +51,11 @@
                 placeholder="Email Address"
               />
               <input
+                name="password"
                 type="password"
-                name="Password1"
-                id="Password"
+                id="password1"
                 placeholder="Password"
+                required
               />
               <i class="fa-regular fa-eye-slash" id="eye"></i>
             </div>
@@ -100,9 +100,11 @@
       <div class="yellow"></div>
     </div>
 
-    <!-- password reset successful popup -->
     
-    {% comment %} <script src="{% static 'js/login.js' %}"></script> {% endcomment %}
-    {% comment %} <script src="{% static 'js/password.js' %}"></script> {% endcomment %}
+    {% comment %}
+    <script src="{% static 'js/login2.js' %}"></script>
+    {% endcomment %} {% comment %}
+    <script src="{% static 'js/password2.js' %}"></script>
+    {% endcomment %}
   </body>
 </html>
