@@ -276,7 +276,7 @@ input:not([type='checkbox']):not([type='button']) {
     align-items: center;
     width: 75%;
   }
-  #email_forgot{
+  #email{
     width: 90%;
     padding: 4% 5%;
   }
