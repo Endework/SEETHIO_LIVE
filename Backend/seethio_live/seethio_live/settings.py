@@ -9,12 +9,11 @@ https://docs.djangoproject.com/en/4.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
-
+from dotenv import load_dotenv
+load_dotenv()
 from pathlib import Path
 import os
 from decouple import config
-from dotenv import load_dotenv
-load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -43,6 +42,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "userauthentication",
     "anymail",
+    "social_django",    #ogo added configuration for social authentication
     # 'crispy_forms',
 ]
 
@@ -54,6 +54,8 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "social_django.middleware.SocialAuthExceptionMiddleware", # ogo add this    
+
 ]
 
 ROOT_URLCONF = "seethio_live.urls"
@@ -69,6 +71,8 @@ TEMPLATES = [
                 "django.template.context_processors.request",
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
+                "social_django.context_processors.login_redirect",   # ogo  add this config    # ogo added this
+                "social_django.context_processors.backends",        # ogo added this
             ],
         },
     },
@@ -152,3 +156,33 @@ SENDINBLUE_API_URL = "https://api.brevo.com/v3/"
 # }
 # DEFAULT_FROM_EMAIL = ""
 # CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+
+#social app custom settings added by ogo
+AUTHENTICATION_BACKENDS = [
+    'social_core.backends.facebook.FacebookOAuth2',  #add this
+    'social_core.backends.google.GoogleOAuth2',       #add this
+    'django.contrib.auth.backends.ModelBackend',
+]
+#social app URLS custom settings added by ogo
+LOGIN_URL = 'login'   #add this
+LOGIN_REDIRECT_URL = '/' #'home'   #add this
+LOGOUT_URL = 'logout'   #add this
+LOGOUT_REDIRECT_URL = 'login'   #add this
+
+#APIS keys and ID settings added by ogo
+SOCIAL_AUTH_FACEBOOK_KEY = os.environ.get('SOCIAL_AUTH_FACEBOOK_KEY')  #add this
+SOCIAL_AUTH_FACEBOOK_SECRET = os.environ.get('SOCIAL_AUTH_FACEBOOK_SECRET')   #add this
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = os.environ.get('SOCIAL_AUTH_GOOGLE_OAUTH2_KEY')   #add this
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = os.environ.get('SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET')   #add this
+
+# Add the following name by ogo
+SOCIAL_AUTH_URL_NAMESPACE = 'social'
+
+# external information by ogo
+SOCIAL_AUTH_FACEBOOK_SCOPE = [    #add this
+    'email',    
+]
+SOCIAL_AUTH_GOOGLE_SCOPE = [   #add this
+    'email',    
+]

@@ -8,6 +8,9 @@ from .models import User
 from django.core.mail import send_mail, BadHeaderError
 from django.http import HttpResponse, HttpResponseRedirect
 from django.contrib.auth.forms import PasswordResetForm
+from django.contrib.auth.decorators import login_required # aded by ogo
+from social_django.utils import psa #added by ogo
+from django.contrib.auth import logout as auth_logout  # Renamed to avoid conflict
 
 # from django.contrib.auth.models import User as AuthUser
 from django.template.loader import render_to_string
@@ -250,3 +253,9 @@ def resend_password_reset_email(request):
         "password_form": password_form,
     }
     return render(request, "registration/password_reset_form.html", context)
+
+@psa('social:complete')
+def google_callback(request):
+    # This view will handle the Google callback and log the user in.
+    return redirect('Html/home.html')  # Redirect to your desired page after login.
+

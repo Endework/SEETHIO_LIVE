@@ -92,10 +92,8 @@
             <img src="{% static 'images/horizontal.svg' %}" alt="" />
           </div>
           <div class="social">
-            <a href=""><img src="{% static 'images/google.svg' %}" alt="" /></a>
-            <a href=""
-              ><img src="{% static 'images/facebook.png' %}" alt=""
-            /></a>
+            <a href="{% url 'social:begin' 'google-oauth2' %}"><img src="{% static 'images/google.svg' %}" alt="Sign up with google" /></a>
+            <a href="{% url 'social:begin' 'facebook' %}"><img src="{% static 'images/facebook.png' %}" alt="Sign up with facebook"/></a>
           </div>
           <p id="account">
             Already have an account?<span
