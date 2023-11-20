@@ -324,8 +324,11 @@ header{
     display: none;
   }
   .button1 {
-    border: none;
-    color:var(--Search-Bar-Colour, rgba(0, 0, 0, 0.50));
+    border-top: 2px solid var(--Secondary-Colour);
+    border-left: 2px solid var(--Secondary-Colour);
+    color:var(--Secondary-Colour);
+    border-top-left-radius: 10px;
+    border-right: 2px solid grey !;
   }
   .button1.active {
     border-radius: 20px 0px 0px 0px;
@@ -440,7 +443,7 @@ hr{
     background-color: #006167;
     padding: 10px;
     color: #fff;
-    border-radius: 20px 20px 20px 0px;
+    border-radius: 0px 20px 20px 20px;
 }
 .flight1 form {
     display: flex;

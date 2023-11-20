@@ -324,16 +324,18 @@ header{
     display: none;
   } */
   .button1 {
-    border: none;
-    color:var(--Search-Bar-Colour, rgba(0, 0, 0, 0.50));
+    border-radius: 20px 0px 0px 0px;
+    border-top: 2px solid var(--Secondary-Colour);
+    border-left: 2px solid var(--Secondary-Colour);
+    color: var(--Secondary-Colour);
   }
   .button1.active {
     border-radius: 20px 0px 0px 0px;
-    border-top: 2px solid var(--Secondary-Colour, #006167);
-    border-left: 2px solid var(--Secondary-Colour, #006167);
+    border-top: 2px solid var(--Secondary-Colour);
+    border-left: 2px solid var(--Secondary-Colour);
     border-bottom: none;
     border-right: none;
-    color: var(--Secondary-Colour, #006167);
+    color: var(--Secondary-Colour);
   }
 .flex_item{
     display: flex;
@@ -440,7 +442,7 @@ hr{
     background-color: #006167;
     padding: 10px;
     color: #fff;
-    border-radius: 20px 20px 20px 0px;
+    border-radius: 0px 20px 20px 0px;
 }
 .flight1 form {
     display: flex;
