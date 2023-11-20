@@ -324,11 +324,10 @@ header{
     display: none;
   }
   .button1 {
+    border-radius: 20px 0px 0px 0px;
     border-top: 2px solid var(--Secondary-Colour);
     border-left: 2px solid var(--Secondary-Colour);
-    color:var(--Secondary-Colour);
-    border-top-left-radius: 10px;
-    border-right: 2px solid grey !;
+    color: var(--Secondary-Colour);
   }
   .button1.active {
     border-radius: 20px 0px 0px 0px;
