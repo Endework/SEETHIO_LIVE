@@ -1,0 +1,2046 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    {% comment %}
+    <link rel="stylesheet" href="../Css/Home.css" />
+    {% endcomment %}
+    <link rel="stylesheet" href="{% static 'css/home.css' %}" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"> -->
+    <!--  -->
+
+    <title>Home page</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+          {% comment %}
+          <img src="../images/navlogo.png" alt="nav logo" /> {%endcomment %}
+          <img src="{% static 'images/navlogo.png' %}" alt="nav logo" />
+
+          <button
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+            class="navbar-toggler navbar-toggler-right"
+          >
+            <i class="fa fa-bars"></i>
+          </button>
+
+          <div id="navbarSupportedContent" class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link active home" aria-current="page" href="#"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Places to Go
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="#">Attraction Centers</a>
+                  </li>
+                  <li><a class="dropdown-item" href="#">Dinings</a></li>
+                  <li><a class="dropdown-item" href="#">Local Market</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">Lodging</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">Flight</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#">Find Rides</a>
+              </li>
+
+              <div style="display: flex; justify-content: center">
+                {% comment %}
+                <img class="w-25" src="../images/sarah_profile.svg" alt="" />
+                {%endcomment %}
+                <img
+                  src="{% static 'images/sarah_profile.svg' %}"
+                  alt="nav logo"
+                />
+
+                <li class="nav-item dropdown mt-2 pt-3">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    {{user.first_name|capfirst}} {{user.last_name|capfirst}}
+                  </a>
+                  <ul class="dropdown-menu">
+                    <div class="d-flex align-items-center tx">
+                      <i class="fa-solid fa-gear"></i>
+                      <li>
+                        <a class="dropdown-item" href="#"> Account Settings</a>
+                      </li>
+                    </div>
+                    <!-- <hr class="bg-light"> -->
+                    <div class="d-flex align-items-center tx">
+                      <i class="fa-solid fa-rectangle-list"></i>
+                      <li><a class="dropdown-item" href="#">Bucket list</a></li>
+                    </div>
+                    <!-- <hr> -->
+                    <div class="d-flex align-items-center tx">
+                      <i class="fa-solid fa-book"></i>
+                      <li>
+                        <a class="dropdown-item" href="#"> Bookings History</a>
+                      </li>
+                    </div>
+                    <!-- <hr> -->
+                  </ul>
+                </li>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div id="container">
+        <!-- CAROUSEL -->
+        <div id="text">
+          <svg
+            class="top"
+            xmlns="http://www.w3.org/2000/svg"
+            width="57"
+            height="56"
+            viewBox="0 0 57 56"
+            fill="none"
+          >
+            <path
+              d="M0.505173 27.9496C0.602629 5.85125 25.1323 -7.36588 43.6418 4.70664C61.3706 16.27 60.2681 42.591 41.6344 52.6313C23.0008 62.6715 0.411827 49.1159 0.505173 27.9496Z"
+              fill="url(#paint0_linear_1650_6466)"
+            />
+            <defs>
+              <linearGradient
+                id="paint0_linear_1650_6466"
+                x1="0.731105"
+                y1="-23.2811"
+                x2="55.2689"
+                y2="77.9354"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stop-color="#00B7AF" />
+                <stop offset="0.651042" stop-color="#F2F2F2" />
+              </linearGradient>
+            </defs>
+          </svg>
+          <svg
+            class="bottom"
+            xmlns="http://www.w3.org/2000/svg"
+            width="97"
+            height="100"
+            viewBox="0 0 97 100"
+            fill="none"
+          >
+            <path
+              d="M1.3628 37.9976C1.98372 8.46891 34.5792 -9.09425 59.5822 6.62769L79.0326 18.8581C103.677 34.3545 102.458 70.6709 76.8299 84.4798L56.8965 95.2203C31.2686 109.029 0.267751 90.0737 0.879765 60.9686L1.3628 37.9976Z"
+              fill="url(#paint0_linear_1650_6465)"
+            />
+            <defs>
+              <linearGradient
+                id="paint0_linear_1650_6465"
+                x1="2.77358"
+                y1="-29.0937"
+                x2="88.2264"
+                y2="129.498"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stop-color="#00B7AF" />
+                <stop offset="0.651042" stop-color="#F2F2F2" />
+              </linearGradient>
+            </defs>
+          </svg>
+          <p class="active">
+            Experience <span id="ethiopia">Ethiopia</span> Explore<span
+              id="Unique"
+              >South West</span
+            >
+            <br />
+            <span class="location" style="margin-left: 30%; font-size: 30px"
+              >(Omo Valley)</span
+            >
+          </p>
+          <p>
+            Experience <span id="ethiopia">Ethiopia</span> Explore<span
+              id="Unique"
+              >Lalibela</span
+            >
+            <br /><span
+              class="location"
+              style="margin-left: 25%; font-size: 30px"
+              >(st George's Church)</span
+            >
+          </p>
+          <p>
+            Experience <span id="ethiopia">Ethiopia</span> Explore<span
+              id="Unique"
+              >Gojjam</span
+            ><br /><span
+              class="location"
+              style="margin-left: 30%; font-size: 30px"
+              >(River Nile Fall)</span
+            >
+          </p>
+          <p>
+            Experience <span id="ethiopia">Ethiopia</span> Explore<span
+              id="Unique"
+              >Afar</span
+            ><br /><span
+              class="location"
+              style="margin-left: 30%; font-size: 30px"
+              >(Erta Ale)</span
+            >
+          </p>
+          <p>
+            Experience <span id="ethiopia">Ethiopia</span> Explore<span
+              id="Unique"
+              >Amhara</span
+            ><br /><span
+              class="location"
+              style="margin-left: 30%; font-size: 30px"
+              >(Semen Mountains)</span
+            >
+          </p>
+          <p>
+            Experience <span id="ethiopia">Ethiopia</span> Explore<span
+              id="Unique"
+              >Addis Ababa</span
+            ><br /><span
+              class="location"
+              style="margin-left: 20%; font-size: 30px"
+              >(Lion of Judha statue)</span
+            >
+          </p>
+          <p>
+            Experience <span id="ethiopia">Ethiopia</span> Explore<span
+              id="Unique"
+              >Harar</span
+            ><br /><span
+              class="location"
+              style="margin-left: 30%; font-size: 30px"
+              >(The walled city)</span
+            >
+          </p>
+          <p>
+            Experience <span id="ethiopia">Ethiopia</span> Explore<span
+              id="Unique"
+              >Addis Ababa</span
+            ><br /><span
+              class="location"
+              style="margin-left: 30%; font-size: 30px"
+              >(Sheger River)</span
+            >
+          </p>
+        </div>
+        <div id="carousel">
+          <img
+            src="{% static 'images/southMan.png' %}"
+            class="active"
+            alt="south man image"
+          />
+
+          <img
+            src="{% static 'images/rockchurchside.png' %}"
+            alt="Rock church"
+          />
+          <img src="{% static 'images/nile river.png' %}" alt="Nile river" />
+          <img src="{% static 'images/ertale.png' %}" alt="Erta Ale" />
+          <img
+            src="{% static 'images/Mountains.png' %}"
+            alt="Semen Mountains"
+          />
+          <img
+            src="{% static 'images/lineofJudha.png' %}"
+            alt="Lion of Judha"
+          />
+          <img src="{% static 'images/harar.png' %}" alt="Harar" />
+          <img
+            src="{% static 'images/sheger river.png' %}"
+            alt="Sheger River"
+          />
+        </div>
+      </div>
+    </header>
+
+    <div class="lodge">
+      <button id="lodgeButton" type="button" class="button1">Lodge</button>
+      <button id="flightButton" type="button" class="button1">Flights</button>
+      <div class="flight1 containerd" id="lodgecontainer">
+        <form action="">
+          <div class="containerflight">
+            <!-- destination -->
+            <div>
+              <label for="Destination"
+                ><i class="fa-solid fa-location-dot"></i> Destination</label
+              >
+              <select
+                name="Destination"
+                id="destination"
+                aria-label="destination"
+              >
+                <option value="">--Select--</option>
+                <option value="">Addis Ababa</option>
+                <option value="">Arba Minch</option>
+                <option value="">Awasa</option>
+                <option value="">Axum</option>
+                <option value="">Bahirdar</option>
+                <option value="">Dallol</option>
+                <option value="">Gojjam</option>
+                <option value="">Gondar</option>
+                <option value="">Lalibela</option>
+                <option value="">Mekele</option>
+              </select>
+            </div>
+            <!-- guests -->
+            <div style="margin-top: 2%">
+              <label for="Guests">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <path
+                    d="M2 22C2 17.5817 5.58172 14 10 14C14.4183 14 18 17.5817 18 22H2ZM10 13C6.685 13 4 10.315 4 7C4 3.685 6.685 1 10 1C13.315 1 16 3.685 16 7C16 10.315 13.315 13 10 13ZM17.3628 15.2332C20.4482 16.0217 22.7679 18.7235 22.9836 22H20C20 19.3902 19.0002 17.0139 17.3628 15.2332ZM15.3401 12.9569C16.9728 11.4922 18 9.36607 18 7C18 5.58266 17.6314 4.25141 16.9849 3.09687C19.2753 3.55397 21 5.57465 21 8C21 10.7625 18.7625 13 16 13C15.7763 13 15.556 12.9853 15.3401 12.9569Z"
+                    fill="#FABF00"
+                  />
+                </svg>
+                Guests</label
+              >
+              <div class="passengers">
+                <div style="display: flex; flex-direction: column">
+                  <input
+                    type="number"
+                    placeholder="1"
+                    style="width: 100%; border: none"
+                    id="adult1"
+                  />
+                  <label style="text-align: left" for="adult1">Adult(s)</label>
+                </div>
+                <div style="display: flex; flex-direction: column">
+                  <input
+                    type="number"
+                    placeholder="0"
+                    style="width: 100%; border: none"
+                    id="Children1"
+                  />
+                  <label style="text-align: left" for="Children1"
+                    >Children</label
+                  >
+                </div>
+              </div>
+            </div>
+            <!-- room -->
+            <div>
+              <label for="Room"><i class="fa-solid fa-house"> </i> Room</label>
+              <div class="count" style="height: 30px">
+                <p style="padding-top: 10%" onclick="incrementValue()">+</p>
+                <p
+                  id="number10"
+                  style="
+                    border-left: 1px solid black;
+                    border-right: 1px solid black;
+                    padding-inline: 10%;
+                    height: 100%;
+                  "
+                >
+                  0
+                </p>
+                <p style="padding-top: 10%" onclick="decrementValue()">-</p>
+              </div>
+            </div>
+            <!-- check in -->
+            <div class="date">
+              <label for="checkin"
+                ><i class="fa-solid fa-clock"> </i> Check-In</label
+              >
+              <input type="date" placeholder="dd-mm-yy" id="checkin" />
+            </div>
+            <!-- check out -->
+            <div class="date">
+              <label for="checkout"
+                ><i class="fa-solid fa-clock"></i> Check-Out</label
+              >
+              <input type="date" placeholder="dd-mm-yyyy" id="checkout" />
+            </div>
+
+            <button class="search-btn">Search</button>
+          </div>
+        </form>
+      </div>
+      <!-- flight -->
+      <div class="flight1 containerd text-center" id="flightcontainer">
+        <form action="">
+          <div class="containerflight">
+            <!-- round trip -->
+            <div style="margin-top: 1.75%">
+              <select name="Roundtrip" id="roundtrip" aria-label="roundtrip">
+                <option value="">Round Trip</option>
+                <option value="">One Way</option>
+              </select>
+            </div>
+            <!-- passengers -->
+            <div style="margin-top: 1.5%">
+              <label for="Passengers"
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                >
+                  <path
+                    d="M2 22C2 17.5817 5.58172 14 10 14C14.4183 14 18 17.5817 18 22H2ZM10 13C6.685 13 4 10.315 4 7C4 3.685 6.685 1 10 1C13.315 1 16 3.685 16 7C16 10.315 13.315 13 10 13ZM17.3628 15.2332C20.4482 16.0217 22.7679 18.7235 22.9836 22H20C20 19.3902 19.0002 17.0139 17.3628 15.2332ZM15.3401 12.9569C16.9728 11.4922 18 9.36607 18 7C18 5.58266 17.6314 4.25141 16.9849 3.09687C19.2753 3.55397 21 5.57465 21 8C21 10.7625 18.7625 13 16 13C15.7763 13 15.556 12.9853 15.3401 12.9569Z"
+                    fill="#FABF00"
+                  /></svg
+                >Passengers</label
+              >
+              <div class="passengers">
+                <div style="display: flex; flex-direction: column">
+                  <input
+                    type="number"
+                    placeholder="1"
+                    style="width: 60px; border: none"
+                    id="Adult2"
+                  />
+                  <label style="text-align: left" for="Adult2">Adult(s) </label>
+                </div>
+                <div style="display: flex; flex-direction: column">
+                  <input
+                    type="number"
+                    placeholder="0"
+                    style="width: 60px; border: none"
+                    id="Children2"
+                  />
+                  <label style="text-align: left" for="">Children</label>
+                </div>
+                <div style="display: flex; flex-direction: column">
+                  <input
+                    type="number"
+                    placeholder="2"
+                    style="width: 60px; border: none"
+                    id="Infants2"
+                  />
+                  <label style="text-align: left" for="Infants2">Infants</label>
+                </div>
+              </div>
+            </div>
+            <!-- your location -->
+            <div>
+              <label for="location"
+                ><i class="fa-solid fa-location-dot"></i> From</label
+              >
+              <input
+                style="border: none"
+                type="text"
+                placeholder="Type your location"
+                id="location"
+              />
+            </div>
+            <div>
+              <!-- your destination -->
+              <label for="to"
+                ><i class="fa-solid fa-location-dot"></i> To</label
+              >
+              <select name="To" id="to" aria-label="To">
+                <option value="">--Select--</option>
+                <option value="">Addis Ababa</option>
+                <option value="">Arba Minch</option>
+                <option value="">Awasa</option>
+                <option value="">Axum</option>
+                <option value="">Bahirdar</option>
+                <option value="">Dallol</option>
+                <option value="">Gojjam</option>
+                <option value="">Gondar</option>
+                <option value="">Lalibela</option>
+                <option value="">Mekele</option>
+              </select>
+            </div>
+            <!-- departure date -->
+            <div class="date">
+              <label for="departure"
+                ><i class="fa-solid fa-clock"></i> Departure Date</label
+              >
+              <input type="date" placeholder="dd-mm-yy" id="departure" />
+            </div>
+            <!-- return date -->
+            <div class="date">
+              <label for="return">
+                <i class="fa-solid fa-clock"></i> Return Date</label
+              >
+              <input type="date" placeholder="Return date" id="return" />
+            </div>
+
+            <button class="search-btn">Search</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- the lodge/flight container ends here -->
+
+    <div class="light_blue">
+      <!-- TRIP PLANNER -->
+      <div class="trip_planner">
+        <h3>Trip Planner</h3>
+        <h5>Welcome to Seethio Trip Planner.</h5>
+        <p>
+          Whether you're drawn to the ancient rock-hewn churches of Lalibela,
+          the stunning Simien Mountains, or the bustling markets of Addis Ababa,
+          our trip planner is your gateway to crafting an unforgettable
+          adventure.
+        </p>
+        <form action="">
+          <div class="row">
+            <div class="col">
+              <div class="form-div mb-3">
+                <p class="fw-medium mb-2 text-start">
+                  <i class="fa-solid fa-location-dot"></i> Destination
+                </p>
+                <div class="flex-container">
+                  <select
+                    name="Destination"
+                    id="Destination1"
+                    class="border rounded py-3 ps-4 w-100 text-body-secondary"
+                    aria-label="destination1"
+                  >
+                    <option value="" selected disabled>--Select--</option>
+
+                    <option value="">Addis Ababa</option>
+                    <option value="">Axum</option>
+                    <option value="">Arba Minch</option>
+                    <option value="">Awasa</option>
+                    <option value="">Bahir Dar</option>
+                    <option value="">Dallol</option>
+                    <option value="">Gojjam</option>
+                    <option value="">Gondar</option>
+                    <option value="">Lalibela</option>
+                    <option value="">Mekele</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-div mb-3">
+                <p class="fw-medium mb-2 text-start">
+                  <i class="fa-solid fa-clock"></i> Trip Duration
+                </p>
+                <input
+                  type="datetime-local"
+                  name="time"
+                  id="time"
+                  placeholder="Select your preferred time zone"
+                  class="border rounded w-100 py-3 ps-4"
+                  required
+                />
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="form-div mb-3">
+                <p class="fw-medium mb-2 text-start">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                  >
+                    <path
+                      d="M11.9991 8.5L14.1151 13.5875L19.6075 14.0279L15.4229 17.6125L16.7013 22.9721L11.9991 20.1L7.29679 22.9721L8.57527 17.6125L4.39062 14.0279L9.88306 13.5875L11.9991 8.5ZM7.99907 2V11H5.99907V2H7.99907ZM17.9991 2V11H15.9991V2H17.9991ZM12.9991 2V7H10.9991V2H12.9991Z"
+                      fill="#FABF00"
+                    />
+                  </svg>
+                  Interests
+                </p>
+                <div class="flex-container">
+                  <select
+                    name="Interests"
+                    id="Interests"
+                    class="border rounded py-3 ps-4 w-100 text-body-secondary"
+                    aria-label="Interests"
+                  >
+                    <option value="" selected disabled>--Select--</option>
+                    <option value="">Adventure</option>
+                    <option value="">Festivals</option>
+                    <option value="">Food and Dinning</option>
+                    <option value="">Historical Centers</option>
+                    <option value="">Local Markets</option>
+                    <option value="">Mountains</option>
+                    <option value="">Parks</option>
+                    <option value="">Religious Place</option>
+                    <option value="">Wild Life</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-div mb-3">
+                <p class="fw-medium mb-2 text-start">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                  >
+                    <path
+                      d="M2 22C2 17.5817 5.58172 14 10 14C14.4183 14 18 17.5817 18 22H2ZM10 13C6.685 13 4 10.315 4 7C4 3.685 6.685 1 10 1C13.315 1 16 3.685 16 7C16 10.315 13.315 13 10 13ZM17.3628 15.2332C20.4482 16.0217 22.7679 18.7235 22.9836 22H20C20 19.3902 19.0002 17.0139 17.3628 15.2332ZM15.3401 12.9569C16.9728 11.4922 18 9.36607 18 7C18 5.58266 17.6314 4.25141 16.9849 3.09687C19.2753 3.55397 21 5.57465 21 8C21 10.7625 18.7625 13 16 13C15.7763 13 15.556 12.9853 15.3401 12.9569Z"
+                      fill="#FABF00"
+                    />
+                  </svg>
+                  Traveler Type
+                </p>
+                <div class="flex-container">
+                  <select
+                    name="Traveler"
+                    id="Traveler"
+                    class="border rounded py-3 ps-4 w-100 text-body-secondary"
+                    aria-label="Traveler"
+                  >
+                    <option value="" selected disabled>--Select--</option>
+                    <option value="">Business</option>
+                    <option value="">Couples</option>
+                    <option value="">Families</option>
+                    <option value="">Friends</option>
+                    <option value="">Solo</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button>Plan</button>
+        </form>
+      </div>
+
+      <!-- ACTIVITIES -->
+
+      <div class="activites">
+        <p class="info">Activities to Explore!</p>
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="card" style="height: 410px !important">
+              <img
+                src="../images/activities1.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+
+              <input
+                class="bucket-list"
+                type="submit"
+                value="Add to Bucketlist"
+              />
+              <div class="card-body">
+                <h4 class="card-title">Hiking and Trekking</h4>
+                <p class="card-text">
+                  Explore the stunning landscapes of the Simien Mountains, Bale
+                  Mountains, or the Gheralta Mountains in Tigray for exceptional
+                  trekking experiences.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card" style="height: 410px !important">
+              <img
+                src="../images/activities2.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <input
+                class="bucket-list"
+                type="submit"
+                value="Add to Bucketlist"
+              />
+              <div class="card-body">
+                <h4 class="card-title">White-Water Rafting</h4>
+                <p class="card-text">
+                  The Omo River and Blue Nile offer thrilling white-water
+                  rafting experiences, with varying levels of difficulty.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card" style="height: 410px !important">
+              <img
+                src="../images/activities3.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <input
+                class="bucket-list"
+                type="submit"
+                value="Add to Bucketlist"
+              />
+              <div class="card-body">
+                <h4 class="card-title">Birdwatching</h4>
+                <p class="card-text">
+                  Ethiopia is a birdwatcher's paradise with diverse bird
+                  species. Visit the Rift Valley Lakes or the Bale Mountains for
+                  birdwatching excursions..
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- TOP RATED LODGE -->
+      <div class="top_rated_lodge">
+        <p class="info">Top Rated Lodge</p>
+        <div class="row">
+          <div class="col-lg-4 top">
+            <div class="card">
+              <div id="carouselExampleIndicators" class="carousel slide">
+                <div class="carousel-indicators">
+                  <button
+                    type="button"
+                    data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide-to="0"
+                    class="active"
+                    aria-current="true"
+                    aria-label="Slide 1"
+                  ></button>
+                  <button
+                    type="button"
+                    data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide-to="1"
+                    aria-label="Slide 2"
+                  ></button>
+                  <button
+                    type="button"
+                    data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide-to="2"
+                    aria-label="Slide 3"
+                  ></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img
+                      src="{% static 'images/Radison_blu1.jpg' %}"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="{% static 'images/Radison_blu2.png' %}"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="{% static 'images/Radison_blu3.png' %}"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                </div>
+                <input
+                  class="bucket-list"
+                  type="submit"
+                  value="Add to Bucketlist"
+                />
+              </div>
+              <div class="card-body">
+                <h5 class="card-title mt-3">Radisson Blu Hotel</h5>
+                <div>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <p>5.0 (425 Reviews)</p>
+                </div>
+                <p class="card-text">
+                  The hotel has a terrace, spa center, bar and guests can enjoy
+                  a meal at the restaurant. The Rooms include deep soaking
+                  bathtubs and pillow-top beds.
+                </p>
+              </div>
+            </div>
+            <div class="price-locationtop">
+              <div class="row">
+                <div class="col" style="border-right: 1px solid black">
+                  <p class="title">Location</p>
+
+                  <p>Kirkos,Addis Ababa</p>
+                  <a href="">View on Map</a>
+                </div>
+                <div class="col">
+                  <p class="title">Price:</p>
+                  <p>$180/night</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card">
+              <div id="carouselExampleIndicators1" class="carousel slide">
+                <div class="carousel-indicators">
+                  <button
+                    type="button"
+                    data-bs-target="#carouselExampleIndicators1"
+                    data-bs-slide-to="0"
+                    class="active"
+                    aria-current="true"
+                    aria-label="Slide 1"
+                  ></button>
+                  <button
+                    type="button"
+                    data-bs-target="#carouselExampleIndicators1"
+                    data-bs-slide-to="1"
+                    aria-label="Slide 2"
+                  ></button>
+                  <button
+                    type="button"
+                    data-bs-target="#carouselExampleIndicators1"
+                    data-bs-slide-to="2"
+                    aria-label="Slide 3"
+                  ></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img
+                      src="{% static 'images/hayat1.jpg' %}"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="{% static 'images/hayat2.png' %}"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="{% static 'images/hayat3.png' %}"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                </div>
+                <input
+                  class="bucket-list"
+                  type="submit"
+                  value="Add to Bucketlist"
+                />
+              </div>
+              <div class="card-body">
+                <h5 class="card-title mt-3">Hyatt Regency</h5>
+                <div>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star-half"></i>
+                  <p>4.5 (800 Reviews)</p>
+                </div>
+                <p class="card-text">
+                  Hyatt Regency Addis Ababa offers accommodations with a
+                  restaurant, free private parking, an outdoor swimming pool and
+                  a fitness
+                </p>
+              </div>
+              <div class="price-location">
+                <div class="row">
+                  <div class="col" style="border-right: 1px solid black">
+                    <p class="title">Location</p>
+
+                    <p>Kirkos,Addis Ababa</p>
+                    <a href="">View on Map</a>
+                  </div>
+                  <div class="col">
+                    <p class="title">Price:</p>
+                    <p>$180/night</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card">
+              <div id="carouselExampleIndicators2" class="carousel slide">
+                <div class="carousel-indicators">
+                  <button
+                    type="button"
+                    data-bs-target="#carouselExampleIndicators2"
+                    data-bs-slide-to="0"
+                    class="active"
+                    aria-current="true"
+                    aria-label="Slide 1"
+                  ></button>
+                  <button
+                    type="button"
+                    data-bs-target="#carouselExampleIndicators2"
+                    data-bs-slide-to="1"
+                    aria-label="Slide 2"
+                  ></button>
+                  <button
+                    type="button"
+                    data-bs-target="#carouselExampleIndicators2"
+                    data-bs-slide-to="2"
+                    aria-label="Slide 3"
+                  ></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img
+                      src="{% static 'images/haile1.jpg' %}"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="{% static 'images/haile2.png' %}"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="{% static 'images/haile3.png' %}"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                </div>
+                <input
+                  class="bucket-list"
+                  type="submit"
+                  value="Add to Bucketlist"
+                />
+              </div>
+              <div class="card-body">
+                <h5 class="card-title mt-3">Haile Resort</h5>
+                <div>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+
+                  <p>4.0 (512 Reviews)</p>
+                </div>
+                <p class="card-text">
+                  The hotel gives a spectacular view of the lake Hawassa that
+                  blends the rich mosaic cultural with southern warm
+                  hospitality.
+                </p>
+              </div>
+              <div class="price-location">
+                <div class="row">
+                  <div class="col" style="border-right: 1px solid black">
+                    <p class="title">Location</p>
+                    <p>Kirkos,Addis Ababa</p>
+                    <a href="">View on Map</a>
+                  </div>
+                  <div class="col">
+                    <p class="title">Price:</p>
+                    <p>$180/night</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Restaurants and dinings -->
+      <div class="restaurants">
+        <p class="info">Restaurants and Dinings</p>
+        <div class="row">
+          <div class="col-lg-4 top">
+            <div class="card">
+              <div id="carouselExampleIndicators3" class="carousel slide">
+                <div class="carousel-indicators">
+                  <button
+                    type="button"
+                    data-bs-target="#carouselExampleIndicators3"
+                    data-bs-slide-to="0"
+                    class="active"
+                    aria-current="true"
+                    aria-label="Slide 1"
+                  ></button>
+                  <button
+                    type="button"
+                    data-bs-target="#carouselExampleIndicators3"
+                    data-bs-slide-to="1"
+                    aria-label="Slide 2"
+                  ></button>
+                  <button
+                    type="button"
+                    data-bs-target="#carouselExampleIndicators3"
+                    data-bs-slide-to="2"
+                    aria-label="Slide 3"
+                  ></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img
+                      src="{% static 'images/yodAbyssinia.png' %}"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="{% static 'images/yodAbyssinia1.png' %}"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="{% static 'images/yodAbyssinia2.png' %}"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                </div>
+                <input
+                  class="bucket-list"
+                  type="submit"
+                  value="Add to Bucketlist"
+                />
+              </div>
+              <div class="card-body">
+                <h5 class="card-title mt-3">Yod Abyssinia</h5>
+                <div>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star-half"></i>
+                  <p>4.5 (800 Reviews)</p>
+                </div>
+                <p>
+                  CUISINES <br />
+                  African, Healthy, Ethiopian
+                </p>
+                <a
+                  href="https://yodabissiniaethiopiantraditionalrestaurant.com/"
+                  >View all details</a
+                >
+              </div>
+            </div>
+            <div class="price-locationtop">
+              <div class="row">
+                <div class="col" style="border-right: 1px solid black">
+                  <p class="title">Location</p>
+                  <p>Bole, Addis Ababa</p>
+                  <a href="">View on Map</a>
+                </div>
+                <div class="col">
+                  <p class="title">Price:</p>
+                  <p>From $20</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card">
+              <div id="carouselExampleIndicators4" class="carousel slide">
+                <div class="carousel-indicators">
+                  <button
+                    type="button"
+                    data-bs-target="#carouselExampleIndicators4"
+                    data-bs-slide-to="0"
+                    class="active"
+                    aria-current="true"
+                    aria-label="Slide 1"
+                  ></button>
+                  <button
+                    type="button"
+                    data-bs-target="#carouselExampleIndicators4"
+                    data-bs-slide-to="1"
+                    aria-label="Slide 2"
+                  ></button>
+                  <button
+                    type="button"
+                    data-bs-target="#carouselExampleIndicators4"
+                    data-bs-slide-to="2"
+                    aria-label="Slide 3"
+                  ></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img
+                      src="{% static 'images/Verres1.jpg' %}"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="{% static 'images/Verres2.png' %}"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="../images/Verres3.png"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                    <img
+                      src="{% static 'images/Verres3.png' %}"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                </div>
+                <input
+                  class="bucket-list"
+                  type="submit"
+                  value="Add to Bucketlist"
+                />
+              </div>
+              <div class="card-body">
+                <h5 class="card-title mt-3">Verres en Vers</h5>
+                <div>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+
+                  <p>5.0 (600 Reviews)</p>
+                </div>
+                <p>CUISINES <br />African, International, Ethiopian</p>
+                <a
+                  href="https://www.radissonhotels.com/en-us/hotels/radisson-blu-addis-ababa"
+                  >View all details</a
+                >
+              </div>
+              <div class="price-location">
+                <div class="row">
+                  <div class="col" style="border-right: 1px solid black">
+                    <p class="title">Location</p>
+
+                    <p>Kirkos,Addis Ababa</p>
+                    <a href="">View on Map</a>
+                  </div>
+                  <div class="col">
+                    <p class="title">Price:</p>
+                    <p>From $30</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card">
+              <div id="carouselExampleIndicators5" class="carousel slide">
+                <div class="carousel-indicators">
+                  <button
+                    type="button"
+                    data-bs-target="#carouselExampleIndicators5"
+                    data-bs-slide-to="0"
+                    class="active"
+                    aria-current="true"
+                    aria-label="Slide 1"
+                  ></button>
+                  <button
+                    type="button"
+                    data-bs-target="#carouselExampleIndicators5"
+                    data-bs-slide-to="1"
+                    aria-label="Slide 2"
+                  ></button>
+                  <button
+                    type="button"
+                    data-bs-target="#carouselExampleIndicators5"
+                    data-bs-slide-to="2"
+                    aria-label="Slide 3"
+                  ></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img
+                      src="{% static 'images/kategna1.jpg' %}"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="{% static 'images/kategna2.png' %}"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="{% static 'images/kategna3.png' %}"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                </div>
+                <input
+                  class="bucket-list"
+                  type="submit"
+                  value="Add to Bucketlist"
+                />
+              </div>
+              <div class="card-body">
+                <h5 class="card-title mt-3">Kategna Restaurant</h5>
+                <div>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+
+                  <p>4.0 (400 Reviews)</p>
+                </div>
+                <p>
+                  CUISINES <br />
+                  African, Ethiopian
+                </p>
+                <a href="https://kategnarestaurant.com/">View all details</a>
+              </div>
+              <div class="price-location">
+                <div class="row">
+                  <div class="col" style="border-right: 1px solid black">
+                    <p class="title">Location</p>
+                    <p>Bole, Addis Ababa</p>
+                    <a href="#">View on Map</a>
+                  </div>
+                  <div class="col">
+                    <p class="title">Price:</p>
+                    <p>From $30</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="white">
+      <div class="rivan">
+        <p>
+          Discover unbeatable savings on accommodation and flights with our
+          exclusive deals, making your dream getaway both affordable and
+          memorable
+        </p>
+        <svg width="200" height="200" xmlns="http://www.w3.org/2000/svg">
+          <polygon points="100,10 40,198 190,78 10,78 160,198" fill="gold" />
+          <text
+            x="50%"
+            y="50%"
+            dominant-baseline="middle"
+            text-anchor="middle"
+            fill="#9B0606"
+            font-size="30px"
+            font-family="Verdana"
+          >
+            30%
+          </text>
+          <text
+            x="50%"
+            y="70%"
+            dominant-baseline="middle"
+            text-anchor="middle"
+            fill="#9B0606"
+            font-size="30px"
+            font-family="Verdana"
+          >
+            OFF
+          </text>
+        </svg>
+      </div>
+      <!-- FEATURED DEALS -->
+      <div class="restaurants">
+        <p class="info">Featured Deals</p>
+        <p>Showing deals for Oct 30, 2023 to Nov 10, 2023.</p>
+        <div class="row">
+          <div class="col-lg-4 top">
+            <div class="card">
+              <div id="carouselExampleIndicators8" class="carousel slide">
+                <div class="carousel-indicators">
+                  <button
+                    type="button"
+                    data-bs-target="#carouselExampleIndicators8"
+                    data-bs-slide-to="0"
+                    class="active"
+                    aria-current="true"
+                    aria-label="Slide 1"
+                  ></button>
+                  <button
+                    type="button"
+                    data-bs-target="#carouselExampleIndicators8"
+                    data-bs-slide-to="1"
+                    aria-label="Slide 2"
+                  ></button>
+                  <button
+                    type="button"
+                    data-bs-target="#carouselExampleIndicators8"
+                    data-bs-slide-to="2"
+                    aria-label="Slide 3"
+                  ></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img
+                      src="{% static 'images/debredamo1.jpg' %}"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="{% static 'images/debredamo2.png' %}"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                  <div class="carousel-item">
+                    <img
+                      src="{% static 'images/debredamo3.png' %}"
+                      class="d-block w-100"
+                      alt="..."
+                    />
+                  </div>
+                </div>
+                <input
+                  class="bucket-list"
+                  type="submit"
+                  value="Add to Bucketlist"
+                />
+              </div>
+              <div class="card-body">
+                <h5 class="card-title mt-3">Debre Damo Hotel</h5>
+                <div>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star-half"></i>
+                  <p>4.5 (800 Reviews)</p>
+                </div>
+                <p class="card-text">
+                  The hotel has a terrace, spa center, bar and guests can enjoy
+                  a meal at the restaurant. The Rooms include deep soaking
+                  bathtubs and pillow-top beds.
+                </p>
+              </div>
+            </div>
+            <div class="price-locationtop">
+              <div class="row">
+                <div class="col" style="border-right: 1px solid black">
+                  <p class="title">Location</p>
+                  <p>Kirkos,Addis Ababa</p>
+                  <a href="">View on Map</a>
+                </div>
+                <div class="col">
+                  <p class="title">Price:</p>
+                  <p>
+                    <span style="text-decoration: line-through">$180</span>
+                    $150/night
+                  </p>
+                  <a href="">Book Now</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4" id="deal1">
+            <div class="card">
+              <svg
+                id="deal11"
+                xmlns="http://www.w3.org/2000/svg"
+                width="126"
+                height="112"
+                viewBox="0 0 126 112"
+                fill="none"
+              >
+                <g filter="url(#filter0_d_1648_12270)">
+                  <path
+                    d="M56.0501 6.1904C59.1194 0.806677 66.8806 0.806674 69.9499 6.19039L80.7092 25.0626C81.9566 27.2507 84.1616 28.7235 86.6606 29.0379L108.608 31.7986C115.525 32.6687 118.097 41.3542 112.769 45.8502L98.4654 57.9195C96.241 59.7965 95.2115 62.7335 95.7771 65.5885L99.3513 83.628C100.618 90.0197 94.1206 95.1633 88.19 92.4642L66.3138 82.5082C64.2085 81.55 61.7915 81.55 59.6862 82.5082L37.81 92.4642C31.8794 95.1633 25.3824 90.0197 26.6487 83.628L30.2229 65.5885C30.7885 62.7335 29.759 59.7965 27.5346 57.9195L13.2314 45.8502C7.90328 41.3542 10.4751 32.6687 17.3922 31.7986L39.3394 29.0379C41.8384 28.7235 44.0434 27.2507 45.2908 25.0626L56.0501 6.1904Z"
+                    fill="#D9D9D9"
+                  />
+                </g>
+                <text
+                  x="50%"
+                  y="40%"
+                  dominant-baseline="middle"
+                  text-anchor="middle"
+                  fill="red"
+                  font-size="12"
+                >
+                  Lock this Fare:
+                </text>
+                <text
+                  x="50%"
+                  y="55%"
+                  dominant-baseline="middle"
+                  text-anchor="middle"
+                  fill="red"
+                  font-size="13"
+                >
+                  $120
+                </text>
+                <defs>
+                  <filter
+                    id="filter0_d_1648_12270"
+                    x="0.382812"
+                    y="0.152344"
+                    width="125.234"
+                    height="111.047"
+                    filterUnits="userSpaceOnUse"
+                    color-interpolation-filters="sRGB"
+                  >
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feColorMatrix
+                      in="SourceAlpha"
+                      type="matrix"
+                      values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                      result="hardAlpha"
+                    />
+                    <feOffset dy="8" />
+                    <feGaussianBlur stdDeviation="5" />
+                    <feComposite in2="hardAlpha" operator="out" />
+                    <feColorMatrix
+                      type="matrix"
+                      values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"
+                    />
+                    <feBlend
+                      mode="normal"
+                      in2="BackgroundImageFix"
+                      result="effect1_dropShadow_1648_12270"
+                    />
+                    <feBlend
+                      mode="normal"
+                      in="SourceGraphic"
+                      in2="effect1_dropShadow_1648_12270"
+                      result="shape"
+                    />
+                  </filter>
+                </defs>
+              </svg>
+
+              <img
+                src="{% static 'images/ethiopian_airlines.jpg' %}"
+                class="card-img-top"
+                alt="..."
+              />
+              <input
+                class="bucket-list"
+                type="submit"
+                value="Add to Bucketlist"
+              />
+              <div class="card-body">
+                <h5 class="card-title mt-3">Ethiopian Airlines</h5>
+                <div>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+
+                  <p>5.0 (425 Reviews)</p>
+                </div>
+                <p>
+                  Ethiopian Airlines, known as the "Pride of Africa," is the
+                  flagship carrier of Ethiopia. Ethiopian Airlines connects
+                  passengers to over 120 destinations globally
+                </p>
+              </div>
+              <div class="price-location">
+                <div class="row">
+                  <div class="col" style="border-right: 1px solid black">
+                    <p class="title">Route</p>
+                    <p>London-Addis Ababa</p>
+                  </div>
+                  <div class="col">
+                    <p class="title">Price:</p>
+                    <p>
+                      <span style="text-decoration: line-through">$900</span
+                      >$750
+                    </p>
+                    <a href="">Book Now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4" id="deal2">
+            <div class="card">
+              <svg
+                id="deal12"
+                xmlns="http://www.w3.org/2000/svg"
+                width="126"
+                height="112"
+                viewBox="0 0 126 112"
+                fill="none"
+              >
+                <g filter="url(#filter0_d_1648_12270)">
+                  <path
+                    d="M56.0501 6.1904C59.1194 0.806677 66.8806 0.806674 69.9499 6.19039L80.7092 25.0626C81.9566 27.2507 84.1616 28.7235 86.6606 29.0379L108.608 31.7986C115.525 32.6687 118.097 41.3542 112.769 45.8502L98.4654 57.9195C96.241 59.7965 95.2115 62.7335 95.7771 65.5885L99.3513 83.628C100.618 90.0197 94.1206 95.1633 88.19 92.4642L66.3138 82.5082C64.2085 81.55 61.7915 81.55 59.6862 82.5082L37.81 92.4642C31.8794 95.1633 25.3824 90.0197 26.6487 83.628L30.2229 65.5885C30.7885 62.7335 29.759 59.7965 27.5346 57.9195L13.2314 45.8502C7.90328 41.3542 10.4751 32.6687 17.3922 31.7986L39.3394 29.0379C41.8384 28.7235 44.0434 27.2507 45.2908 25.0626L56.0501 6.1904Z"
+                    fill="#D9D9D9"
+                  />
+                </g>
+                <text
+                  x="50%"
+                  y="40%"
+                  dominant-baseline="middle"
+                  text-anchor="middle"
+                  fill="red"
+                  font-size="12"
+                >
+                  Lock this Fare:
+                </text>
+                <text
+                  x="50%"
+                  y="55%"
+                  dominant-baseline="middle"
+                  text-anchor="middle"
+                  fill="red"
+                  font-size="13"
+                >
+                  $120
+                </text>
+                <defs>
+                  <filter
+                    id="filter0_d_1648_12270"
+                    x="0.382812"
+                    y="0.152344"
+                    width="125.234"
+                    height="111.047"
+                    filterUnits="userSpaceOnUse"
+                    color-interpolation-filters="sRGB"
+                  >
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feColorMatrix
+                      in="SourceAlpha"
+                      type="matrix"
+                      values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                      result="hardAlpha"
+                    />
+                    <feOffset dy="8" />
+                    <feGaussianBlur stdDeviation="5" />
+                    <feComposite in2="hardAlpha" operator="out" />
+                    <feColorMatrix
+                      type="matrix"
+                      values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"
+                    />
+                    <feBlend
+                      mode="normal"
+                      in2="BackgroundImageFix"
+                      result="effect1_dropShadow_1648_12270"
+                    />
+                    <feBlend
+                      mode="normal"
+                      in="SourceGraphic"
+                      in2="effect1_dropShadow_1648_12270"
+                      result="shape"
+                    />
+                  </filter>
+                </defs>
+              </svg>
+
+              <img
+                src="{% static 'images/ethiopian_airlines.jpg' %}"
+                class="card-img-top"
+                alt="..."
+              />
+
+              <input
+                class="bucket-list"
+                type="submit"
+                value="Add to Bucketlist"
+              />
+              <div class="card-body">
+                <h5 class="card-title mt-3">Ethiopian Airlines</h5>
+                <div>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+
+                  <p>5.0 (425 Reviews)</p>
+                </div>
+                <p>
+                  Ethiopian Airlines, known as the "Pride of Africa," is the
+                  flagship carrier of Ethiopia. Ethiopian Airlines connects
+                  passengers to over 120 destinations globally
+                </p>
+              </div>
+              <div class="price-location">
+                <div class="row">
+                  <div class="col" style="border-right: 1px solid black">
+                    <p class="title">Location</p>
+                    <p>Nigeria- Addis Ababa</p>
+                  </div>
+                  <div class="col">
+                    <p class="title">Route:</p>
+                    <p>
+                      <span style="text-decoration: line-through">$700</span
+                      >$550
+                    </p>
+                    <a href="">Book Now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- CURRENCY CONVERTOR -->
+    <div class="currency" id="currency">
+      <h3>Currency Convertor</h3>
+      <p>
+        Easily convert your currency to Ethiopian Birr, so you can explore this
+        beautiful country without any financial hassles. Discover the latest
+        exchange rates and ensure you get the most out of your budget
+      </p>
+      <form action="">
+        <div class="row">
+          <div class="col-lg-6 col-sm-12">
+            <p class="fw-medium mb-2">
+              <i class="fa-solid fa-money-bill"></i> Your Currency
+            </p>
+            <div class="money">
+              <div class="left">
+                <span class="text-dark">
+                  <img
+                    src="{% static 'images/USA_flag.svg' %}"
+                    alt=""
+                  />USD</span
+                >
+              </div>
+              <div class="right">
+                <div class="form-div mb-3 w-100">
+                  <div class="flex-container">
+                    <select
+                      name="usa"
+                      id="usa"
+                      class="border rounded py-2 ps-4 w-100 text-body-secondary"
+                      aria-label="usa"
+                    >
+                      <option value="" selected disabled>US Dollar</option>
+                      <option value="">Australian Dollar (AUD)</option>
+                      <option value="">Canadian Dollar (CAD)</option>
+                      <option value="">Euro (EUR)</option>
+                      <option value="">Japanese Yen (JPY)</option>
+                      <option value="">Kenyan Shilling (KES)</option>
+                      <option value="">Nigerian Naira (NGN)</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-sm-12">
+            <p class="fw-medium mb-2">
+              <i class="fa-solid fa-money-bill"></i> Ethiopia Currency
+            </p>
+            <div class="money">
+              <div class="left">
+                <span class="text-dark">
+                  <img
+                    src="{% static 'images/ETB_flag.png' %}"
+                    alt=""
+                  />ETB</span
+                >
+              </div>
+              <div class="right">
+                <div class="form-div mb-3">
+                  <p class="pt-2 text-dark">Ethiopian Birr</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6 col-sm-12">
+            <div class="money">
+              <input
+                type="number"
+                name=""
+                id=""
+                placeholder="1"
+                style="border: none; text-align: center"
+              />
+            </div>
+          </div>
+          <div class="col-lg-6 col-sm-12">
+            <div class="money">
+              <p style="color: black">55.3312</p>
+            </div>
+          </div>
+        </div>
+        <button onclick="window.location.href='#popup1'">
+          Locate a Bank near you
+        </button>
+      </form>
+    </div>
+    <!-- Popup page for the locate bank button -->
+    <div id="popup1" class="overlay">
+      <div class="popup">
+        <a class="close" href="#">&times;</a>
+        <div class="content">
+          <h5>Click on a Bank to find its Branches in Ethiopia</h5>
+          <div class="row">
+            <div class="col">
+              <div class="bank" style="display: flex; flex-direction: column">
+                <img
+                  style="width: 40%"
+                  src="{% static 'images/Abyssinia.svg' %}"
+                  alt=""
+                />
+                <a href="https://www.bankofabyssinia.com/branch-atm-locations/"
+                  >Abyssinia Bank</a
+                >
+              </div>
+            </div>
+            <div class="col">
+              <div class="bank" style="display: flex; flex-direction: column">
+                <img
+                  style="width: 40%"
+                  src="{% static 'images/Awash.svg' %}"
+                  alt=""
+                />
+                <a href="https://awashbank.com/awash-branch-atm-agent-network/"
+                  >Awash Bank</a
+                >
+              </div>
+            </div>
+            <div class="col">
+              <div class="bank" style="display: flex; flex-direction: column">
+                <img
+                  style="width: 40%"
+                  src="{% static 'images/berihan.svg' %}"
+                  alt=""
+                />
+                <a href="https://berhanbanksc.com/location-2/">Berhan Bank</a>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="bank" style="display: flex; flex-direction: column">
+                <img
+                  style="width: 40%"
+                  src="{% static 'images/cbe.svg' %}"
+                  alt=""
+                />
+                <a href="https://www.combanketh.et/en/branch-network/"
+                  >Commercial Bank of Ethiopia</a
+                >
+              </div>
+            </div>
+            <div class="col">
+              <div class="bank" style="display: flex; flex-direction: column">
+                <img
+                  style="width: 40%"
+                  src="{% static 'images/Dashen.svg' %}"
+                  alt=""
+                />
+                <a href="https://dashenbanksc.com/find-a-branch/"
+                  >Dashen Bank</a
+                >
+              </div>
+            </div>
+            <div class="col">
+              <div class="bank" style="display: flex; flex-direction: column">
+                <img
+                  style="width: 40%"
+                  src="{% static 'images/NIB.svg' %}"
+                  alt=""
+                />
+                <a href="https://www.nibbanksc.com/branch-atms-pos/"
+                  >NIB International Bank</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="bank" style="display: flex; flex-direction: column">
+                <img
+                  style="width: 40%"
+                  src="{% static 'images/oromia.svg' %}"
+                  alt=""
+                />
+                <a href="https://www.oromiabank.com/branches/">Oromia Bank</a>
+              </div>
+            </div>
+            <div class="col">
+              <div class="bank" style="display: flex; flex-direction: column">
+                <img
+                  style="width: 40%"
+                  src="{% static 'images/united.svg' %}"
+                  alt=""
+                />
+                <a href="https://www.hibretbank.com.et/branch-and-atm-locator/"
+                  >United Bank</a
+                >
+              </div>
+            </div>
+            <div class="col">
+              <div class="bank" style="display: flex; flex-direction: column">
+                <img
+                  style="width: 40%"
+                  src="{% static 'images/wegagen.svg' %}"
+                  alt=""
+                />
+                <a href="https://www.wegagen.com/contact/contact-us/"
+                  >Wegagen Bank</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col" style="display: none">
+              <div class="bank" style="display: flex; flex-direction: column">
+                <img
+                  style="width: 40%"
+                  src="{% static 'images/Abyssinia.svg' %}"
+                  alt=""
+                />
+                <a href="">Abyssinia</a>
+              </div>
+            </div>
+            <div class="col">
+              <div
+                class="bank"
+                style="display: flex; flex-direction: column; margin-bottom: 5%"
+              >
+                <img
+                  style="width: 40%"
+                  src="{% static 'images/zemen.svg' %}"
+                  alt=""
+                />
+                <a href="https://www.zemenbank.com/regional-offices"
+                  >Zemen Bank</a
+                >
+              </div>
+            </div>
+            <div class="col" style="display: none">
+              <div class="bank" style="display: flex; flex-direction: column">
+                <img
+                  style="width: 40%"
+                  src="{% static 'images/Abyssinia.svg' %}"
+                  alt=""
+                />
+                <a href="">Abyssinia</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- WATER DROP -->
+    <div class="water_drop">
+      <svg
+        class="left"
+        xmlns="http://www.w3.org/2000/svg"
+        width="107"
+        height="100"
+        viewBox="0 0 107 100"
+        fill="none"
+      >
+        <path
+          d="M106.187 39.1694C109.932 6.88835 69.6689 -11.5833 40.0645 8.83398L18.3051 23.8408C-6.83172 41.1768 -5.3381 74.6801 21.1126 86.815L40.1194 95.5349C66.5701 107.67 100.255 90.3055 103.434 62.896L106.187 39.1694Z"
+          fill="url(#paint0_linear_1650_6812)"
+        />
+        <defs>
+          <linearGradient
+            id="paint0_linear_1650_6812"
+            x1="115.762"
+            y1="-43.3725"
+            x2="28.0299"
+            y2="147.859"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stop-color="#00B7AF" />
+            <stop offset="0.651042" stop-color="#F2F2F2" />
+          </linearGradient>
+        </defs>
+      </svg>
+
+      <svg
+        class="top"
+        xmlns="http://www.w3.org/2000/svg"
+        width="97"
+        height="100"
+        viewBox="0 0 97 100"
+        fill="none"
+      >
+        <path
+          d="M1.3628 37.9976C1.98372 8.46891 34.5792 -9.09425 59.5822 6.62769L79.0326 18.8581C103.677 34.3545 102.458 70.6709 76.8299 84.4798L56.8965 95.2203C31.2686 109.029 0.267751 90.0737 0.879765 60.9686L1.3628 37.9976Z"
+          fill="url(#paint0_linear_1650_6810)"
+        />
+        <defs>
+          <linearGradient
+            id="paint0_linear_1650_6810"
+            x1="2.77358"
+            y1="-29.0937"
+            x2="88.2264"
+            y2="129.498"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stop-color="#00B7AF" />
+            <stop offset="0.651042" stop-color="#F2F2F2" />
+          </linearGradient>
+        </defs>
+      </svg>
+
+      <svg
+        class="right"
+        xmlns="http://www.w3.org/2000/svg"
+        width="57"
+        height="56"
+        viewBox="0 0 57 56"
+        fill="none"
+      >
+        <path
+          d="M0.505173 27.9496C0.602629 5.85125 25.1323 -7.36588 43.6418 4.70664C61.3706 16.27 60.2681 42.591 41.6344 52.6313C23.0008 62.6715 0.411827 49.1159 0.505173 27.9496Z"
+          fill="url(#paint0_linear_1650_6811)"
+        />
+        <defs>
+          <linearGradient
+            id="paint0_linear_1650_6811"
+            x1="0.731105"
+            y1="-23.2811"
+            x2="55.2689"
+            y2="77.9354"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stop-color="#00B7AF" />
+            <stop offset="0.651042" stop-color="#F2F2F2" />
+          </linearGradient>
+        </defs>
+      </svg>
+    </div>
+
+    <footer>
+      <div class="container">
+        <div class="help">
+          <p class="title">Need any help?</p>
+          <p>
+            Call 24/7 for any help <br />
+            <span> +00 123 456 789</span>
+          </p>
+          <p>
+            Mail to our support team <br />
+            <span>support@Seethio.com</span>
+          </p>
+          <p>Follow us on</p>
+          <div class="social-icon">
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+            <a href=""> <i class="fa-brands fa-facebook"></i></a>
+            <a href=""> <i class="fa-brands fa-twitter"></i></a>
+            <a href=""><i class="fa-brands fa-youtube"></i></a>
+            <a href=""><i class="fa-brands fa-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="links">
+          <div>
+            <p class="title">Company</p>
+            <p>Home</p>
+            <p>Testimonials</p>
+            <p>About Us</p>
+            <p>Work with Us</p>
+            <p>Partners</p>
+          </div>
+          <div>
+            <p class="title">Support</p>
+            <p>Account</p>
+            <p>FAQ</p>
+            <p>Legal</p>
+            <p>Contact us</p>
+            <p>Privacy Policy</p>
+          </div>
+          <div>
+            <p class="title">Services</p>
+            <p>Discover place</p>
+            <p>Plan a trip</p>
+            <p>Booking</p>
+            <p>Get Deals</p>
+            <p>Currency exchange</p>
+          </div>
+        </div>
+        <div class="subscribe">
+          <p><span>Subscribe to receive new deals</span></p>
+          <div class="form">
+            <input type="text" placeholder="Email Address" />
+            <button>Send</button>
+          </div>
+        </div>
+      </div>
+      <div class="footer-wrapper">
+        <hr style="border: 1px solid white" />
+      </div>
+      <div class="footer">
+        <div class="logo">
+          <a href="/index.html">
+            <img src="{% static 'footer_logo.png' %}" alt=""
+          /></a>
+        </div>
+        <div class="copyright">
+          <p><span>Copyright © 2023 Kunturi Design</span></p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script> -->
+
+    <script src="./home.js"></script>
+
+    <!-- <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script> -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
