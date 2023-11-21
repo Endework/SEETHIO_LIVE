@@ -26,8 +26,6 @@ import random
 from urllib.parse import unquote
 #flight views of amadeus
 
-from amadeus import Client, ResponseError
-from .forms import FlightSearchForm
 
 
 User = get_user_model()
@@ -265,7 +263,11 @@ def google_callback(request):
     # This view will handle the Google callback and log the user in.
     return redirect('Html/Home.html')  # Redirect to your desired page after login.
 
-# views. for flight by ogo
+# views.py
+from django.shortcuts import render
+from django.http import JsonResponse
+from amadeus import Client, ResponseError
+from .forms import FlightSearchForm
 
 def search_flights(request):
     if request.method == 'POST':
@@ -278,8 +280,8 @@ def search_flights(request):
 
             # Initialize the Amadeus client with your API key
             amadeus = Client(
-                client_id='YOUR_CLIENT_ID',
-                client_secret='YOUR_CLIENT_SECRET',
+                client_id='settings.AMADEUS_API_KEY,',
+                client_secret='settings.AMADEUS_API_SECRET',
                 hostname='test.api.amadeus.com'  # Change to 'api.amadeus.com' for production
             )
 
@@ -306,5 +308,3 @@ def search_flights(request):
         form = FlightSearchForm()
 
     return render(request, 'search_flights.html', {'form': form})
-
-
