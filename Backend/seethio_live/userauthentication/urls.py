@@ -3,6 +3,7 @@ from userauthentication.views import *
 from django.contrib.auth import views as auth_views
 from django.contrib.auth.views import PasswordResetConfirmView
 from userauthentication.forms import CustomSetPasswordForm
+from .views import search_flights
 
 app_name = "userauthentication"
 urlpatterns = [
@@ -36,4 +37,7 @@ urlpatterns = [
         ),
         name="password_reset_complete",
     ),
+    
+    path('search/', search_flights, name='search_flights'),
+    # Add other URLs as needed ogo
 ]
