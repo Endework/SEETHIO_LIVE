@@ -29,3 +29,11 @@ class EmailVerification(models.Model):
     def generate_otp(self):
         # Generate a 6-digit OTP
         self.otp = str(random.randint(100000, 999999))
+        
+# models CREATED BY OGO for flights
+
+class Flight(models.Model):
+    origin = models.CharField(max_length=100)
+    destination = models.CharField(max_length=100)
+    departure_date = models.DateField()
+    # Add other relevant fields as needed

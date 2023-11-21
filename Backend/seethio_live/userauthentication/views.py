@@ -8,6 +8,7 @@ from .models import User
 from django.core.mail import send_mail, BadHeaderError
 from django.http import HttpResponse, HttpResponseRedirect
 from django.contrib.auth.forms import PasswordResetForm
+from django.http import JsonResponse
 from django.contrib.auth.decorators import login_required # aded by ogo
 from social_django.utils import psa #added by ogo
 from django.contrib.auth import logout as auth_logout  # Renamed to avoid conflict
@@ -23,6 +24,11 @@ from .forms import *
 from userauthentication.models import EmailVerification
 import random
 from urllib.parse import unquote
+#flight views of amadeus
+
+from amadeus import Client, ResponseError
+from .forms import FlightSearchForm
+
 
 User = get_user_model()
 
@@ -34,7 +40,7 @@ def index(request):
     return render(request, "Html/index.html")
 
 def home(request):
-    return render(request, "Html/home.html")
+    return render(request, "Html/Home.html")
 
 
 
@@ -257,5 +263,48 @@ def resend_password_reset_email(request):
 @psa('social:complete')
 def google_callback(request):
     # This view will handle the Google callback and log the user in.
-    return redirect('Html/home.html')  # Redirect to your desired page after login.
+    return redirect('Html/Home.html')  # Redirect to your desired page after login.
+
+# views. for flight by ogo
+
+def search_flights(request):
+    if request.method == 'POST':
+        form = FlightSearchForm(request.POST)
+        if form.is_valid():
+            # Retrieve data from the form
+            origin = form.cleaned_data['origin']
+            destination = form.cleaned_data['destination']
+            departure_date = form.cleaned_data['departure_date']
+
+            # Initialize the Amadeus client with your API key
+            amadeus = Client(
+                client_id='YOUR_CLIENT_ID',
+                client_secret='YOUR_CLIENT_SECRET',
+                hostname='test.api.amadeus.com'  # Change to 'api.amadeus.com' for production
+            )
+
+            try:
+                # Make a request to the Amadeus Flight Offers Search API
+                response = amadeus.shopping.flight_offers_search.get(
+                    originLocationCode=origin,
+                    destinationLocationCode=destination,
+                    departureDate=departure_date,
+                    adults=1  # Adjust parameters as needed
+                )
+
+                # Process the API response and store it in the database or return as JSON
+                # (You'll need to adapt this based on the actual Amadeus API response structure and your model)
+
+                # For simplicity, just return the Amadeus API response as JSON
+                return JsonResponse(response.data)
+
+            except ResponseError as e:
+                # Handle Amadeus API response errors
+                return JsonResponse({'error': str(e)})
+
+    else:
+        form = FlightSearchForm()
+
+    return render(request, 'search_flights.html', {'form': form})
+
 
