@@ -17,16 +17,23 @@ nav{
     background: var(--Secondary-Colour, #006167);
     display: flex;
     color: white;
+    justify-content: space-around;
 }
 .logo {
-    width: 234px;
+    /* width: 234px; */
+    width: 14%;
 height: 91px;
 flex-shrink: 0;
 
 }
+.nav{
+    width: 86%;
+}
+.logo img{
+    width: 100%;
+}
 .search{
     margin-top: 37px;
-    margin-left: 37px;
     position: relative;
 }
 .search input{
