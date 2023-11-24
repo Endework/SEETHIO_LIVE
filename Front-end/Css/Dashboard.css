@@ -126,7 +126,8 @@ aside  hr{
     
 }
 .hero-image{
-    width: 1120px;
+    /* width: 1120px; */
+    width: 100%;
     
 }
 .hero-image img{
