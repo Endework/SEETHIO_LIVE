@@ -178,7 +178,8 @@ aside  hr{
     line-height: 24px; /* 150% */
 }
 .card {
-    width: 850px;
+    /* width: 850px; */
+    width: 80%;
     height: 400px;
     border-radius: 20px;
     border: 1px solid var(--Line-Colour, rgba(137, 137, 137, 0.50));
