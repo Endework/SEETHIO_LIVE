@@ -18,99 +18,43 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <style>
-      nav {
-        width: 100%;
-        height: 116px;
-        flex-shrink: 0;
-        background: var(--Secondary-Colour, #006167);
+   <style>
+    nav{
         display: flex;
-        color: white;
-        justify-content: space-around;
         align-items: center;
-      }
-      .logo {
-        /* width: 234px; */
-        width: 14%;
-        height: 91px;
-        flex-shrink: 0;
-      }
-      .nav {
-        width: 86%;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-around;
-      }
-      .logo img {
         width: 100%;
-      }
-      .search {
-        margin-top: 37px;
-
-        position: relative;
-        width: 25%;
-        margin-right: 5%;
-      }
-      .search input {
-        /* width: 325px; */
-        width: 100%;
-        height: 50px;
-        flex-shrink: 0;
-        border-radius: 8px;
-        background: #f5f9f5;
-        margin-left: 165px;
-      }
-
-      .fa-magnifying-glass {
-        position: absolute;
-        top: 16px;
-        left: 180px;
-        color: black !important;
-      }
-      .fa-user,
-      .home {
-        color: #fabf00;
-      }
-      input::placeholder {
-        padding-left: 52px;
-        color: var(--Icon-Colour, #545454);
-      }
-      .notification {
-        width: 52px;
-        height: 53px;
-        background: #f5f9f5;
+        background-color:blueviolet ;
+        justify-content: space-between;
+    }
+    nav ul{
         display: flex;
-        justify-content: center;
+        flex-shrink: 0;
         align-items: center;
-        border-radius: 100%;
-        border: none;
-      }
-      .dropdown-toggle::after {
-        border-top-color: #fabf00 !important;
-      }
-    </style>
+        gap:5%;
+        width: 75%;
+        margin-left: 5%;
+        
+    }
+    
+    li{
+        list-style: none;
+    }
+    
+   </style>
   </head>
   <body>
     <header>
-      <nav>
-        <div class="logo">
-          <img src="/Front-end/images/dashboard_logo.png" alt="" />
-        </div>
-        <div class="nav">
-          <div class="search">
-            <span><i class="fa-solid fa-magnifying-glass"></i></span>
-            <input type=" text" class="form-control" placeholder="Search" />
-          </div>
-          <a
-            href="/Front-end/Html/Home.html"
-            class="fs-4 d-flex align-items-center home"
-            style="margin-inline: 2%"
-            >Home</a
-          >
-          <div class="nav-wrapper d-flex gap-5 align-items-center text-center">
-            <div class="notification">
-              <svg
+    <nav>
+        <img src="/Front-end/images/dashboard_logo.png" alt="">
+        <ul>
+            <li style="margin-left: 10%; width: 25%;">
+                <form class="d-flex form" role="search">
+                <input class="form-control me-2 formin" type="search" placeholder="Search" aria-label="Search">
+              </form></li>
+            <li>
+                <a href="">Home</a></li>
+            <li>
+                <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="19"
                 height="27"
@@ -125,190 +69,189 @@
                   d="M16.5 21.6667L16.9 22.2C17.0657 22.4209 17.0209 22.7343 16.8 22.9C16.7135 22.9649 16.6082 23 16.5 23H0.5C0.22386 23 0 22.7761 0 22.5C0 22.3918 0.0350899 22.2865 0.0999999 22.2L0.5 21.6667V13C0.5 8.58172 4.08172 5 8.5 5C12.9183 5 16.5 8.58172 16.5 13V21.6667ZM6 24H11C11 25.3807 9.8807 26.5 8.5 26.5C7.1193 26.5 6 25.3807 6 24Z"
                   fill="#FABF00"
                 />
-              </svg>
-            </div>
-            <div class="profile d-flex gap-1 mt-3 ">
-              <i class="fa-solid fa-user fs-4 mt-2"></i>
-              <p class="fs-4">User Name</p>
-            </div>
-            <div class="language d-flex gap-1">
-              <svg
-             
-                xmlns="http://www.w3.org/2000/svg"
-                width="32"
-                height="25"
-                viewBox="0 0 24 24"
-                fill="none"
-              >
-                <path
-                  d="M2.05078 12.9981H7.52871C7.7077 16.2669 8.75886 19.3034 10.4535 21.879C5.98907 21.1852 2.50156 17.5383 2.05078 12.9981ZM2.05078 10.9981C2.50156 6.45785 5.98907 2.81093 10.4535 2.11719C8.75886 4.69273 7.7077 7.72928 7.52871 10.9981H2.05078ZM21.9521 10.9981H16.4741C16.2951 7.72928 15.244 4.69273 13.5494 2.11719C18.0138 2.81093 21.5013 6.45785 21.9521 10.9981ZM21.9521 12.9981C21.5013 17.5383 18.0138 21.1852 13.5494 21.879C15.244 19.3034 16.2951 16.2669 16.4741 12.9981H21.9521ZM9.53214 12.9981H14.4707C14.2991 15.7809 13.4161 18.3713 12.0014 20.5896C10.5867 18.3713 9.70375 15.7809 9.53214 12.9981ZM9.53214 10.9981C9.70375 8.21527 10.5867 5.62489 12.0014 3.40658C13.4161 5.62489 14.2991 8.21527 14.4707 10.9981H9.53214Z"
-                  fill="white"
-                />
-              </svg>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle fs-4"
-                  data-bs-toggle="dropdown"
-                  href="#"
-                  role="button"
-                  aria-expanded="false"
-                  >English</a
-                >
-                <ul class="dropdown-menu ps-2">
-                  <div
-                    class="dropcontent d-flex"
-                    style="align-items: center; gap: 10px"
+              </svg></li>
+            <li class="d-flex align-items-center">
+                <i class="fa-solid fa-user"></i>
+                <p>User Name</p></li>
+                <li> 
+                    <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="32"
+                    viewBox="0 0 24 24"
+                    fill="none"
                   >
-                    <p class="mt-3">English (UK)</p>
-                    <input type="checkbox" / checked>
-                  </div>
-                  <hr />
-                  <div class="dropcontent">
-                    <p>English (US)</p>
-                    <hr />
-                  </div>
-                  <div class="dropcontent">
-                    <p>Afrikaans</p>
-                    <hr />
-                  </div>
-                  <div class="dropcontent">
-                    <p>Amharic</p>
-                    <hr />
-                  </div>
-                  <div class="dropcontent">
-                    <p>Arabic</p>
-                    <hr />
-                  </div>
-                  <div class="dropcontent">
-                    <p>Bengali</p>
-                    <hr />
-                  </div>
-                  <div class="dropcontent">
-                    <p>Bulgarian</p>
-                    <hr />
-                  </div>
-                  <div class="dropcontent">
-                    <p>Catalan</p>
-                    <hr />
-                  </div>
-                  <div class="dropcontent">
-                    <p>Czech</p>
-                    <hr />
-                  </div>
-                  <div class="dropcontent">
-                    <p>Chinese</p>
-                    <hr />
-                  </div>
-                  <div class="dropcontent">
-                    <p>Danish</p>
-                    <hr />
-                  </div>
-                  <div class="dropcontent">
-                    <p>Dutch</p>
-                    <hr />
-                  </div>
-                  <div class="dropcontent">
-                    <p>Estonian</p>
-                    <hr />
-                  </div>
-                  <div class="dropcontent">
-                    <p>Finnish</p>
-                    <hr />
-                  </div>
-                  <div class="dropcontent">
-                    <p>French</p>
-                    <hr />
-                  </div>
-                  <div class="dropcontent">
-                    <p>German</p>
-                    <hr />
-                  </div>
-                  <div class="dropcontent">
-                    <p>Greek</p>
-                    <hr />
-                  </div>
-                  <div class="dropcontent">
-                    <p>Hausa</p>
-                    <hr />
-                  </div>
-                  <div class="dropcontent">
-                    <p>Hindi</p>
-                    <hr />
-                  </div>
-                  <div class="dropcontent">
-                    <p>Hungarian</p>
-                    <hr />
-                  </div>
-                  <div class="dropcontent">
-                    <p>Igbo</p>
-                    <hr />
-                  </div>
-                  <div class="dropcontent">
-                    <p>Indonesian</p>
-                    <hr />
-                  </div>
-                  <div class="dropcontent">
-                    <p>Italian</p>
-                    <hr />
-                  </div>
-                  <div class="dropcontent">
-                    <p>Japanese</p>
-                    <hr />
-                  </div>
-                  <div class="dropcontent">
-                    <p>Korean</p>
-                    <hr />
-                  </div>
-                  <div class="dropcontent">
-                    <p>Oromo</p>
-                    <hr />
-                  </div>
-                  <div class="dropcontent">
-                    <p>Polish</p>
-                    <hr />
-                  </div>
-                  <div class="dropcontent">
-                    <p>Portuguese</p>
-                    <hr />
-                  </div>
-                  <div class="dropcontent">
-                    <p>Russian</p>
-                    <hr />
-                  </div>
-                  <div class="dropcontent">
-                    <p>Spanish</p>
-                    <hr />
-                  </div>
-                  <div class="dropcontent">
-                    <p>Swahili</p>
-                    <hr />
-                  </div>
-                  <div class="dropcontent">
-                    <p>Tingrinya</p>
-                    <hr />
-                  </div>
-                  <div class="dropcontent">
-                    <p>Turkish</p>
-                    <hr />
-                  </div>
-                  <div class="dropcontent">
-                    <p>Wolof</p>
-                    <hr />
-                  </div>
-                  <div class="dropcontent">
-                    <p>Yoruba</p>
-                    <hr />
-                  </div>
-                  <div class="dropcontent">
-                    <p>Zulu</p>
-                    <hr />
-                  </div>
-                </ul>
-              </li>
-            </div>
-          </div>
-        </div>
-      </nav>
+                    <path
+                      d="M2.05078 12.9981H7.52871C7.7077 16.2669 8.75886 19.3034 10.4535 21.879C5.98907 21.1852 2.50156 17.5383 2.05078 12.9981ZM2.05078 10.9981C2.50156 6.45785 5.98907 2.81093 10.4535 2.11719C8.75886 4.69273 7.7077 7.72928 7.52871 10.9981H2.05078ZM21.9521 10.9981H16.4741C16.2951 7.72928 15.244 4.69273 13.5494 2.11719C18.0138 2.81093 21.5013 6.45785 21.9521 10.9981ZM21.9521 12.9981C21.5013 17.5383 18.0138 21.1852 13.5494 21.879C15.244 19.3034 16.2951 16.2669 16.4741 12.9981H21.9521ZM9.53214 12.9981H14.4707C14.2991 15.7809 13.4161 18.3713 12.0014 20.5896C10.5867 18.3713 9.70375 15.7809 9.53214 12.9981ZM9.53214 10.9981C9.70375 8.21527 10.5867 5.62489 12.0014 3.40658C13.4161 5.62489 14.2991 8.21527 14.4707 10.9981H9.53214Z"
+                      fill="white"
+                    />
+                  </svg>
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link dropdown-toggle fs-4"
+                      data-bs-toggle="dropdown"
+                      href="#"
+                      role="button"
+                      aria-expanded="false"
+                      >English</a
+                    >
+                    <ul class="dropdown-menu ps-2">
+                      <div
+                        class="dropcontent d-flex"
+                        style="align-items: center; gap: 10px"
+                      >
+                        <p class="mt-3">English (UK)</p>
+                        <input type="checkbox" / checked>
+                      </div>
+                      <hr />
+                      <div class="dropcontent">
+                        <p>English (US)</p>
+                        <hr />
+                      </div>
+                      <div class="dropcontent">
+                        <p>Afrikaans</p>
+                        <hr />
+                      </div>
+                      <div class="dropcontent">
+                        <p>Amharic</p>
+                        <hr />
+                      </div>
+                      <div class="dropcontent">
+                        <p>Arabic</p>
+                        <hr />
+                      </div>
+                      <div class="dropcontent">
+                        <p>Bengali</p>
+                        <hr />
+                      </div>
+                      <div class="dropcontent">
+                        <p>Bulgarian</p>
+                        <hr />
+                      </div>
+                      <div class="dropcontent">
+                        <p>Catalan</p>
+                        <hr />
+                      </div>
+                      <div class="dropcontent">
+                        <p>Czech</p>
+                        <hr />
+                      </div>
+                      <div class="dropcontent">
+                        <p>Chinese</p>
+                        <hr />
+                      </div>
+                      <div class="dropcontent">
+                        <p>Danish</p>
+                        <hr />
+                      </div>
+                      <div class="dropcontent">
+                        <p>Dutch</p>
+                        <hr />
+                      </div>
+                      <div class="dropcontent">
+                        <p>Estonian</p>
+                        <hr />
+                      </div>
+                      <div class="dropcontent">
+                        <p>Finnish</p>
+                        <hr />
+                      </div>
+                      <div class="dropcontent">
+                        <p>French</p>
+                        <hr />
+                      </div>
+                      <div class="dropcontent">
+                        <p>German</p>
+                        <hr />
+                      </div>
+                      <div class="dropcontent">
+                        <p>Greek</p>
+                        <hr />
+                      </div>
+                      <div class="dropcontent">
+                        <p>Hausa</p>
+                        <hr />
+                      </div>
+                      <div class="dropcontent">
+                        <p>Hindi</p>
+                        <hr />
+                      </div>
+                      <div class="dropcontent">
+                        <p>Hungarian</p>
+                        <hr />
+                      </div>
+                      <div class="dropcontent">
+                        <p>Igbo</p>
+                        <hr />
+                      </div>
+                      <div class="dropcontent">
+                        <p>Indonesian</p>
+                        <hr />
+                      </div>
+                      <div class="dropcontent">
+                        <p>Italian</p>
+                        <hr />
+                      </div>
+                      <div class="dropcontent">
+                        <p>Japanese</p>
+                        <hr />
+                      </div>
+                      <div class="dropcontent">
+                        <p>Korean</p>
+                        <hr />
+                      </div>
+                      <div class="dropcontent">
+                        <p>Oromo</p>
+                        <hr />
+                      </div>
+                      <div class="dropcontent">
+                        <p>Polish</p>
+                        <hr />
+                      </div>
+                      <div class="dropcontent">
+                        <p>Portuguese</p>
+                        <hr />
+                      </div>
+                      <div class="dropcontent">
+                        <p>Russian</p>
+                        <hr />
+                      </div>
+                      <div class="dropcontent">
+                        <p>Spanish</p>
+                        <hr />
+                      </div>
+                      <div class="dropcontent">
+                        <p>Swahili</p>
+                        <hr />
+                      </div>
+                      <div class="dropcontent">
+                        <p>Tingrinya</p>
+                        <hr />
+                      </div>
+                      <div class="dropcontent">
+                        <p>Turkish</p>
+                        <hr />
+                      </div>
+                      <div class="dropcontent">
+                        <p>Wolof</p>
+                        <hr />
+                      </div>
+                      <div class="dropcontent">
+                        <p>Yoruba</p>
+                        <hr />
+                      </div>
+                      <div class="dropcontent">
+                        <p>Zulu</p>
+                        <hr />
+                      </div>
+                    </ul>
+                  </li>
+                  
+                </li>
+                 
+                    
+        </ul>
+    </nav>
     </header>
   </body>
 </html>
