@@ -113,8 +113,22 @@ aside  hr{
     position: relative;
     width: 75%
 }
+.pagename{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-left: 15%;
+}
+.buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-left: 25%;
+    
+}
 .pagename p{
-    margin-left: 55px;
+    
+    
     margin-top: 14px;
     color: var(--Secondary-Colour, #006167);
     text-align: justify;
@@ -140,7 +154,8 @@ aside  hr{
     font-weight: 600;
     line-height: 24px; /* 150% */
     border: none;
-    margin-left: 360px;
+    /* margin-left: 360px; */
+    
 }
 .non-active{
     width: 165.239px;
@@ -156,6 +171,7 @@ aside  hr{
     font-style: normal;
     font-weight: 400;
     line-height: 24px; /* 150% */
+    margin-inline: auto;
 }
 .card {
     /* width: 850px; */
