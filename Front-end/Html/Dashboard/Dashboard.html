@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Profile Page</title>
+    <!-- fontawsome link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- bootstrap css link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <!-- style sheet -->
+    <link rel="stylesheet" href="/Front-end/Css/Dashboard.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">
+          <img src="/Front-end/images/dashboard_logo.png" alt="" />
+        </div>
+        <div class="search">
+          <span><i class="fa-solid fa-magnifying-glass"></i></span>
+          <input type=" text" class="form-control" placeholder="Search" />
+        </div>
+        <a href="/Front-end/Html/Home.html" class="mx-5 fs-4 d-flex align-items-center home"
+          >Home</a
+        >
+        <div class="nav-wrapper d-flex gap-5 align-items-center text-center">
+          <div class="notification ms-2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="19"
+              height="27"
+              viewBox="0 0 19 27"
+              fill="none"
+            >
+              <path
+                d="M15.4884 7C13.5582 7 12 5.43667 12 3.5C12 1.56333 13.5582 0 15.4884 0H15.5116C17.4418 0 19 1.56333 19 3.5C19 5.43667 17.4186 7 15.4884 7Z"
+                fill="#E41D1D"
+              />
+              <path
+                d="M16.5 21.6667L16.9 22.2C17.0657 22.4209 17.0209 22.7343 16.8 22.9C16.7135 22.9649 16.6082 23 16.5 23H0.5C0.22386 23 0 22.7761 0 22.5C0 22.3918 0.0350899 22.2865 0.0999999 22.2L0.5 21.6667V13C0.5 8.58172 4.08172 5 8.5 5C12.9183 5 16.5 8.58172 16.5 13V21.6667ZM6 24H11C11 25.3807 9.8807 26.5 8.5 26.5C7.1193 26.5 6 25.3807 6 24Z"
+                fill="#FABF00"
+              />
+            </svg>
+          </div>
+          <div class="profile d-flex gap-2 mt-4">
+            <i class="fa-solid fa-user fs-2"></i>
+            <p class="fs-4">User Name</p>
+          </div>
+          <div class="language d-flex gap-2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <path
+                d="M2.05078 12.9981H7.52871C7.7077 16.2669 8.75886 19.3034 10.4535 21.879C5.98907 21.1852 2.50156 17.5383 2.05078 12.9981ZM2.05078 10.9981C2.50156 6.45785 5.98907 2.81093 10.4535 2.11719C8.75886 4.69273 7.7077 7.72928 7.52871 10.9981H2.05078ZM21.9521 10.9981H16.4741C16.2951 7.72928 15.244 4.69273 13.5494 2.11719C18.0138 2.81093 21.5013 6.45785 21.9521 10.9981ZM21.9521 12.9981C21.5013 17.5383 18.0138 21.1852 13.5494 21.879C15.244 19.3034 16.2951 16.2669 16.4741 12.9981H21.9521ZM9.53214 12.9981H14.4707C14.2991 15.7809 13.4161 18.3713 12.0014 20.5896C10.5867 18.3713 9.70375 15.7809 9.53214 12.9981ZM9.53214 10.9981C9.70375 8.21527 10.5867 5.62489 12.0014 3.40658C13.4161 5.62489 14.2991 8.21527 14.4707 10.9981H9.53214Z"
+                fill="white"
+              />
+            </svg>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle fs-4"
+                data-bs-toggle="dropdown"
+                href="#"
+                role="button"
+                aria-expanded="false"
+                >English</a
+              >
+              <ul class="dropdown-menu ps-2">
+                <div
+                  class="dropcontent d-flex"
+                  style="align-items: center; gap: 10px"
+                >
+                  <p class="mt-3">English (UK)</p>
+                  <input type="checkbox" / checked>
+                </div>
+                <hr />
+                <div class="dropcontent">
+                  <p>English (US)</p>
+                  <hr />
+                </div>
+                <div class="dropcontent">
+                  <p>Afrikaans</p>
+                  <hr />
+                </div>
+                <div class="dropcontent">
+                  <p>Amharic</p>
+                  <hr />
+                </div>
+                <div class="dropcontent">
+                  <p>Arabic</p>
+                  <hr />
+                </div>
+                <div class="dropcontent">
+                  <p>Bengali</p>
+                  <hr />
+                </div>
+                <div class="dropcontent">
+                  <p>Bulgarian</p>
+                  <hr />
+                </div>
+                <div class="dropcontent">
+                  <p>Catalan</p>
+                  <hr />
+                </div>
+                <div class="dropcontent">
+                  <p>Czech</p>
+                  <hr />
+                </div>
+                <div class="dropcontent">
+                  <p>Chinese</p>
+                  <hr />
+                </div>
+                <div class="dropcontent">
+                  <p>Danish</p>
+                  <hr />
+                </div>
+                <div class="dropcontent">
+                  <p>Dutch</p>
+                  <hr />
+                </div>
+                <div class="dropcontent">
+                  <p>Estonian</p>
+                  <hr />
+                </div>
+                <div class="dropcontent">
+                  <p>Finnish</p>
+                  <hr />
+                </div>
+                <div class="dropcontent">
+                  <p>French</p>
+                  <hr />
+                </div>
+                <div class="dropcontent">
+                  <p>German</p>
+                  <hr />
+                </div>
+                <div class="dropcontent">
+                  <p>Greek</p>
+                  <hr />
+                </div>
+                <div class="dropcontent">
+                  <p>Hausa</p>
+                  <hr />
+                </div>
+                <div class="dropcontent">
+                  <p>Hindi</p>
+                  <hr />
+                </div>
+                <div class="dropcontent">
+                  <p>Hungarian</p>
+                  <hr />
+                </div>
+                <div class="dropcontent">
+                  <p>Igbo</p>
+                  <hr />
+                </div>
+                <div class="dropcontent">
+                  <p>Indonesian</p>
+                  <hr />
+                </div>
+                <div class="dropcontent">
+                  <p>Italian</p>
+                  <hr />
+                </div>
+                <div class="dropcontent">
+                  <p>Japanese</p>
+                  <hr />
+                </div>
+                <div class="dropcontent">
+                  <p>Korean</p>
+                  <hr />
+                </div>
+                <div class="dropcontent">
+                  <p>Oromo</p>
+                  <hr />
+                </div>
+                <div class="dropcontent">
+                  <p>Polish</p>
+                  <hr />
+                </div>
+                <div class="dropcontent">
+                  <p>Portuguese</p>
+                  <hr />
+                </div>
+                <div class="dropcontent">
+                  <p>Russian</p>
+                  <hr />
+                </div>
+                <div class="dropcontent">
+                  <p>Spanish</p>
+                  <hr />
+                </div>
+                <div class="dropcontent">
+                  <p>Swahili</p>
+                  <hr />
+                </div>
+                <div class="dropcontent">
+                  <p>Tingrinya</p>
+                  <hr />
+                </div>
+                <div class="dropcontent">
+                  <p>Turkish</p>
+                  <hr />
+                </div>
+                <div class="dropcontent">
+                  <p>Wolof</p>
+                  <hr />
+                </div>
+                <div class="dropcontent">
+                  <p>Yoruba</p>
+                  <hr />
+                </div>
+                <div class="dropcontent">
+                  <p>Zulu</p>
+                  <hr />
+                </div>
+              </ul>
+            </li>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <div class="main">
+      <div class="left_menu">
+        <aside>
+          <div class="account_setting">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <path
+                d="M9.95596 2.20913C11.2896 1.92997 12.6827 1.92116 14.0469 2.20638C14.2239 3.36593 14.9067 4.43745 16.0016 5.06956C17.0964 5.70166 18.3659 5.75737 19.4585 5.33083C20.3877 6.36971 21.0767 7.58056 21.5016 8.87505C20.5872 9.60811 20.0016 10.7345 20.0016 11.9977C20.0016 13.2617 20.5879 14.3887 21.5033 15.1217C21.292 15.7621 21.0124 16.3907 20.6618 16.9977C20.3113 17.6048 19.9068 18.1612 19.4578 18.6644C18.3653 18.2381 17.0962 18.294 16.0016 18.9259C14.9076 19.5575 14.2249 20.6279 14.0472 21.7864C12.7137 22.0655 11.3207 22.0743 9.95638 21.7891C9.77943 20.6296 9.09646 19.558 8.00162 18.9259C6.90679 18.2938 5.63734 18.2381 4.54467 18.6647C3.61552 17.6258 2.92661 16.4149 2.50159 15.1204C3.41607 14.3874 4.00163 13.2609 4.00163 11.9977C4.00163 10.7338 3.41539 9.6068 2.5 8.87377C2.71128 8.23335 2.99089 7.60482 3.34137 6.99776C3.69186 6.3907 4.09638 5.83429 4.54536 5.3311C5.63788 5.75734 6.90702 5.70153 8.00162 5.06956C9.09559 4.43795 9.77835 3.36763 9.95596 2.20913ZM12.0016 14.9977C13.6585 14.9977 15.0016 13.6546 15.0016 11.9977C15.0016 10.3409 13.6585 8.99776 12.0016 8.99776C10.3447 8.99776 9.00162 10.3409 9.00162 11.9977C9.00162 13.6546 10.3447 14.9977 12.0016 14.9977Z"
+                fill="#FABF00"
+              />
+            </svg>
+            <p>Account Settings</p>
+          </div>
+          <hr />
+          <div class="bucketList">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <path
+                d="M19 22H5C3.34315 22 2 20.6569 2 19V3C2 2.44772 2.44772 2 3 2H17C17.5523 2 18 2.44772 18 3V15H22V19C22 20.6569 20.6569 22 19 22ZM18 17V19C18 19.5523 18.4477 20 19 20C19.5523 20 20 19.5523 20 19V17H18ZM6 7V9H14V7H6ZM6 11V13H14V11H6ZM6 15V17H11V15H6Z"
+                fill="#FABF00"
+              />
+            </svg>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle bucketl"
+                data-bs-toggle="dropdown"
+                href="#"
+                role="button"
+                aria-expanded="false"
+                >Bucketlist</a
+              >
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item item-1" href="./itineraries.html"
+                    >My Bucketlist</a
+                  >
+                </li>
+                <hr
+                  style="border-color: black; width: 80%; margin-inline: 5%"
+                />
+                <li>
+                  <a class="dropdown-item item-1" href="./Sharedwithme.html"
+                    >Shared with me</a
+                  >
+                </li>
+                <hr
+                  style="border-color: black; width: 80%; margin-inline: 5%"
+                />
+              </ul>
+            </li>
+          </div>
+          <hr />
+          <div class="bookingshistory">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <path
+                d="M20 22H6.5C4.567 22 3 20.433 3 18.5V5C3 3.34315 4.34315 2 6 2H20C20.5523 2 21 2.44772 21 3V21C21 21.5523 20.5523 22 20 22ZM19 20V17H6.5C5.67157 17 5 17.6716 5 18.5C5 19.3284 5.67157 20 6.5 20H19ZM10 4V12L13.5 10L17 12V4H10Z"
+                fill="#FABF00"
+              />
+            </svg>
+            <p>Bookings History</p>
+          </div>
+          <hr />
+          <div class="grouptour">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <path
+                d="M17.7726 8.82282C17.6427 8.99619 17.5129 9.13482 17.3863 9.24478C17.3875 9.16985 17.388 9.09451 17.388 9.01873C17.388 6.68081 16.8171 4.50774 15.7684 2.68144C15.9561 2.53575 16.1318 2.45629 16.2799 2.41801H16.5C16.8226 2.41801 17.2968 2.58713 17.7726 3.22213C18.2489 3.85785 18.612 4.84228 18.612 6.02247C18.612 7.20267 18.2489 8.1871 17.7726 8.82282ZM20.0722 16.6339C20.6075 16.4027 21.1172 16.1211 21.5973 15.7945C21.607 15.8625 21.612 15.9311 21.612 16V18.5857H20.3787C20.3478 17.9098 20.2415 17.2571 20.0722 16.6339ZM5.38805 8.98876C5.38805 7.80857 5.75112 6.82414 6.22741 6.18842C6.70316 5.55342 7.17737 5.3843 7.5 5.3843C7.82263 5.3843 8.29684 5.55342 8.77259 6.18842C9.24888 6.82414 9.61195 7.80857 9.61195 8.98876C9.61195 10.169 9.24888 11.1534 8.77259 11.7891C8.29684 12.4241 7.82263 12.5932 7.5 12.5932C7.17737 12.5932 6.70316 12.4241 6.22741 11.7891C5.75112 11.1534 5.38805 10.169 5.38805 8.98876ZM2.38805 19.0262C2.38805 18.9437 2.39517 18.8615 2.40907 18.7803C3.86489 19.7713 5.59396 20.3656 7.5 20.3656C9.39528 20.3656 11.1277 19.7902 12.593 18.7924C12.6055 18.8696 12.612 18.9478 12.612 19.0262V21.612H2.38805V19.0262Z"
+                fill="#006167"
+                stroke="#FABF00"
+                stroke-width="4.7761"
+              />
+            </svg>
+            <p>Group tour ( coming soon)</p>
+          </div>
+          <hr />
+          <div class="help">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <path
+                d="M12 2.25C10.0716 2.25 8.18657 2.82183 6.58319 3.89317C4.97982 4.96451 3.73013 6.48726 2.99218 8.26884C2.25422 10.0504 2.06114 12.0108 2.43735 13.9021C2.81355 15.7934 3.74215 17.5307 5.10571 18.8943C6.46928 20.2579 8.20656 21.1865 10.0979 21.5627C11.9892 21.9389 13.9496 21.7458 15.7312 21.0078C17.5127 20.2699 19.0355 19.0202 20.1068 17.4168C21.1782 15.8134 21.75 13.9284 21.75 12C21.7471 9.41504 20.7189 6.93679 18.8911 5.10894C17.0632 3.28109 14.585 2.25293 12 2.25ZM12.0001 18C11.7776 18 11.56 17.9341 11.375 17.8104C11.19 17.6868 11.0458 17.5111 10.9607 17.3056C10.8755 17.1 10.8533 16.8738 10.8967 16.6556C10.9401 16.4373 11.0472 16.2369 11.2046 16.0795C11.3619 15.9222 11.5624 15.8151 11.7806 15.7717C11.9988 15.7282 12.225 15.7505 12.4306 15.8357C12.6361 15.9208 12.8118 16.065 12.9355 16.25C13.0591 16.435 13.1251 16.6525 13.1251 16.875C13.1251 17.1734 13.0065 17.4596 12.7955 17.6705C12.5846 17.8815 12.2984 18 12.0001 18ZM12.75 13.4165V13.5005C12.75 13.6994 12.671 13.8901 12.5303 14.0308C12.3897 14.1714 12.1989 14.2505 12 14.2505C11.8011 14.2505 11.6103 14.1714 11.4697 14.0308C11.329 13.8901 11.25 13.6994 11.25 13.5005V12.7505C11.25 12.5515 11.329 12.3608 11.4697 12.2201C11.6103 12.0795 11.8011 12.0005 12 12.0005C12.3708 12.0005 12.7334 11.8905 13.0417 11.6845C13.35 11.4784 13.5904 11.1856 13.7323 10.843C13.8742 10.5004 13.9113 10.1234 13.839 9.75966C13.7666 9.39595 13.5881 9.06186 13.3258 8.79963C13.0636 8.53741 12.7295 8.35883 12.3658 8.28649C12.0021 8.21414 11.6251 8.25127 11.2825 8.39318C10.9399 8.5351 10.647 8.77542 10.441 9.08376C10.235 9.39211 10.125 9.75462 10.125 10.1255C10.125 10.3244 10.046 10.5151 9.90534 10.6558C9.76469 10.7964 9.57392 10.8755 9.37501 10.8755C9.1761 10.8755 8.98533 10.7964 8.84468 10.6558C8.70403 10.5151 8.62501 10.3244 8.62501 10.1255C8.62509 9.49014 8.80449 8.86774 9.14259 8.32985C9.48068 7.79196 9.96373 7.36042 10.5362 7.08487C11.1086 6.80931 11.7472 6.70093 12.3785 6.77219C13.0099 6.84344 13.6082 7.09144 14.1049 7.48767C14.6015 7.88389 14.9762 8.41225 15.1859 9.01196C15.3956 9.61168 15.4317 10.2584 15.2902 10.8778C15.1487 11.4971 14.8352 12.0639 14.3858 12.5131C13.9364 12.9622 13.3694 13.2753 12.75 13.4165Z"
+                fill="#FABF00"
+              />
+            </svg>
+            <p>Get Help</p>
+          </div>
+          <hr />
+          <div class="signout">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <path
+                d="M5 2H19C19.5523 2 20 2.44772 20 3V21C20 21.5523 19.5523 22 19 22H5C4.44772 22 4 21.5523 4 21V3C4 2.44772 4.44772 2 5 2ZM9 11V8L4 12L9 16V13H15V11H9Z"
+                fill="#FABF00"
+              />
+            </svg>
+            <p>Sign Out</p>
+          </div>
+          <hr />
+        </aside>
+      </div>
+      <div class="right-content">
+        <p>Welcome to your dashboard, SarahDAdventurer!</p>
+        <div class="hero-image" style="position: relative;">
+          <img src="/Front-end/images/Dashboard-header-image.png" alt="" />
+          
+          <a href="" style="position: absolute; right: 0; bottom: 0;">Edit Cover Photo</a>
+        </div>
+        <div class="edit-profile">
+          <img id="top" src="/Front-end/images/Polygon 15.svg" alt="" />
+          <img id="bottom" src="/Front-end//images/Polygon 12.svg" alt="" />
+          <div class="profile-image">
+            <img src="/Front-end/images/edit-profile-image.svg" alt="" />
+          </div>
+          <div class="profile">
+            <a href="">Edit Profile Picture</a>
+            <div class="row gap-5">
+              <div class="col initial">Name:</div>
+              <div class="col detail">Sarah Jones</div>
+            </div>
+            <div class="row gap-5">
+              <div class="col initial">Email Address:</div>
+              <div class="col detail">Sarah@mail.com</div>
+            </div>
+            <div class="row gap-5">
+              <div class="col initial">Phone Number:</div>
+              <div class="col detail">+234 090 345 6789</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- bootstrap js link -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
