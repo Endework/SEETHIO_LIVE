@@ -190,16 +190,18 @@ aside  hr{
     display: flex;
     justify-content: space-between;
     /* padding: 32px 40px 120px 55px; */
+   
     padding: 4% 5% 10% 7%;
 }
 .top-div img , #imageCard , #imageCard1, #imageCard2{
-    width: 350px;
+    width: 330px;
+   
     height: 177px;
     border-radius: 5px;
 }
 
 .text-div{
-    width: 370px;
+    width: 350px;
     color: var(--Text-Colour, #121212);
     text-align: justify;
     font-family: Nunito;
