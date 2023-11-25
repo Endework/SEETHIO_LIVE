@@ -129,12 +129,28 @@ aside  hr{
     width: 75%;
 
 }
+.pagename{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-left: 1.5%;
+}
+.buttons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-left: 7%;
+    
+}
 .pagename p{
-    margin-left: 55px;
+    
+    
     margin-top: 14px;
     color: var(--Secondary-Colour, #006167);
     text-align: justify;
+    font-family: Nunito;
     font-size: 24px;
+    font-style: normal;
     font-weight: 500;
     line-height: 24px; /* 100% */
 }
