@@ -202,7 +202,8 @@ margin-left: 55px;
 
 .card-div{
     display: flex;
-    padding: 6% 4%;
+   
+    padding: 6% 3% 6% 1%;
     gap:25px;
 }
 /*  */
