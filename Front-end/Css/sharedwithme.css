@@ -26,39 +26,29 @@ li{
 }
 
 /* navigation styles */
-nav{
-    height: 116px;
-    flex-shrink: 0;
-    background: var(--Secondary-Colour, #006167);
+
+nav {
     display: flex;
+    align-items: center;
+    width: 100%;
+    background: var(--Secondary-Colour, #006167);
+    justify-content: space-between;
     color: white;
-}
-.logo-shared {
-    width: 234px;
-    height: 91px;
+  }
+  nav ul {
+    display: flex;
     flex-shrink: 0;
-
-}
-.search-shared{
-    margin-top: 37px;
-    margin-left: 37px;
-    position: relative;
-}
-.search-shared input{
-    width: 325px;
-    height: 50px;
-    flex-shrink: 0;
-    border-radius: 8px;
-    background: #F5F9F5;
-    margin-left: 165px;
-}
-
-.search-shared .fa-magnifying-glass{
-    position: absolute;
-    top: 16px;
-    left: 180px;
-    color: black;
-}
+    align-items: center;
+    gap: 5%;
+    width: 75%;
+    margin-left: 5%;
+    font-size: 20px;
+  }
+  
+  li {
+    list-style: none;
+  }
+  
 .fa-user , .home{
     color: #FABF00;
 }
@@ -66,16 +56,7 @@ input::placeholder{
     padding-left: 52px;
     color: var(--Icon-Colour, #545454);
 }
-.notification{
-    width: 52px;
-    height: 50px;
-    background: #F5F9F5;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 100%;
-    border: none;
-}
+
 
 .dropdown-toggle::after {
     border-top-color: #FABF00 !important;; 
@@ -239,7 +220,7 @@ aside div p , .nav-link{
     justify-content: space-between;
     padding: 32px 40px 120px 55px;
 }
-.top-div-shared img , #imageCard , #imageCard1{
+.top-div-shared img , #imageCard , #imageCard1, #imageCard2{
     width: 350px;
     height: 177px;
     border-radius: 5px;
@@ -331,19 +312,19 @@ button:not(.remove):hover {
 
 /*  */
 
-#imageCard, #imageCard1 {
+#imageCard, #imageCard1, #imageCard2 {
     position: relative;
     
     
 }
-#imageCard img , #imageCard1 img {
+#imageCard img , #imageCard1 img , #imageCard2 img {
     position: absolute;
     width: 100%;
     height: 100%;
     transition: opacity 0.1s ease-in-out;
     opacity: 0;
 }
-#imageCard img.active1 , #imageCard1 img.active2 {
+#imageCard img.active1 , #imageCard1 img.active2 , #imageCard2 img.active3 {
     opacity: 1;
 }
 
