@@ -126,30 +126,13 @@ aside  hr{
 .right-content{
     background: linear-gradient(180deg, rgba(215, 239, 218, 0.00) 0%, #D7EFDA 100%), #FFF;
     position: relative;
-    width: 75%
-}
-.pagename{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    margin-left: 5%;
-}
-.buttons{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin-left: 25%;
-    
 }
 .pagename p{
-    
-    
+    margin-left: 55px;
     margin-top: 14px;
     color: var(--Secondary-Colour, #006167);
     text-align: justify;
-    font-family: Nunito;
     font-size: 24px;
-    font-style: normal;
     font-weight: 500;
     line-height: 24px; /* 100% */
 }
@@ -163,14 +146,14 @@ aside  hr{
     background: var(--Secondary-Colour, #006167);
     color: var(--UNPRIMARY-COLOUR, #FFF);
     text-align: center;
-    font-family: Nunito;
     font-size: 16px;
-    font-style: normal;
     font-weight: 600;
     line-height: 24px; /* 150% */
     border: none;
-    /* margin-left: 360px; */
-    
+   
+}
+.button1{
+    margin-left: 360px;
 }
 .non-active{
     width: 165.239px;
@@ -181,13 +164,11 @@ aside  hr{
     background: var(--UNPRIMARY-COLOUR, #FFF);
     color: var(--Subwords, rgba(18, 18, 18, 0.70));
     text-align: center;
-    font-family: Nunito;
     font-size: 16px;
-    font-style: normal;
     font-weight: 400;
     line-height: 24px; /* 150% */
-    margin-inline: auto;
 }
+
 .filter_wrapper{
     display: inline-flex;
 align-items: flex-start;
@@ -222,7 +203,7 @@ margin-left: 55px;
 .card-div{
     display: flex;
     padding: 6% 8%;
-    gap:5%
+    gap:25px;
 }
 /*  */
 
