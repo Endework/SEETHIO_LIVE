@@ -128,29 +128,23 @@ aside  hr{
     width: 100%;
 
 }
-.pagename{
+.pagename, .pagename1{
   display: flex;
   align-items: center;
   justify-content: space-around;
-  margin-left: 5%;
+  margin-left: 2%;
+  padding-left: 2%;
 }
-.buttons{
+.buttons, .buttons1{
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   margin-left: 25%;
   
 }
-.buttons1{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    margin-left: 30%;
-    
-}
+
+
 .pagename p{
-  
-  
   margin-top: 14px;
   color: var(--Secondary-Colour, #006167);
   text-align: justify;
@@ -162,8 +156,8 @@ aside  hr{
 }
 
 .active{
-  width: 165.239px;
-  height: 47.193px;
+  width: 160px;
+  height: 47px;
   flex-shrink: 0;
   border-radius: 15px 15px 0px 0px;
   border-top: 1px solid #000;
@@ -171,7 +165,7 @@ aside  hr{
   color: var(--UNPRIMARY-COLOUR, #FFF);
   text-align: center;
   font-family: Nunito;
-  font-size: 16px;
+  font-size: 14px;
   font-style: normal;
   font-weight: 600;
   line-height: 24px; /* 150% */
@@ -180,8 +174,8 @@ aside  hr{
   
 }
 .non-active{
-  width: 165.239px;
-  height: 37.755px;
+  width: 160px;
+  height: 37px;
   flex-shrink: 0;
   border-radius: 15px 15px 0px 0px;
   border: 1px solid #FFF;
@@ -189,7 +183,7 @@ aside  hr{
   color: var(--Subwords, rgba(18, 18, 18, 0.70));
   text-align: center;
   font-family: Nunito;
-  font-size: 16px;
+  font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: 24px; /* 150% */
@@ -866,6 +860,7 @@ margin-top: 20px;
         border-radius: 5px;
         display: flex;
         justify-content: space-around;
+        align-items: center;
         padding: 3% 2% 5% 2%;
         width: 100%;
         height: 12vh; 
