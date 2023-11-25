@@ -67,7 +67,7 @@ input::placeholder{
 aside{
    
     padding-top: 100px;
-    padding-left: 20px;
+    padding-left: 15px;
     
     
     
@@ -84,7 +84,7 @@ aside div p:hover , .bucketl:hover, .item-1:hover{
 aside div p , .nav-link{
     color: var(--UNPRIMARY-COLOUR, #FFF);
     font-family: Nunito;
-    font-size: 24px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 400;
     line-height: 32px; /* 133.333% */
