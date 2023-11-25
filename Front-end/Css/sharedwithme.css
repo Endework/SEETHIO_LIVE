@@ -81,7 +81,8 @@ input::placeholder{
     display: flex;
 }
 .left_menu-shared{
-    width: 377px;
+    /* width: 377px; */
+    width: 25%;
     height: 1500px;
     flex-shrink: 0;
     background: var(--Secondary-Colour, #006167);
@@ -91,7 +92,7 @@ input::placeholder{
 aside{
    
     padding-top: 100px;
-    padding-left: 20px;
+    padding-left: 15px;
     
     
     
@@ -106,19 +107,19 @@ aside div{
 aside div p , .nav-link{
     color: var(--UNPRIMARY-COLOUR, #FFF);
     font-family: Nunito;
-    font-size: 24px;
+    font-size: 21px;
     font-style: normal;
     font-weight: 400;
     line-height: 32px; /* 133.333% */
 }
 .divider{
-    width: 338px;
+    width: 80%;
     border:1px solid  #f1f1f1;
 }
 .right-content-shared{
     background: linear-gradient(180deg, rgba(215, 239, 218, 0.00) 0%, #D7EFDA 100%), #FFF;
     position: relative;
-    width: 100%;
+    width: 75%;
 }
 .navigation-new{
     margin-top: 15px;
@@ -232,15 +233,16 @@ aside div p , .nav-link{
 .top-div-shared{
     display: flex;
     justify-content: space-between;
-    padding: 32px 40px 120px 55px;
+    /* padding: 32px 40px 120px 55px; */
+    padding: 4% 5% 10% 7%;
 }
 .top-div-shared img , #imageCard , #imageCard1, #imageCard2{
-    width: 350px;
+    width: 330px;
     height: 177px;
     border-radius: 5px;
 }
 .text-div-shared{
-    width: 370px;
+    width: 330px;
     color: var(--Text-Colour, #121212);
     text-align: justify;
     font-family: Nunito;
