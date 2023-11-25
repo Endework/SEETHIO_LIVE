@@ -97,33 +97,33 @@ imageCard1.addEventListener('mouseout', function() {
 });
 
 // for card 3
-var images = document.querySelectorAll('#imageCard2 img');
-var currentImage = 0;
-var hoverInterval;
-var imageCard = document.querySelector('#imageCard2');
-var lastMousePosition = { x: 0, y: 0 };
-var mouseSpeed = 0;
-var isMouseOver = false; // Add this flag
+var images2 = document.querySelectorAll('#imageCard2 img');
+var currentImage2 = 0;
+var hoverInterval2;
+var imageCard2 = document.querySelector('#imageCard2');
+var lastMousePosition2 = { x: 0, y: 0 };
+var mouseSpeed2 = 0;
+var isMouseOver2 = false; // Add this flag
 
 function changeImage(direction) {
-    images[currentImage].classList.remove('active3');
+    images2[currentImage2].classList.remove('active3');
     if (direction === 'right') {
-        currentImage = (currentImage + 1) % images.length;
+        currentImage2 = (currentImage2 + 1) % images2.length;
     } else if (direction === 'left') {
-        currentImage = (currentImage - 1 + images.length) % images.length;
+        currentImage2 = (currentImage2 - 1 + images2.length) % images2.length;
     }
-    images[currentImage].classList.add('active3');
+    images2[currentImage2].classList.add('active3');
 }
 
-imageCard.addEventListener('mousemove', function(e) {
-    if (!isMouseOver) return; // Add this line
+imageCard2.addEventListener('mousemove', function(e) {
+    if (!isMouseOver2) return; // Add this line
 
     var rect = e.target.getBoundingClientRect();
     var x = e.clientX - rect.left; //x position within the element.
     var y = e.clientY - rect.top;  //y position within the element.
 
     // Calculate mouse speed and direction
-    mouseSpeed = Math.sqrt(Math.pow(x - lastMousePosition.x, 2) + Math.pow(y - lastMousePosition.y, 2));
+    mouseSpeed2 = Math.sqrt(Math.pow(x - lastMousePosition.x, 2) + Math.pow(y - lastMousePosition.y, 2));
     var direction = x > lastMousePosition.x ? 'right' : 'left';
     lastMousePosition = { x: x, y: y };
 
@@ -131,18 +131,18 @@ imageCard.addEventListener('mousemove', function(e) {
     changeImage(direction);
 });
 
-imageCard.addEventListener('mouseover', function(e) {
-    isMouseOver = true; // Set the flag to true
+imageCard2.addEventListener('mouseover', function(e) {
+    isMouseOver2 = true; // Set the flag to true
 
-    hoverInterval = setInterval(function() {
+    hoverInterval2 = setInterval(function() {
         var transitionTime = 1000 / mouseSpeed; // Change transition time based on mouse speed
         changeImage('right'); // Default direction
     }, 1000);
 });
 
-imageCard.addEventListener('mouseout', function() {
-    isMouseOver = false; // Set the flag to false
-    clearInterval(hoverInterval);
+imageCard2.addEventListener('mouseout', function() {
+    isMouseOver2 = false; // Set the flag to false
+    clearInterval(hoverInterval2);
 });
 // for the popup2
 document
