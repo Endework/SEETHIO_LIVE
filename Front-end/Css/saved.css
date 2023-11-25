@@ -56,12 +56,17 @@ nav img{
   justify-content: center;
 }
 
-.fa-magnifying-glass{
-    position: absolute;
-    top: 16px;
-    left: 180px;
- color: black !important; 
+.formin{
+  position: relative;
+  
 }
+.fa-magnifying-glass{
+  position: absolute;
+  top: 25%;
+  left:5%;
+  color: grey !important;;
+}
+
 .fa-user , .home{
     color: #FABF00;
 }

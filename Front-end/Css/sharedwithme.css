@@ -56,11 +56,21 @@ nav {
 .fa-user , .home{
     color: #FABF00;
 }
+
 input::placeholder{
     padding-left: 52px;
     color: var(--Icon-Colour, #545454);
 }
-
+.formin{
+  position: relative;
+  
+}
+.fa-magnifying-glass{
+  position: absolute;
+  top: 25%;
+  left:5%;
+  color:grey !important;
+}
 
 .dropdown-toggle::after {
     border-top-color: #FABF00 !important;; 
@@ -72,7 +82,7 @@ input::placeholder{
 }
 .left_menu-shared{
     width: 377px;
-    height: 1024px;
+    height: 1500px;
     flex-shrink: 0;
     background: var(--Secondary-Colour, #006167);
     margin-top: 3px;
