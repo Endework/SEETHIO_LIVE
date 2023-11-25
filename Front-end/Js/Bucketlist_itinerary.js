@@ -7,13 +7,13 @@ var mouseSpeed = 0;
 var isMouseOver = false; // Add this flag
 
 function changeImage(direction) {
-    images[currentImage].classList.remove('active1');
+    images[currentImage].classList.remove('active7');
     if (direction === 'right') {
         currentImage = (currentImage + 1) % images.length;
     } else if (direction === 'left') {
         currentImage = (currentImage - 1 + images.length) % images.length;
     }
-    images[currentImage].classList.add('active1');
+    images[currentImage].classList.add('active7');
 }
 
 imageCard.addEventListener('mousemove', function(e) {

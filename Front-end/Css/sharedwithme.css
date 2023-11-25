@@ -317,7 +317,7 @@ aside  hr{
     transition: opacity 0.1s ease-in-out;
     opacity: 0;
 }
-#imageCard img.active1 , #imageCard1 img.active2 , #imageCard2 img.active3{
+#imageCard img.active7 , #imageCard1 img.active2 , #imageCard2 img.active3{
     opacity: 1;
 }
 
@@ -769,7 +769,7 @@ margin-top: 20px;
     position: relative;
     }
     
-    .carousel1, .carousel2 , .carousel3 , .carousel4 , .carousel5 , .carousel6 , .carousel7, .carousel8 , .carousel9{
+    .carousel1, .carousel2 , .carousel3 , .carousel4 , .carousel5 , .carousel6 , .carousel7, .carousel8 , .carousel9 , .carousel10{
     position: relative;
     width: 100%;
     height: 200px; /* Adjust as needed */
@@ -844,6 +844,10 @@ margin-top: 20px;
     line-height: 14px; /* 140% */
     border: none;
     background: transparent;
+    }
+    .remove:hover , .body-remove:hover{
+      background: transparent !important;
+      color: #E41D1D !important;
     }
     .map{
         color: var(--Text-Colour, #121212);

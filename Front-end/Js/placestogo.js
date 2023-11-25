@@ -1,4 +1,4 @@
-var carouselClasses = ['carousel1', 'carousel2', 'carousel3', 'carousel4', 'carousel5', 'carousel6' ,'carousel7', 'carousel8', 'carousel9'];
+var carouselClasses = ['carousel1', 'carousel2', 'carousel3', 'carousel4', 'carousel5', 'carousel6' ,'carousel7', 'carousel8', 'carousel9','carousel10'];
 
 carouselClasses.forEach(function(carouselClass) {
     var carousel = document.querySelector('.' + carouselClass);
