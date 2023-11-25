@@ -126,6 +126,8 @@ aside  hr{
 .right-content{
     background: linear-gradient(180deg, rgba(215, 239, 218, 0.00) 0%, #D7EFDA 100%), #FFF;
     position: relative;
+    width: 75%;
+
 }
 .pagename p{
     margin-left: 55px;
@@ -201,10 +203,10 @@ margin-left: 55px;
 /* card and card images style */
 
 .card-div{
-    display: flex;
+    display: flex; 
    
-    padding: 6% 3% 6% 1%;
-    gap:25px;
+    padding: 6% 2%;
+    gap:21px;
 }
 /*  */
 
