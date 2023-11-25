@@ -18,6 +18,11 @@ nav {
     justify-content: space-between;
     color: white;
   }
+  nav img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   nav ul {
     display: flex;
     flex-shrink: 0;
@@ -132,12 +137,23 @@ font-weight: 500;
 line-height: normal;
 text-decoration-line: underline;
 }
-.edit-profile{
+/* .edit-profile{
     width: 536px;
     height: 508px;
     flex-shrink: 0;
     margin-left: 278px;
     margin-top: 75px;
+    position: relative;
+    
+} */
+.edit-profile{
+   display: flex;
+   width: 536px;
+   margin-top: 75px;
+   flex-direction: column;
+    margin-inline: auto;
+    height: 508px;
+    
     position: relative;
     
 }

@@ -31,6 +31,11 @@ nav{
     display: flex;
     color: white;
 }
+nav img{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 button:not(.body-remove):hover {
     background: var(--PRIMARY-COLOUR);
     color: var(--Secondary-Colour);

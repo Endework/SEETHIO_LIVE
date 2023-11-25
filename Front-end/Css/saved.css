@@ -50,7 +50,11 @@ nav {
   li {
     list-style: none;
   }
-
+nav img{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 .fa-magnifying-glass{
     position: absolute;
