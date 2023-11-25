@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600&display=swap'); */
 *{
     margin: 0;
     padding: 0;
@@ -299,7 +299,7 @@ aside  hr{
     transition: opacity 0.1s ease-in-out;
     opacity: 0;
 }
-#imageCard img.active1 , #imageCard1 img.active2 , #imageCard2 img.active3{
+#imageCard img.activen , #imageCard1 img.active2 , #imageCard2 img.active3{
     opacity: 1;
 }
 

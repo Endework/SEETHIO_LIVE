@@ -36,13 +36,13 @@ imageCard.addEventListener('mouseout', function() {
 });
 
 function changeImage(direction) {
-    images[currentImage].classList.remove('active');
+    images[currentImage].classList.remove('active7');
     if (direction === 'right') {
         currentImage = (currentImage + 1) % images.length;
     } else if (direction === 'left') {
         currentImage = (currentImage - 1 + images.length) % images.length;
     }
-    images[currentImage].classList.add('active');
+    images[currentImage].classList.add('active7');
 }
 
 // For #imageCard1
@@ -83,13 +83,13 @@ imageCard1.addEventListener('mouseout', function() {
 });
 
 function changeImage1(direction) {
-    images1[currentImage1].classList.remove('active1');
+    images1[currentImage1].classList.remove('active8');
     if (direction === 'right') {
         currentImage1 = (currentImage1 + 1) % images1.length;
     } else if (direction === 'left') {
         currentImage1 = (currentImage1 - 1 + images1.length) % images1.length;
     }
-    images1[currentImage1].classList.add('active1');
+    images1[currentImage1].classList.add('active8');
 }
 
 // For #imageCard2
@@ -130,11 +130,11 @@ imageCard2.addEventListener('mouseout', function() {
 });
 
 function changeImage2(direction) {
-    images2[currentImage2].classList.remove('active2');
+    images2[currentImage2].classList.remove('active9');
     if (direction === 'right') {
         currentImage2 = (currentImage2 + 1) % images2.length;
     } else if (direction === 'left') {
         currentImage2 = (currentImage2 - 1 + images2.length) % images2.length;
     }
-    images2[currentImage2].classList.add('active2');
+    images2[currentImage2].classList.add('active9');
 }

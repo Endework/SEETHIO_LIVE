@@ -311,7 +311,7 @@ aside  hr{
     transition: opacity 0.1s ease-in-out;
     opacity: 0;
 }
-#imageCard img.active7 , #imageCard1 img.active2 , #imageCard2 img.active3{
+#imageCard img.active7 , #imageCard1 img.active8 , #imageCard2 img.active9{
     opacity: 1;
 }
 
@@ -542,7 +542,9 @@ scrollbar-width: none; /* Firefox */
 
 
 
-
+.drop:hover{
+  color:var(--PRIMARY-COLOUR);
+}
   /* Hide scrollbar for IE, Edge and Firefox */
   .checkbox-dropdown {
     width: 470px;
@@ -1287,7 +1289,7 @@ margin-top: 20px;
         padding-left:3%;
     }
     .filter1 p{
-        margin-left: 55px;
+        margin-left: 30px;
         margin-top: 15px;
     }
     .filter-content1 input{

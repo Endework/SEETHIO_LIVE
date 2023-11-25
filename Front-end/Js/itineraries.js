@@ -7,13 +7,13 @@ var mouseSpeed = 0;
 var isMouseOver = false; // Add this flag
 
 function changeImage(direction) {
-    images[currentImage].classList.remove('active7');
+    images[currentImage].classList.remove('activen');
     if (direction === 'right') {
         currentImage = (currentImage + 1) % images.length;
     } else if (direction === 'left') {
         currentImage = (currentImage - 1 + images.length) % images.length;
     }
-    images[currentImage].classList.add('active7');
+    images[currentImage].classList.add('activen');
 }
 
 imageCard.addEventListener('mousemove', function(e) {
@@ -57,13 +57,13 @@ var mouseSpeed1 = 0;
 var isMouseOver1 = false; // Add this flag
 
 function changeImage1(direction) {
-    images1[currentImage1].classList.remove('active8');
+    images1[currentImage1].classList.remove('active2');
     if (direction === 'right') {
         currentImage1 = (currentImage1 + 1) % images1.length;
     } else if (direction === 'left') {
         currentImage1 = (currentImage1 - 1 + images1.length) % images1.length;
     }
-    images1[currentImage1].classList.add('active8');
+    images1[currentImage1].classList.add('active2');
 }
 
 imageCard1.addEventListener('mousemove', function(e) {
@@ -106,7 +106,7 @@ var mouseSpeed2 = 0;
 var isMouseOver2 = false; // Add this flag
 
 function changeImage(direction) {
-    images2[currentImage2].classList.remove('active9');
+    images2[currentImage2].classList.remove('active3');
     if (direction === 'right') {
         currentImage2 = (currentImage2 + 1) % images2.length;
     } else if (direction === 'left') {
