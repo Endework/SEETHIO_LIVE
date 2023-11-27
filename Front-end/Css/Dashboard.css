@@ -87,10 +87,10 @@ aside div{
     width: 338px;
     height: 42px;
 }
-aside div p:hover , .bucketl:hover, .item-1:hover{
+aside div p:hover , .bucketl:hover, .item-1:hover , aside div a:hover{
     color: #FABF00;
 }
-aside div p , .nav-link{
+aside div p , .nav-link ,aside div a{
     color: var(--UNPRIMARY-COLOUR, #FFF);
     font-family: Nunito;
     font-size: 20px;

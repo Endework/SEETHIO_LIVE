@@ -21,6 +21,11 @@
     />
     <!-- style sheet -->
     <link rel="stylesheet" href="/Front-end/Css/saved.css" />
+    <style>
+      #removereson{
+        display: none;
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -333,7 +338,7 @@
                 stroke-width="4.7761"
               />
             </svg>
-            <p>Group tour ( coming soon)</p>
+           <a href="./Grouptour.html">Group Tour</a>
           </div>
           <hr class="divider" />
           <div class="help">
@@ -349,7 +354,7 @@
                 fill="#FABF00"
               />
             </svg>
-            <p>Get Help</p>
+            <a href="./Help.html">Get Help</a>
           </div>
           <hr class="divider" />
           <div class="signout">
@@ -1183,14 +1188,14 @@
                   <label>
                     <input
                       type="checkbox"
-                      value="Vejle"
-                      name="city"
+                      value="Bucketlist"
+                      name="Bucketlist"
                     />Bucketlist Accomplished</label
                   >
                 </li>
                 <li>
                   <label>
-                    <input type="checkbox" value="Horsens" name="city" />New
+                    <input type="checkbox" value="discoveries" name="discoveries" />New
                     Discoveries</label
                   >
                 </li>
@@ -1198,8 +1203,9 @@
                   <label>
                     <input
                       type="checkbox"
-                      value="Kolding"
-                      name="city"
+                      value="other"
+                      name="other"
+                      id="others"
                     />Others</label
                   >
                 </li>
@@ -1300,5 +1306,6 @@
       crossorigin="anonymous"
     ></script>
     <script src="/Front-end/Js/placestogo.js"></script>
+    <script src="/Front-end/Js/remove.js"></script>
   </body>
 </html>

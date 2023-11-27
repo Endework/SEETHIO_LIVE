@@ -24,6 +24,9 @@
   </head>
   <body>
     <style>
+      #removereson{
+        display: none;
+      }
         .popup-shared {
           position: fixed;
           top: 0;
@@ -356,7 +359,7 @@
                 stroke-width="4.7761"
               />
             </svg>
-            <p>Group tour ( coming soon)</p>
+           <a href="./Grouptour.html">Group Tour</a>
           </div>
           <hr />
           <div class="help">
@@ -372,7 +375,7 @@
                 fill="#FABF00"
               />
             </svg>
-            <p>Get Help</p>
+            <a href="./Help.html">Get Help</a>
           </div>
           <hr />
           <div class="signout">
@@ -870,14 +873,14 @@
                   <label>
                     <input
                       type="checkbox"
-                      value="Vejle"
-                      name="city"
+                      value="Bucketlist"
+                      name="Bucketlist"
                     />Bucketlist Accomplished</label
                   >
                 </li>
                 <li>
                   <label>
-                    <input type="checkbox" value="Horsens" name="city" />New
+                    <input type="checkbox" value="Discoveries" name="Discoveries" />New
                     Discoveries</label
                   >
                 </li>
@@ -885,8 +888,9 @@
                   <label>
                     <input
                       type="checkbox"
-                      value="Kolding"
-                      name="city"
+                      value="others"
+                      name="others"
+                      id="others"
                     />Others</label
                   >
                 </li>
@@ -1161,7 +1165,7 @@
                         <p style="color: #4f4f4f">4.0 (400 Reviews)</p>
                       </div>
                     </div>
-                    <div class="body-text">
+                    <div class="body-text pt-4">
                       <p>
                         Cuisines <br />
                         <span style="color: #121212">African, Ethiopian</span>
@@ -1301,7 +1305,7 @@
                         <p style="color: #4f4f4f">5.0 (800 Reviews)</p>
                       </div>
                     </div>
-                    <div class="body-text">
+                    <div class="body-text pt-4">
                       <p>
                         Cuisines <br />
                         <span style="color: #121212">American, Cafe, French.</span>
@@ -2115,6 +2119,7 @@
       </div>
     <script src="/Front-end/Js/test.js"></script>
     <script src="/Front-end/js/placestogo.js"></script>
+    <script src="/Front-end/js/remove.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"

@@ -20,6 +20,11 @@
       crossorigin="anonymous"
     />
     <!-- style sheet -->
+    <style>
+      #removereson{
+        display: none;
+      }
+    </style>
     <link rel="stylesheet" href="/Front-end/Css/places.css" />
   </head>
   <body>
@@ -333,7 +338,7 @@
                 stroke-width="4.7761"
               />
             </svg>
-            <p>Group tour ( coming soon)</p>
+            <a href="./Grouptour.html">Group Tour</a>
           </div>
           <hr class="divider" />
           <div class="help">
@@ -349,7 +354,7 @@
                 fill="#FABF00"
               />
             </svg>
-            <p>Get Help</p>
+            <a href="./Help.html">Get Help</a>
           </div>
           <hr class="divider" />
           <div class="signout">
@@ -538,7 +543,7 @@
                   <p style="color: #4f4f4f">4.0 (400 Reviews)</p>
                 </div>
               </div>
-              <div class="body-text">
+              <div class="body-text pt-4">
                 <p>
                   Cuisines <br />
                   <span style="color: #121212;">African, Ethiopian</span>
@@ -673,10 +678,10 @@
                   <p style="color: #4f4f4f">5.0 (800 Reviews)</p>
                 </div>
               </div>
-              <div class="body-text">
+              <div class="body-text pt-4">
                 <p>
                   Cuisines <br />
-                  American, Cafe, French.
+                  <span style="color: #121212;">American, Cafe, French.</span>
                 </p>
               </div>
               <div
@@ -985,7 +990,7 @@
                   <p style="color: #4f4f4f">5.0 (600 Reviews)</p>
                 </div>
               </div>
-              <div class="body-text">
+              <div class="body-text pt-4">
                 <p>
                   Cuisines <br />
                   <span style="color:#121212;">American, Cafe, French.</span>
@@ -1202,14 +1207,14 @@
                   <label>
                     <input
                       type="checkbox"
-                      value="Vejle"
-                      name="city"
+                      value="Bucketlist"
+                      name="Bucketlist"
                     />Bucketlist Accomplished</label
                   >
                 </li>
                 <li>
                   <label>
-                    <input type="checkbox" value="Horsens" name="city" />New
+                    <input type="checkbox" value="Discoveries" name="Discoveries" />New
                     Discoveries</label
                   >
                 </li>
@@ -1217,8 +1222,9 @@
                   <label>
                     <input
                       type="checkbox"
-                      value="Kolding"
-                      name="city"
+                      value="other"
+                      name="other"
+                      id="others"
                     />Others</label
                   >
                 </li>
@@ -1320,6 +1326,8 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
+  
     <script src="/Front-end/Js/placestogo.js"></script>
+    <script src="/Front-end/Js/remove.js"></script>
   </body>
 </html>

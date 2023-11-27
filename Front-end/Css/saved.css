@@ -107,13 +107,13 @@ aside div{
     width: 338px;
     height: 42px;
 }
-aside div p , .nav-link{
+aside div p , .nav-link ,aside div a{
     color: var(--UNPRIMARY-COLOUR, #FFF);
     font-size: 20px;
     font-weight: 400;
     line-height: 32px; /* 133.333% */
 }
-aside div p:hover , .drop:hover , .dropitem:hover{
+aside div p:hover , .drop:hover , .dropitem:hover, aside div a:hover{
     color: var(--PRIMARY-COLOUR);
 }
 aside  hr{
