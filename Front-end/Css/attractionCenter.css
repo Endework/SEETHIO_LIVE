@@ -410,15 +410,19 @@ nav .dropdown #profilePic
 
 
   /* FOOTER */
+footer
+{
+    background-color: var(--secondary-colour);
+    color: var(--unprimary-colour);
+    padding: 1rem 2rem;
+}
 
-  footer
+
+  footer .footer
   {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    background-color: var(--secondary-colour);
-    color: var(--unprimary-colour);
-    padding: 1rem 2rem;
   }
 
   .needanyhelp
@@ -504,3 +508,28 @@ nav .dropdown #profilePic
     padding: 0.4rem 0.8rem;
     cursor: pointer;
   }
+
+  footer .lower_footer
+  {
+    width: 100%;
+    height: 2px;
+    background-color: var(--unprimary-colour);
+    margin-block: 3rem;
+  }
+
+  footer .lower_footer .logo_and_text
+  {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  footer .lower_footer .logo_and_text img
+{
+  width: 150px;
+}
+
+footer .lower_footer .logo_and_text p
+{
+  color: var(--primary-colour);
+}
