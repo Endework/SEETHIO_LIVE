@@ -21,6 +21,8 @@
     />
     <!-- style sheet -->
     <link rel="stylesheet" href="/Front-end/Css/Dashboard.css" />
+    <link rel="stylesheet" href="/Front-end/Css/profilepictureselect.css">
+  
   </head>
   <body>
     <header>
@@ -242,7 +244,7 @@
       </nav>
     </header>
 
-    <div class="main">
+    <div class="main" id="dashboard">
       <div class="left_menu">
         <aside>
           <div class="account_setting">
@@ -384,7 +386,7 @@
             <img src="/Front-end/images/edit-profile-image.svg" alt="" />
           </div>
           <div class="profile">
-            <a href="">Edit Profile Picture</a>
+            <a href="#popup1">Edit Profile Picture</a>
             <div class="row gap-5">
               <div class="col initial">Name:</div>
               <div class="col detail">Sarah Jones</div>
@@ -394,18 +396,153 @@
               <div class="col detail">Sarah@mail.com</div>
             </div>
             <div class="row gap-5">
-              <div class="col initial">Phone Number:</div>
-              <div class="col detail">+234 090 345 6789</div>
+              <div class="col initial">User Name:</div>
+              <div class="col detail">@SarahJones</div>
             </div>
           </div>
         </div>
       </div>
     </div>
+
+    <!-- popups -->
+    <div id="popup1" class="overlay">
+      <main>
+          <img id="p12" src="/Front-end/images/Polygon 12.svg" alt="">
+          <img id="p15" src="/Front-end/images/Polygon 15.svg" alt="">
+          <img id="p14" src="/Front-end/images/Polygon 14.svg" alt="">
+          <img id="p16" src="/Front-end/images/Polygon 16.svg" alt="">
+          <img id="p13" src="/Front-end/images/Polygon 13.svg" alt="">
+      
+          <div class="mainp1">
+      
+            <p id="back1" onclick="window.location.href='#dashboard'"><i class="fa-solid fa-arrow-left"></i> Back</p>
+              <div class="containerp1">
+                  <h2>Current Profile Picture</h2>
+                  <img  src="/Front-end/images/edit-profile-image.svg" alt="">
+                  <div class="imgageselect">
+                      <img id="top1" src="/Front-end/images/Polygon 14.svg" alt="">
+                      <img id="middle1" src="/Front-end/images/Polygon 16.svg" alt="">
+                      <img id="bottom1" src="/Front-end/images/Polygon 13.svg" alt="">
+                    <div class="upload">
+                    <img id="image"  src="/Front-end/images/Group.svg" alt="">
+                    <input type="file" id="file-input" style="display: none;">
+                      <p style="margin-top: 105%;">Upload</p>
+                    </div>
+                      <div class="avatar" style="margin-top: 10%;">
+                          <a href="#popup2"><img src="/Front-end//images/Avatar.svg" alt=""></a>
+                      <p>Avatar</p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </main>
+  </div>
+
+  <div id="popup2" class="overlay">
+    <main>
+        <img id="p12" src="/Front-end/images/Polygon 12.svg" alt="">
+        <img id="p15" src="/Front-end/images/Polygon 15.svg" alt="">
+        <img id="p14" src="/Front-end/images/Polygon 14.svg" alt="">
+        <img id="p16" src="/Front-end/images/Polygon 16.svg" alt="">
+        <img id="p13" src="/Front-end/images/Polygon 13.svg" alt="">
+    
+        <div class="main1">
+    
+            <div class="container1">
+                <p onclick="window.location.href='#popup1'" id="back" ><i class="fa-solid fa-arrow-left"></i> Back</p>
+               
+                    <div class="topcontainer">
+                        <p id="choose">Choose an Avarta</p>
+                        <button onclick="window.location.href='#popup3'" id="continue">Continue</button>
+                                               
+                    </div>
+              
+                <div class="avarta-cont">
+                    <div class="avarta">
+                        <img src="/Front-end/images/Avarta1.svg" alt="">
+                        <img src="/Front-end/images/Avarta2.svg" alt="">
+                        <img src="/Front-end/images/Avarta3.svg" alt="">
+                       
+                    </div>
+                    <div class="avarta">
+                        <img src="/Front-end/images/Avarta4.svg" alt="">
+                        <img src="/Front-end/images/Avarta5.svg" alt="">
+                        <img src="/Front-end/images/Avarta6.svg" alt="">
+                    </div>
+                    <div class="avarta">
+                        <img src="/Front-end/images/Avarta7.svg" alt="">
+                        <img src="/Front-end/images/Avarta8.svg" alt="">
+                        <img src="/Front-end/images/Avarta9.svg" alt="">
+                    </div>
+                    <div class="avarta">
+                        <img src="/Front-end/images/Avarta10.svg" alt="">
+                        <img src="/Front-end/images/Avarta11.svg" alt="">
+                        <img src="/Front-end/images/Avarta12.svg" alt="">
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+    </main>
+</div>
+
+
+<div id="popup3" class="overlay">
+  <main>
+      <img id="p12" src="/Front-end/images/Polygon 12.svg" alt="">
+      <img id="p15" src="/Front-end/images/Polygon 15.svg" alt="">
+      <img id="p14" src="/Front-end/images/Polygon 14.svg" alt="">
+      <img id="p16" src="/Front-end/images/Polygon 16.svg" alt="">
+      <img id="p13" src="/Front-end/images/Polygon 13.svg" alt="">
+  
+      <div class="main1">
+  
+          <div class="containerp3">
+              <p onclick="window.location.href='#popup1'" id="back" ><i class="fa-solid fa-arrow-left"></i> Back</p>
+             
+                  <div class="topcontainer1">
+                      <p id="choose">Edit Profile Picture</p>
+                      
+                      <p>New Photo</p>
+                  </div>
+            
+              <div class="avarta-cont1">
+                <img id="mainimage" src="/Front-end/images/Editpropic.png" alt="">
+                <p>You can save ONLY after you are done editing your photo</p>
+                <svg id="scroller" xmlns="http://www.w3.org/2000/svg" width="250" height="30" viewBox="0 0 250 30" fill="none">
+                  <rect y="13" width="250" height="5" rx="2.5" fill="#006167"/>
+                  <circle cx="163" cy="15" r="15" fill="#FABF00"/>
+                </svg>
+                <div class="bottom-div">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="80" height="60" viewBox="0 0 80 60" fill="none">
+                      <rect width="80" height="60" rx="10" fill="#006167"/>
+                      <path d="M20 29.5C20 39.1639 27.6762 47 37.1429 47C41.6952 47 46.0571 45.1722 49.3333 41.9444L46.4762 39.0278C44.0571 41.6528 40.6857 43.1111 37.1429 43.1111C25.2571 43.1111 19.3143 28.45 27.7143 19.875C36.1143 11.3 50.4762 17.3861 50.4762 29.5H44.7619L52.381 37.2778H52.5714L60 29.5H54.2857C54.2857 19.8361 46.6095 12 37.1429 12C27.6762 12 20 19.8361 20 29.5Z" fill="#FABF00"/>
+                    </svg>
+                    <button id="done">Done Editing</button>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="80" height="60" viewBox="0 0 80 60" fill="none">
+                      <rect width="80" height="60" rx="10" fill="#006167"/>
+                      <path d="M42.8571 12C38.3106 12 33.9502 13.8437 30.7353 17.1256C27.5204 20.4075 25.7143 24.8587 25.7143 29.5H20L27.4095 37.0639L27.5429 37.3361L35.2381 29.5H29.5238C29.5238 25.8901 30.9286 22.4281 33.4291 19.8755C35.9295 17.3229 39.3209 15.8889 42.8571 15.8889C46.3934 15.8889 49.7847 17.3229 52.2852 19.8755C54.7857 22.4281 56.1905 25.8901 56.1905 29.5C56.1905 33.1099 54.7857 36.5719 52.2852 39.1245C49.7847 41.6771 46.3934 43.1111 42.8571 43.1111C39.181 43.1111 35.8476 41.575 33.4476 39.1056L30.7429 41.8667C33.8476 45.0556 38.0952 47 42.8571 47C47.4037 47 51.7641 45.1563 54.979 41.8744C58.1939 38.5925 60 34.1413 60 29.5C60 24.8587 58.1939 20.4075 54.979 17.1256C51.7641 13.8437 47.4037 12 42.8571 12Z" fill="#FABF00"/>
+                    </svg>
+                </div>
+                <div class="final-div">
+                  <p>Choose another Photo</p>
+                  <p>Cancel</p>
+                </div>
+              </div>
+              <button id="save">Save</button>
+             
+          </div>
+      </div>
+  </main>
+</div>
     <!-- bootstrap js link -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
+    
+  
+  </script>
   </body>
 </html>
