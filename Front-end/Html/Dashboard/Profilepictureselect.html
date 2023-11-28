@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profile picture selection</title>
+   <link rel="stylesheet" href="/Front-end/Css/profilepictureselect.css">
+</head>
+
+<body>
+    <a href="#popup1">Check</a>
+    <div id="popup1" class="overlay">
+        <main>
+            <img id="p12" src="/Front-end/images/Polygon 12.svg" alt="">
+            <img id="p15" src="/Front-end/images/Polygon 15.svg" alt="">
+            <img id="p14" src="/Front-end/images/Polygon 14.svg" alt="">
+            <img id="p16" src="/Front-end/images/Polygon 16.svg" alt="">
+            <img id="p13" src="/Front-end/images/Polygon 13.svg" alt="">
+        
+            <div class="mainp1">
+        
+                <div class="containerp1">
+                    <p ><i class="fa-solid fa-arrow-left"></i> Back</p>
+                    <h2>Current Profile Picture</h2>
+                    <img  src="/Front-end/images/edit-profile-image.svg" alt="">
+                    <div class="imgageselect">
+                        <img id="top1" src="/Front-end/images/Polygon 14.svg" alt="">
+                        <img id="middle1" src="/Front-end/images/Polygon 16.svg" alt="">
+                        <img id="bottom1" src="/Front-end/images/Polygon 13.svg" alt="">
+                      <div class="upload">
+                      <img id="image" src="/Front-end/images/Group.svg" alt="">
+                      <input type="file" id="file-input" style="display: none;">
+                        <p style="margin-top: 115%;">Upload</p>
+                      </div>
+                        <div class="avatar" style="margin-top: 10%;">
+                            <a href="/Front-end/Html/Dashboard/Avarar.html"><img src="/Front-end//images/Avatar.svg" alt=""></a>
+                        <p>Avatar</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script>
+        document.getElementById('image').addEventListener('click', function() {
+        document.getElementById('file-input').click();
+    });
+    
+    </script>
+</body>
+</html>

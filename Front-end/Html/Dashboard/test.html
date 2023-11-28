@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/Front-end/Css/image.css">
+</head>
+
+<body>
+    
+    <div class="cropper">
+        <div class="crop-result">
+            <div class="image"></div>
+            <div class="name"></div>
+        </div>
+        <input type="file" class="file-input">
+        <input type="button" class="file-button button" value="Upload">
+
+        <div class="popup">
+            <div class="image-box">
+                <svg class="thumb-box">
+                    <rect width="300" height="100"/>
+                  </svg>
+                <div class="spinner">Loading...</div>
+            </div>
+            <div class="action">
+                <div class="container">
+                    <i class="fas fa-search-minus"></i>
+                    <input type="range" class="zoom-slider" min="-19" max="19" value="-3">
+                    <i class="fas fa-search-minus"></i>
+                </div>
+              
+                <div class="container">
+                    <input type="button" class="cancel-button button warning" value="Cancel">
+                    <input type="button" class="crop-button button success" value="Crop">
+                </div>
+            </div>
+        </div>
+    </div>
+   <script src="/Front-end/Js/image.js"></script>
+</body>
+</html>
