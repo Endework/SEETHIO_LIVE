@@ -147,11 +147,11 @@ nav img
 }
 
 /* Add a orange background color to navbar links on hover */
-.navbar a:hover, .dropdown:hover .dropbtn {
+/* .navbar a:hover, .dropdown:hover .dropbtn {
   transition: 0.3s ease-in-out;
   background-color: var(--primary-colour);
   border-radius: var(--br-8xs);
-}
+} */
 
 /* Add normal background color to active navbar links on hover */
 .active .dropbtn:hover
@@ -161,7 +161,7 @@ nav img
 
 .navbar .active a:hover
 {
-  background-color: white;
+  background-color: var(--secondary-colour);
 }
 
 
@@ -193,7 +193,7 @@ nav img
 
 /* Add a grey background color to dropdown links on hover */
 .dropdown-content a:hover {
-  background-color: #ddd;
+  background-color: var(--secondary-colour);
 }
 
 /* Show the dropdown menu on hover */
@@ -214,7 +214,10 @@ nav img
   background-color: white;
   margin: 5px 0;
 }
-
+.bi-caret-down-fill, .fa-user{
+  color: var(--primary-colour)!important; 
+  
+}
 /* User Profile pic */
 nav .dropdown #profilePic
 {
