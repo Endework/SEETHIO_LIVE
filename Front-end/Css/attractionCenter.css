@@ -364,7 +364,12 @@ nav .dropdown #profilePic
     right: 0;
     margin: 0;
   }
-
+/* endework */
+#bucket:hover{
+  background: var(--primary-colour);
+  color: var(--secondary-colour);
+}
+/* endework */
   .sectionTwo .individualRow .card .text
   {
     display: flex;
