@@ -279,12 +279,18 @@ letter-spacing: 0.4px;
 }
 /* Section2 */
 
-.login, .login .email, .login .pass{
+.login{
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 30px;
     
+}
+.login .email, .login .pass{
+    display: flex;
+    flex-direction: column;
+    
+    gap: 30px;
 }
 /* Section3 */
 .notification{
@@ -323,6 +329,7 @@ input[type='checkbox']{
     
 }
 
+
 .secured{
     display: flex;
     flex-direction: row;
@@ -333,6 +340,9 @@ input[type='checkbox']{
     border-right: 1px solid var(--Line-Colour, rgba(137, 137, 137, 0.50));
     border-bottom: 1px solid var(--Line-Colour, rgba(137, 137, 137, 0.50));
     border-left: 1px solid var(--Line-Colour, rgba(137, 137, 137, 0.50));
+}
+.payment .txt{
+    margin-inline: 235px;
 }
 .credit{
     margin-inline: 212px;
