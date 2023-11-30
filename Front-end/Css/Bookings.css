@@ -200,7 +200,7 @@ h3{
 }
 .search-container{
     width: 300px;
-    height: 70px;
+    height: 60px;
     flex-shrink: 0;
     border-radius: 20px;
     border: 2px solid var(--line-gray, rgba(137, 137, 137, 0.50));
@@ -276,7 +276,7 @@ form button{
 
 /* SECTION2 */
 .section2{
-    padding-inline: 125px;
+    padding-inline: 100px;
     height: 100vh;
 }
 .row-content{
