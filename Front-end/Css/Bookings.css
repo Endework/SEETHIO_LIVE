@@ -213,6 +213,7 @@ h3{
     flex-direction: column;
     gap: 10px;
     margin-bottom: 40px;
+    
 }
 .inner p{
     color: var(--PRIMARY-COLOUR, #FABF00);
@@ -224,8 +225,8 @@ line-height: 32px; /* 160% */
 }
 .form-content{
     display: flex;
-    gap: 20px;
-    width: 100%;
+    
+    justify-content: space-around;
 
 }
 .fa-solid{
@@ -243,6 +244,7 @@ line-height: 32px; /* 160% */
     justify-content: center;
     margin-left: 5px;
     border: none;
+    
 }
 .search-container .fa-search , .search-container .fa-hashtag ,.search-container .folder{
     margin-left: 50px;
