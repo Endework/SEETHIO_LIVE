@@ -202,9 +202,22 @@ label{
     letter-spacing: 0.4px;
     margin-bottom: 10px;
 }
+.email1 label{
+        color: var(--Subwords, rgba(18, 18, 18, 0.70));
+    
+        font-family: Nunito;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 16px; /* 80% */
+        letter-spacing: 0.4px;
+        margin-bottom: 10px;
+        padding: 10px;
+    
+}
 .main{
     width: 100%;
-    height: 4200px;
+    height: 4500px;
     background: linear-gradient(180deg, rgba(215, 239, 218, 0.00) 0%, #D7EFDA 100%), #FFF;
 }
 .back{
@@ -391,7 +404,7 @@ input[type='checkbox']{
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    margin-inline: 235px;
+    margin-inline: 210px;
     padding-top: 20px; /* Adjust this value as needed */
     border-radius: 10px;
     border-right: 1px solid var(--Line-Colour, rgba(137, 137, 137, 0.50));
@@ -411,6 +424,9 @@ input[type='checkbox']{
 }
 
 .credit{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     margin-inline: 212px;
     border-radius: 10px;
 border: 1px solid var(--PRIMARY-COLOUR, #FABF00);
@@ -426,6 +442,7 @@ color: var(--Secondary-Colour, #006167);
 }
 .creditinner{
    margin: 39px 42px;
+   
     
 }
 .upper{
@@ -460,8 +477,8 @@ color: white;
     border-radius: 10px;
     opacity: 0.8;
     background: #000;
-    margin-inline: 200px;
-    
+    margin-inline: auto;
+    justify-content: center;
     padding: 10px;
     background-image: url('/Front-end/images/omo3.png');
     background-position: center;
