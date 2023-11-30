@@ -281,16 +281,19 @@ form button{
 }
 .row-content{
     display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 50px;
     margin-bottom: 150px;
 }
 .card1, .card2{
-    width: 570px;
+    width: 500px;
     height: 330px;
     flex-shrink: 0;
     border-radius: 0px 15px;
     background-position: center;
     position: relative;
+    
   
     
 }
@@ -305,16 +308,18 @@ form button{
     background: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(4px);
     position: absolute;
-    top: 70%;
-    width: 540px;
-    height: 85px;
+    top: 65%;
+    width: 480px;
+    height: 95px;
     flex-shrink: 0;
+    
 }
 .catagory{
     display: flex;
     flex-direction: column;
     padding: 16px 47px 34px 47px;
     border-right: 1px solid #FABF00 ;
+    
 }
 .delete{
     padding: 40px 20px 20px 5px;
@@ -344,7 +349,7 @@ form button{
 }
 .view-detail{
     display: flex;
-    width: 150px;
+    width: 145px;
     height: 60px;
     padding: 8px 24px;
     justify-content: center;
@@ -367,7 +372,7 @@ form button{
 .view-detail1, .replica{
     position: absolute;
     display: flex;
-    width: 150px;
+    width: 135px;
     height: 60px;
     padding: 8px 24px;
     justify-content: center;
