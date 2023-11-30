@@ -397,59 +397,66 @@ input[type='checkbox']{
     display: flex;
     flex-direction: column;
     gap: 10px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
     
+}
+.txt{
+    position: absolute;
+    top: 7%;
+    left: 32%;
 }
 .secured{
     display: flex;
-    flex-direction: row;
     align-items: center;
-    justify-content: space-between;
-    margin-inline: 210px;
-    padding-top: 20px; /* Adjust this value as needed */
+    gap: 50px;
+    justify-content: center;
+    padding-top: 15px;
     border-radius: 10px;
     border-right: 1px solid var(--Line-Colour, rgba(137, 137, 137, 0.50));
     border-bottom: 1px solid var(--Line-Colour, rgba(137, 137, 137, 0.50));
     border-left: 1px solid var(--Line-Colour, rgba(137, 137, 137, 0.50));
-    border-top: 1px solid var(--Line-Colour, rgba(137, 137, 137, 0.50));
-}
-.payment .txt{
-    margin-inline: 235px;
-}
-
-
-
-
-.payment .txt{
-    margin-inline: 235px;
-}
-
-.credit{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-inline: 212px;
-    border-radius: 10px;
-border: 1px solid var(--PRIMARY-COLOUR, #FABF00);
-background: #FFF;
-color: var(--Secondary-Colour, #006167);
-}
-.row1{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    gap: 10px;
-}
-.creditinner{
-   margin: 39px 42px;
-   
     
+}
+.secured::before {
+    content: "";
+    position: absolute;
+    top: 8%;
+    left: 42%;
+    right: 31.75%;
+    height: 1px;
+    background: var(--Line-Colour, rgba(137, 137, 137, 0.50));
+}
+.txt::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: white; /* or the background color of your parent container */
 }
 .upper{
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
 }
+
+.row1{
+    display: flex;
+    justify-content: space-around;
+    gap: 30px;
+    align-items: center;
+}
+.credit{
+    
+    border-radius: 10px;
+border: 1px solid var(--PRIMARY-COLOUR, #FABF00);
+background: #FFF;
+   
+}
+
+
 .delete{
     display: flex;
 width: 80px;
@@ -815,3 +822,48 @@ footer form input{
 .copyright p{
     font-family: 'Public Sans', sans-serif;
 }
+
+/* media query */
+@media (max-width: 1024px) {
+    .payment{
+        /* Adjust the gap for smaller screens */
+        gap: 5px;
+    }
+    .secured{
+        /* Adjust the margin and padding for smaller screens */
+        margin-inline: 150px;
+        padding-top: 10px;
+    }
+    .payment .txt{
+        /* Adjust the margin for smaller screens */
+        margin-inline: 175px;
+    }
+    .credit{
+        /* Adjust the margin for smaller screens */
+        margin-inline: 152px;
+    }
+    .row1{
+        /* Adjust the gap for smaller screens */
+        gap: 5px;
+    }
+    .creditinner{
+        /* Adjust the margin for smaller screens */
+        margin: 20px 21px;
+    }
+    
+    .cardinput{
+        /* Adjust the gap for smaller screens */
+        gap: 15px;
+    }
+    .cardinput label{
+        /* Adjust the font size for smaller screens */
+        font-size: 12px;
+    }
+    
+    .card-inner{
+        /* Adjust the gap for smaller screens */
+        gap: 15px;
+    }
+   
+}
+
