@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookings -Seethio</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/Front-end/Css/Account setting.css" />
+    <!-- FONT AWESOME -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top">
+          <div class="container-fluid">
+            <img src="/Front-end/images/navlogo.png" alt="nav logo" />
+            <button
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+              class="navbar-toggler navbar-toggler-right"
+            >
+              <i class="fa fa-bars"></i>
+            </button>
+  
+            <div id="navbarSupportedContent" class="collapse navbar-collapse">
+              <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                  <a class="nav-link active home" aria-current="page" href="#"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item dropdown">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Places to Go
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="./attractionCenter.html">Attraction Centers</a>
+                    </li>
+                    <li><a class="dropdown-item" href="#">Dinings</a></li>
+                    <li><a class="dropdown-item" href="#">Local Market</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="./Lodge.html">Lodging</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="./Flight.html">Flight</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="./Ride.html">Find Rides</a>
+                </li>
+  
+                <div style="display: flex; justify-content: center">
+                 
+                  <li class="nav-item dropdown mt-2 pt-3 d-flex align-items-center gap-1">
+                    <a href="./Dashboard/Dashboard.html"><i class="fa-solid fa-user mb-4"></i> </a>
+                    <a
+                      class="nav-link dropdown-toggle mb-4"
+                      href="#"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                     User Name
+                     
+                    </a>
+                    <ul class="dropdown-menu">
+                      <div class="d-flex align-items-center tx">
+                        <i class="fa-solid fa-gear"></i>
+                        <li>
+                          <a class="dropdown-item" href="./Dashboard.html"> Account Settings</a>
+                        </li>
+                      </div>
+                      <!-- <hr class="bg-light"> -->
+                      <div class="d-flex align-items-center tx">
+                        <i class="fa-solid fa-rectangle-list"></i>
+                        <li><a class="dropdown-item" href="#">Bucket list</a></li>
+                      </div>
+                      <!-- <hr> -->
+                      <div class="d-flex align-items-center tx">
+                        <i class="fa-solid fa-book"></i>
+                        <li>
+                          <a class="dropdown-item" href="#"> Bookings History</a>
+                        </li>
+                      </div>
+                      <!-- <hr> -->
+                    </ul>
+                  </li>
+                </div>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <div class="hero">
+            <h1>Bookings</h1>
+            <p>Welcome to your Hotel and Flight Bookings History Landing Page, where your travel journey comes to life. Here, you can access a detailed record of your past hotel stays and flight bookings, allowing you to reminisce about your adventures and plan future trips with ease.</p>
+        </div>
+      </header>
+<!-- MAIN -->
+<div class="main">
+   <a href="/Front-end/Html/Home.html" style="color:black">
+       <div class="back" >
+        <i style="color: black;" class="fa-solid fa-arrow-left"></i>
+        <p>Back</p>
+       </div>
+   </a>
+   <!-- PERSONAL DETAILS -->
+    <section class="sec-1">
+        <p  class="title1">Personal Details</p>
+        <form action="">
+            <div class="name">
+                <div class="first">
+                    <label for="fname">First Name</label>
+                    <input type="text" name="First Name" id="fname" placeholder="Sarah">
+                </div>
+                <div class="last">
+                    <label for="lname">Last Name</label>
+                    <input type="text" name="Last Name" id="lname" placeholder="Jone">
+                </div>
+                
+            </div>
+            <div class="username">
+                <label for="Username ">Username </label>
+                <input type="text" name="Username" id="Username" placeholder="SarahDAdventurer">
+            </div>
+            <p class="subtitle">Contact Details</p>
+            <div class="name">
+                <div class="phone">
+                    <label for="Phone Number">Phone Number</label>
+                    <input type="tel" name="Phone Number" id="Phone Number">
+                </div>
+                <div class="email">
+                    <label for="Email Address">Email Address</label>
+                    <input type="email" placeholder="Sarah@mail.com">
+                </div>
+            </div>
+            <div class="address">
+                <label for="Address">Address</label>
+                <div class="address1">
+                    <input type="text" name="Address" id="Address">
+                    <input type="text" name="Address" id="Address">
+                </div>
+                <div class="address1">
+                    <input type="text" name="Address" id="Address">
+                    <input type="text" name="Address" id="Address">
+                </div>
+            </div>
+            <button class="save">Save</button>
+
+        </form>
+
+    </section>
+    <!-- Login Details -->
+<section class="sec-2">
+<div class="login">
+    <p class="title1">Login Details</p>
+    <form action="">
+        <div class="email">
+            <label for="Email Address">Email Address</label>
+            <input type="email" name="" id="" placeholder="Sarah@mail.com">
+        </div>
+        <div class="pass">
+            <p class="subtitle">Change Password</p>
+            <label for="Current Password">Current Password</label>
+            <input type="password" name="" id="" placeholder="Type  Password">
+        </div>
+        <div class="pass">
+            <label for="New Password">New Password</label>
+            <input type="password" name="" id="" placeholder="Type New Password">
+        </div>
+        <div class="pass">
+            <label for="Confirm New Password">Confirm New Password</label>
+            <input type="password" name="" id="" placeholder="Re-type New Password">
+        </div>
+        <button class="save">Save</button>
+    </form>
+</div>
+</section>
+
+<!-- Notification Settings -->
+<section class="sec-3">
+<div class="notification">
+    <p class="title1">Notification Settings</p>
+    <p>Select your preferred notification channel(s)</p>
+    <form action="">
+        <div class="email1">
+            <input type="checkbox" name="email" id="email1">
+            <label for="email1">Email</label>
+        </div>
+        <div class="email1">
+            <input type="checkbox" name="email" id="Phone1">
+            <label for="Phone1">Phone Number</label>
+        </div>
+        <p>Select your preferred notification Options</p>
+        <div class="email1">
+            <input type="checkbox" name="Bookings" id="Bookings">
+            <label for="Bookings">Bookings Confirmations</label>
+        </div>
+        <div class="email1">
+            <input type="checkbox" name="Trip" id="Trip">
+            <label for="Trip">Trip Reminders</label>
+        </div>
+        <div class="email1">
+            <input type="checkbox" name="Updates" id="Updates">
+            <label for="Updates">SEETHIO Newsletters and Updates</label>
+        </div>
+        <p style="text-align: center;">(Get updated when a new tourism attraction sites that fits your desire <br>
+            tour is available)</p>
+            <button class="save">Save</button>
+    </form>
+</div>
+</section>
+  
+<!-- Payment Settings -->
+<section class="sec-4">
+    <div class="payment">
+        <p class="title1">Payment Settings</p>
+        <p>Secured By</p>
+        <div class="secured">
+            <img src="/Front-end/images/mastercard-logo.png" alt="">
+            <img src="/Front-end/images/logos_visa.svg" alt="">
+            <img src="/Front-end/images/logos_paypal.svg" alt="">
+        </div>
+        <div class="credit">
+            <div class="upper">
+                <p >MAIN</p>
+                <P class="delete">Delete</P>
+            </div>
+            <div class="creditinner">
+                <div class="row1">
+                    <img src="/Front-end/images/mastercard-logo.png" alt="">
+                    <p>****</p>
+                    <p>****</p>
+                    <p>****</p>
+                    <p>****</p>
+                    <p>8490</p>
+                </div>
+                <div class="row1">
+                    <p>Adekunle Chioma Adamu</p>
+                    <p>Expires <br>01/24</p>
+                </div>
+            </div>
+        </div>
+        <div class="newcard">
+            <p  class="newcard-title">Add New Card</p>
+            <img src="/Front-end/images/Frame-add.svg" alt="">
+        </div>
+        <div class="cardinput">
+            <div class="card-number">
+                <label for="Card Number">Card Number</label>
+                <input type="number" >
+            </div>
+            <div class="card-number">
+                <label for="Card Name">Card Name</label>
+                <input type="number">
+            </div>
+            <div class="card-inner">
+                <div class="card-number" style="width: 50%;">
+                    <label for="Card Number">Expiry Date</label>
+                    <input type="number" style="width: 100%;">
+                </div>
+                <div class="card-number" style="width: 50%;">
+                    <label for="Card Number">CVV</label>
+                    <input type="number" style="width: 100%;">
+                </div>
+            </div>
+        </div>
+        <button class="save">Save</button>
+    </div>
+</section>
+
+<section class="sec-5">
+    <p style="text-align: center;">Delete Account</p>
+    <button class="save">Close</button>
+</section>
+</div>
+<!-- DELETE ACCOUNT -->
+
+
+
+<div class="water_drop">
+    <svg
+      class="left"
+      xmlns="http://www.w3.org/2000/svg"
+      width="107"
+      height="100"
+      viewBox="0 0 107 100"
+      fill="none"
+    >
+      <path
+        d="M106.187 39.1694C109.932 6.88835 69.6689 -11.5833 40.0645 8.83398L18.3051 23.8408C-6.83172 41.1768 -5.3381 74.6801 21.1126 86.815L40.1194 95.5349C66.5701 107.67 100.255 90.3055 103.434 62.896L106.187 39.1694Z"
+        fill="url(#paint0_linear_1650_6812)"
+      />
+      <defs>
+        <linearGradient
+          id="paint0_linear_1650_6812"
+          x1="115.762"
+          y1="-43.3725"
+          x2="28.0299"
+          y2="147.859"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stop-color="#00B7AF" />
+          <stop offset="0.651042" stop-color="#F2F2F2" />
+        </linearGradient>
+      </defs>
+    </svg>
+
+    <svg
+      class="top"
+      xmlns="http://www.w3.org/2000/svg"
+      width="97"
+      height="100"
+      viewBox="0 0 97 100"
+      fill="none"
+    >
+      <path
+        d="M1.3628 37.9976C1.98372 8.46891 34.5792 -9.09425 59.5822 6.62769L79.0326 18.8581C103.677 34.3545 102.458 70.6709 76.8299 84.4798L56.8965 95.2203C31.2686 109.029 0.267751 90.0737 0.879765 60.9686L1.3628 37.9976Z"
+        fill="url(#paint0_linear_1650_6810)"
+      />
+      <defs>
+        <linearGradient
+          id="paint0_linear_1650_6810"
+          x1="2.77358"
+          y1="-29.0937"
+          x2="88.2264"
+          y2="129.498"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stop-color="#00B7AF" />
+          <stop offset="0.651042" stop-color="#F2F2F2" />
+        </linearGradient>
+      </defs>
+    </svg>
+
+    <svg
+      class="right"
+      xmlns="http://www.w3.org/2000/svg"
+      width="57"
+      height="56"
+      viewBox="0 0 57 56"
+      fill="none"
+    >
+      <path
+        d="M0.505173 27.9496C0.602629 5.85125 25.1323 -7.36588 43.6418 4.70664C61.3706 16.27 60.2681 42.591 41.6344 52.6313C23.0008 62.6715 0.411827 49.1159 0.505173 27.9496Z"
+        fill="url(#paint0_linear_1650_6811)"
+      />
+      <defs>
+        <linearGradient
+          id="paint0_linear_1650_6811"
+          x1="0.731105"
+          y1="-23.2811"
+          x2="55.2689"
+          y2="77.9354"
+          gradientUnits="userSpaceOnUse"
+        >
+          <stop stop-color="#00B7AF" />
+          <stop offset="0.651042" stop-color="#F2F2F2" />
+        </linearGradient>
+      </defs>
+    </svg>
+  </div>
+
+  <!-- footter -->
+  <footer>
+    <div class="container">
+      <div class="help">
+        <p class="title">Need any help?</p>
+        <p>
+          Call 24/7 for any help <br />
+          <span> +00 123 456 789</span>
+        </p>
+        <p>
+          Mail to our support team <br />
+          <span>support@Seethio.com</span>
+        </p>
+        <p>Follow us on</p>
+        <div class="social-icon">
+          <a href=""><i class="fa-brands fa-instagram"></i></a>
+          <a href=""> <i class="fa-brands fa-facebook"></i></a>
+          <a href=""> <i class="fa-brands fa-twitter"></i></a>
+          <a href=""><i class="fa-brands fa-youtube"></i></a>
+          <a href=""><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+      </div>
+      <div class="links">
+        <div>
+          <p class="title">Company</p>
+          <p>Home</p>
+          <p>Testimonials</p>
+          <p>About Us</p>
+          <p>Work with Us</p>
+          <p>Partners</p>
+        </div>
+        <div>
+          <p class="title">Support</p>
+          <p>Account</p>
+          <p>FAQ</p>
+          <p>Legal</p>
+          <p>Contact us</p>
+          <p>Privacy Policy</p>
+        </div>
+        <div>
+          <p class="title">Services</p>
+          <p>Discover place</p>
+          <p>Plan a trip</p>
+          <p>Booking</p>
+          <p>Get Deals</p>
+          <p>Currency exchange</p>
+        </div>
+      </div>
+      <!-- <div class="subscribe">
+        <p><span>Subscribe to receive new deals</span></p>
+        <div class="form">
+          <input type="text" placeholder="Email Address" />
+          <button>Send</button>
+        </div>
+      </div> -->
+    </div>
+    <div class="footer-wrapper">
+      <hr style="border: 1px solid white" />
+    </div>
+    <div class="footer">
+      <div class="logo">
+        <a href="/index.html"
+          ><img src="../images/footer_logo.png" alt=""
+        /></a>
+      </div>
+      <div class="copyright">
+        <p><span>Copyright © 2023 Kunturi Design</span></p>
+      </div>
+    </div>
+  </footer>
+
+
+      <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+</body>
+</html>
