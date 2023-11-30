@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+   
+    <style>
+        .check{
+            display: flex;
+width: 100%;
+        }
+        .check select{
+            width: 10%;
+        }
+        .check input{
+            width: 90%;
+        }
+    </style>
+</head>
+<body>
+    <div class="phone w-100">
+        <label for="Phone Number">Phone Number</label>
+        <div class="check">
+            <select id="countryCode" onchange="changeCountryCode(this);">
+            <input type="tel" name="" id="phone" placeholder="Phone Number">
+        </div>
+        </select>
+    </div>
+</body>
+
+<script>
+    var countryCodes = {
+    'United States': '+1',
+    'United Kingdom': '+44',
+    'Australia': '+61',
+    // ...
+};
+
+var select = document.getElementById('countryCode');
+
+for (var country in countryCodes) {
+    var option = document.createElement('option');
+    option.value = countryCodes[country];
+    option.textContent = country + ' - ' + option.value;
+    select.appendChild(option);
+}
+
+var input = document.getElementById('phone');
+
+function changeCountryCode(select) {
+    var code = select.options[select.selectedIndex].value;
+    input.value = code + ' ';
+}
+</script>
+</html>
