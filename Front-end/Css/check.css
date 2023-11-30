@@ -43,6 +43,8 @@ right: 20%;
   align-items: center;
   justify-content: center;
   height: 100vh;
+  padding-bottom: 100px;
+  padding-top: 25px;
   
  
 
@@ -217,7 +219,7 @@ line-height: 36px; /* 112.5% */
   height: 80px;
 }
 #done{
-  display: flex;
+  
 width: 150px;
 height: 60px;
 padding: 4px 24px;
@@ -227,6 +229,7 @@ flex-shrink: 0;
 border-radius: 5px;
 background: var(--Secondary-Colour, #006167);
 border: none;
+color: white;
 }
 .bottom-div, .final-div{
   display: flex;
@@ -243,7 +246,7 @@ border: none;
   align-items: center;
 }
 #save{
-  display: flex;
+ 
 width: 300px;
 height: 56px;
 padding: 4px 24px;
@@ -255,6 +258,8 @@ background: var(--Secondary-Colour, #006167);
 text-align: center;
 border: none;
 display: none;
+color: white;
+
 }
 
 #mainimage {
