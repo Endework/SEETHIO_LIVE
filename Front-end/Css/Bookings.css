@@ -225,6 +225,7 @@ line-height: 32px; /* 160% */
 .form-content{
     display: flex;
     gap: 20px;
+    width: 100%;
 
 }
 .fa-solid{
@@ -244,10 +245,10 @@ line-height: 32px; /* 160% */
     border: none;
 }
 .search-container .fa-search , .search-container .fa-hashtag ,.search-container .folder{
-    margin-left: 64px;
+    margin-left: 50px;
 }
 .section1, .section3{
-    margin: 95px 30px 100px 30px;
+    margin: 95px 20px 100px 20px;
   
 }
 .fa-hashtag , .fa-search{
