@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>My Bucketlist Local Market</title>
+    <!-- fontawsome link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- bootstrap css link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <!-- style sheet -->
+    <link rel="stylesheet" href="/Front-end/Css/market.css" />
+    
+  </head>
+  <body>
+    <header>
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container-fluid">
+              <img src="../images/navlogo.png" alt="nav logo" />
+              <button
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+                class="navbar-toggler navbar-toggler-right"
+              >
+                <i class="fa fa-bars"></i>
+              </button>
+    
+              <div id="navbarSupportedContent" class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto">
+                  <li class="nav-item">
+                    <a class="nav-link active " aria-current="page" href="./Home.html"
+                      >Home</a
+                    >
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link dropdown-toggle home"
+                      href="#"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Places to Go
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a class="dropdown-item" href="./attractionCenter.html">Attraction Centers</a>
+                      </li>
+                      <li><a class="dropdown-item" href="./Restaurantanddining.html">Dinings</a></li>
+                      <li><a class="dropdown-item" href="#">Local Market</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="./Lodge.html">Lodging</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="./Flight.html">Flight</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="./Ride.html">Find Rides</a>
+                  </li>
+    
+                  <div style="display: flex; justify-content: center">
+                   
+                    <li class="nav-item dropdown mt-2 pt-3 d-flex align-items-center gap-1">
+                      <a href="./Dashboard/Dashboard.html"><i class="fa-solid fa-user mb-4"></i> </a>
+                      <a
+                        class="nav-link dropdown-toggle mb-4"
+                        href="#"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-expanded="false"
+                      >
+                       User Name
+                       
+                      </a>
+                      <ul class="dropdown-menu">
+                        <div class="d-flex align-items-center tx">
+                          <i class="fa-solid fa-gear"></i>
+                          <li>
+                            <a class="dropdown-item" href="./Dashboard/Accountsetting.html"> Account Settings</a>
+                          </li>
+                        </div>
+                        <!-- <hr class="bg-light"> -->
+                        <div class="d-flex align-items-center tx">
+                          <i class="fa-solid fa-rectangle-list"></i>
+                          <li><a class="dropdown-item" href="./Dashboard/Itineraries.html">Bucket list</a></li>
+                        </div>
+                        <!-- <hr> -->
+                        <div class="d-flex align-items-center tx">
+                          <i class="fa-solid fa-book"></i>
+                          <li>
+                            <a class="dropdown-item" href="./Dashboard/Bookings.html"> Bookings History</a>
+                          </li>
+                        </div>
+                        <!-- <hr> -->
+                      </ul>
+                    </li>
+                  </div>
+                </ul>
+              </div>
+            </div>
+          </nav>
+          <img id="p13" src="/Front-end/images/Polygon 13.svg" alt="">
+          <img id="p9" src="/Front-end/images/Polygon 9.svg" alt="">
+          <img id="p11" src="/Front-end/images/Polygon 11.svg" alt="">
+    </header>
+
+    <div class="main">
+      <p class="info1">Experience Ethiopia Top local markets offering a wide variety of traditional products for Tourists and locals.</p>
+      <div class="sec-1 d-flex">
+        <div class="text-side  ">
+            <p class="title">Shiro Meda Market</p>
+            <p class="stitle ps-5 ms-3">Things you will get </p>
+            <div class="items-wrapper d-flex gap-5">
+                <div class="items">
+                    <div class="item-in d-flex gap-3 align-items-center">
+                        <img src="/Front-end/images/Dress.png" alt="">
+                        <p>Cultural dress</p>
+                    </div>
+                    <div class="item-in d-flex gap-3  align-items-center">
+                        <img src="/Front-end/images/Gabi.png" alt="">
+                        <p>Gabi (netela or kuta)</p>
+                    </div>
+                    <div class="item-in d-flex gap-3 align-items-center">
+                        <img src="/Front-end/images/Jewelry.png" alt="">
+                        <p>jewelry and accessory </p>
+                    </div>
+                </div>
+                <div class="items">
+                    <div class="item-in d-flex gap-3 align-items-center">
+                        <img src="/Front-end/images/Shoes.png" alt="">
+                        <p>cultural shoes</p>
+                    </div>
+                    <div class="item-in  d-flex gap-3 align-items-center">
+                        <img src="/Front-end/images/hat.png" alt="">
+                        <p>hat </p>
+                    </div>
+                    <div class="item-in d-flex gap-3 align-items-center">
+                        <img src="/Front-end/images/Curtain.png" alt="">
+                        <p>curtain </p>
+                    </div>
+                </div>
+            </div>
+            <div class="location">
+                <p>Location:</p>
+                <div class="locationw d-flex gap-2 ">
+                    <p>shiro meda, Addis Ababa </p>
+                    <a href="https://www.google.com/maps/place/Africa+Traditional+dresses/@9.0638208,38.7611661,16z/data=!4m6!3m5!1s0x164b8f791c72e47b:0xbaf53f2ac668813c!8m2!3d9.0650107!4d38.7608954!16s%2Fg%2F11mxrsskg2?entry=ttu">View on Map</a>
+                </div>
+            </div>
+            <div class="star-wrapper d-flex gap-2">
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <p >4.5 (426 Reviews)</p>
+            </div>
+            <p class="text-center ps-3 ">Nice market to buy traditional clothes. Pricing not too high as well. It's easily accessible by taxi.</p>
+            <button class="bucket">Add to Bucketlist</button>
+        </div>
+        <div class="img-side d-flex ">
+            <div class="img1">
+                <img src="/Front-end/images/meda1.png" alt="">
+            </div>
+            <div class="img2  ">
+                <div class="img21">
+                    <img src="/Front-end/images/meda2.png" alt="">
+                </div>
+                <div class="img21">
+                    <img src="/Front-end/images/meda3.png" alt="">
+                </div>
+
+            </div>
+        </div>
+      </div>
+      <div class="sec-2">
+        <div class="imgcard">
+            <p>Cultural Dress</p>
+            <img src="../images/dress1.png" alt="">
+        </div>
+        <div class="imgcard">
+            <p>Gabi (netela / kuta)</p>
+            <img src="../images/kuta.png" alt="">
+        </div>
+        <div class="imgcard">
+            <p>Jewelry/Accessory </p>
+            <img src="../images/neckless.png" alt="">
+        </div>
+        <div class="imgcard">
+            <p>Cultural Shoes</p>
+            <img src="../images/shoes1.png" alt="">
+        </div>
+        <div class="imgcard">
+            <p>Cultural Hat</p>
+            <img src="../images/hat1.png" alt="">
+        </div>
+        <div class="imgcard">
+            <p>Curtain</p>
+            <img src="../images/curtain1.png" alt="">
+        </div>
+      </div>
+      <div class="sec-3 d-flex">
+        <div class="text-side  ">
+            <p class="title">Piyasa Market</p>
+            <p class="stitle ps-5 ms-3">Things you will get </p>
+            <div class="items-wrapper d-flex gap-5">
+                <div class="items">
+                    <div class="item-in d-flex gap-3 align-items-center">
+                        <img src="/Front-end/images/bag.png" alt="">
+                        <p>cultural bag</p>
+                    </div>
+                    
+                    <div class="item-in d-flex gap-3 align-items-center">
+                        <img src="/Front-end/images/Jewelry.png" alt="">
+                        <p>jewelry and accessory  </p>
+                    </div>
+                </div>
+                <div class="items">
+                    <div class="item-in d-flex gap-3 align-items-center">
+                        <img src="/Front-end/images/Shoes.png" alt="">
+                        <p>cultural shoes</p>
+                    </div>
+                    <div class="item-in  d-flex gap-3 align-items-center">
+                        <img src="/Front-end/images/hat.png" alt="">
+                        <p>hat </p>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="location">
+                <p>Location:</p>
+                <div class="locationw d-flex gap-2 ">
+                    <p>Piyasa, Addis Ababa  </p>
+                    <a href="https://www.google.com/maps/place/Africa+Traditional+dresses/@9.0638208,38.7611661,16z/data=!4m6!3m5!1s0x164b8f791c72e47b:0xbaf53f2ac668813c!8m2!3d9.0650107!4d38.7608954!16s%2Fg%2F11mxrsskg2?entry=ttu"></a>
+                </div>
+            </div>
+            <div class="star-wrapper d-flex gap-2">
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <p >4.5 (426 Reviews)</p>
+            </div>
+            <p class="text-justify px-3 ">Discover a delightful market offering a diverse selection of traditional and laser bags infused with Ethiopian cultural flair. Experience reasonable prices and convenient accessibility via taxi transportation.</p>
+            <button class="bucket">Add to Bucketlist</button>
+        </div>
+        <div class="img-side d-flex ">
+            <div class="img1" id="pyassa1">
+                <img src="/Front-end/images/piyassa1.jpeg" alt="">
+            </div>
+            <div class="img2  ">
+                <div class="img21" id="pyassa2">
+                    <img src="/Front-end/images/piyassa2.jpeg" alt="">
+                </div>
+                <div class="img21" id="pyassa3">
+                    <img src="/Front-end/images/piyassa3.jpeg" alt="">
+                </div>
+
+            </div>
+        </div>
+      </div>
+
+      <div class="sec-4">
+        <div class="imgcard">
+            <p>Cultural Bag</p>
+            <img src="../images/bag1.png" alt="">
+        </div>
+        <div class="imgcard">
+            <p>Jewelry/Accessory </p>
+            <img src="../images/jj2.png" alt="">
+        </div>
+        <div class="imgcard">
+            <p>Cultural Shoes </p>
+            <img src="../images/shoescultural.png" alt="">
+        </div>
+        <div class="imgcard">
+            <p>Cultural Hat</p>
+            <img src="../images/hat2.png" alt="">
+        </div>
+        <div class="imgcard">
+            <p>Cultural Hat</p>
+            <img src="../images/mesob3.png" alt="">
+        </div>
+        
+      </div>
+
+      <div class="navigator">
+        <div class="nav1 d-flex">
+            <i class="fa-solid fa-angle-left"></i>
+            <p>Previous </p>
+        </div>
+        <div class="num">
+            <p class="pt-3 num1">1</p>
+        </div>
+        <div class="num-text">
+            <p class="pt-3 num2">of 1</p>
+        </div>
+        <div class="nav1 d-flex">
+            <p>Next </p>
+            <i class="fa-solid fa-angle-right"></i>
+        </div>
+      </div>
+
+        
+      </div>
+    </div>
+    
+    <div class="water_drop">
+        <svg
+          class="left"
+          xmlns="http://www.w3.org/2000/svg"
+          width="107"
+          height="100"
+          viewBox="0 0 107 100"
+          fill="none"
+        >
+          <path
+            d="M106.187 39.1694C109.932 6.88835 69.6689 -11.5833 40.0645 8.83398L18.3051 23.8408C-6.83172 41.1768 -5.3381 74.6801 21.1126 86.815L40.1194 95.5349C66.5701 107.67 100.255 90.3055 103.434 62.896L106.187 39.1694Z"
+            fill="url(#paint0_linear_1650_6812)"
+          />
+          <defs>
+            <linearGradient
+              id="paint0_linear_1650_6812"
+              x1="115.762"
+              y1="-43.3725"
+              x2="28.0299"
+              y2="147.859"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stop-color="#00B7AF" />
+              <stop offset="0.651042" stop-color="#F2F2F2" />
+            </linearGradient>
+          </defs>
+        </svg>
+  
+        <svg
+          class="top"
+          xmlns="http://www.w3.org/2000/svg"
+          width="97"
+          height="100"
+          viewBox="0 0 97 100"
+          fill="none"
+        >
+          <path
+            d="M1.3628 37.9976C1.98372 8.46891 34.5792 -9.09425 59.5822 6.62769L79.0326 18.8581C103.677 34.3545 102.458 70.6709 76.8299 84.4798L56.8965 95.2203C31.2686 109.029 0.267751 90.0737 0.879765 60.9686L1.3628 37.9976Z"
+            fill="url(#paint0_linear_1650_6810)"
+          />
+          <defs>
+            <linearGradient
+              id="paint0_linear_1650_6810"
+              x1="2.77358"
+              y1="-29.0937"
+              x2="88.2264"
+              y2="129.498"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stop-color="#00B7AF" />
+              <stop offset="0.651042" stop-color="#F2F2F2" />
+            </linearGradient>
+          </defs>
+        </svg>
+  
+        <svg
+          class="right"
+          xmlns="http://www.w3.org/2000/svg"
+          width="57"
+          height="56"
+          viewBox="0 0 57 56"
+          fill="none"
+        >
+          <path
+            d="M0.505173 27.9496C0.602629 5.85125 25.1323 -7.36588 43.6418 4.70664C61.3706 16.27 60.2681 42.591 41.6344 52.6313C23.0008 62.6715 0.411827 49.1159 0.505173 27.9496Z"
+            fill="url(#paint0_linear_1650_6811)"
+          />
+          <defs>
+            <linearGradient
+              id="paint0_linear_1650_6811"
+              x1="0.731105"
+              y1="-23.2811"
+              x2="55.2689"
+              y2="77.9354"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stop-color="#00B7AF" />
+              <stop offset="0.651042" stop-color="#F2F2F2" />
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+  
+      <!-- footter -->
+      <footer>
+        <div class="container">
+          <div class="help">
+            <p class="title">Need any help?</p>
+            <p>
+              Call 24/7 for any help <br />
+              <span> +00 123 456 789</span>
+            </p>
+            <p>
+              Mail to our support team <br />
+              <span>support@Seethio.com</span>
+            </p>
+            <p>Follow us on</p>
+            <div class="social-icon">
+              <a href=""><i class="fa-brands fa-instagram"></i></a>
+              <a href=""> <i class="fa-brands fa-facebook"></i></a>
+              <a href=""> <i class="fa-brands fa-twitter"></i></a>
+              <a href=""><i class="fa-brands fa-youtube"></i></a>
+              <a href=""><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+          </div>
+          <div class="links">
+            <div>
+              <p class="title">Company</p>
+              <p>Home</p>
+              <p>Testimonials</p>
+              <p>About Us</p>
+              <p>Work with Us</p>
+              <p>Partners</p>
+            </div>
+            <div>
+              <p class="title">Support</p>
+              <p>Account</p>
+              <p>FAQ</p>
+              <p>Legal</p>
+              <p>Contact us</p>
+              <p>Privacy Policy</p>
+            </div>
+            <div>
+              <p class="title">Services</p>
+              <p>Discover place</p>
+              <p>Plan a trip</p>
+              <p>Booking</p>
+              <p>Get Deals</p>
+              <p>Currency exchange</p>
+            </div>
+          </div>
+          <!-- <div class="subscribe">
+            <p><span>Subscribe to receive new deals</span></p>
+            <div class="form">
+              <input type="text" placeholder="Email Address" />
+              <button>Send</button>
+            </div>
+          </div> -->
+        </div>
+        <div class="footer-wrapper">
+          <hr style="border: 1px solid white" />
+        </div>
+        <div class="footer">
+          <div class="logo">
+            <a href="/index.html"
+              ><img src="../images/footer_logo.png" alt=""
+            /></a>
+          </div>
+          <div class="copyright">
+            <p><span>Copyright © 2023 Kunturi Design</span></p>
+          </div>
+        </div>
+      </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/Front-end/Js/restaurants.js"></script>
+  
+  </body>
+</html>
