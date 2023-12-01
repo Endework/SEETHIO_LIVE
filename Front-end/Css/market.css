@@ -261,9 +261,9 @@ padding-left: 30px;
 .img-side .img1{
     width: 55%;
 }
-.img-side .img1 img{
+/* .img-side .img1 img{
     height: 520px;
-}
+} */
 .img-side .img2{
     display: flex;
     flex-direction: column;
@@ -271,10 +271,10 @@ padding-left: 30px;
     height: 450px;
     gap: 3px;
 }
-#pyassa1 img, .img-side .img1 img{
+#pyassa1 img, .img-side .img1 img {
     height: 510px;
 }
-#pyassa2 img , #pyassa3 img {
+#pyassa2 img , #pyassa3 img , #meda1 img , #meda2 img {
     height: 252px;
 }
 .img-side .img2 img{
