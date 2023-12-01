@@ -196,6 +196,7 @@ button:not(.body-remove):hover {
     align-items: center;
     padding: 0px 20px;
     height: 56px;
+    
    
 }
 .filterby{
@@ -225,7 +226,7 @@ button:not(.body-remove):hover {
 }
 .filter-content label{
   
-    color: #000;
+    color: var(--Subwords, rgba(18, 18, 18, 0.70));
     text-align: justify;
     font-size: 18px;
     font-weight: 400;
