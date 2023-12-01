@@ -5,7 +5,6 @@ from django.contrib.auth.password_validation import validate_password
 
 from userauthentication.models import User
 
-
 class UserRegisterForm(UserCreationForm):
     first_name = forms.CharField(
         widget=forms.TextInput(
@@ -97,3 +96,4 @@ class FlightSearchForm(forms.Form):
     destination = forms.CharField(max_length=100)
     departure_date = forms.DateField()
     # Add other relevant fields as needed
+

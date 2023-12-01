@@ -7,7 +7,12 @@ import random
 
 # User = get_user_model()
 
-
+# # Create your models here.
+class User(models.Model):
+     Userid= models.IntegerField()
+     username= models.CharField(max_length=50)
+     email= models.CharField(max_length=100)
+    
 # Create your models here.
 class User(AbstractUser):
     email = models.EmailField(unique=True)
@@ -30,6 +35,16 @@ class EmailVerification(models.Model):
         # Generate a 6-digit OTP
         self.otp = str(random.randint(100000, 999999))
         
+# models CREATED BY Ple for signup
+class Subscribers(models.Model):
+    user_name= models.CharField(max_length=50)
+    email_address= models.CharField(max_length=100)
+    date_created= models.DateTimeField(auto_now_add=True)
+    date_updated= models.DateTimeField(auto_now=True)
+    class Meta:
+        verbose_name_plural= 'Subscribers'
+
+
 # models CREATED BY OGO for flights
 
 class Flight(models.Model):

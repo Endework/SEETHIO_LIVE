@@ -43,8 +43,13 @@ INSTALLED_APPS = [
     "userauthentication",
     "anymail",
     "social_django",    #ogo added configuration for social authentication
-    # 'crispy_forms',
+    #"userauthentication.apps.UserauthenticationConfig",
+    'crispy_forms',
+    'crispy_bootstrap4', 
 ]
+
+AUTH_USER_MODEL = 'userauthentication.User'
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
@@ -87,7 +92,7 @@ WSGI_APPLICATION = "seethio_live.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+         "NAME": BASE_DIR / "db.sqlite3",
     }
 }
 
@@ -132,7 +137,7 @@ STATIC_URL = "static/"
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
-AUTH_USER_MODEL = "userauthentication.User"
+
 # STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "static/")]
 MEDIA_URL = "images/"
@@ -186,3 +191,4 @@ SOCIAL_AUTH_FACEBOOK_SCOPE = [    #add this
 SOCIAL_AUTH_GOOGLE_SCOPE = [   #add this
     'email',    
 ]
+
