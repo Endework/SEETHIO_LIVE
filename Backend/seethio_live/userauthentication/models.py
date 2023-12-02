@@ -8,10 +8,10 @@ import random
 # User = get_user_model()
 
 # # Create your models here.
-class User(models.Model):
-     Userid= models.IntegerField()
-     username= models.CharField(max_length=50)
-     email= models.CharField(max_length=100)
+#class User(models.Model):
+ #    Userid= models.IntegerField()
+  #   username= models.CharField(max_length=50)
+   #  email= models.CharField(max_length=100)
     
 # Create your models here.
 class User(AbstractUser):

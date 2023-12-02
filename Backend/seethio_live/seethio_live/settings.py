@@ -43,9 +43,8 @@ INSTALLED_APPS = [
     "userauthentication",
     "anymail",
     "social_django",    #ogo added configuration for social authentication
-    #"userauthentication.apps.UserauthenticationConfig",
     'crispy_forms',
-    'crispy_bootstrap4', 
+    #'crispy_bootstrap4', 
 ]
 
 AUTH_USER_MODEL = 'userauthentication.User'
