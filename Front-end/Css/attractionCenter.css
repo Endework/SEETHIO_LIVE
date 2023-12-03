@@ -255,6 +255,7 @@ nav .dropdown #profilePic
   border-radius: var(--br-3xs);
   display: flex;
   justify-content: space-between;
+  gap: 1.5rem;
   align-items: center;
   padding-inline: 1.5rem;
   margin-bottom: 3rem;
@@ -264,11 +265,23 @@ nav .dropdown #profilePic
  {
   color: var(--primary-colour);
   font-size: var(--font-size-lg);
+  white-space: nowrap;
  }
 
  .sectionOne .filterBar label
  {
   cursor: pointer;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+ }
+
+ .sectionOne .filterBar .filter_buttons
+ {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+
  }
 
  .sectionOne .filterBar button
@@ -279,6 +292,7 @@ nav .dropdown #profilePic
   border: none;
   border-radius: var(--br-8xs);
   font-family: inherit;
+  white-space: nowrap;
  }
 
  .sectionOne .filterBar #clear
@@ -328,9 +342,10 @@ nav .dropdown #profilePic
   main .sectionTwo .card
   {
     width: 500px;
+    height: 580px;
     margin: 20px;
-    border-top-right-radius: 15px;
-    border-top-left-radius: 15px;
+    border-radius: 25px;
+    box-shadow: 10px 5px 30px black;
     overflow: hidden;
     background-color: var(--unprimary-colour);
   }
@@ -341,6 +356,7 @@ nav .dropdown #profilePic
     display: flex;
     overflow: hidden;
     position: relative;
+    height: 300px;
   }
 
   .sectionTwo .carousel {
@@ -405,6 +421,27 @@ nav .dropdown #profilePic
     height: 300px;
     overflow: hidden;
   }
+
+  
+  main .sectionThree div #one {
+    transform: translateX(1200px) translateY(150px); /* Move the polygon 100px to the right and 50px down */
+    width: 5rem;
+  }
+  
+  main .sectionThree div #two {
+    transform: translateX(100px) translateY(-10px); /* Move the polygon 50px to the left and 100px up */
+  }
+  
+  main .sectionThree div #three {
+    transform: translateX(400px) translateY(100px); /* Move the polygon 200px to the right and 100px down */
+    width: 7rem;
+  }
+
+  main .sectionThree div #four {
+    transform: translateX(500px) translateY(200px); /* Move the polygon 200px to the right and 100px down */
+    width: 3rem;
+  }
+  
 
 
 
@@ -532,4 +569,139 @@ footer
 footer .lower_footer .logo_and_text p
 {
   color: var(--primary-colour);
+}
+
+
+
+/* Media query for screens up to 768px */
+@media (max-width: 768px) {
+
+  /* HEADER */
+  nav {
+    height: auto;
+  }
+
+  nav img {
+    width: 150px;
+  }
+
+  nav .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav .navbar a,
+  nav .dropdown .dropbtn {
+    width: 100%;
+    text-align: left;
+    padding: 10px 20px;
+    box-sizing: border-box;
+  }
+
+  nav .navbar .dropdown {
+    width: 100%;
+  }
+
+  /* SECTION ONE */
+  main {
+    padding: 20px;
+  }
+
+  .sectionOne {
+    text-align: center;
+  }
+
+  .filterBar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .filterBar label,
+  .filterBar button {
+    margin-bottom: 10px;
+  }
+
+  /* SECTION TWO */
+  .individualRow {
+    flex-direction: column;
+  }
+
+  .card {
+    margin-bottom: 20px;
+  }
+
+  .carousel-container {
+    height: auto;
+  }
+
+  .text {
+    margin-top: 20px;
+  }
+
+  /* SECTION THREE */
+  .sectionThree div {
+    display: none;
+  }
+
+  /* FOOTER */
+  .footer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer_links,
+  .subscribe {
+    width: 100%;
+  }
+
+  .subscribe form {
+    width: 100%;
+  }
+}
+
+
+
+/* Media query for screens between 768px and 1024px */
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* HEADER */
+  nav img {
+    width: 120px;
+  }
+
+  nav .navbar a,
+  nav .dropdown .dropbtn {
+    padding: 8px 16px;
+    font-size: 14px; /* Adjust the font size as needed */
+    font-family: inherit;
+  }
+
+  /* SECTION ONE */
+  .sectionOne .filterBar
+  {
+    width: 100%;
+  }
+
+  .filterBar label,
+  .filterBar button {
+    font-size: 10px; /* Adjust the font size as needed */
+  }
+
+  /* SECTION TWO */
+  .text {
+    font-size: 14px; /* Adjust the font size as needed */
+  }
+
+  /* FOOTER */
+  .footer {
+    padding: 20px;
+  }
+
+  .footer_links a {
+    font-size: 14px; /* Adjust the font size as needed */
+  }
+
+  .subscribe input,
+  .subscribe button {
+    font-size: 14px; /* Adjust the font size as needed */
+  }
 }
