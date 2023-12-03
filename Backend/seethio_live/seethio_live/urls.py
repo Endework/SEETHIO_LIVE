@@ -18,6 +18,8 @@ from django.contrib import admin
 from django.urls import path, include
 from django.contrib.auth import views as auth_views
 from userauthentication import views
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns # new from render deploy
+
 
 urlpatterns = [
     path("admin/", admin.site.urls),
@@ -25,3 +27,5 @@ urlpatterns = [
     path("accounts/", include("django.contrib.auth.urls")),
     path('auth/', include('social_django.urls', namespace='social')),  # Social authentication by ogo
 ]
+
+urlpatterns += staticfiles_urlpatterns() # new for render deploy
