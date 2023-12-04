@@ -115,7 +115,7 @@ nav img
 /* Links inside the navbar */
 .navbar a {
   float: left;
-  font-size: 16px;
+  font-size: 22px;
   color: white;
   text-align: center;
   padding: 14px 16px;
@@ -130,7 +130,7 @@ nav img
 
 /* Dropdown button */
 .dropdown .dropbtn {
-  font-size: 16px;
+  font-size: 22px;
   border: none;
   outline: none;
   color: white;
@@ -141,7 +141,7 @@ nav img
 }
 
 /* font color for the active menu */
-.active .dropbtn
+.active .dropbtn, .fa-user
 {
   color: var(--primary-colour);
 }
@@ -154,14 +154,14 @@ nav img
 } */
 
 /* Add normal background color to active navbar links on hover */
-.active .dropbtn:hover
+/* .active .dropbtn:hover
 {
   background-color:white;
-}
+} */
 
 .navbar .active a:hover
 {
-  background-color: var(--secondary-colour);
+  background-color: #006167;
 }
 
 
@@ -169,7 +169,7 @@ nav img
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f9f9f9;
+  background-color: #fff;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
@@ -178,7 +178,7 @@ nav img
 /* Dropdown content for active menu */
 .dropdown .active
 {
-  background-color: var(--color-lightgray-100);
+  background-color: white;
 }
 
 /* Links inside the dropdown */
@@ -193,7 +193,7 @@ nav img
 
 /* Add a grey background color to dropdown links on hover */
 .dropdown-content a:hover {
-  background-color: var(--secondary-colour);
+  background-color: #ddd;
 }
 
 /* Show the dropdown menu on hover */
@@ -214,10 +214,7 @@ nav img
   background-color: white;
   margin: 5px 0;
 }
-.bi-caret-down-fill, .fa-user{
-  color: var(--primary-colour)!important; 
-  
-}
+
 /* User Profile pic */
 nav .dropdown #profilePic
 {
@@ -258,6 +255,7 @@ nav .dropdown #profilePic
   border-radius: var(--br-3xs);
   display: flex;
   justify-content: space-between;
+  gap: 1.5rem;
   align-items: center;
   padding-inline: 1.5rem;
   margin-bottom: 3rem;
@@ -267,11 +265,23 @@ nav .dropdown #profilePic
  {
   color: var(--primary-colour);
   font-size: var(--font-size-lg);
+  white-space: nowrap;
  }
 
  .sectionOne .filterBar label
  {
   cursor: pointer;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+ }
+
+ .sectionOne .filterBar .filter_buttons
+ {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+
  }
 
  .sectionOne .filterBar button
@@ -282,6 +292,7 @@ nav .dropdown #profilePic
   border: none;
   border-radius: var(--br-8xs);
   font-family: inherit;
+  white-space: nowrap;
  }
 
  .sectionOne .filterBar #clear
@@ -320,6 +331,7 @@ nav .dropdown #profilePic
   .sectionTwo
   {
     padding-inline: 4rem;
+    margin-bottom: 50px;
   }
 
   main .sectionTwo .individualRow
@@ -331,9 +343,10 @@ nav .dropdown #profilePic
   main .sectionTwo .card
   {
     width: 500px;
+    height: 580px;
     margin: 20px;
-    border-top-right-radius: 15px;
-    border-top-left-radius: 15px;
+    border-radius: 25px;
+    box-shadow: 10px 5px 30px black;
     overflow: hidden;
     background-color: var(--unprimary-colour);
   }
@@ -344,6 +357,7 @@ nav .dropdown #profilePic
     display: flex;
     overflow: hidden;
     position: relative;
+    height: 300px;
   }
 
   .sectionTwo .carousel {
@@ -367,12 +381,7 @@ nav .dropdown #profilePic
     right: 0;
     margin: 0;
   }
-/* endework */
-#bucket:hover{
-  background: var(--primary-colour);
-  color: var(--secondary-colour);
-}
-/* endework */
+
   .sectionTwo .individualRow .card .text
   {
     display: flex;
@@ -406,13 +415,29 @@ nav .dropdown #profilePic
 
 
   /* SECTION THREE */
-   main .sectionThree div
-  {
-    position: relative;
+  .water_drop{
     background: var(--extra, radial-gradient(109.68% 68.44% at 28.35% 22.94%, rgba(0, 183, 175, 0.25) 0.25%, rgba(242, 242, 242, 0.17) 29.07%, rgba(0, 183, 175, 0.14) 52.5%, rgba(242, 242, 242, 0.19) 71.25%, rgba(0, 183, 175, 0.25) 99.96%));
-    height: 300px;
-    overflow: hidden;
-  }
+    position: relative;
+   
+    height: 280px;
+    flex-shrink: 0;
+}
+.water_drop .left{
+    position: absolute;
+    left: 10%;
+    top: 30%;
+}
+.water_drop .top{
+    position: absolute;
+    left: 50%;
+    top: 15%;
+}
+.water_drop .right{
+    position: absolute;
+    right: 15%;
+    top: 55%;
+}
+  
 
 
 
@@ -540,4 +565,139 @@ footer
 footer .lower_footer .logo_and_text p
 {
   color: var(--primary-colour);
+}
+
+
+
+/* Media query for screens up to 768px */
+@media (max-width: 768px) {
+
+  /* HEADER */
+  nav {
+    height: auto;
+  }
+
+  nav img {
+    width: 150px;
+  }
+
+  nav .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav .navbar a,
+  nav .dropdown .dropbtn {
+    width: 100%;
+    text-align: left;
+    padding: 10px 20px;
+    box-sizing: border-box;
+  }
+
+  nav .navbar .dropdown {
+    width: 100%;
+  }
+
+  /* SECTION ONE */
+  main {
+    padding: 20px;
+  }
+
+  .sectionOne {
+    text-align: center;
+  }
+
+  .filterBar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .filterBar label,
+  .filterBar button {
+    margin-bottom: 10px;
+  }
+
+  /* SECTION TWO */
+  .individualRow {
+    flex-direction: column;
+  }
+
+  .card {
+    margin-bottom: 20px;
+  }
+
+  .carousel-container {
+    height: auto;
+  }
+
+  .text {
+    margin-top: 20px;
+  }
+
+  /* SECTION THREE */
+  .sectionThree div {
+    display: none;
+  }
+
+  /* FOOTER */
+  .footer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer_links,
+  .subscribe {
+    width: 100%;
+  }
+
+  .subscribe form {
+    width: 100%;
+  }
+}
+
+
+
+/* Media query for screens between 768px and 1024px */
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* HEADER */
+  nav img {
+    width: 120px;
+  }
+
+  nav .navbar a,
+  nav .dropdown .dropbtn {
+    padding: 8px 16px;
+    font-size: 14px; /* Adjust the font size as needed */
+    font-family: inherit;
+  }
+
+  /* SECTION ONE */
+  .sectionOne .filterBar
+  {
+    width: 100%;
+  }
+
+  .filterBar label,
+  .filterBar button {
+    font-size: 10px; /* Adjust the font size as needed */
+  }
+
+  /* SECTION TWO */
+  .text {
+    font-size: 14px; /* Adjust the font size as needed */
+  }
+
+  /* FOOTER */
+  .footer {
+    padding: 20px;
+  }
+
+  .footer_links a {
+    font-size: 14px; /* Adjust the font size as needed */
+  }
+
+  .subscribe input,
+  .subscribe button {
+    font-size: 14px; /* Adjust the font size as needed */
+  }
 }
