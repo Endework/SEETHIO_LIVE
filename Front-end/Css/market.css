@@ -172,6 +172,7 @@ button:not(.body-remove):hover {
     gap: 5px;
     border-radius: 5px 0px 5px 30px;
     background: #FFF;
+   
     
  
 }
@@ -208,7 +209,7 @@ text-decoration-line: underline;
     background: var(--Secondary-Colour, #006167);
     color: white;
     border: none;
-    display: flex;
+    
     float: right;
 }
 .fa-solid{
@@ -217,6 +218,8 @@ text-decoration-line: underline;
 .text-side{
     width: 40%;
     padding-top: 5%;
+    height: 585px;
+   
    
 }
 .text-side .title{
@@ -261,6 +264,7 @@ padding-left: 30px;
 }
 .img-side .img1{
     width: 55%;
+    height: 585px;
 }
 /* .img-side .img1 img{
     height: 520px;
@@ -269,10 +273,20 @@ padding-left: 30px;
     display: flex;
     flex-direction: column;
     width: 45%;
-    height: 450px;
+    
     gap: 3px;
 }
-#pyassa1 img, .img-side .img1 img {
+.img-side .img1 img, .img-side .img2 img{
+    
+    width: 100%;
+}
+.img-side .img2 img{
+    height: 289.5px;
+}
+#piyassatext{
+    height: 400px;
+}
+/* #pyassa1 img, .img-side .img1 img {
     height: 510px;
 }
 #pyassa2 img , #pyassa3 img , #meda1 img , #meda2 img {
@@ -283,7 +297,7 @@ padding-left: 30px;
 }
 .img-side img{
     width: 100%;
-}
+} */
 
 /* sec-2 */
 .sec-2 , .sec-4{
