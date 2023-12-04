@@ -1,0 +1,931 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Nunito+Sans:opsz,wght@6..12,200;6..12,300;6..12,400;6..12,500&family=Public+Sans:wght@200;300;400&family=Roboto:wght@400;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* ROOT VARIABLES */
+:root{
+    --Secondary-Colour:#006167;
+    --PRIMARY-COLOUR:#FABF00;
+    --Unsecondary-Colour:#FFF;
+}
+body{
+    font-family: 'Nunito', sans-serif;
+}
+/* NAVIGATION BAR */
+.navbar {
+    transition: all 0.4s;
+    width: 100%;
+}
+
+.navbar .nav-link {
+    color: #fff;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus {
+    color: #fff;
+    text-decoration: none;
+}
+.home{
+    color: var(--PRIMARY-COLOUR) !important;
+}
+.navbar.active .nav-link {
+    color: #555;
+}
+.dropdown-toggle::after {
+    border-top-color: black!important; /* Change this to your desired color */
+}
+
+.navbar.active .nav-link:hover,
+.navbar.active .nav-link:focus {
+    color: #555;
+    text-decoration: none;
+}
+
+.navbar.active .navbar-brand {
+    color: #555;
+}
+  .dropdown-menu .dropdown-item{
+    color: var(--Secondary-Colour)!important; 
+  }
+.container-fluid img{
+    width: 261px;
+    height: 86px;
+    flex-shrink: 0;
+    backdrop-filter: blur(2px);
+}
+.navbar .navbar-nav{
+    
+    display: flex ;
+    /* height: 100px; */
+    padding: 10px 10px 10px 0px;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex: 1 0 0;
+    border-radius: 5px 0px 0px 5px;
+    background: var(--Secondary-Colour);
+}
+.navbar .navbar-nav .nav-item a{
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 5px;
+    color: var(--Unsecondary-Colour);
+
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 400;
+    
+}
+
+/* CARUSEL */
+.carousel-item img {
+    object-fit: cover; 
+    height: 100vh !important; 
+}
+.carousel-caption{
+    width: 1192px;
+    height: 201px;
+    text-transform: capitalize;
+    position: absolute;
+    right: 20%;
+    top: 40%; 
+    left: 10%;
+    z-index: 10;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    
+}
+.carousel-inner h1{
+   font-size: 4.75rem !important;
+   font-weight: bolder;
+  
+}
+.carousel-inner h2{
+    font-size: 2.75rem !important;
+}
+.carousel-caption h1,.carousel-caption h2{
+    margin: 10px 0 0 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+    animation: animtext 3.5s steps(80, end); 
+     transition: all cubic-bezier(0.1, 0.7, 1.0, 0.1);
+  }
+  .carousel-indicators button {
+    border-radius: 100% !important; /* This makes the indicator round */
+    padding: 5px !important;
+    width: 5px !important;
+    height: 5px !important;
+    
+}
+  @keyframes animtext { 
+    from {
+        width: 0;
+       transition: all 3s ease-in-out;
+    } 
+    to {
+      transform: translateX(0%);
+      transition: all 2s ease-in-out;
+    }
+  }
+  .button
+{
+    text-decoration: none;
+    background: #006167;
+    box-shadow: 0px 16px 24px 2px rgba(0, 0, 0, 0.14);
+    padding: 0.8rem 1.6rem;
+    display: block;
+    border-radius: 8px;
+    color: #fff;
+    transition: 0.3s ease-in-out;
+    width: 6rem;
+    text-align: center;
+}
+.button:hover
+{
+    background: #FABF00;
+    color: #006167;
+}
+
+/* DISCOVER ETHIOPIA */
+.discover_ethiopia
+{
+    width: 100%;
+    height: auto;
+    background: rgba(0, 97, 103, 0.25);
+}
+.discover_ethiopia .discover_ethiopia_div
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1.5rem;
+    padding-block: 1.1rem;
+    width: 70%;
+    margin: auto;
+    text-align: center;
+}
+.discover_ethiopia .discover_ethiopia_div h2
+{
+    font-size: 2rem;
+    font-weight: 500;
+}
+.discover_ethiopia .discover_ethiopia_div h2, .discover_ethiopia .discover_ethiopia_div p
+{
+    color: #000;
+}
+
+.discover_ethiopia .discover_ethiopia_div a
+{
+    text-decoration: none;
+    background: #006167;
+    box-shadow: 0px 16px 24px 2px rgba(0, 0, 0, 0.14);
+    padding: 1rem 1.3rem;
+    border-radius: 8px;
+    color: #fff;
+    transition: 0.3s ease-in-out;;
+}
+
+.discover_ethiopia .discover_ethiopia_div a:hover
+{
+    background: #FABF00;
+    color: #006167;
+}
+
+/* LIGHT BLUE BACKGROUND SECTIONS */
+.light_blue_bg
+{
+    background: #eef8ef;
+    width: 100%;
+    height: auto;
+    padding-bottom: 4rem;
+}
+.light_blue_bg{
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-inline: auto;
+    margin-top: 2rem;
+    border-radius: 10px;
+    padding:  3rem;
+    
+}
+
+/* BOOK HOTELS */
+.book_hotels{
+    min-height: 400px;
+    
+}
+.book_hotels .img_side
+
+{   
+    position: relative;
+    
+    
+    
+}
+.book_hotels .img_side img
+{
+    position: absolute;
+    width: 230px;
+    border-radius:85% ;
+   
+}
+.book_hotels .img_side #image1
+{
+    top: 0%;
+    left: 0%;
+}
+.book_hotels .img_side #image2
+{   
+    width: 270px;
+    top: 29%;
+    left: 20%;
+}
+.book_hotels .img_side #image3
+{
+    top: 58%;
+    left: 50%;
+}
+.text_side{
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    
+    color: var(--Secondary-Colour);
+}
+
+/* SEE HOW SEETHIO WORKS */
+.see_how ,.book_hotels ,.book_your_flight
+{
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    margin-inline: auto;
+    margin-top: 5rem;
+    border-radius: 10px;
+    padding: 2rem 6rem;
+    text-align: justify;
+
+}
+.book_your_flight a , .book_hotels a, .see_how a{
+    padding: 1rem 1.25rem;
+    width: 200px;
+}
+
+.see_how iframe
+{
+    border-radius: 10px;
+}
+/* TAKE A BOLD STEP, SET YOUR TARGET, HELLO ETHIOPIA */
+.take_a_bold_step
+{
+    padding: 4rem 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+
+}
+
+.take_a_bold_step .individual_card
+{
+    border: 1px solid #D7EFDA;
+    border-radius: 16px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    overflow: hidden;
+}
+
+.take_a_bold_step .individual_card img
+{
+    width: 450px;
+    height: 450px;
+    border-radius: 16px;
+    object-fit: cover;
+    transform: scale(1);
+    transition: 0.3s ease-in-out;
+}
+
+.take_a_bold_step .individual_card img:hover
+{
+    transform: scale(1.5);
+    cursor: pointer;
+}
+
+.take_a_bold_step .individual_card .text_part
+
+{
+    text-align: center;
+    color: var(--Secondary-Colour);
+   
+}
+
+.take_a_bold_step .individual_card .text_part p
+{
+    font-size: 1.2rem;
+    width: 319px;
+    height: 182px;
+    margin-inline: auto;
+    margin-block: 2rem;
+}
+
+.take_a_bold_step .individual_card .text_part a
+{
+    text-decoration: none;
+    background-color: var(--Secondary-Colour);
+    color: var(--Unsecondary-Colour);
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    transition: 0.3s ease-in-out;
+}
+
+.take_a_bold_step .individual_card .text_part a:hover
+{
+    background-color:var(--PRIMARY-COLOUR);
+    color: var(--Secondary-Colour);
+}
+/* BE THE FIRST TO KNOW OUR DEALS */
+
+.be_the_first {
+    /* Set the container's size and position */
+    
+    padding-block: 5rem;
+    position: relative;
+  }
+  
+  
+  /* Setting the images as the background of the container */
+  .be_the_first::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #D7EFDA;
+      
+    
+    background-image: url('/Front-end/images/Polygon\ 10.svg'), url('/Front-end/images/Polygon\ 9.svg'), url('/Front-end/images/Polygon\ 13.svg'), url('/Front-end/images/Polygon\ 12.svg'), url('/Front-end/images/Polygon\ 11.svg'), url('/Front-end/images/Polygon\ 14.svg');
+    
+    /* Position and size of the images */
+    background-position: 12% 60%,  55% 20%, 25% 20%, 50% 75%,38% 45%, 80% 55%; /* Adjust these values for each image */
+    /* background-size: 25px 50px, 75px,25px, 15px 20px ,10px 12px ,18px 20px , 25px 12px;   */
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
+  .be_the_first .be_the_first_div form {
+    position: relative;
+    
+  }
+  
+  .be_the_first .be_the_first_div
+  {
+      background: radial-gradient( rgba(0, 183, 175, 0.25) 0.25%, rgba(242, 242, 242, 0.17) 29.07%, rgba(0, 183, 175, 0.14) 52.5%, rgba(242, 242, 242, 0.19) 71.25%, rgba(0, 183, 175, 0.25) 99.96%);
+      width: 80%;
+      margin-inline: auto;
+      border-radius: 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      padding: 2rem;
+      text-align: center;
+  }
+  
+  .be_the_first .be_the_first_div p
+  {
+      font-size: 1.5rem;
+      margin: 1rem 0rem 2rem;
+      color: var(--Secondary-Colour);
+  }
+  .be_the_first .be_the_first_div h2{
+    color: var(--Secondary-Colour);
+    text-align: center;
+    font-size: 57px;
+    font-weight: 400;
+    line-height: 40px; 
+  }
+  .be_the_first .be_the_first_div form input[type = "text"], input[type = "email"]
+  {
+      display: block;
+      outline: none;
+      background-color: transparent;
+      padding: 1rem 2rem;
+      width: 50rem;
+      border: 1px solid var(--Secondary-Colour);
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+      color: #000;
+  }
+  
+  .be_the_first .be_the_first_div form input[type = "button"]
+  {
+      display: block;
+      text-align: center;
+      width: 15rem;
+      margin-inline: auto;
+      padding: 1rem 2.5rem;
+      background-color: var(--Secondary-Colour);
+      color: var(--Unsecondary-Colour);
+      outline: none;
+      border: none;
+      border-radius: 8px;
+      box-shadow: 0px 16px 24px 2px rgba(0, 0, 0, 0.14);
+      transition: 0.3s ease-in-out;
+  }
+  
+  .be_the_first .be_the_first_div form input[type = "button"]:hover
+  {
+      background-color: var(--PRIMARY-COLOUR);
+      color: var(--Secondary-Colour);
+  }
+  
+
+
+/* CLIENT REVIEWS */
+
+.client_reviews
+{
+    padding: 3rem 2rem;
+}
+
+.client_reviews h2
+{
+    text-align: center;
+    color:rgba(51, 51, 51, 0.87);
+    margin-bottom: 3rem;
+}
+
+.client_reviews .review_card
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.client_reviews .review_card .individual_review
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.client_reviews .review_card .individual_review img
+{
+    width: 200px;
+    height: 200px;
+    clip-path: circle();
+    object-fit: cover;
+}
+
+.client_reviews .review_card .individual_review .text-content
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.client_reviews .review_card .individual_review .bi-quote
+{
+    color: #7DEFDA;
+    font-size: 2rem;
+}
+
+.client_reviews .review_card .individual_review .stars
+{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--PRIMARY-COLOUR) ;
+}
+.stars{
+    color: var(--PRIMARY-COLOUR) ;
+    gap: 1rem;
+}
+
+.be_the_first_div {
+    position: relative;
+}
+#p1{
+    position: absolute;
+    top: 0;
+    left:10px;
+}
+
+/* FOOTER */
+footer span{
+    color: var(--PRIMARY-COLOUR)
+}
+
+footer .help {
+    line-height: 30px;
+  
+}
+footer .help p{
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--Unsecondary-Colour);
+    
+}
+
+footer .help p span{
+    font-size: 22px;
+    font-weight: 500;
+   
+}
+.fa-brands {
+    color: var(--PRIMARY-COLOUR);
+    font-size: 25px;
+    
+}
+.title{
+    font-size: 18px;
+    text-transform: uppercase;
+}
+footer{
+    background-color: var(--Secondary-Colour);
+    width: 100%;
+    
+
+}
+footer .container{
+    padding: 3% 5.25% 0.75% 5.25%;
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+}
+.container .help .social-icon{
+    margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer .container .links{
+    display: flex;
+    /* justify-content: space-between; */
+    gap: 3.5%;
+    align-items: flex-start;
+   line-height: 10px;
+   width: 463px;
+
+}
+footer .container .links p{
+    color: var(--Unsecondary-Colour);
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 250%; /* 40px */
+}
+footer .container .subscribe p span{
+    color: var(--PRIMARY-COLOUR);
+    font-family: 'Nunito Sans', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+}
+footer .footer-wrapper , footer .footer{
+    padding: 3% 5.25% 0.75% 5.25%;
+}
+footer .footer {
+    display: flex;
+    justify-content: space-between;
+}
+footer .content{
+    display: flex;
+    justify-content: space-between;
+    
+}
+footer .subscribe input{
+    display: flex;
+    width: 249px;
+    height: 43px;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    background: var(--Unsecondary-Colour);
+    border: none;
+    
+}
+.form{
+    position: relative;
+}
+.subscribe button{
+    display: flex;
+   color: black;
+    width: 50px;
+    height: 43px;
+    padding: 13px 8px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    border-radius: 5px;
+    border: 1px solid var(--Unsecondary-Colour);
+    background: var(--PRIMARY-COLOUR);
+}
+footer ::placeholder{
+    width: 224px;
+    padding: 5px 15px 5px 5px;
+    height: 24px;
+    flex-shrink: 0;
+    color: #CECBC2;
+}
+footer form input{
+    background-color: var(--Unsecondary-Colour) !important;
+}
+
+.download{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+.apple ,.google{
+    background-color: black;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 10px;
+    padding: 5px;
+}
+.copyright p{
+    font-family: 'Public Sans', sans-serif;
+}
+
+/* RESPONSIVENESS */
+/* SCREEN SIZES LESSER THAN OR EQUAL TO 320px */
+@media (max-width: 320px)
+{
+    .discover_ethiopia .discover_ethiopia_div h2
+    {
+        font-size: 1.5rem;
+    }
+
+    .discover_ethiopia .discover_ethiopia_div p
+    {
+        font-size: 14px;
+    }
+}
+
+/* SCREEN SIZES LESSER THAN OR EQUAL TO 325px */
+@media (max-width:375px){
+    footer .container .links{
+        display: flex;
+        /* justify-content: space-between; */
+        gap: 1.5%;
+        align-items: flex-start;
+       line-height: 10px;
+       width: 100%;
+    
+    }
+    footer .subscribe input{
+        width: 310px;
+    }
+    form .container {
+        width: 100%;
+    }
+    .container .help .social-icon{
+        justify-content: space-evenly;
+    }
+    .book_hotels
+    {
+        width: 100%;
+        font-size: 13px;
+    }
+    .final_review{
+        flex-direction: column;    
+    }
+
+}
+/* SCREEN SIZES LESSER THAN OR EQUAL TO 425px */
+@media (max-width: 425px)
+{
+    .book_your_flight
+    {
+        padding: 0;
+    }
+
+    .text_side P
+    {
+        width: 100%;
+    }
+
+    .book_hotels .img_side
+    {
+        width: 80%;
+    }
+
+    .be_the_first .be_the_first_div p
+    {
+        font-size: 20px;
+    }
+
+    .be_the_first .be_the_first_div form input[type = "text"], input[type = "email"]
+    {
+        width: 100%;
+        font-size: 16px;
+        padding: 1rem;
+    }
+
+
+    .book_your_flight
+    {
+        flex-direction: column-reverse;
+        gap: 1rem;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+    }
+
+
+    .text_side P
+    {
+        width: 100%;
+    }
+
+        .book_your_flight img
+    {
+        width: 100%;
+    }
+    .button
+    {
+        margin-inline: auto;
+    }
+    
+    footer .container {
+        flex-direction: column;
+        
+    }
+    footer p{
+        font-size: 15px;
+    }
+}
+
+/* SCREEN SIZES LESSER THAN OR EQUAL TO 768px */
+@media (max-width: 768px){ 
+     
+
+    .book_hotels
+    {
+        flex-direction: column-reverse;
+        gap: 0.8rem;
+
+    }
+    .book_hotels h2, .book_hotels p, .book_hotels :active
+    {
+        text-align: center;
+    }
+
+    .book_hotels .img_side
+    {
+        position: static;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        width: 50%;
+        align-items: center;
+        margin-inline: auto;
+    }
+    .book_hotels .img_side img
+    {
+        width: 100%;
+        position:static;
+        clip-path: none;
+        border-radius: 10px;
+    }
+    .book_hotels
+    {
+        flex-direction: column-reverse;
+        gap: 0.8rem;
+    }
+
+    .book_hotels h2, .book_hotels p, .book_hotels :active
+    {
+        text-align: center;
+    }
+
+    .book_hotels .img_side
+    {
+        position: static;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        width: 50%;
+        align-items: center;
+        margin-inline: auto;
+    }
+
+    .book_hotels .img_side img
+    {
+        width: 100%;
+        position:static;
+        clip-path: none;
+        border-radius: 10px;
+    }
+
+    .see_how
+    {
+        flex-direction: column-reverse;
+        gap: 1rem;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        padding: 1rem;
+    }
+
+    .see_how iframe
+    {
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .take_a_bold_step
+    {
+        padding: 4rem 5rem;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2rem;
+    }
+    .be_the_first .be_the_first_div h2{
+        font-size: 2.5rem;
+    }
+
+    .take_a_bold_step .individual_card img
+    {
+        width: 300px;
+        height: 300px;
+    }
+    .be_the_first .be_the_first_div form input[type = "text"], input[type = "email"]
+    {
+        width: 100%;
+        font-size: 16px;
+        padding: 1rem;
+    }
+    .be_the_first::before {
+        background-image: none;
+    }
+    .client_reviews .review_card
+    {
+        flex-direction: column;
+        gap: 4rem;
+    }
+   
+     /*FOOTER  */
+     footer .container{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+
+/* SCREEN SIZES LESSER THAN OR EQUAL TO 1024px */
+@media (max-width:1024px){
+
+    .container-fluid img{
+    width: 161px;
+    height: 50px;
+    flex-shrink: 0;
+    backdrop-filter: blur(2px);
+    }
+    .navbar .navbar-nav{
+        
+            padding: 5px 5px 5px 0px;
+            gap: 7px;
+            flex: 1 0 0;
+            border-radius: 5px 0px 0px 5px;
+            background: var(--Secondary-Colour);
+    }
+        .navbar .navbar-nav .nav-item a{
+            padding: 5px;
+            gap: 5px;
+            font-size: 15px;
+            line-height: 32px; 
+        }
+        
+}
+
+   

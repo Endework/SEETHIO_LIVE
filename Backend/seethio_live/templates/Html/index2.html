@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landing page</title>
+
+    <!-- STYLE SHEETS -->
+    <link rel="stylesheet" href="{% static 'css/index.css' %}" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- BOOTSTRAP -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header>
+      <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+          <img src="{% static 'images/navlogo.png' %}" alt="nav logo" />
+          <button
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+            class="navbar-toggler navbar-toggler-right"
+          >
+            <i class="fa fa-bars"></i>
+          </button>
+
+          <div id="navbarSupportedContent" class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link active home" aria-current="page" href="#"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Discover Ethiopia
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="#">Attraction Centers</a>
+                  </li>
+                  <li><a class="dropdown-item" href="#">Dinings</a></li>
+                  <li><a class="dropdown-item" href="#">Local Market</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Travel Planner
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Tour Itinerary</a></li>
+                  <li>
+                    <a class="dropdown-item" href="#">Currency Converter</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Bookings
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Flight</a></li>
+                  <li><a class="dropdown-item" href="#">Lodgings</a></li>
+                  <li><a class="dropdown-item" href="#">Deals</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Resources
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Blog</a></li>
+                  <li><a class="dropdown-item" href="#">FAQ</a></li>
+                  <li><a class="dropdown-item" href="#">About Us</a></li>
+                </ul>
+              </li>
+
+              <li class="nav-item">
+                {% if request.user.is_authenticated %}
+                <a class="nav-link" href="/Front-end/Html/Login/login.html"
+                  ><button class="btn text-light me-1" type="button">
+                    {{user.username|capfirst}}
+                  </button></a
+                >
+                {% else %}
+                <a class="nav-link" href="{% url 'userauthentication:signin' %}"
+                  ><button class="btn text-light me-1" type="button">
+                    LOGIN
+                  </button></a
+                >
+                {% endif %}
+              </li>
+              <li class="nav-item">
+                {% if request.user.is_authenticated %}
+                <a
+                  class="nav-link"
+                  href="{% url 'userauthentication:signout' %}"
+                  ><button
+                    class="btn btn-outline-light text-success bg-light me-1 pe-1"
+                    type="button"
+                  >
+                    Log Out
+                  </button></a
+                >
+                {% else %}
+                <a class="nav-link" href="{% url 'userauthentication:signup' %}"
+                  ><button
+                    class="btn btn-outline-light text-success bg-light me-1 pe-1"
+                    type="button"
+                  >
+                    SIGN UP
+                  </button></a
+                >
+                {% endif %}
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- CAROUSEL -->
+      <div
+        id="carouselExampleCaptions"
+        class="carousel slide"
+        data-bs-interval="3500"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="3"
+            aria-label="Slide 4"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="4"
+            aria-label="Slide 5"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="5"
+            aria-label="Slide 6"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide-to="6"
+            aria-label="Slide 7"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="{% static 'images/sheger river.png' %}"
+              class="d-block w-100"
+              alt="..."
+            />
+            <div class="carousel-caption d-none d-md-block slide-in-left">
+              <h1>The Sheger River</h1>
+              <h2>Addis Ababa</h2>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="{% static 'images/friendshippark.png' %}"
+              class="d-block w-100"
+              alt="..."
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h1>Sheger Park and Its Glory</h1>
+              <h2>Addis Ababa</h2>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="{% static 'images/lineofJudha.png' %}"
+              class="d-block w-100"
+              alt="..."
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h1>The Lion of Judah Monument</h1>
+              <h2>Addis Ababa</h2>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="{% static 'images/entotoinside.png' %}"
+              class="d-block w-100"
+              alt="..."
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h1>A Natural View of Entoto Park</h1>
+              <h2>Addis Ababa</h2>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="{% static 'images/nile river.png' %}"
+              class="d-block w-100"
+              alt="..."
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h1>The Refreshing Nile River Fall</h1>
+              <h2>Gojam Region</h2>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <img
+              src="/{% static 'images/rockchurchside.png' %}"
+              class="d-block w-100"
+              alt="..."
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h1>The Magnificent st George's Church</h1>
+              <h2>Lalibela.</h2>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img
+              src="{% static 'images/ertaletop.png' %}"
+              class="d-block w-100"
+              alt="..."
+            />
+            <div class="carousel-caption d-none d-md-block">
+              <h1>The Fairy Belly of Erta Ale</h1>
+              <h2>Danakil Depression,Afar Region</h2>
+            </div>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </header>
+
+    <section class="discover_ethiopia">
+      <div class="discover_ethiopia_div">
+        <h2>Discover Ethiopia</h2>
+        <p>
+          Welcome to Seethio! Seethio reveals the beauty and mysteries of
+          Ethiopia for adventurers looking for an immersive and culturally
+          stimulating vacation. Begin your journey by exploring Ethiopia's
+          breathtaking landscapes, colorful culture, and rich history with us.
+          Our extensive understanding of the country's history guarantees that
+          you see the most genuine and remarkable attractions. Join us as we go
+          deep into Ethiopia's heart and book your ticket now.
+        </p>
+        <a href="#">Discover More</a>
+      </div>
+    </section>
+
+    <!-- BOOK YOUR FLIGHT -->
+
+    <div class="light_blue_bg">
+      <section class="container book_your_flight">
+        <div class="row">
+          <div class="col-lg-6 col-md-12 text_side py-5 px-5">
+            <h2 class="pt-3">Book your flight ticket</h2>
+            <p>
+              Fly high with our hassle free booking process. We offer ethical
+              conduct and personalized travel solutions. Book your flights with
+              confidence and openness, knowing that we have your best interests
+              in mind.
+            </p>
+            <a class="button" href="#" class="button">Book now</a>
+          </div>
+          <div class="col-lg-6 col-md-12">
+            <img
+              class="w-100"
+              src="{% static 'images/aeroplane_people.png' %}"
+              alt="aeroplane shaped image with a couple sitting on their luggage"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- BOOK HOTELS SECTION -->
+      <section class="container book_hotels">
+        <div class="row py-5 px-5">
+          <div class="col-lg-6 col-md-12 img_side py-5 px-5">
+            <img
+              src="{% static 'images/book_hotels_image1.png' %}"
+              alt="a huge hotel in Ethiopia"
+              id="image1"
+            />
+            <img
+              src="{% static 'images/book_hotels_image2.png' %}"
+              alt="Night shots of a huge hotel in Ethiopia"
+              id="image2"
+            />
+            <img
+              src="{% static 'images/book_hotels_image3.png' %}"
+              alt="Another huge hotel in Ethiopia"
+              id="image3"
+            />
+          </div>
+
+          <div class="col-lg-6 col-md-6 text_side py-5 px-5">
+            <h2>Book a lodge</h2>
+            <p>
+              Discover the country's top rated hotels and apartments for a
+              relaxing and culturally interesting tourism. We strive to provide
+              you access to secure hotels and apartments that represent the
+              essence of Ethiopian hospitality.
+            </p>
+            <a class="button" href="#" class="button">Book now</a>
+          </div>
+        </div>
+      </section>
+      <!-- SEE HOW SEETHIO WORKS -->
+      <section class="container see_how gap-3">
+        <div class="text_side py-5 px-5">
+          <h2>See How Seethio Works</h2>
+          <p>
+            Play our Demo Video to see more on how we carry out our services for
+            your comfort and satisfaction.
+          </p>
+          <a class="button" href="#" class="button">Book now</a>
+        </div>
+
+        <iframe
+          class="py-5 px-5"
+          width="1000"
+          height="400"
+          src="https://www.youtube.com/embed/2xW9mTStyhM"
+          title="Journey Through Ethiopia - Africa Travel Documentary"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </section>
+    </div>
+
+    <!--TAKE A BOLD STEP, SET YOUR TARGET, HELLO ETHIOPIA -->
+    <section class="take_a_bold_step">
+      <div class="individual_card">
+        <img
+          src="{% static 'images/take_a_bold_step.png' %}"
+          alt="take a bold step"
+        />
+
+        <div class="text_part">
+          <h2>Plan your itinerary</h2>
+          <p>
+            Start your journey confidently with Seethio AI-powered feature.
+            Exploring diverse activities and create a personalized bucket list
+            to discover Ethiopia's wonders.
+          </p>
+          <a href="#">Plan a trip</a>
+        </div>
+      </div>
+
+      <div class="individual_card">
+        <img src="{% static 'images/hello_ethiopia.png' %}" alt="hello" />
+
+        <div class="text_part">
+          <h2>Plan your expense</h2>
+          <p>
+            Take advantage of our currency converter feature and curated travel
+            deals. Locate local exchange banks and save money for your trip.
+          </p>
+          <a href="#">Find out more</a>
+        </div>
+      </div>
+
+      <div class="individual_card">
+        <img
+          src="{% static 'images/adventure_awaits.png' %}"
+          alt="adventure awaits"
+        />
+
+        <div class="text_part">
+          <h2>Find a ride</h2>
+          <p>
+            Leverage our partnership with local riders. Explore the nitty gritty
+            of Ethiopia with various car rental options that match your
+            standard. Giving you a smooth and safe local tour experience.
+          </p>
+          <a href="#">Find rides</a>
+        </div>
+      </div>
+    </section>
+    <section class="be_the_first">
+      <div class="be_the_first_div">
+        <h2>Be the first to know our deals</h2>
+        <p>
+          Subscribe to our newsletter to get the latest updates on our travel
+          <br />
+          deals on Seethiopia
+        </p>
+
+        <form action="#" method="post">
+          <input type="text" name="name" id="name" placeholder="Name" />
+          <input type="email" name="email" id="email" placeholder="Email" />
+          <input type="button" value="Subscribe" />
+        </form>
+      </div>
+    </section>
+
+    <!-- CLIENT REVIEWS -->
+    <section class="client_reviews">
+      <h2>Satisfied Clients Reviews</h2>
+
+      <div class="review_card">
+        <div class="individual_review">
+          <img src="{% static 'images/client_1.jpeg' %}" alt="client one" />
+          <div class="text_content">
+            <h2>Jane George</h2>
+            <p>
+              <i class="bi bi-quote"></i>I have always dreamt of a travel app
+              that would serve as an all in one travel app, where I could do a
+              variety of things from one place. Well, Seethio was a dream come
+              true for me. I can't say how grateful I am to have stumbled on
+              this app.
+            </p>
+
+            <div class="stars">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+
+              <p>5/5</p>
+            </div>
+          </div>
+        </div>
+        <div class="individual_review">
+          <img src="{% static 'images/client_2.jpeg' %}" alt="client two" />
+          <div class="text_content">
+            <h2>Kelvin Dan</h2>
+            <p>
+              <i class="bi bi-quote"></i>From the user-friendly interface,
+              seamless booking process, incredible destination recommendations,
+              to the amazing deals, I couldn't have asked for more from one
+              travel website. My friends and I had an unforgettable adventure.
+            </p>
+
+            <div class="stars">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star"></i>
+
+              <p>4/5</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="individual_review">
+          <img src="/{% static 'images/client_3.jpeg' %}" alt="client three" />
+          <div class="text_content">
+            <h2>Rose Williams</h2>
+            <p>
+              <i class="bi bi-quote"></i>My first attraction to Seethio is their
+              user-friendly interface, this made planning for my tour so much
+              easier. With the variety of options available on the website, I
+              found the best hotels, restaurants and places to visit. I am glad
+              that I chose to use this travel website. They made my journey
+              filled with adventure and beautiful moments.
+            </p>
+
+            <div class="stars">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+
+              <p>5/5</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="individual_review">
+          <img src="{% static 'images/client_4.jpeg' %}" alt="client four" />
+          <div class="text_content">
+            <h2>Steve Jacob</h2>
+            <p>
+              <i class="bi bi-quote"></i>I couldn't wait to go on this trip and
+              it turned out to be exactly as I anticipated, thanks to seethio.
+              All the recommendations helped me plan my itinerary and via the
+              website, I was able to discover and visit places I may not have
+              found, it was undeniably a unique and stress free.
+            </p>
+
+            <div class="stars">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star"></i>
+
+              <p>4/5</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p>Showing our latest 4 and 5 star reviews</p>
+      <div class="final_review" style="display: flex">
+        <p>An impressive performance based on 150 reviews.</p>
+        <div class="stars">
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-fill"></i>
+          <i class="bi bi-star-half"></i>
+        </div>
+      </div>
+    </section>
+    <!-- FOOTER -->
+    <footer>
+      <div class="container">
+        <div class="help">
+          <p class="title">Need any help?</p>
+          <p>
+            Call 24/7 for any help <br />
+            <span> +00 123 456 789</span>
+          </p>
+          <p>
+            Mail to our support team <br />
+            <span>support@Seethio.com</span>
+          </p>
+          <p>Follow us on</p>
+          <div class="social-icon">
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+            <a href=""> <i class="fa-brands fa-facebook"></i></a>
+            <a href=""> <i class="fa-brands fa-twitter"></i></a>
+            <a href=""><i class="fa-brands fa-youtube"></i></a>
+            <a href=""><i class="fa-brands fa-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="links">
+          <div>
+            <p class="title">Company</p>
+            <p>Home</p>
+            <p>Testimonials</p>
+            <p>About Us</p>
+            <p>Work with Us</p>
+            <p>Partners</p>
+          </div>
+          <div>
+            <p class="title">Support</p>
+            <p>Account</p>
+            <p>FAQ</p>
+            <p>Legal</p>
+            <p>Contact us</p>
+            <p>Privacy Policy</p>
+          </div>
+          <div>
+            <p class="title">Services</p>
+            <p>Discover place</p>
+            <p>Plan a trip</p>
+            <p>Booking</p>
+            <p>Get Deals</p>
+            <p>Currency exchange</p>
+          </div>
+        </div>
+        <div class="subscribe">
+          <p><span>Subscribe to receive new deals</span></p>
+          <div class="form">
+            <input type="text" placeholder="Email Address" />
+            <button>Send</button>
+          </div>
+        </div>
+      </div>
+      <div class="footer-wrapper">
+        <hr style="border: 1px solid white" />
+      </div>
+      <div class="footer">
+        <div class="logo">
+          <a href="/index.html"
+            ><img src="{% static 'images/footer_logo.png' %}" alt=""
+          /></a>
+        </div>
+        <div class="copyright">
+          <p><span>Copyright © 2023 Kunturi Design</span></p>
+        </div>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"
+      integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="./home.js"></script>
+  </body>
+</html>
