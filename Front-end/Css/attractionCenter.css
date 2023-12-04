@@ -139,9 +139,12 @@ nav img
   font-family: inherit; /* Important for vertical align on mobile phones */
   margin: 0; /* Important for vertical align on mobile phones */
 }
+.dropdown .dropbtn:hover{
+  background: #006167;
+}
 
 /* font color for the active menu */
-.active .dropbtn, .fa-user
+.active .dropbtn, .fa-user, .bi-caret-down-fill
 {
   color: var(--primary-colour);
 }
@@ -175,6 +178,10 @@ nav img
   z-index: 1;
 }
 
+.dropdown-content a:hover{
+  background: #006167 !important;
+  color: var(--primary-colour);
+}
 /* Dropdown content for active menu */
 .dropdown .active
 {
