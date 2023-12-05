@@ -1,0 +1,1 @@
+web: gunicorn seethio_live.wsgi:application
