@@ -9,8 +9,7 @@ app_name = "userauthentication"
 urlpatterns = [
     
     path("", index, name="index"),
-    path("home/", home, name="home"),
-    path("login/", login, name='login'), #add this
+    path("home", home, name="home"),
     path("verify_email/<str:uidb64>/", verify_email, name="verify_email"),
     path("signup/", register_view, name="signup"),
     path("sign_success/", sign_success, name="sign_success"),
