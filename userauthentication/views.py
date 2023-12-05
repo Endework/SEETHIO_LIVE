@@ -33,11 +33,17 @@ User = get_user_model()
 
 
 #Create your views here.
+
 def index(request):
     return render(request, "Html/index.html")
 
 def home(request):
     return render(request, "Html/Home.html")
+def login(request):
+    return render(request, "Html/Login/login.html")
+def logout(request):
+    return render(request, "Html/index.html")
+
 
 def register_view(request):
     if request.method == "POST":
@@ -258,7 +264,7 @@ def resend_password_reset_email(request):
 @psa('social:complete')
 def google_callback(request):
     # This view will handle the Google callback and log the user in.
-    return redirect('Html/Home.html')  # Redirect to your desired page after login.
+    return redirect('home')  # Redirect to your desired page after login.
 
 # views.py
 from django.shortcuts import render

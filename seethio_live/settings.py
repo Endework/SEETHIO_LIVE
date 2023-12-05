@@ -175,9 +175,12 @@ AUTHENTICATION_BACKENDS = [
 ]
 #social app URLS custom settings added by ogo
 LOGIN_URL = 'login'   #add this
-LOGIN_REDIRECT_URL = '/' #'home'   #add this
+LOGIN_REDIRECT_URL = 'home' #'home'   #add this
 LOGOUT_URL = 'logout'   #add this
 LOGOUT_REDIRECT_URL = 'login'   #add this
+LOGIN_URL = 'login'  # Redirect to the login page if authentication is required
+LOGIN_REDIRECT_URL = 'home'  # Redirect after successful login
+LOGIN_ERROR_URL = 'login'
 
 #APIS keys and ID settings added by ogo
 SOCIAL_AUTH_FACEBOOK_KEY = os.environ.get('SOCIAL_AUTH_FACEBOOK_KEY')  #add this
