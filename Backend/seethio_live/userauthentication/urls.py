@@ -4,6 +4,7 @@ from django.contrib.auth import views as auth_views
 from django.contrib.auth.views import PasswordResetConfirmView
 from userauthentication.forms import CustomSetPasswordForm
 from .views import search_flights
+from . import views #added by ple
 
 app_name = "userauthentication"
 urlpatterns = [
@@ -40,4 +41,7 @@ urlpatterns = [
     
     path('search/', search_flights, name='search_flights'),
     # Add other URLs as needed ogo
+    path(
+        "subscription/", views.subscription, name="subscription"  #added by ple
+    ),
 ]

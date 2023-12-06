@@ -19,7 +19,11 @@
     <link rel="stylesheet" href="{% static 'css/login.css' %}" />
     <title>Log in</title>
   </head>
+
+    <title>log in </title>
+</head>
   <body>
+    {% block content %}
     <main>
       <div class="left">
         <div class="img-div"></div>
@@ -80,6 +84,11 @@
           </div>
           <div class="social">
             <a href="{% url 'social:begin' 'google-oauth2' %}"><img src="{% static 'images/google.svg' %}" alt="Sign up with google" /></a>
+
+          <div id="message"></div>
+          {% comment %} added social AUTHORIZATIONs here {% endcomment %}
+          <div class="other">
+            <a href="{% url 'social:begin' 'google-oauth2' %}"><img src="{% static 'images/google.svg' %}" alt="Sign up with google"/></a>
             <a href="{% url 'social:begin' 'facebook' %}"><img src="{% static 'images/facebook.png' %}" alt="Sign up with facebook"/></a>
           </div>
 
@@ -104,5 +113,8 @@
     {% endcomment %} {% comment %}
     <script src="{% static 'js/password2.js' %}"></script>
     {% endcomment %}
+
+    {% endblock %}
+    <script src="login.js"></script>
   </body>
 </html>

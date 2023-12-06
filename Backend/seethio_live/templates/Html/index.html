@@ -4,7 +4,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Landing page</title>
+    <title> Landing page </title>
 
     <!-- STYLE SHEETS -->
     {% comment %} <link rel="stylesheet" href="Front-end/Css/index.css" /> {% endcomment %}
@@ -28,9 +28,11 @@
       integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
       crossorigin="anonymous"
     />
+    <script src="{% static 'home.js' %}"></script>
   </head>
   <body>
     <!-- HEADER -->
+    {% block content %}
     <header>
       <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container-fluid">
@@ -477,8 +479,18 @@
           <a style="text-decoration: none" href="#popup1"
           ><button type="submit" class="btn btn-success subscribe" box-shadow="none" onclick="submitAndAlert();">Subscribe</button></a>
 
+
+          <input type="text" name="name" id="name" placeholder="Name" />
+          <input type="email" name="email" id="email" placeholder="Email" />
+          <input type="button" value="Subscribe" onclick="showThanks();" />
         </form>
       </div>
+      <!-- message if email is sent --> 
+      {% if messages %} {% for message in messages %}
+      <div class="my-5 alert alert-success">
+        <h5 class="m-0">{{ message }}</h5>
+      </div>
+     {% endfor %} {% endif %}
     </section>
     <script>
     function submitAndAlert(){
@@ -650,9 +662,15 @@
           <p><span>Subscribe to receive new deals</span></p>
           <div class="form">
             <input type="text" placeholder="Email Address" />
-            <button>Send</button>
+            <input type="button" value="send" onclick="showThanks();" />
           </div>
         </div>
+        <!-- message if email is sent -->
+        {% if messages %} {% for message in messages %}
+         <div class="my-5 alert alert-success">
+          <h5 class="m-0">{{ message }}</h5>
+         </div>
+        {% endfor %} {% endif %}
       </div>
       <div class="footer-wrapper">
         <hr style="border: 1px solid white" />
@@ -668,6 +686,7 @@
         </div>
       </div>
     </footer>
+    {% endblock content %}
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
