@@ -4,30 +4,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="{% static 'css/login.css' %}" />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-    <title>log in </title>
-</head>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="{% static 'css/login.css' %}" />
+    <title>Log in</title>
+  </head>
   <body>
     {% block content %}
     <main>
       <div class="left">
-        <img src="{% static 'images/login_new.jpg' %}" alt="" />
+        <div class="img-div"></div>
       </div>
       <div class="right">
         <div class="content">
-          <div class="logo-div">
-            <img
-              src="{% static 'images/seethio_logo.png' %}"
-              alt=""
-              style="width: 100%; height: 100%"
-            />
+          <div class="logo">
+            <img src="{% static 'images/seethio_logo.png' %}" alt="" />
           </div>
-          <h1>Welcome!</h1>
-          <h2>Login to your account</h2>
+          <h3>Welcome</h3>
+          <h4>Login to your account</h4>
           {% if messages %} {% for message in messages %}
           <div id="alert" class="alert alert-{{message.tags}}">
             <strong>{{ message }}</strong>
@@ -36,69 +40,78 @@
           <script>
             setTimeout(() => {
               $("#alert").alert("close");
-            }, 3000);
+            }, 2000);
           </script>
           <form action="" method="post" id="myForm">
             {% csrf_token %}
-            <div class="full-width">
-              <label for="email">Email</label>
+            <div class="full_width">
               <input
-                name="email"
                 type="email"
+                name="email"
                 id="email"
-                placeholder="example@gmail.com"
-                required
+                placeholder="Email Address"
               />
-            </div>
-            <div class="full-width">
-              <label for="password1">Password</label>
               <input
                 name="password"
                 type="password"
                 id="password1"
-                style="padding-left: 30px"
-                placeholder="********"
+                placeholder="Password"
                 required
               />
               <i class="fa-regular fa-eye-slash" id="eye"></i>
             </div>
-            <span
-              ><a href="/Front-end/Html/Login/forgot.html"
-                >Forgot Password?</a
-              ></span
-            >
-            <div class="terms">
-              <input type="checkbox" id="terms" />
-              <label for="check"
-                >I have read and accepted SEETHIO <span>Terms</span> &
-                <span>Policy</span>.</label
-              >
+            <a href="{% url 'userauthentication:password_reset' %}">
+              <p>Forgot Password?</p>
+            </a>
+            <div class="checkbutton">
+              <input type="checkbox" name="checkbox" id="terms" />
+
+              <p>
+                I have read and accepted SEETHIO
+                <a href=""><span>Terms</span> $ <span>Policy</span></a>
+              </p>
             </div>
-
-            <center><button type="submit" id="submit">log in</button></center>
+            <input type="submit" class="btn" value="Login" />
           </form>
-
+          <div id="message"></div>
           <div class="horizontal">
             <img src="{% static 'images/horizontal.svg' %}" alt="" />
-            <p>Or continue with</p>
+            <p>Or</p>
             <img src="{% static 'images/horizontal.svg' %}" alt="" />
           </div>
-          <div id="message"></div>
-          {% comment %} added social AUTHORIZATIONs here {% endcomment %}
-          <div class="other">
+            {% comment %} added social AUTHORIZATIONs here {% endcomment %}
+          <div class="social">
             <a href="{% url 'social:begin' 'google-oauth2' %}"><img src="{% static 'images/google.svg' %}" alt="Sign up with google"/></a>
             <a href="{% url 'social:begin' 'facebook' %}"><img src="{% static 'images/facebook.png' %}" alt="Sign up with facebook"/></a>
           </div>
+<<<<<<< HEAD
           <p>
             Don't have an account?
             <span
               ><a href="/signup">Sign up</a></span
               
             >
+=======
+          <p id="account">Don't have an account?
+            <span><a href="{% url 'userauthentication:signup' %}">Sign Up</a></span>
+>>>>>>> 610de8b8a99e3e14032d110cc3e72ad61173fe30
           </p>
         </div>
       </div>
     </main>
+    <!-- ellipse -->
+    <div class="ellipse">
+      <div class="green"></div>
+      <div class="yellow"></div>
+    </div>
+
+    
+    {% comment %}
+    <script src="{% static 'js/login2.js' %}"></script>
+    {% endcomment %} {% comment %}
+    <script src="{% static 'js/password2.js' %}"></script>
+    {% endcomment %}
+
     {% endblock %}
     <script src="login.js"></script>
   </body>

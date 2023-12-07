@@ -10,27 +10,31 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 from dotenv import load_dotenv
-
-# Load environment variables from .env file
-load_dotenv()
-
 from pathlib import Path
 import os
+from decouple import config
+
+# Load environment variables from .env file
+
+if Path(".env").exists():
+    load_dotenv()
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+STATICFILES_DIRS = [BASE_DIR / "static"] # new for render deploy
+STATIC_ROOT = BASE_DIR / "staticfiles" # new form render deploy
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-prs+%oud^uy1)kv5c6yqm4eg(2n#6ujtdor91k(d1^w)z*0$!q"
+SECRET_KEY = str(os.getenv('SECRET_KEY'))
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -43,8 +47,15 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "userauthentication",
-    'social_django', #ogo added configuration
+    "Booking",
+    "anymail",
+    "social_django",    #ogo added configuration for social authentication
+    'crispy_forms',
+    #'crispy_bootstrap4', 
 ]
+
+AUTH_USER_MODEL = 'userauthentication.User'
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
@@ -54,8 +65,7 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
-    'social_django.middleware.SocialAuthExceptionMiddleware', # ogo add this    
-
+    "social_django.middleware.SocialAuthExceptionMiddleware", # ogo add this    
 ]
 
 ROOT_URLCONF = "seethio_live.urls"
@@ -71,8 +81,9 @@ TEMPLATES = [
                 "django.template.context_processors.request",
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
-                'social_django.context_processors.login_redirect', # ogo added this
-                'social_django.context_processors.backends', # ogo added this
+                "social_django.context_processors.login_redirect",   # ogo  add this config    # ogo added this
+                "social_django.context_processors.backends",        # ogo added this
+               
             ],
         },
     },
@@ -87,7 +98,7 @@ WSGI_APPLICATION = "seethio_live.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.sqlite3",
-        "NAME": BASE_DIR / "db.sqlite3",
+         "NAME": BASE_DIR / "db.sqlite3",
     }
 }
 
@@ -132,20 +143,14 @@ STATIC_URL = "static/"
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
-AUTH_USER_MODEL = "userauthentication.User"
+
 # STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "static/")]
 MEDIA_URL = "images/"
 MEDIA_ROOT = os.path.join(BASE_DIR, "static/images")
 
 # SMTP configuration
-EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
-EMAIL_HOST = "smtp.gmail.com"
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-EMAIL_HOST_USER = ""
-EMAIL_HOST_PASSWORD = ""
-DEFAULT_FROM_EMAIL = "TestSite Team <noreply@example.com>"
+
 
 #social app custom settings added by ogo
 AUTHENTICATION_BACKENDS = [
@@ -179,7 +184,23 @@ SOCIAL_AUTH_GOOGLE_SCOPE = [   #add this
 # EMAIL_BACKEND = "django.core.mail.backends.filebased.EmailBackend"
 # EMAIL_FILE_PATH = BASE_DIR / "sent_emails"
 
+# Brevo
+EMAIL_BACKEND = "anymail.backends.sendinblue.EmailBackend"
+ANYMAIL = {
+    "SENDINBLUE_API_KEY": config("SENDINBLUE_API_KEY"),
+}
+SENDINBLUE_API_URL = "https://api.brevo.com/v3/"
+# ANYMAIL = {
+#     "MAILGUN_API_KEY": "<your Mailgun key>",
+# }
+# DEFAULT_FROM_EMAIL = ""
+# CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
 # MAILCHIMP CREDENTIALS added by ple
 MAILCHIMP_API_KEY = os.environ.get('MAILCHIMP_API_KEY')
 MAILCHIMP_DATA_CENTER = os.environ.get('MAILCHIMP_DATA_CENTER')
 MAILCHIMP_EMAIL_LIST_ID = os.environ.get('MAILCHIMP_EMAIL_LIST_ID')
+
+
+
+
