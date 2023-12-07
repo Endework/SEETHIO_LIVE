@@ -24,6 +24,7 @@ from django.contrib.staticfiles.urls import staticfiles_urlpatterns # new from r
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("", include("userauthentication.urls")),
+    path("", include("Booking.urls")),
     path("accounts/", include("django.contrib.auth.urls")),
     path('auth/', include('social_django.urls', namespace='social')),  # Social authentication by ogo
     ]

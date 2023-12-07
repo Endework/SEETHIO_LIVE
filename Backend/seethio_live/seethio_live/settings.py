@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "userauthentication",
+    "Booking",
     "anymail",
     "social_django",    #ogo added configuration for social authentication
     'crispy_forms',
@@ -199,3 +200,7 @@ SENDINBLUE_API_URL = "https://api.brevo.com/v3/"
 MAILCHIMP_API_KEY = os.environ.get('MAILCHIMP_API_KEY')
 MAILCHIMP_DATA_CENTER = os.environ.get('MAILCHIMP_DATA_CENTER')
 MAILCHIMP_EMAIL_LIST_ID = os.environ.get('MAILCHIMP_EMAIL_LIST_ID')
+
+
+
+

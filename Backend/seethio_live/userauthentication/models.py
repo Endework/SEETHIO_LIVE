@@ -45,10 +45,3 @@ class Subscribers(models.Model):
         verbose_name_plural= 'Subscribers'
 
 
-# models CREATED BY OGO for flights
-
-class Flight(models.Model):
-    origin = models.CharField(max_length=100)
-    destination = models.CharField(max_length=100)
-    departure_date = models.DateField()
-    # Add other relevant fields as needed
