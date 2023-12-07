@@ -14,9 +14,7 @@ from django.core.mail import send_mail, BadHeaderError
 from django.http import HttpResponse, HttpResponseRedirect
 from django.contrib.auth.forms import PasswordResetForm
 from django.http import JsonResponse
-from django.contrib.auth.decorators import login_required # aded by ogo
-from social_django.utils import psa #added by ogo
-from django.contrib.auth import logout as auth_logout  # Renamed to avoid conflict
+
 
 # from django.contrib.auth.models import User as AuthUser
 from django.template.loader import render_to_string

@@ -1,12 +1,8 @@
+
+# flight_search/forms.py
 from django import forms
 
-from userauthentication.models import User
-
-
-#forms for flight by ogo
-
 class FlightSearchForm(forms.Form):
-    origin = forms.CharField(max_length=100)
-    destination = forms.CharField(max_length=100)
+    origin = forms.CharField(max_length=3)
+    destination = forms.CharField(max_length=3)
     departure_date = forms.DateField()
-    # Add other relevant fields as needed
