@@ -72,10 +72,10 @@
                 </a>
                 <ul class="dropdown-menu">
                   <li>
-                    <a class="dropdown-item" href="#">Attraction Centers</a>
+                    <a class="dropdown-item" href="{% url 'userauthentication:signup' %}">Attraction Centers</a>
                   </li>
-                  <li><a class="dropdown-item" href="#">Dinings</a></li>
-                  <li><a class="dropdown-item" href="#">Local Market</a></li>
+                  <li><a class="dropdown-item" href="{% url 'userauthentication:signup' %}">Dinings</a></li>
+                  <li><a class="dropdown-item" href="{% url 'userauthentication:signup' %}">Local Market</a></li>
                 </ul>
               </li>
               <li class="nav-item dropdown">
@@ -89,9 +89,9 @@
                   Travel Planner
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Tour Itinerary</a></li>
+                  <li><a class="dropdown-item" href="{% url 'userauthentication:signup' %}">Tour Itinerary</a></li>
                   <li>
-                    <a class="dropdown-item" href="#">Currency Converter</a>
+                    <a class="dropdown-item" href="{% url 'userauthentication:signup' %}">Currency Converter</a>
                   </li>
                 </ul>
               </li>
@@ -106,9 +106,9 @@
                   Bookings
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="{% url 'userauthentication:signin' %}">Flight</a></li>
-                  <li><a class="dropdown-item" href="#">Lodgings</a></li>
-                  <li><a class="dropdown-item" href="#">Deals</a></li>
+                  <li><a class="dropdown-item" href="{% url 'userauthentication:signup' %}">Flight</a></li>
+                  <li><a class="dropdown-item" href="{% url 'userauthentication:signup' %}">Lodgings</a></li>
+                  <li><a class="dropdown-item" href="{% url 'userauthentication:signup' %}">Deals</a></li>
                 </ul>
               </li>
               <li class="nav-item dropdown">
@@ -122,9 +122,9 @@
                   Resources
                 </a>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Blog</a></li>
-                  <li><a class="dropdown-item" href="#">FAQ</a></li>
-                  <li><a class="dropdown-item" href="#">About Us</a></li>
+                  <li><a class="dropdown-item" href="{% url 'userauthentication:signup' %}">Blog</a></li>
+                  <li><a class="dropdown-item" href="{% url 'userauthentication:signup' %}">FAQ</a></li>
+                  <li><a class="dropdown-item" href="{% url 'userauthentication:signup' %}">About Us</a></li>
                 </ul>
               </li>
 
@@ -320,7 +320,7 @@
           you see the most genuine and remarkable attractions. Join us as we go
           deep into Ethiopia's heart and book your ticket now.
         </p>
-        <a href="#">Discover More</a>
+        <a href="{% url 'userauthentication:signup' %}">Discover More</a>
       </div>
     </section>
 
@@ -337,7 +337,7 @@
               confidence and openness, knowing that we have your best interests
               in mind.
             </p>
-            <a class="button" href="#" class="button">Book now</a>
+            <a class="button" href="{% url 'userauthentication:signup' %}" class="button">Book now</a>
           </div>
           <div class="col-lg-6 col-md-12">
             <img
@@ -381,7 +381,7 @@
               you access to secure hotels and apartments that represent the
               essence of Ethiopian hospitality.
             </p>
-            <a class="button" href="#" class="button">Book now</a>
+            <a class="button" href="{% url 'userauthentication:signup' %}" class="button">Book now</a>
           </div>
         </div>
       </section>
