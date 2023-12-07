@@ -13,4 +13,3 @@ __pycache__/
 *.env
 
 # Ignore database files
-db.sqlite3

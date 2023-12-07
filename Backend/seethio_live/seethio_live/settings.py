@@ -10,17 +10,11 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 from dotenv import load_dotenv
-<<<<<<< HEAD
-=======
-
-# Load environment variables from .env file
-load_dotenv()
-
->>>>>>> a7db6970c39dad7fd02ec794e4144011718cfea2
 from pathlib import Path
 import os
 from decouple import config
 
+# Load environment variables from .env file
 
 if Path(".env").exists():
     load_dotenv()
@@ -53,14 +47,10 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "userauthentication",
-<<<<<<< HEAD
     "anymail",
     "social_django",    #ogo added configuration for social authentication
     'crispy_forms',
     #'crispy_bootstrap4', 
-=======
-    'social_django', #ogo added configuration
->>>>>>> a7db6970c39dad7fd02ec794e4144011718cfea2
 ]
 
 AUTH_USER_MODEL = 'userauthentication.User'
@@ -74,12 +64,7 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
-<<<<<<< HEAD
     "social_django.middleware.SocialAuthExceptionMiddleware", # ogo add this    
-=======
-    'social_django.middleware.SocialAuthExceptionMiddleware', # ogo add this    
->>>>>>> a7db6970c39dad7fd02ec794e4144011718cfea2
-
 ]
 
 ROOT_URLCONF = "seethio_live.urls"
@@ -95,13 +80,9 @@ TEMPLATES = [
                 "django.template.context_processors.request",
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
-<<<<<<< HEAD
                 "social_django.context_processors.login_redirect",   # ogo  add this config    # ogo added this
                 "social_django.context_processors.backends",        # ogo added this
-=======
-                'social_django.context_processors.login_redirect', # ogo added this
-                'social_django.context_processors.backends', # ogo added this
->>>>>>> a7db6970c39dad7fd02ec794e4144011718cfea2
+               
             ],
         },
     },
@@ -202,7 +183,6 @@ SOCIAL_AUTH_GOOGLE_SCOPE = [   #add this
 # EMAIL_BACKEND = "django.core.mail.backends.filebased.EmailBackend"
 # EMAIL_FILE_PATH = BASE_DIR / "sent_emails"
 
-<<<<<<< HEAD
 # Brevo
 EMAIL_BACKEND = "anymail.backends.sendinblue.EmailBackend"
 ANYMAIL = {
@@ -215,39 +195,7 @@ SENDINBLUE_API_URL = "https://api.brevo.com/v3/"
 # DEFAULT_FROM_EMAIL = ""
 # CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
-
-#social app custom settings added by ogo
-AUTHENTICATION_BACKENDS = [
-    'social_core.backends.facebook.FacebookOAuth2',  #add this
-    'social_core.backends.google.GoogleOAuth2',       #add this
-    'django.contrib.auth.backends.ModelBackend',
-]
-#social app URLS custom settings added by ogo
-LOGIN_URL = 'login'   #add this
-LOGIN_REDIRECT_URL = '/' #'home'   #add this
-LOGOUT_URL = 'logout'   #add this
-LOGOUT_REDIRECT_URL = 'login'   #add this
-
-#APIS keys and ID settings added by ogo
-SOCIAL_AUTH_FACEBOOK_KEY = os.environ.get('SOCIAL_AUTH_FACEBOOK_KEY')  #add this
-SOCIAL_AUTH_FACEBOOK_SECRET = os.environ.get('SOCIAL_AUTH_FACEBOOK_SECRET')   #add this
-SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = os.environ.get('SOCIAL_AUTH_GOOGLE_OAUTH2_KEY')   #add this
-SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = os.environ.get('SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET')   #add this
-
-# Add the following name by ogo
-SOCIAL_AUTH_URL_NAMESPACE = 'social'
-
-# external information by ogo
-SOCIAL_AUTH_FACEBOOK_SCOPE = [    #add this
-    'email',    
-]
-SOCIAL_AUTH_GOOGLE_SCOPE = [   #add this
-    'email',    
-]
-
-=======
 # MAILCHIMP CREDENTIALS added by ple
 MAILCHIMP_API_KEY = os.environ.get('MAILCHIMP_API_KEY')
 MAILCHIMP_DATA_CENTER = os.environ.get('MAILCHIMP_DATA_CENTER')
 MAILCHIMP_EMAIL_LIST_ID = os.environ.get('MAILCHIMP_EMAIL_LIST_ID')
->>>>>>> a7db6970c39dad7fd02ec794e4144011718cfea2

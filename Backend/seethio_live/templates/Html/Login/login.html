@@ -19,9 +19,6 @@
     <link rel="stylesheet" href="{% static 'css/login.css' %}" />
     <title>Log in</title>
   </head>
-
-    <title>log in </title>
-</head>
   <body>
     {% block content %}
     <main>
@@ -82,21 +79,13 @@
             <p>Or</p>
             <img src="{% static 'images/horizontal.svg' %}" alt="" />
           </div>
+            {% comment %} added social AUTHORIZATIONs here {% endcomment %}
           <div class="social">
-            <a href="{% url 'social:begin' 'google-oauth2' %}"><img src="{% static 'images/google.svg' %}" alt="Sign up with google" /></a>
-
-          <div id="message"></div>
-          {% comment %} added social AUTHORIZATIONs here {% endcomment %}
-          <div class="other">
             <a href="{% url 'social:begin' 'google-oauth2' %}"><img src="{% static 'images/google.svg' %}" alt="Sign up with google"/></a>
             <a href="{% url 'social:begin' 'facebook' %}"><img src="{% static 'images/facebook.png' %}" alt="Sign up with facebook"/></a>
           </div>
-
-          <p id="account">
-            Don't have an account?
-            <span
-              ><a href="{% url 'userauthentication:signup' %}">Sign Up</a></span
-            >
+          <p id="account">Don't have an account?
+            <span><a href="{% url 'userauthentication:signup' %}">Sign Up</a></span>
           </p>
         </div>
       </div>

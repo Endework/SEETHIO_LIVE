@@ -476,13 +476,9 @@
           /></a> -->
 
           <!-- edited button starts here -->
-          <a style="text-decoration: none" href="#popup1"
-          ><button type="submit" class="btn btn-success subscribe" box-shadow="none" onclick="submitAndAlert();">Subscribe</button></a>
-
-
-          <input type="text" name="name" id="name" placeholder="Name" />
-          <input type="email" name="email" id="email" placeholder="Email" />
+          <a style="text-decoration: none" href="#popup1">
           <input type="button" value="Subscribe" onclick="showThanks();" />
+          </a>
         </form>
       </div>
       <!-- message if email is sent --> 
@@ -662,9 +658,10 @@
           <p><span>Subscribe to receive new deals</span></p>
           <div class="form">
             <input type="text" placeholder="Email Address" />
-            <input type="button" value="send" onclick="showThanks();" />
+            <button onclick="showThanks();">Send</button>
           </div>
         </div>
+
         <!-- message if email is sent -->
         {% if messages %} {% for message in messages %}
          <div class="my-5 alert alert-success">
