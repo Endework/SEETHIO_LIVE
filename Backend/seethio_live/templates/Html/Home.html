@@ -85,13 +85,11 @@
               </li>
 
               <div style="display: flex; justify-content: center">
-                {% comment %}
-                <img class="w-25" src="../images/sarah_profile.svg" alt="" />
-                {%endcomment %}
-                <img
+                <img class="w-25" src="{% static "images/sarah_profile.svg" %}" alt="" />
+                {% comment %} <img
                   src="{% static 'images/sarah_profile.svg' %}"
                   alt="nav logo"
-                />
+                /> {% endcomment %}
 
                 <li class="nav-item dropdown mt-2 pt-3">
                   <a
@@ -658,7 +656,7 @@
           <div class="col-lg-4">
             <div class="card" style="height: 410px !important">
               <img
-                src="../images/activities1.jpg"
+                src="{% static "images/activities1.jpg" %}"
                 class="card-img-top"
                 alt="..."
               />
@@ -681,7 +679,7 @@
           <div class="col-lg-4">
             <div class="card" style="height: 410px !important">
               <img
-                src="../images/activities2.jpg"
+                src="{% static "images/activities2.jpg" %}"
                 class="card-img-top"
                 alt="..."
               />
@@ -702,7 +700,7 @@
           <div class="col-lg-4">
             <div class="card" style="height: 410px !important">
               <img
-                src="../images/activities3.jpg"
+                src="{% static "images/activities3.jpg" %}"
                 class="card-img-top"
                 alt="..."
               />
