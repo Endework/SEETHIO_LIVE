@@ -11,5 +11,5 @@ __pycache__/
 
 # Ignore local settings
 seethio/ *.env
-
+.env
 # Ignore database files

@@ -261,7 +261,7 @@ def resend_password_reset_email(request):
 @psa('social:complete')
 def google_callback(request):
     # This view will handle the Google callback and log the user in.
-    return redirect('Html/Home.html')  # Redirect to your desired page after login.
+    return redirect(request,'Html/Home.html') 
 
 
 # Mailchimp Settings added by ple
