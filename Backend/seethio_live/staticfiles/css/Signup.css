@@ -148,7 +148,7 @@ input[type='password']{
 }
 .fa-eye-slash{
     position: absolute;
-    right: 25%;
+    right: 12%;
     top: 61.5%;
 }
 input:not([type='checkbox']):not([type='button']) {

@@ -19,6 +19,8 @@
     <link rel="stylesheet" href="{% static 'css/login.css' %}" />
     <title>Log in</title>
   </head>
+  <script src="{% static 'js/login.js' %}"></script>
+
   <body>
     {% block content %}
     <main>
@@ -68,7 +70,7 @@
 
               <p>
                 I have read and accepted SEETHIO
-                <a href=""><span>Terms</span> $ <span>Policy</span></a>
+                <a href=""><span>Terms</span> & <span>Policy</span></a>
               </p>
             </div>
             <input type="submit" class="btn" value="Login" />
@@ -84,17 +86,8 @@
             <a href="{% url 'social:begin' 'google-oauth2' %}"><img src="{% static 'images/google.svg' %}" alt="Sign up with google"/></a>
             <a href="{% url 'social:begin' 'facebook' %}"><img src="{% static 'images/facebook.png' %}" alt="Sign up with facebook"/></a>
           </div>
-<<<<<<< HEAD
-          <p>
-            Don't have an account?
-            <span
-              ><a href="/signup">Sign up</a></span
-              
-            >
-=======
           <p id="account">Don't have an account?
             <span><a href="{% url 'userauthentication:signup' %}">Sign Up</a></span>
->>>>>>> 610de8b8a99e3e14032d110cc3e72ad61173fe30
           </p>
         </div>
       </div>
@@ -106,13 +99,10 @@
     </div>
 
     
-    {% comment %}
-    <script src="{% static 'js/login2.js' %}"></script>
-    {% endcomment %} {% comment %}
-    <script src="{% static 'js/password2.js' %}"></script>
-    {% endcomment %}
-
     {% endblock %}
-    <script src="login.js"></script>
+{% comment %} 
+    <script src="{% static 'js/logi.js' %}"></script>
+    <script src="{% static 'js/password.js' %}"></script> {% endcomment %}
+    
   </body>
 </html>
