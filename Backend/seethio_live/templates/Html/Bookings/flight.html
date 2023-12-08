@@ -280,7 +280,8 @@
       <!-- flight -->
       <div class="flight1 containerd text-center" id="flightcontainer">
               <!-- flight_search/templates/flight_search/search_flights.html -->
-        <form method="post" action="{% url 'search_flights' %}">
+        <form method="post" action="{% url 'Booking:search_flights' %}">
+
           {% csrf_token %}
           {{ form.as_p }}
           <div class="containerflight">

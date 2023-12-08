@@ -1,0 +1,7 @@
+<!-- flight_search/templates/flight_search/search_flights.html -->
+<form method="post" action="{% url 'search_flights' %}">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Search Flights</button>
+  </form>
+  

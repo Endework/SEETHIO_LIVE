@@ -1,0 +1,8 @@
+<!-- flight_search/templates/flight_search/results.html -->
+{% for flight in flights %}
+  {{ flight.origin.name }} to {{ flight.destination.name }}<br>
+  Departure: {{ flight.departure_time }}<br>
+  Arrival: {{ flight.arrival_time }}<br>
+  Price: ${{ flight.price }}<br>
+  <hr>
+{% endfor %}

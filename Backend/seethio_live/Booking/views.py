@@ -1,12 +1,11 @@
-from django.shortcuts import render
-# views.py
+
 from django.shortcuts import render
 from django.http import JsonResponse
 from amadeus import Client, ResponseError
 from .forms import FlightSearchForm
 
 def flights_view(request):
-    return render(request, 'Html/Flight/flight.html')
+     return render(request, 'Html/Bookings/flight.html')
 
 def search_flights(request):
     if request.method == 'POST':
@@ -16,11 +15,11 @@ def search_flights(request):
             # Update the view logic based on Amadeus API response
             # Save relevant data to the Flight model
             # Render the results to the user
-            return render(request, 'flight_search/results.html', {'flights': flights})
+            return render(request, 'Html/Bookings/testing.html', {'flights': flights})
     else:
         form = FlightSearchForm()
 
-    return render(request, 'flight_search/search_flights.html', {'form': form})
+    return render(request, 'Html/Bookings/test.html', {'form': form})
 
 
 # def search_flights(request):
