@@ -20,116 +20,151 @@
       crossorigin="anonymous"
     />
     <!-- style sheet -->
-    <link rel="stylesheet" href="/Front-end/Css/Restaurants.css" />
-    
+    <link rel="stylesheet" href="../Css/Restaurants.css" />
   </head>
   <body>
     <header>
-        <nav class="navbar navbar-expand-lg fixed-top">
-            <div class="container-fluid">
-              <img src="../images/navlogo.png" alt="nav logo" />
-              <button
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent"
-                aria-expanded="false"
-                aria-label="Toggle navigation"
-                class="navbar-toggler navbar-toggler-right"
-              >
-                <i class="fa fa-bars"></i>
-              </button>
-    
-              <div id="navbarSupportedContent" class="collapse navbar-collapse">
-                <ul class="navbar-nav ml-auto">
-                  <li class="nav-item">
-                    <a class="nav-link active " aria-current="page" href="#"
-                      >Home</a
+      <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+          <img src="../images/navlogo.png" alt="nav logo" />
+          <button
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+            class="navbar-toggler navbar-toggler-right"
+          >
+            <i class="fa fa-bars"></i>
+          </button>
+
+          <div id="navbarSupportedContent" class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle home"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Places to Go
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="./attractionCenter.html"
+                      >Attraction Centers</a
                     >
                   </li>
-                  <li class="nav-item dropdown">
-                    <a
-                      class="nav-link dropdown-toggle home"
-                      href="#"
-                      role="button"
-                      data-bs-toggle="dropdown"
-                      aria-expanded="false"
+                  <li>
+                    <a class="dropdown-item" href="./Restaurantanddining.html"
+                      >Dinings</a
                     >
-                      Places to Go
-                    </a>
-                    <ul class="dropdown-menu">
-                      <li>
-                        <a class="dropdown-item" href="./attractionCenter.html">Attraction Centers</a>
-                      </li>
-                      <li><a class="dropdown-item" href="./Restaurantanddining.html">Dinings</a></li>
-                      <li><a class="dropdown-item" href="./market.html">Local Market</a></li>
-                    </ul>
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="./Lodge.html">Lodging</a>
+                  <li>
+                    <a class="dropdown-item" href="./market.html"
+                      >Local Market</a
+                    >
                   </li>
-                  <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="./Flight.html">Flight</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="./Ride.html">Find Rides</a>
-                  </li>
-    
-                  <div style="display: flex; justify-content: center">
-                   
-                    <li class="nav-item dropdown mt-2 pt-3 d-flex align-items-center gap-1">
-                      <a href="./Dashboard/Dashboard.html"><i class="fa-solid fa-user mb-4"></i> </a>
-                      <a
-                        class="nav-link dropdown-toggle mb-4"
-                        href="#"
-                        role="button"
-                        data-bs-toggle="dropdown"
-                        aria-expanded="false"
-                      >
-                       User Name
-                       
-                      </a>
-                      <ul class="dropdown-menu">
-                        <div class="d-flex align-items-center tx">
-                          <i class="fa-solid fa-gear"></i>
-                          <li>
-                            <a class="dropdown-item" href="./Dashboard/Accountsetting.html"> Account Settings</a>
-                          </li>
-                        </div>
-                        <!-- <hr class="bg-light"> -->
-                        <div class="d-flex align-items-center tx">
-                          <i class="fa-solid fa-rectangle-list"></i>
-                          <li><a class="dropdown-item" href="./Dashboard/Itineraries.html">Bucket list</a></li>
-                        </div>
-                        <!-- <hr> -->
-                        <div class="d-flex align-items-center tx">
-                          <i class="fa-solid fa-book"></i>
-                          <li>
-                            <a class="dropdown-item" href="./Dashboard/Bookings.html"> Bookings History</a>
-                          </li>
-                        </div>
-                        <!-- <hr> -->
-                      </ul>
-                    </li>
-                  </div>
                 </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="./Lodge.html"
+                  >Lodging</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="./Flight.html"
+                  >Flight</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="./Ride.html"
+                  >Find Rides</a
+                >
+              </li>
+
+              <div style="display: flex; justify-content: center">
+                <li
+                  class="nav-item dropdown mt-2 pt-3 d-flex align-items-center gap-1"
+                >
+                  <a href="./Dashboard/Dashboard.html"
+                    ><i class="fa-solid fa-user mb-4"></i>
+                  </a>
+                  <a
+                    class="nav-link dropdown-toggle mb-4"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    User Name
+                  </a>
+                  <ul class="dropdown-menu">
+                    <div class="d-flex align-items-center tx">
+                      <i class="fa-solid fa-gear"></i>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="./Dashboard/Accountsetting.html"
+                        >
+                          Account Settings</a
+                        >
+                      </li>
+                    </div>
+                    <!-- <hr class="bg-light"> -->
+                    <div class="d-flex align-items-center tx">
+                      <i class="fa-solid fa-rectangle-list"></i>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="./Dashboard/Itineraries.html"
+                          >Bucket list</a
+                        >
+                      </li>
+                    </div>
+                    <!-- <hr> -->
+                    <div class="d-flex align-items-center tx">
+                      <i class="fa-solid fa-book"></i>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="./Dashboard/Bookings.html"
+                        >
+                          Bookings History</a
+                        >
+                      </li>
+                    </div>
+                    <!-- <hr> -->
+                  </ul>
+                </li>
               </div>
-            </div>
-          </nav>
-          <img id="p13" src="/Front-end/images/Polygon 13.svg" alt="">
-          <img id="p9" src="/Front-end/images/Polygon 9.svg" alt="">
-          <img id="p11" src="/Front-end/images/Polygon 11.svg" alt="">
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <img id="p13" src="../images/Polygon 13.svg" alt="" />
+      <img id="p9" src="../images/Polygon 9.svg" alt="" />
+      <img id="p11" src="../images/Polygon 11.svg" alt="" />
     </header>
 
     <div class="main">
-      
       <div class="right-content">
-        <h3 class="mtitle">Experience the Rich Culinary Heritage of Ethiopia. </h3>
-        <p  class="info">Discover local and intercontinental dishes served in Ethiopia’s top restaurants and dinings.</p>
-       
+        <h3 class="mtitle">
+          Experience the Rich Culinary Heritage of Ethiopia.
+        </h3>
+        <p class="info">
+          Discover local and intercontinental dishes served in Ethiopia’s top
+          restaurants and dinings.
+        </p>
+
         <div class="filter d-flex align-items-center">
-            <div class="filter_wrapper">
-              <p class="filterby mt-1 pt-2">Filter by</p>
+          <div class="filter_wrapper">
+            <p class="filterby mt-1 pt-2">Filter by</p>
             <div class="filter-content">
               <input type="checkbox" name="Lodge" id="Lodge" />
               <label for="Lodge">Local/Traditional Cuisine</label>
@@ -138,7 +173,6 @@
               <input type="checkbox" name="Flights" id="Flights" />
               <label for="Flights">Intercontinental Cuisine</label>
             </div>
-            
           </div>
           <div class="filterbuttons">
             <button class="clear">Clear All</button>
@@ -152,21 +186,9 @@
             <p class="bucket">Add to Bucketlist</p>
             <div class="carousel1">
               <div class="carousel-images">
-                <img
-                  class="carousel-image"
-                  src="/Front-end/images/v1.png"
-                  alt=""
-                />
-                <img
-                  class="carousel-image"
-                  src="/Front-end/images/v2.png"
-                  alt=""
-                />
-                <img
-                  class="carousel-image"
-                  src="/Front-end/images/v3.png"
-                  alt=""
-                />
+                <img class="carousel-image" src="../images/v1.png" alt="" />
+                <img class="carousel-image" src="../images/v2.png" alt="" />
+                <img class="carousel-image" src="../images/v3.png" alt="" />
               </div>
             </div>
             <div class="body-div">
@@ -192,17 +214,16 @@
                   <i class="fa-star fa-solid"></i>
                   <i class="fa-star fa-solid"></i>
                   <i class="fa-star fa-solid"></i>
-                  
+
                   <p style="color: #4f4f4f">5.0 (600 Reviews)</p>
                 </div>
               </div>
               <div class="body-text">
                 <p>
-                    Cuisines <br>
-                    African, Intercontinental, Ethiopian.
+                  Cuisines <br />
+                  African, Intercontinental, Ethiopian.
                 </p>
               </div>
-              
             </div>
           </div>
           <!-- card2 -->
@@ -210,21 +231,9 @@
             <p class="bucket">Add to Bucketlist</p>
             <div class="carousel2">
               <div class="carousel-images">
-                <img
-                  class="carousel-image"
-                  src="/Front-end/images/l1.png"
-                  alt=""
-                />
-                <img
-                  class="carousel-image"
-                  src="/Front-end/images/l2.png"
-                  alt=""
-                />
-                <img
-                  class="carousel-image"
-                  src="/Front-end/images/l3.png"
-                  alt=""
-                />
+                <img class="carousel-image" src="../images/l1.png" alt="" />
+                <img class="carousel-image" src="../images/l2.png" alt="" />
+                <img class="carousel-image" src="../images/l3.png" alt="" />
               </div>
             </div>
             <div class="body-div">
@@ -232,11 +241,14 @@
                 <div class="left">
                   <h6>Location:</h6>
                   <p>Menelik II Ave, Addis Ababa</p>
-                  <a href="https://www.google.com/maps/place/La+Patisserie/@9.0114698,38.7623459,15z/data=!4m6!3m5!1s0x164b85b9515ad27f:0xce26a471028ae1c9!8m2!3d9.0114698!4d38.7623459!16s%2Fg%2F11c2pr8ggq?entry=ttu">View on Map</a>
+                  <a
+                    href="https://www.google.com/maps/place/La+Patisserie/@9.0114698,38.7623459,15z/data=!4m6!3m5!1s0x164b85b9515ad27f:0xce26a471028ae1c9!8m2!3d9.0114698!4d38.7623459!16s%2Fg%2F11c2pr8ggq?entry=ttu"
+                    >View on Map</a
+                  >
                 </div>
                 <div class="right">
                   <h6>Price:</h6>
-                  <p> From <span class="price1"> $1</span></p>
+                  <p>From <span class="price1"> $1</span></p>
                 </div>
               </div>
               <div class="body-title">
@@ -252,11 +264,10 @@
               </div>
               <div class="body-text">
                 <p>
-                    Cuisines <br>
-                    American, Cafe, French.
+                  Cuisines <br />
+                  American, Cafe, French.
                 </p>
               </div>
-              
             </div>
           </div>
           <!-- card3 -->
@@ -264,21 +275,9 @@
             <p class="bucket">Add to Bucketlist</p>
             <div class="carousel3">
               <div class="carousel-images">
-                <img
-                  class="carousel-image"
-                  src="/Front-end/images/B1.png"
-                  alt=""
-                />
-                <img
-                  class="carousel-image"
-                  src="/Front-end/images/B2.png"
-                  alt=""
-                />
-                <img
-                  class="carousel-image"
-                  src="/Front-end/images/b3.png"
-                  alt=""
-                />
+                <img class="carousel-image" src="../images/B1.png" alt="" />
+                <img class="carousel-image" src="../images/B2.png" alt="" />
+                <img class="carousel-image" src="../images/b3.png" alt="" />
               </div>
             </div>
             <div class="body-div">
@@ -286,12 +285,14 @@
                 <div class="left">
                   <h6>Location:</h6>
                   <p>Sekota Road, Lalibia.</p>
-                  <a href="https://www.google.com/maps/place/Ben+Abeba/@12.0432771,39.0370726,15z/data=!4m6!3m5!1s0x16413ef88b36ce97:0x266174b737567dd1!8m2!3d12.0431495!4d39.03699!16s%2Fg%2F11b5wjg1j7?entry=ttu">View on Map</a>
+                  <a
+                    href="https://www.google.com/maps/place/Ben+Abeba/@12.0432771,39.0370726,15z/data=!4m6!3m5!1s0x16413ef88b36ce97:0x266174b737567dd1!8m2!3d12.0431495!4d39.03699!16s%2Fg%2F11b5wjg1j7?entry=ttu"
+                    >View on Map</a
+                  >
                 </div>
                 <div class="right">
                   <h6>Price:</h6>
                   <p>From <span class="price1">$3</span></p>
-                  
                 </div>
               </div>
               <div class="body-title">
@@ -307,198 +308,157 @@
               </div>
               <div class="body-text">
                 <p>
-                    Cuisines <br>
-                    African, European, Ethiopian, International.
+                  Cuisines <br />
+                  African, European, Ethiopian, International.
                 </p>
               </div>
-             
             </div>
           </div>
         </div>
         <!-- second div -->
         <div class="card-div">
-            <!-- card1 -->
-            <div class="card">
-              <p class="bucket">Add to Bucketlist</p>
-              <div class="carousel10">
-                <div class="carousel-images">
-                  <img
-                    class="carousel-image"
-                    src="/Front-end/images/t1.png"
-                    alt=""
-                  />
-                  <img
-                    class="carousel-image"
-                    src="/Front-end/images/t2.png"
-                    alt=""
-                  />
-                  <img
-                    class="carousel-image"
-                    src="/Front-end/images/t3.png"
-                    alt=""
-                  />
-                </div>
-              </div>
-              <div class="body-div">
-                <div class="price">
-                  <div class="left">
-                    <h6>Location:</h6>
-                    <p>Cameroon St, Addis Ababa, </p>
-                   <a href="https://www.google.com/maps/search/kategna+restaurant/@8.9957083,38.7225819,13z/data=!3m1!4b1?entry=ttu">View on Map</a>
-                  </div>
-                  <div class="right">
-                    <h6>Price:</h6>
-                    <p>From <span class="price1">$</span></p>
-                   
-                  </div>
-                </div>
-                <div class="body-title">
-                  <p><b>Ketegna Restaurant</b></p>
-                  <div class="review d-flex gap-1">
-                    <i class="fa-star fa-solid"></i>
-                    <i class="fa-star fa-solid"></i>
-                    <i class="fa-star fa-solid"></i>
-                    <i class="fa-star fa-solid"></i>
-                    <i class="fa-star-half-stroke fa-solid"></i>
-                    <p style="color: #4f4f4f">4.3 (534 Reviews)</p>
-                  </div>
-                </div>
-                <div class="body-text">
-                  <p>
-                      Cuisines <br>
-                      African, Ethiopian.
-                  </p>
-                </div>
-                
+          <!-- card1 -->
+          <div class="card">
+            <p class="bucket">Add to Bucketlist</p>
+            <div class="carousel10">
+              <div class="carousel-images">
+                <img class="carousel-image" src="../images/t1.png" alt="" />
+                <img class="carousel-image" src="../images/t2.png" alt="" />
+                <img class="carousel-image" src="../images/t3.png" alt="" />
               </div>
             </div>
-            <!-- card2 -->
-            <div class="card">
-             <p class="bucket">Add to Bucketlist</p>
-              <div class="carousel11">
-                <div class="carousel-images">
-                  <img
-                    class="carousel-image"
-                    src="/Front-end/images/s1.png"
-                    alt=""
-                  />
-                  <img
-                    class="carousel-image"
-                    src="/Front-end/images/s2.png"
-                    alt=""
-                  />
-                  <img
-                    class="carousel-image"
-                    src="/Front-end/images/s3.png"
-                    alt=""
-                  />
+            <div class="body-div">
+              <div class="price">
+                <div class="left">
+                  <h6>Location:</h6>
+                  <p>Cameroon St, Addis Ababa,</p>
+                  <a
+                    href="https://www.google.com/maps/search/kategna+restaurant/@8.9957083,38.7225819,13z/data=!3m1!4b1?entry=ttu"
+                    >View on Map</a
+                  >
+                </div>
+                <div class="right">
+                  <h6>Price:</h6>
+                  <p>From <span class="price1">$</span></p>
                 </div>
               </div>
-              <div class="body-div">
-                <div class="price">
-                  <div class="left">
-                    <h6>Location:</h6>
-                    <p>Alexander, Pushkin St, Addis Ababa </p>
-                    <a href="https://www.google.com/maps/place/Sishu/@8.9873106,38.7422243,17z/data=!3m1!4b1!4m6!3m5!1s0x164b8424886d2313:0xe09f244533e937ad!8m2!3d8.9873106!4d38.7447992!16s%2Fg%2F1hm22jwqs?hl=en&entry=tts">View on Map</a>
-                  </div>
-                  <div class="right">
-                    <h6>Price:</h6>
-                    <p>From <span>$</span></p>
-                  </div>
-                </div>
-                <div class="body-title">
-                  <p><b>Shishu Restaurant</b></p>
-                  <div class="review d-flex gap-1">
-                    <i class="fa-star fa-solid"></i>
-                    <i class="fa-star fa-solid"></i>
-                    <i class="fa-star fa-solid"></i>
-                    <i class="fa-star fa-solid"></i>
-                    <i class="fa-star-half-stroke fa-solid"></i>
-                    <p style="color: #4f4f4f">4.5 (426 Reviews)</p>
-                  </div>
-                </div>
-                <div class="body-text">
-                  <p>Cuisines <br>
-                    American.
-                </div>
-               
-              </div>
-            </div>
-            <!-- card3 -->
-            <div class="card">
-              <p class="bucket">Add to Bucketlist</p>
-              <div class="carousel12">
-                <div class="carousel-images">
-                  <img
-                    class="carousel-image"
-                    src="/Front-end/images/f1.png"
-                    alt=""
-                  />
-                  <img
-                    class="carousel-image"
-                    src="/Front-end/images/f2.png"
-                    alt=""
-                  />
-                  <img
-                    class="carousel-image"
-                    src="/Front-end/images/f3.png"
-                    alt=""
-                  />
+              <div class="body-title">
+                <p><b>Ketegna Restaurant</b></p>
+                <div class="review d-flex gap-1">
+                  <i class="fa-star fa-solid"></i>
+                  <i class="fa-star fa-solid"></i>
+                  <i class="fa-star fa-solid"></i>
+                  <i class="fa-star fa-solid"></i>
+                  <i class="fa-star-half-stroke fa-solid"></i>
+                  <p style="color: #4f4f4f">4.3 (534 Reviews)</p>
                 </div>
               </div>
-              <div class="body-div">
-                <div class="price">
-                  <div class="left">
-                    <h6>Location:</h6>
-                    <p>Gonder, Ethiopia </p>
-                    <a href="https://www.google.com/maps/search/gusto+restaurant+addis+ababa+ethiopia/@9.0109506,38.7033256,13z/data=!3m1!4b1?hl=en&entry=ttu">View on Map</a>
-                  </div>
-                  <div class="right">
-                    <h6>Price:</h6>
-                    <p >From <span class="price1">$</span></p>
-                    
-                  </div>
-                </div>
-                <div class="body-title">
-                  <p><b>The Four Sisters Restaurants</b></p>
-                  <div class="review d-flex gap-1">
-                    <i class="fa-star fa-solid"></i>
-                    <i class="fa-star fa-solid"></i>
-                    <i class="fa-star fa-solid"></i>
-                    <i class="fa-star fa-solid"></i>
-                    <i class="fa-star-half-stroke fa-solid"></i>
-                    <p style="color: #4f4f4f">4.5 (245 Reviews)</p>
-                  </div>
-                </div>
-                <div class="body-text">
-                 <p>Cuisines <br>
-                    Eropean, African, Ethiopian.</p>
-                </div>
-               
+              <div class="body-text">
+                <p>
+                  Cuisines <br />
+                  African, Ethiopian.
+                </p>
               </div>
             </div>
           </div>
+          <!-- card2 -->
+          <div class="card">
+            <p class="bucket">Add to Bucketlist</p>
+            <div class="carousel11">
+              <div class="carousel-images">
+                <img class="carousel-image" src="../images/s1.png" alt="" />
+                <img class="carousel-image" src="../images/s2.png" alt="" />
+                <img class="carousel-image" src="../images/s3.png" alt="" />
+              </div>
+            </div>
+            <div class="body-div">
+              <div class="price">
+                <div class="left">
+                  <h6>Location:</h6>
+                  <p>Alexander, Pushkin St, Addis Ababa</p>
+                  <a
+                    href="https://www.google.com/maps/place/Sishu/@8.9873106,38.7422243,17z/data=!3m1!4b1!4m6!3m5!1s0x164b8424886d2313:0xe09f244533e937ad!8m2!3d8.9873106!4d38.7447992!16s%2Fg%2F1hm22jwqs?hl=en&entry=tts"
+                    >View on Map</a
+                  >
+                </div>
+                <div class="right">
+                  <h6>Price:</h6>
+                  <p>From <span>$</span></p>
+                </div>
+              </div>
+              <div class="body-title">
+                <p><b>Shishu Restaurant</b></p>
+                <div class="review d-flex gap-1">
+                  <i class="fa-star fa-solid"></i>
+                  <i class="fa-star fa-solid"></i>
+                  <i class="fa-star fa-solid"></i>
+                  <i class="fa-star fa-solid"></i>
+                  <i class="fa-star-half-stroke fa-solid"></i>
+                  <p style="color: #4f4f4f">4.5 (426 Reviews)</p>
+                </div>
+              </div>
+              <div class="body-text">
+                <p>
+                  Cuisines <br />
+                  American.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- card3 -->
+          <div class="card">
+            <p class="bucket">Add to Bucketlist</p>
+            <div class="carousel12">
+              <div class="carousel-images">
+                <img class="carousel-image" src="../images/f1.png" alt="" />
+                <img class="carousel-image" src="../images/f2.png" alt="" />
+                <img class="carousel-image" src="../images/f3.png" alt="" />
+              </div>
+            </div>
+            <div class="body-div">
+              <div class="price">
+                <div class="left">
+                  <h6>Location:</h6>
+                  <p>Gonder, Ethiopia</p>
+                  <a
+                    href="https://www.google.com/maps/search/gusto+restaurant+addis+ababa+ethiopia/@9.0109506,38.7033256,13z/data=!3m1!4b1?hl=en&entry=ttu"
+                    >View on Map</a
+                  >
+                </div>
+                <div class="right">
+                  <h6>Price:</h6>
+                  <p>From <span class="price1">$</span></p>
+                </div>
+              </div>
+              <div class="body-title">
+                <p><b>The Four Sisters Restaurants</b></p>
+                <div class="review d-flex gap-1">
+                  <i class="fa-star fa-solid"></i>
+                  <i class="fa-star fa-solid"></i>
+                  <i class="fa-star fa-solid"></i>
+                  <i class="fa-star fa-solid"></i>
+                  <i class="fa-star-half-stroke fa-solid"></i>
+                  <p style="color: #4f4f4f">4.5 (245 Reviews)</p>
+                </div>
+              </div>
+              <div class="body-text">
+                <p>
+                  Cuisines <br />
+                  Eropean, African, Ethiopian.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="card-div">
           <!-- card1 -->
           <div class="card">
             <p class="bucket">Add to Bucketlist</p>
             <div class="carousel4">
               <div class="carousel-images">
-                <img
-                  class="carousel-image"
-                  src="/Front-end/images/tt1.png"
-                  alt=""
-                />
-                <img
-                  class="carousel-image"
-                  src="/Front-end/images/tt2.png"
-                  alt=""
-                />
-                <img
-                  class="carousel-image"
-                  src="/Front-end/images/tt3.png"
-                  alt=""
-                />
+                <img class="carousel-image" src="../images/tt1.png" alt="" />
+                <img class="carousel-image" src="../images/tt2.png" alt="" />
+                <img class="carousel-image" src="../images/tt3.png" alt="" />
               </div>
             </div>
             <div class="body-div">
@@ -506,12 +466,14 @@
                 <div class="left">
                   <h6>Location:</h6>
                   <p>Addis Ababa, Ethiopia</p>
-                 <a href="https://www.google.com/maps/place/Totot+Traditional+food+Hall+%7C+Gerji+%7C+%E1%89%B6%E1%89%B6%E1%89%B5+%7C+%E1%8C%88%E1%88%AD%E1%8C%82/@9.0072739,38.8061699,15z/data=!4m6!3m5!1s0x164b8599dd6be6a5:0x6f01def6f8644ea2!8m2!3d9.0072739!4d38.8061699!16s%2Fg%2F11j5qlc4dr?hl=en&entry=ttu">View on Map</a>
+                  <a
+                    href="https://www.google.com/maps/place/Totot+Traditional+food+Hall+%7C+Gerji+%7C+%E1%89%B6%E1%89%B6%E1%89%B5+%7C+%E1%8C%88%E1%88%AD%E1%8C%82/@9.0072739,38.8061699,15z/data=!4m6!3m5!1s0x164b8599dd6be6a5:0x6f01def6f8644ea2!8m2!3d9.0072739!4d38.8061699!16s%2Fg%2F11j5qlc4dr?hl=en&entry=ttu"
+                    >View on Map</a
+                  >
                 </div>
                 <div class="right">
                   <h6>Price:</h6>
                   <p>From <span class="price1">$</span></p>
-                 
                 </div>
               </div>
               <div class="body-title">
@@ -527,33 +489,20 @@
               </div>
               <div class="body-text">
                 <p>
-                    Cuisines <br>
-                    African, Ethiopian.
+                  Cuisines <br />
+                  African, Ethiopian.
                 </p>
               </div>
-              
             </div>
           </div>
           <!-- card2 -->
           <div class="card">
-           <p class="bucket">Add to Bucketlist</p>
+            <p class="bucket">Add to Bucketlist</p>
             <div class="carousel5">
               <div class="carousel-images">
-                <img
-                  class="carousel-image"
-                  src="/Front-end/images/y1.png"
-                  alt=""
-                />
-                <img
-                  class="carousel-image"
-                  src="/Front-end/images/y2.png"
-                  alt=""
-                />
-                <img
-                  class="carousel-image"
-                  src="/Front-end/images/y3.png"
-                  alt=""
-                />
+                <img class="carousel-image" src="../images/y1.png" alt="" />
+                <img class="carousel-image" src="../images/y2.png" alt="" />
+                <img class="carousel-image" src="../images/y3.png" alt="" />
               </div>
             </div>
             <div class="body-div">
@@ -561,7 +510,10 @@
                 <div class="left">
                   <h6>Location:</h6>
                   <p>Addis Ababa, Ethiopia</p>
-                  <a href="https://www.google.com/maps/search/yod+abyssinia+traditional+restaurant/@8.9939935,38.7213895,13z/data=!3m1!4b1?hl=en&entry=ttu">View on Map</a>
+                  <a
+                    href="https://www.google.com/maps/search/yod+abyssinia+traditional+restaurant/@8.9939935,38.7213895,13z/data=!3m1!4b1?hl=en&entry=ttu"
+                    >View on Map</a
+                  >
                 </div>
                 <div class="right">
                   <h6>Price:</h6>
@@ -580,10 +532,11 @@
                 </div>
               </div>
               <div class="body-text">
-                <p>Cuisines <br>
-                    African, Healthy, Ethiopian.</p>
+                <p>
+                  Cuisines <br />
+                  African, Healthy, Ethiopian.
+                </p>
               </div>
-             
             </div>
           </div>
           <!-- card3 -->
@@ -591,34 +544,24 @@
             <p class="bucket">Add to Bucketlist</p>
             <div class="carousel6">
               <div class="carousel-images">
-                <img
-                  class="carousel-image"
-                  src="/Front-end/images/yy1.png"
-                  alt=""
-                />
-                <img
-                  class="carousel-image"
-                  src="/Front-end/images/yy2.png"
-                  alt=""
-                />
-                <img
-                  class="carousel-image"
-                  src="/Front-end/images/yy3.png"
-                  alt=""
-                />
+                <img class="carousel-image" src="../images/yy1.png" alt="" />
+                <img class="carousel-image" src="../images/yy2.png" alt="" />
+                <img class="carousel-image" src="../images/yy3.png" alt="" />
               </div>
             </div>
             <div class="body-div">
               <div class="price">
                 <div class="left">
                   <h6>Location:</h6>
-                  <p>Torhylouc, Minaye, Addis Ababa, </p>
-                  <a href="https://www.google.com/maps/search/gusto+restaurant+addis+ababa+ethiopia/@9.0109506,38.7033256,13z/data=!3m1!4b1?hl=en&entry=ttu">View on Map</a>
+                  <p>Torhylouc, Minaye, Addis Ababa,</p>
+                  <a
+                    href="https://www.google.com/maps/search/gusto+restaurant+addis+ababa+ethiopia/@9.0109506,38.7033256,13z/data=!3m1!4b1?hl=en&entry=ttu"
+                    >View on Map</a
+                  >
                 </div>
                 <div class="right">
                   <h6>Price:</h6>
-                  <p >From <span class="price1">$5</span></p>
-                  
+                  <p>From <span class="price1">$5</span></p>
                 </div>
               </div>
               <div class="body-title">
@@ -633,10 +576,11 @@
                 </div>
               </div>
               <div class="body-text">
-               <p>Cuisines <br>
-                Italian, Mediterranean, European, French, Spanish.</p>
+                <p>
+                  Cuisines <br />
+                  Italian, Mediterranean, European, French, Spanish.
+                </p>
               </div>
-             
             </div>
           </div>
         </div>
@@ -647,34 +591,24 @@
             <p class="bucket">Add to Bucketlist</p>
             <div class="carousel7">
               <div class="carousel-images">
-                <img
-                  class="carousel-image"
-                  src="/Front-end/images/c1.png"
-                  alt=""
-                />
-                <img
-                  class="carousel-image"
-                  src="/Front-end/images/c2.png"
-                  alt=""
-                />
-                <img
-                  class="carousel-image"
-                  src="/Front-end/images/c3.png"
-                  alt=""
-                />
+                <img class="carousel-image" src="../images/c1.png" alt="" />
+                <img class="carousel-image" src="../images/c2.png" alt="" />
+                <img class="carousel-image" src="../images/c3.png" alt="" />
               </div>
             </div>
             <div class="body-div">
               <div class="price">
                 <div class="left">
                   <h6>Location:</h6>
-                  <p>Mahatma - Gandhi St, Addis Ababa, </p>
-                  <a href="https://www.google.com/maps/place/Castelli's+Restaurant+%7C+piasa+%7C+%E1%8A%AB%E1%88%B5%E1%89%B5%E1%88%8D+%E1%88%AC%E1%88%B5%E1%89%B6%E1%88%AB%E1%8A%95%E1%89%B5+%7C+%E1%8D%92%E1%8B%AB%E1%88%B3/@25.2549555,-38.8182793,3z/data=!4m6!3m5!1s0x164b85f6a39ce52d:0xf61a8b7fe9f0d13e!8m2!3d9.0321889!4d38.752846!16s%2Fg%2F1td6_cfk?hl=en&entry=ttu">View on Map</a>
+                  <p>Mahatma - Gandhi St, Addis Ababa,</p>
+                  <a
+                    href="https://www.google.com/maps/place/Castelli's+Restaurant+%7C+piasa+%7C+%E1%8A%AB%E1%88%B5%E1%89%B5%E1%88%8D+%E1%88%AC%E1%88%B5%E1%89%B6%E1%88%AB%E1%8A%95%E1%89%B5+%7C+%E1%8D%92%E1%8B%AB%E1%88%B3/@25.2549555,-38.8182793,3z/data=!4m6!3m5!1s0x164b85f6a39ce52d:0xf61a8b7fe9f0d13e!8m2!3d9.0321889!4d38.752846!16s%2Fg%2F1td6_cfk?hl=en&entry=ttu"
+                    >View on Map</a
+                  >
                 </div>
                 <div class="right">
                   <h6>Price:</h6>
                   <p>From <span class="price1">$</span></p>
-                  
                 </div>
               </div>
               <div class="body-title">
@@ -691,46 +625,35 @@
               </div>
               <div class="body-text">
                 <p>
-                    Cuisines <br>
-                    Italian, European.
+                  Cuisines <br />
+                  Italian, European.
                 </p>
               </div>
-              
             </div>
           </div>
           <!-- card2 -->
           <div class="card">
-            <p class="bucket"> Add to Bucketlist</p>
+            <p class="bucket">Add to Bucketlist</p>
             <div class="carousel8">
               <div class="carousel-images">
-                <img
-                  class="carousel-image"
-                  src="/Front-end/images/le1.png"
-                  alt=""
-                />
-                <img
-                  class="carousel-image"
-                  src="/Front-end/images/le2.png"
-                  alt=""
-                />
-                <img
-                  class="carousel-image"
-                  src="/Front-end/images/Le3.png"
-                  alt=""
-                />
+                <img class="carousel-image" src="../images/le1.png" alt="" />
+                <img class="carousel-image" src="../images/le2.png" alt="" />
+                <img class="carousel-image" src="../images/Le3.png" alt="" />
               </div>
             </div>
             <div class="body-div">
               <div class="price">
                 <div class="left">
                   <h6>Location:</h6>
-                  <p>Bole Atlas, Addis Ababa, </p>
-                  <a href="https://www.google.com/maps/place/Le+Grand+Reve,+Belgian+Restaurant/@9.0004077,38.781692,17z/data=!3m1!4b1!4m6!3m5!1s0x164b85012cd68843:0xa2ec5389c98200d1!8m2!3d9.0004077!4d38.781692!16s%2Fg%2F11b6hsl1vc?hl=en&entry=ttu">View on Map</a>
+                  <p>Bole Atlas, Addis Ababa,</p>
+                  <a
+                    href="https://www.google.com/maps/place/Le+Grand+Reve,+Belgian+Restaurant/@9.0004077,38.781692,17z/data=!3m1!4b1!4m6!3m5!1s0x164b85012cd68843:0xa2ec5389c98200d1!8m2!3d9.0004077!4d38.781692!16s%2Fg%2F11b6hsl1vc?hl=en&entry=ttu"
+                    >View on Map</a
+                  >
                 </div>
                 <div class="right">
                   <h6>Price:</h6>
                   <p>From<span class="price1"> $7</span></p>
-                 
                 </div>
               </div>
               <div class="body-title">
@@ -746,47 +669,36 @@
               </div>
               <div class="body-text">
                 <p>
-                    Cuisines <br>
-                    Belgian, European, French.
+                  Cuisines <br />
+                  Belgian, European, French.
                 </p>
               </div>
-              
             </div>
           </div>
           <!-- card3 -->
           <div class="card">
-           <p class="bucket">Add to Bucketlist</p>
-            </button>
+            <p class="bucket">Add to Bucketlist</p>
+
             <div class="carousel9">
               <div class="carousel-images">
-                <img
-                  class="carousel-image"
-                  src="/Front-end/images/k1.png"
-                  alt=""
-                />
-                <img
-                  class="carousel-image"
-                  src="/Front-end/images/k2.png"
-                  alt=""
-                />
-                <img
-                  class="carousel-image"
-                  src="/Front-end/images/k3.png"
-                  alt=""
-                />
+                <img class="carousel-image" src="../images/k1.png" alt="" />
+                <img class="carousel-image" src="../images/k2.png" alt="" />
+                <img class="carousel-image" src="../images/k3.png" alt="" />
               </div>
             </div>
             <div class="body-div">
               <div class="price">
                 <div class="left">
                   <h6>Location:</h6>
-                  <p>Hyatt Regency, Meskel Square,
-                    Addis Ababa, </p>
-                    <a href="https://www.google.com/maps/place/The+Kitchen/@9.010139,38.7619192,17z/data=!3m1!4b1!4m6!3m5!1s0x164b85d65ead9e2f:0xc29db3e8c8d4d16c!8m2!3d9.010139!4d38.7644941!16s%2Fg%2F11fmbb4nzv?entry=tts">View on Map</a>
+                  <p>Hyatt Regency, Meskel Square, Addis Ababa,</p>
+                  <a
+                    href="https://www.google.com/maps/place/The+Kitchen/@9.010139,38.7619192,17z/data=!3m1!4b1!4m6!3m5!1s0x164b85d65ead9e2f:0xc29db3e8c8d4d16c!8m2!3d9.010139!4d38.7644941!16s%2Fg%2F11fmbb4nzv?entry=tts"
+                    >View on Map</a
+                  >
                 </div>
                 <div class="right">
                   <h6>Price:</h6>
-                  <p >From<span class="price1"> $10</span></p>
+                  <p>From<span class="price1"> $10</span></p>
                 </div>
               </div>
               <div class="body-title">
@@ -802,182 +714,182 @@
                 </div>
               </div>
               <div class="body-text">
-                <p>Cuisines <br>
-                    Mediterranean, Healthy, Middle Eastern.</p>
+                <p>
+                  Cuisines <br />
+                  Mediterranean, Healthy, Middle Eastern.
+                </p>
               </div>
-              
             </div>
           </div>
         </div>
         <div class="navigator d-flex gap-2 justify-content-center">
-            <p>Showing 1 of 1</p>
-            <div id="icons1">
-                <i class="fa-solid fa-chevron-left"></i>
-                <i class="fa-solid fa-chevron-right"></i>
-            </div>
+          <p>Showing 1 of 1</p>
+          <div id="icons1">
+            <i class="fa-solid fa-chevron-left"></i>
+            <i class="fa-solid fa-chevron-right"></i>
+          </div>
         </div>
       </div>
     </div>
-    
+
     <div class="water_drop">
-        <svg
-          class="left"
-          xmlns="http://www.w3.org/2000/svg"
-          width="107"
-          height="100"
-          viewBox="0 0 107 100"
-          fill="none"
-        >
-          <path
-            d="M106.187 39.1694C109.932 6.88835 69.6689 -11.5833 40.0645 8.83398L18.3051 23.8408C-6.83172 41.1768 -5.3381 74.6801 21.1126 86.815L40.1194 95.5349C66.5701 107.67 100.255 90.3055 103.434 62.896L106.187 39.1694Z"
-            fill="url(#paint0_linear_1650_6812)"
-          />
-          <defs>
-            <linearGradient
-              id="paint0_linear_1650_6812"
-              x1="115.762"
-              y1="-43.3725"
-              x2="28.0299"
-              y2="147.859"
-              gradientUnits="userSpaceOnUse"
-            >
-              <stop stop-color="#00B7AF" />
-              <stop offset="0.651042" stop-color="#F2F2F2" />
-            </linearGradient>
-          </defs>
-        </svg>
-  
-        <svg
-          class="top"
-          xmlns="http://www.w3.org/2000/svg"
-          width="97"
-          height="100"
-          viewBox="0 0 97 100"
-          fill="none"
-        >
-          <path
-            d="M1.3628 37.9976C1.98372 8.46891 34.5792 -9.09425 59.5822 6.62769L79.0326 18.8581C103.677 34.3545 102.458 70.6709 76.8299 84.4798L56.8965 95.2203C31.2686 109.029 0.267751 90.0737 0.879765 60.9686L1.3628 37.9976Z"
-            fill="url(#paint0_linear_1650_6810)"
-          />
-          <defs>
-            <linearGradient
-              id="paint0_linear_1650_6810"
-              x1="2.77358"
-              y1="-29.0937"
-              x2="88.2264"
-              y2="129.498"
-              gradientUnits="userSpaceOnUse"
-            >
-              <stop stop-color="#00B7AF" />
-              <stop offset="0.651042" stop-color="#F2F2F2" />
-            </linearGradient>
-          </defs>
-        </svg>
-  
-        <svg
-          class="right"
-          xmlns="http://www.w3.org/2000/svg"
-          width="57"
-          height="56"
-          viewBox="0 0 57 56"
-          fill="none"
-        >
-          <path
-            d="M0.505173 27.9496C0.602629 5.85125 25.1323 -7.36588 43.6418 4.70664C61.3706 16.27 60.2681 42.591 41.6344 52.6313C23.0008 62.6715 0.411827 49.1159 0.505173 27.9496Z"
-            fill="url(#paint0_linear_1650_6811)"
-          />
-          <defs>
-            <linearGradient
-              id="paint0_linear_1650_6811"
-              x1="0.731105"
-              y1="-23.2811"
-              x2="55.2689"
-              y2="77.9354"
-              gradientUnits="userSpaceOnUse"
-            >
-              <stop stop-color="#00B7AF" />
-              <stop offset="0.651042" stop-color="#F2F2F2" />
-            </linearGradient>
-          </defs>
-        </svg>
-      </div>
-  
-      <!-- footter -->
-      <footer>
-        <div class="container">
-          <div class="help">
-            <p class="title">Need any help?</p>
-            <p>
-              Call 24/7 for any help <br />
-              <span> +00 123 456 789</span>
-            </p>
-            <p>
-              Mail to our support team <br />
-              <span>support@Seethio.com</span>
-            </p>
-            <p>Follow us on</p>
-            <div class="social-icon">
-              <a href=""><i class="fa-brands fa-instagram"></i></a>
-              <a href=""> <i class="fa-brands fa-facebook"></i></a>
-              <a href=""> <i class="fa-brands fa-twitter"></i></a>
-              <a href=""><i class="fa-brands fa-youtube"></i></a>
-              <a href=""><i class="fa-brands fa-linkedin"></i></a>
-            </div>
+      <svg
+        class="left"
+        xmlns="http://www.w3.org/2000/svg"
+        width="107"
+        height="100"
+        viewBox="0 0 107 100"
+        fill="none"
+      >
+        <path
+          d="M106.187 39.1694C109.932 6.88835 69.6689 -11.5833 40.0645 8.83398L18.3051 23.8408C-6.83172 41.1768 -5.3381 74.6801 21.1126 86.815L40.1194 95.5349C66.5701 107.67 100.255 90.3055 103.434 62.896L106.187 39.1694Z"
+          fill="url(#paint0_linear_1650_6812)"
+        />
+        <defs>
+          <linearGradient
+            id="paint0_linear_1650_6812"
+            x1="115.762"
+            y1="-43.3725"
+            x2="28.0299"
+            y2="147.859"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stop-color="#00B7AF" />
+            <stop offset="0.651042" stop-color="#F2F2F2" />
+          </linearGradient>
+        </defs>
+      </svg>
+
+      <svg
+        class="top"
+        xmlns="http://www.w3.org/2000/svg"
+        width="97"
+        height="100"
+        viewBox="0 0 97 100"
+        fill="none"
+      >
+        <path
+          d="M1.3628 37.9976C1.98372 8.46891 34.5792 -9.09425 59.5822 6.62769L79.0326 18.8581C103.677 34.3545 102.458 70.6709 76.8299 84.4798L56.8965 95.2203C31.2686 109.029 0.267751 90.0737 0.879765 60.9686L1.3628 37.9976Z"
+          fill="url(#paint0_linear_1650_6810)"
+        />
+        <defs>
+          <linearGradient
+            id="paint0_linear_1650_6810"
+            x1="2.77358"
+            y1="-29.0937"
+            x2="88.2264"
+            y2="129.498"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stop-color="#00B7AF" />
+            <stop offset="0.651042" stop-color="#F2F2F2" />
+          </linearGradient>
+        </defs>
+      </svg>
+
+      <svg
+        class="right"
+        xmlns="http://www.w3.org/2000/svg"
+        width="57"
+        height="56"
+        viewBox="0 0 57 56"
+        fill="none"
+      >
+        <path
+          d="M0.505173 27.9496C0.602629 5.85125 25.1323 -7.36588 43.6418 4.70664C61.3706 16.27 60.2681 42.591 41.6344 52.6313C23.0008 62.6715 0.411827 49.1159 0.505173 27.9496Z"
+          fill="url(#paint0_linear_1650_6811)"
+        />
+        <defs>
+          <linearGradient
+            id="paint0_linear_1650_6811"
+            x1="0.731105"
+            y1="-23.2811"
+            x2="55.2689"
+            y2="77.9354"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stop-color="#00B7AF" />
+            <stop offset="0.651042" stop-color="#F2F2F2" />
+          </linearGradient>
+        </defs>
+      </svg>
+    </div>
+
+    <!-- footter -->
+    <footer>
+      <div class="container">
+        <div class="help">
+          <p class="title">Need any help?</p>
+          <p>
+            Call 24/7 for any help <br />
+            <span> +00 123 456 789</span>
+          </p>
+          <p>
+            Mail to our support team <br />
+            <span>support@Seethio.com</span>
+          </p>
+          <p>Follow us on</p>
+          <div class="social-icon">
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+            <a href=""> <i class="fa-brands fa-facebook"></i></a>
+            <a href=""> <i class="fa-brands fa-twitter"></i></a>
+            <a href=""><i class="fa-brands fa-youtube"></i></a>
+            <a href=""><i class="fa-brands fa-linkedin"></i></a>
           </div>
-          <div class="links">
-            <div>
-              <p class="title">Company</p>
-              <p>Home</p>
-              <p>Testimonials</p>
-              <p>About Us</p>
-              <p>Work with Us</p>
-              <p>Partners</p>
-            </div>
-            <div>
-              <p class="title">Support</p>
-              <p>Account</p>
-              <p>FAQ</p>
-              <p>Legal</p>
-              <p>Contact us</p>
-              <p>Privacy Policy</p>
-            </div>
-            <div>
-              <p class="title">Services</p>
-              <p>Discover place</p>
-              <p>Plan a trip</p>
-              <p>Booking</p>
-              <p>Get Deals</p>
-              <p>Currency exchange</p>
-            </div>
+        </div>
+        <div class="links">
+          <div>
+            <p class="title">Company</p>
+            <p>Home</p>
+            <p>Testimonials</p>
+            <p>About Us</p>
+            <p>Work with Us</p>
+            <p>Partners</p>
           </div>
-          <!-- <div class="subscribe">
+          <div>
+            <p class="title">Support</p>
+            <p>Account</p>
+            <p>FAQ</p>
+            <p>Legal</p>
+            <p>Contact us</p>
+            <p>Privacy Policy</p>
+          </div>
+          <div>
+            <p class="title">Services</p>
+            <p>Discover place</p>
+            <p>Plan a trip</p>
+            <p>Booking</p>
+            <p>Get Deals</p>
+            <p>Currency exchange</p>
+          </div>
+        </div>
+        <!-- <div class="subscribe">
             <p><span>Subscribe to receive new deals</span></p>
             <div class="form">
               <input type="text" placeholder="Email Address" />
               <button>Send</button>
             </div>
           </div> -->
+      </div>
+      <div class="footer-wrapper">
+        <hr style="border: 1px solid white" />
+      </div>
+      <div class="footer">
+        <div class="logo">
+          <a href="/index.html"
+            ><img src="../images/footer_logo.png" alt=""
+          /></a>
         </div>
-        <div class="footer-wrapper">
-          <hr style="border: 1px solid white" />
+        <div class="copyright">
+          <p><span>Copyright © 2023 Kunturi Design</span></p>
         </div>
-        <div class="footer">
-          <div class="logo">
-            <a href="/index.html"
-              ><img src="../images/footer_logo.png" alt=""
-            /></a>
-          </div>
-          <div class="copyright">
-            <p><span>Copyright © 2023 Kunturi Design</span></p>
-          </div>
-        </div>
-      </footer>
+      </div>
+    </footer>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
-    <script src="/Front-end/Js/restaurants.js"></script>
-  
+    <script src="../Js/restaurants.js"></script>
   </body>
 </html>

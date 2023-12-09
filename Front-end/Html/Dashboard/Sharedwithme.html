@@ -18,49 +18,46 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="/Front-end/Css/Sharedwithme.css" />
-    
-   
+    <link rel="stylesheet" href="../../Css/Sharedwithme.css" />
   </head>
   <body>
     <style>
-      #removereson{
+      #removereson {
         display: none;
       }
-        .popup-shared {
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          overflow: auto;
-          background: rgba(0, 0, 0, 1);
-          transition: opacity 0.5s;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          visibility: hidden;
-          opacity: 0;
-          z-index: 1000;
-        }
-        .popup-shared:target {
-          visibility: visible;
-          opacity: 1;
-        }
-        .content-shared {
-          background-color: transparent;
-            padding: 20px;
-          border-radius: 10px;
-          width: 80%;
-          height: 100vh;
-        }
-      </style>
+      .popup-shared {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background: rgba(0, 0, 0, 1);
+        transition: opacity 0.5s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        visibility: hidden;
+        opacity: 0;
+        z-index: 1000;
+      }
+      .popup-shared:target {
+        visibility: visible;
+        opacity: 1;
+      }
+      .content-shared {
+        background-color: transparent;
+        padding: 20px;
+        border-radius: 10px;
+        width: 80%;
+        height: 100vh;
+      }
+    </style>
     <header>
       <nav>
-        <img src="/Front-end/images/dashboard_logo.png" alt="" />
+        <img src="../../images/dashboard_logo.png" alt="" />
         <ul>
-          <li class="formin" style="margin-left: 10%; width: 25%"> 
-            
+          <li class="formin" style="margin-left: 10%; width: 25%">
             <form class="d-flex form" role="search">
               <i class="fa-solid fa-magnifying-glass"></i>
               <input
@@ -291,7 +288,7 @@
                 fill="#FABF00"
               />
             </svg>
-           <a href="./Accountsetting.html">Account Settings</a>
+            <a href="./Accountsetting.html">Account Settings</a>
           </div>
           <hr />
           <div class="bucketList">
@@ -317,8 +314,12 @@
                 style="color: #fabf00"
                 >Bucketlist</a
               >
-              <ul class="dropdown-menu ">
-                <li><a class="dropdown-item drop" href="./Itineraries.html">My Bucketlist</a></li>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item drop" href="./Itineraries.html"
+                    >My Bucketlist</a
+                  >
+                </li>
                 <li>
                   <a class="dropdown-item drop" href="./sharedwithme.html"
                     >Shared with me</a
@@ -359,7 +360,7 @@
                 stroke-width="4.7761"
               />
             </svg>
-           <a href="./Grouptour.html">Group Tour</a>
+            <a href="./Grouptour.html">Group Tour</a>
           </div>
           <hr />
           <div class="help">
@@ -403,10 +404,7 @@
           </div>
           <div class="buttons">
             <button class="button1 active">Itineraries</button>
-            <button
-              class="non-active"
-              onclick="window.location.href='#popup9'"
-            >
+            <button class="non-active" onclick="window.location.href='#popup9'">
               Places to Go
             </button>
 
@@ -424,15 +422,15 @@
             <div class="img-div">
               <div id="imageCard">
                 <img
-                  src="/Front-end/images/NileFountainBucket.jpeg"
+                  src="../../images/NileFountainBucket.jpeg"
                   class="active7"
                 />
-                <img src="/Front-end/images/rockchurchside.png" />
-                <img src="/Front-end/images/axum.png" />
-                <img src="/Front-end/images/theater.png" />
-                <img src="/Front-end/images/Gondar-timker.png" />
-                <img src="/Front-end/images/fasil.jpeg" />
-                <img src="/Front-end/images/fountain2.jpeg" />
+                <img src="../../images/rockchurchside.png" />
+                <img src="../../images/axum.png" />
+                <img src="../../images/theater.png" />
+                <img src="../../images/Gondar-timker.png" />
+                <img src="../../images/fasil.jpeg" />
+                <img src="../../images/fountain2.jpeg" />
               </div>
               <div class="location d-flex pt-3">
                 <svg
@@ -489,13 +487,13 @@
           <div class="top-div">
             <div class="img-div">
               <div id="imageCard1">
-                <img src="/Front-end/images/fasil.jpeg" class="active8" />
-                <img src="/Front-end/images/NileFountainBucket.jpeg" />
-                <img src="/Front-end/images/rockchurchside.png" />
-                <img src="/Front-end/images/axum.png" />
-                <img src="/Front-end/images/theater.png" />
-                <img src="/Front-end/images/Gondar-timker.png" />
-                <img src="/Front-end/images/fountain2.jpeg" />
+                <img src="../../images/fasil.jpeg" class="active8" />
+                <img src="../../images/NileFountainBucket.jpeg" />
+                <img src="../../images/rockchurchside.png" />
+                <img src="../../images/axum.png" />
+                <img src="../../images/theater.png" />
+                <img src="../../images/Gondar-timker.png" />
+                <img src="../../images/fountain2.jpeg" />
               </div>
               <div class="location d-flex pt-3">
                 <svg
@@ -554,11 +552,11 @@
           <div class="top-div">
             <div class="img-div">
               <div id="imageCard2">
-                <img src="/Front-end/images/omo1.png" class="active9" />
-                <img src="/Front-end/images/omo2.png" />
-                <img src="/Front-end/images/omo3.png" />
-                <img src="/Front-end/images/omo4.png" />
-                <img src="/Front-end/images/omo5.png" />
+                <img src="../../images/omo1.png" class="active9" />
+                <img src="../../images/omo2.png" />
+                <img src="../../images/omo3.png" />
+                <img src="../../images/omo4.png" />
+                <img src="../../images/omo5.png" />
               </div>
               <div class="location d-flex pt-3">
                 <svg
@@ -880,8 +878,11 @@
                 </li>
                 <li>
                   <label>
-                    <input type="checkbox" value="Discoveries" name="Discoveries" />New
-                    Discoveries</label
+                    <input
+                      type="checkbox"
+                      value="Discoveries"
+                      name="Discoveries"
+                    />New Discoveries</label
                   >
                 </li>
                 <li>
@@ -988,530 +989,57 @@
     </div>
 
     <div class="popup-shared" id="popup9">
-        <div class="content-shared">
-          <div class="main1">
-            <div class="right-content1">
-              <div class="navigation  pt-2 d-flex align-item-center">
-                <div class="pagename1 ">
-                  <p>Shared with Me</p>
-                </div>
-                <div class="buttons1">
-                  <button
-                    class="non-active1 button1"
-                    onclick="window.location.href='Sharedwithme.html'"
-                  >
-                    Itineraries
-                  </button>
-                  <button class="active1">Places to Go</button>
-                  <button
-                    class="non-active1"
-                    onclick="window.location.href='#popup10'"
-                  >
-                    Saved Deals
-                  </button>
-                </div>
-              </div>
-              <div class="filter1">
-                <p class="filterby1">Filter by</p>
-                <div class="filter_wrapper1">
-                  <div class="filter-content1">
-                    <input
-                      type="checkbox"
-                      name="AttractionCenters"
-                      id="AttractionCenters"
-                    />
-                    <label for="AttractionCenters">Attraction Centers</label>
-                  </div>
-                  <div class="filter-content1">
-                    <input type="checkbox" name="LocalMarkets" id="LocalMarkets" />
-                    <label for="LocalMarkets">Local Markets</label>
-                  </div>
-                  <div class="filter-content1">
-                    <input
-                      type="checkbox"
-                      name="RestaurantandDinning"
-                      id="RestaurantandDinning"
-                    />
-                    <label for="RestaurantandDinning">Restaurant and Dinning</label>
-                  </div>
-                </div>
-              </div>
-              <!-- first div -->
-              <div class="card-div">
-                <!-- card1 -->
-                <div class="card1">
-                  <button class="bucket" style="width: 170px">
-                    Attraction Center
-                  </button>
-                  <div class="carousel1">
-                    <div class="carousel-images">
-                      <img
-                        class="carousel-image"
-                        src="/Front-end/images/fountain3.png"
-                        alt=""
-                      />
-                      <img
-                        class="carousel-image"
-                        src="/Front-end/images/chiladababoon.png"
-                        alt=""
-                      />
-                      <img
-                        class="carousel-image"
-                        src="/Front-end/images/waliya.png"
-                        alt=""
-                      />
-                      <img
-                        class="carousel-image"
-                        src="/Front-end/images/hut.png"
-                        alt=""
-                      />
-                      <img
-                        class="carousel-image"
-                        src="/Front-end/images/dashen_mnt.png"
-                        alt=""
-                      />
-                    </div>
-                  </div>
-                  <div class="body-div">
-                    <a class="map" href="" style="float: right">View on Map</a>
-                    <div class="body-title">
-                      <p>
-                        <b
-                          >Simien Mountains Park,
-                          <span style="font-size: 11px">Amhara</span></b
-                        >
-                      </p>
-                    </div>
-                    <div class="body-text">
-                      <p>
-                        Experience the breathtaking scenery and wildlife of the Simien
-                        Mountains, a UNESCO World Heritage Site. Hike along the
-                        escarpment, spot the endemic gelada monkeys and walia ibex,
-                        and camp under the stars.
-                      </p>
-                      <div class="body-bottom d-flex align-items-center pe-4 mt-5">
-                        <p class="pt-3">
-                          Access:<span style="color: #006167">Paid</span>
-                        </p>
-                        <button
-                          class="body-share"
-                          onclick="window.location.href='#popup2'"
-                        >
-                          Share
-                        </button>
-                        <button
-                          class="body-remove"
-                          onclick="window.location.href='#popup3'"
-                        >
-                          Remove
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- card2 -->
-                <div class="card1">
-                  <button class="bucket" style="width: 196px">
-                    Restaurant & Dinning
-                  </button>
-                  <div class="carousel2">
-                    <div class="carousel-images">
-                      <img
-                        class="carousel-image"
-                        src="/Front-end/images/Mesobinjera.png"
-                        alt=""
-                      />
-                      <img
-                        class="carousel-image"
-                        src="/Front-end/images/salad.jpeg"
-                        alt=""
-                      />
-                      <img
-                        class="carousel-image"
-                        src="/Front-end/images/chechebsa.jpeg"
-                        alt=""
-                      />
-                      <img
-                        class="carousel-image"
-                        src="/Front-end/images/aynet.jpeg"
-                        alt=""
-                      />
-                    </div>
-                  </div>
-                  <div class="body-div">
-                    <div class="price">
-                      <div class="left">
-                        <h6>Location:</h6>
-                        <p style="color: #121212">Bole, Addis Ababa</p>
-                        <a
-                          href="https://www.google.com/maps/dir//debre+damo+hotel/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x164b857377c86f7f:0xda307876aa0a9dca?sa=X&ved=2ahUKEwjgwILz782CAxW0a_EDHRZIATMQ9Rd6BAhMEAA"
-                          >View on Map</a
-                        >
-                      </div>
-                      <div class="right">
-                        <h6>Price:</h6>
-                        <p style="color: #121212">
-                          From <span style="font-size: 14px">$8</span>
-                        </p>
-                      </div>
-                    </div>
-                    <div class="body-title">
-                      <p><b>Kategna Restaurant</b></p>
-                      <div class="review d-flex gap-1 align-items-center">
-                        <i class="fa-star fa-solid"></i>
-                        <i class="fa-star fa-solid"></i>
-                        <i class="fa-star fa-solid"></i>
-                        <i class="fa-star fa-solid"></i>
-                        <p style="color: #4f4f4f">4.0 (400 Reviews)</p>
-                      </div>
-                    </div>
-                    <div class="body-text pt-4">
-                      <p>
-                        Cuisines <br />
-                        <span style="color: #121212">African, Ethiopian</span>
-                      </p>
-                    </div>
-                    <div
-                      class="body-bottom me-3"
-                      style="margin-left: 30%; padding-bottom: 5%"
-                    >
-                      <button
-                        class="body-share"
-                        onclick="window.location.href='#popup2'"
-                      >
-                        Share
-                      </button>
-                      <button
-                        class="body-remove"
-                        onclick="window.location.href='#popup3'"
-                      >
-                        Remove
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <!-- card3 -->
-                <div class="card1">
-                  <button class="bucket" style="width: 170px">Local Market</button>
-                  <div class="carousel3">
-                    <div class="carousel-images">
-                      <img
-                        class="carousel-image"
-                        src="/Front-end/images/Mesobmarket.png"
-                        alt=""
-                      />
-                      <img
-                        class="carousel-image"
-                        src="/Front-end/images/spicemarket.jpeg"
-                        alt=""
-                      />
-                      <img
-                        class="carousel-image"
-                        src="/Front-end/images/wheatmarket.jpeg"
-                        alt=""
-                      />
-                    </div>
-                  </div>
-                  <div class="body-div">
-                    <a class="map" href="" style="float: right">View on Map</a>
-                    <div class="body-title">
-                      <p>
-                        <b
-                          >Merkato,
-                          <span style="font-size: 11px">Addis Ababa</span></b
-                        >
-                      </p>
-                    </div>
-                    <div class="body-text">
-                      <p>
-                        Considered as one of the largest open-air markets in Africa,
-                        Merkato in Addis Ababa is a bustling and lively market where
-                        you can find everything from spices and textiles to
-                        traditional handicrafts.
-                      </p>
-                      <div class="body-bottom pt-5 mt-4" style="margin-left: 20%">
-                        <!-- <p>Access: Paid</p> -->
-                        <button
-                          class="body-share"
-                          onclick="window.location.href='#popup2'"
-                        >
-                          Share
-                        </button>
-                        <button
-                          class="body-remove"
-                          onclick="window.location.href='#popup3'"
-                        >
-                          Remove
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- second div -->
-              <div class="card-div">
-                <!-- card1 -->
-                <div class="card1">
-                  <button class="bucket" style="width: 196px">
-                    Restaurant & Dinning
-                  </button>
-                  <div class="carousel4">
-                    <div class="carousel-images">
-                      <img
-                        class="carousel-image"
-                        src="/Front-end/images/cappuccino.png"
-                        alt=""
-                      />
-                      <img
-                        class="carousel-image"
-                        src="/Front-end/images/Breadtoast.png"
-                        alt=""
-                      />
-                      <img
-                        class="carousel-image"
-                        src="/Front-end/images/Coffehouse.png"
-                        alt=""
-                      />
-                      <img
-                        class="carousel-image"
-                        src="/Front-end/images/crossiant.jpeg"
-                        alt=""
-                      />
-                    </div>
-                  </div>
-                  <div class="body-div">
-                    <div class="price">
-                      <div class="left">
-                        <h6>Location:</h6>
-                        <p>Addis Ababa</p>
-                        <a
-                          href="https://www.google.com/maps/dir//debre+damo+hotel/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x164b857377c86f7f:0xda307876aa0a9dca?sa=X&ved=2ahUKEwjgwILz782CAxW0a_EDHRZIATMQ9Rd6BAhMEAA"
-                          >View on Map</a
-                        >
-                      </div>
-                      <div class="right">
-                        <h6>Price:</h6>
-                        <p>From <span style="font-size: 14px">$5</span></p>
-                      </div>
-                    </div>
-                    <div class="body-title">
-                      <p><b>La Patisserie</b></p>
-                      <div class="review d-flex gap-1">
-                        <i class="fa-star fa-solid"></i>
-                        <i class="fa-star fa-solid"></i>
-                        <i class="fa-star fa-solid"></i>
-                        <i class="fa-star fa-solid"></i>
-                        <i class="fa-star fa-solid"></i>
-                        <p style="color: #4f4f4f">5.0 (800 Reviews)</p>
-                      </div>
-                    </div>
-                    <div class="body-text pt-4">
-                      <p>
-                        Cuisines <br />
-                        <span style="color: #121212">American, Cafe, French.</span>
-                      </p>
-                    </div>
-                    <div
-                      class="body-bottom me-3"
-                      style="margin-left: 20%; padding-bottom: 5%"
-                    >
-                      <button
-                        class="body-share"
-                        onclick="window.location.href='#popup2'"
-                      >
-                        Share
-                      </button>
-                      <button
-                        class="body-remove"
-                        onclick="window.location.href='#popup3'"
-                      >
-                        Remove
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <!-- card2 -->
-                <div class="card1">
-                  <button class="bucket" style="width: 170px">Local Market</button>
-                  <div class="carousel5">
-                    <div class="carousel-images">
-                      <img
-                        class="carousel-image"
-                        src="/Front-end/images/shemamarket.jpeg"
-                        alt=""
-                      />
-                      <img
-                        class="carousel-image"
-                        src="/Front-end/images/mesob2market.jpeg"
-                        alt=""
-                      />
-                      <img
-                        class="carousel-image"
-                        src="/Front-end/images/Sifet1market.png"
-                        alt=""
-                      />
-                      <img
-                        class="carousel-image"
-                        src="/Front-end/images/sifet2market.jpeg"
-                        alt=""
-                      />
-                    </div>
-                  </div>
-                  <div class="body-div">
-                    <a class="map" href="" style="float: right">View on Map</a>
-                    <div class="body-title">
-                      <p>
-                        <b
-                          >Axum Tsion Market,
-                          <span style="font-size: 11px">Axum </span></b
-                        >
-                      </p>
-                    </div>
-                    <div class="body-text">
-                      <p>
-                        This market is known for its traditional Ethiopian textiles,
-                        religious artifacts, and a variety of locally made goods. It
-                        provides a glimpse into the cultural and historical
-                        significance of Axum.
-                      </p>
-                      <div class="body-bottom pt-5 mt-5" style="margin-left: 20%">
-                        <button
-                          class="body-share"
-                          onclick="window.location.href='#popup2'"
-                        >
-                          Share
-                        </button>
-                        <button
-                          class="body-remove"
-                          onclick="window.location.href='#popup3'"
-                        >
-                          Remove
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- card3 -->
-                <div class="card1">
-                  <button class="bucket" style="width: 196px">
-                    Attraction Center
-                  </button>
-                  <div class="carousel6">
-                    <div class="carousel-images">
-                      <img
-                        class="carousel-image"
-                        src="/Front-end/images/afar1.png"
-                        alt=""
-                      />
-                      <img
-                        class="carousel-image"
-                        src="/Front-end/images/Afar2.png"
-                        alt=""
-                      />
-                      <img
-                        class="carousel-image"
-                        src="/Front-end/images/afar3.png"
-                        alt=""
-                      />
-                      <img
-                        class="carousel-image"
-                        src="/Front-end/images/afar4.png"
-                        alt=""
-                      />
-                      <img
-                        class="carousel-image"
-                        src="/Front-end/images/afar5.png"
-                        alt=""
-                      />
-                    </div>
-                  </div>
-                  <div class="body-div">
-                    <a class="map" href="" style="float: right">View on Map</a>
-                    <div class="body-title">
-                      <p>
-                        <b
-                          >Danakil Depression,
-                          <span style="font-size: 11px">Afar</span></b
-                        >
-                      </p>
-                    </div>
-                    <div class="body-text">
-                      <p>
-                        Venture into the extreme and alien landscape of the Danakil
-                        Depression, one of the hottest and lowest places on Earth. See
-                        the colorful mineral formations, the bubbling geysers, and the
-                        active volcano of Erta Ale.
-                      </p>
-                      <div class="body-bottom d-flex align-items-center pe-4 mt-5">
-                        <p class="mt-2">
-                          Access:<span style="color: #006167">Paid</span>
-                        </p>
-                        <button
-                          class="body-share"
-                          onclick="window.location.href='#popup2'"
-                        >
-                          Share
-                        </button>
-                        <button
-                          class="body-remove"
-                          onclick="window.location.href='#popup3'"
-                        >
-                          Remove
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <!-- third div -->
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="popup-shared" id="popup10">
-        <div class="content-shared">
+      <div class="content-shared">
+        <div class="main1">
           <div class="right-content1">
             <div class="navigation pt-2 d-flex align-item-center">
-              <div class="pagename1 ">
+              <div class="pagename1">
                 <p>Shared with Me</p>
               </div>
               <div class="buttons1">
                 <button
                   class="non-active1 button1"
-                  onclick="window.location.href='sharedwithme.html'"
+                  onclick="window.location.href='Sharedwithme.html'"
                 >
                   Itineraries
                 </button>
-  
+                <button class="active1">Places to Go</button>
                 <button
-                  class="non-active1 button1"
-                  onclick="window.location.href='#popup9'"
+                  class="non-active1"
+                  onclick="window.location.href='#popup10'"
                 >
-                  Places to Go
+                  Saved Deals
                 </button>
-  
-                <button class="active1">Saved Deals</button>
               </div>
             </div>
             <div class="filter1">
               <p class="filterby1">Filter by</p>
               <div class="filter_wrapper1">
                 <div class="filter-content1">
-                  <input type="checkbox" name="Lodge" id="Lodge" />
-                  <label for="Lodge">Lodge</label>
+                  <input
+                    type="checkbox"
+                    name="AttractionCenters"
+                    id="AttractionCenters"
+                  />
+                  <label for="AttractionCenters">Attraction Centers</label>
                 </div>
                 <div class="filter-content1">
-                  <input type="checkbox" name="Flights" id="Flights" />
-                  <label for="Flights">Flights</label>
+                  <input
+                    type="checkbox"
+                    name="LocalMarkets"
+                    id="LocalMarkets"
+                  />
+                  <label for="LocalMarkets">Local Markets</label>
                 </div>
                 <div class="filter-content1">
-                  <input type="checkbox" name="Active" id="Active" />
-                  <label for="Active">Active</label>
-                </div>
-                <div class="filter-content1">
-                  <input type="checkbox" name="Expired" id="Expired" />
-                  <label for="Expired">Expired</label>
+                  <input
+                    type="checkbox"
+                    name="RestaurantandDinning"
+                    id="RestaurantandDinning"
+                  />
+                  <label for="RestaurantandDinning"
+                    >Restaurant and Dinning</label
+                  >
                 </div>
               </div>
             </div>
@@ -1519,22 +1047,102 @@
             <div class="card-div">
               <!-- card1 -->
               <div class="card1">
-                <button class="bucket" style="width: 100px">Booked</button>
-                <div class="carousel10">
+                <button class="bucket" style="width: 170px">
+                  Attraction Center
+                </button>
+                <div class="carousel1">
                   <div class="carousel-images">
                     <img
                       class="carousel-image"
-                      src="/Front-end/images/Radison_blu1.jpg"
+                      src="../../images/fountain3.png"
                       alt=""
                     />
                     <img
                       class="carousel-image"
-                      src="/Front-end/images/Radison_blu2.jpeg"
+                      src="../../images/chiladababoon.png"
                       alt=""
                     />
                     <img
                       class="carousel-image"
-                      src="/Front-end/images/Radison_blu3.jpeg"
+                      src="../../images/waliya.png"
+                      alt=""
+                    />
+                    <img
+                      class="carousel-image"
+                      src="../../images/hut.png"
+                      alt=""
+                    />
+                    <img
+                      class="carousel-image"
+                      src="../../images/dashen_mnt.png"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="body-div">
+                  <a class="map" href="" style="float: right">View on Map</a>
+                  <div class="body-title">
+                    <p>
+                      <b
+                        >Simien Mountains Park,
+                        <span style="font-size: 11px">Amhara</span></b
+                      >
+                    </p>
+                  </div>
+                  <div class="body-text">
+                    <p>
+                      Experience the breathtaking scenery and wildlife of the
+                      Simien Mountains, a UNESCO World Heritage Site. Hike along
+                      the escarpment, spot the endemic gelada monkeys and walia
+                      ibex, and camp under the stars.
+                    </p>
+                    <div
+                      class="body-bottom d-flex align-items-center pe-4 mt-5"
+                    >
+                      <p class="pt-3">
+                        Access:<span style="color: #006167">Paid</span>
+                      </p>
+                      <button
+                        class="body-share"
+                        onclick="window.location.href='#popup2'"
+                      >
+                        Share
+                      </button>
+                      <button
+                        class="body-remove"
+                        onclick="window.location.href='#popup3'"
+                      >
+                        Remove
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- card2 -->
+              <div class="card1">
+                <button class="bucket" style="width: 196px">
+                  Restaurant & Dinning
+                </button>
+                <div class="carousel2">
+                  <div class="carousel-images">
+                    <img
+                      class="carousel-image"
+                      src="../../images/Mesobinjera.png"
+                      alt=""
+                    />
+                    <img
+                      class="carousel-image"
+                      src="../../images/salad.jpeg"
+                      alt=""
+                    />
+                    <img
+                      class="carousel-image"
+                      src="../../images/chechebsa.jpeg"
+                      alt=""
+                    />
+                    <img
+                      class="carousel-image"
+                      src="../../images/aynet.jpeg"
                       alt=""
                     />
                   </div>
@@ -1543,7 +1151,7 @@
                   <div class="price">
                     <div class="left">
                       <h6>Location:</h6>
-                      <p>Kirkos, Addis Ababa</p>
+                      <p style="color: #121212">Bole, Addis Ababa</p>
                       <a
                         href="https://www.google.com/maps/dir//debre+damo+hotel/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x164b857377c86f7f:0xda307876aa0a9dca?sa=X&ved=2ahUKEwjgwILz782CAxW0a_EDHRZIATMQ9Rd6BAhMEAA"
                         >View on Map</a
@@ -1551,97 +1159,39 @@
                     </div>
                     <div class="right">
                       <h6>Price:</h6>
-                      <p style="font-size: 14px; font-weight: 400">
-                        <span style="text-decoration: line-through"> $180</span>
-                        $150/night
+                      <p style="color: #121212">
+                        From <span style="font-size: 14px">$8</span>
                       </p>
                     </div>
                   </div>
                   <div class="body-title">
-                    <p><b>Radisson Blu Hotel</b></p>
+                    <p><b>Kategna Restaurant</b></p>
                     <div class="review d-flex gap-1 align-items-center">
                       <i class="fa-star fa-solid"></i>
                       <i class="fa-star fa-solid"></i>
                       <i class="fa-star fa-solid"></i>
                       <i class="fa-star fa-solid"></i>
-                      <i class="fa-solid fa-star-half"></i>
-                      <p style="color: #4f4f4f">4.5 (800 Reviews)</p>
+                      <p style="color: #4f4f4f">4.0 (400 Reviews)</p>
                     </div>
                   </div>
-                  <div class="body-text">
+                  <div class="body-text pt-4">
                     <p>
-                      The hotel has a terrace, spa center, bar and guests can
-                      enjoy a meal at the restaurant. The Rooms include deep
-                      soaking bathtubs and pillow-top beds.
+                      Cuisines <br />
+                      <span style="color: #121212">African, Ethiopian</span>
                     </p>
                   </div>
-                  <div class="body-bottom" style="padding-bottom: 5%; display: flex; justify-content: center; margin-inline: auto;">
+                  <div
+                    class="body-bottom me-3"
+                    style="margin-left: 30%; padding-bottom: 5%"
+                  >
                     <button
-                      class="body-share m-0"
+                      class="body-share"
                       onclick="window.location.href='#popup2'"
                     >
                       Share
                     </button>
                     <button
-                      class="body-remove ms-2"
-                      onclick="window.location.href='#popup3'"
-                    >
-                      Remove
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <!-- 12 -->
-              <div class="card1">
-                <button class="bucket" style="width: 100px; background: #e41d1d">
-                  Expired
-                </button>
-                <div class="carousel2">
-                  <div class="carousel-images">
-                    <img class="carousel-image" src="/Front-end/images/ethiopian_airlines.jpg" alt="" />
-                  </div>
-                </div>
-                <div class="body-div">
-                  <div class="price">
-                    <div class="left">
-                      <h6>Route:</h6>
-                      <p>London - Addis Ababa</p>
-                    </div>
-                    <div class="right">
-                      <h6>Price:</h6>
-                      <p style="font-size: 14px; font-weight: 400">
-                        <span style="text-decoration: line-through">$900</span>
-                        $750
-                      </p>
-                    </div>
-                  </div>
-                  <div class="body-title">
-                    <p><b>Ethiopian Airline</b></p>
-                    <div class="review d-flex gap-1 align-items-center">
-                      <i class="fa-star fa-solid"></i>
-                      <i class="fa-star fa-solid"></i>
-                      <i class="fa-star fa-solid"></i>
-                      <i class="fa-star fa-solid"></i>
-                      <i class="fa-star fa-solid"></i>
-                      <p style="color: #4f4f4f">5.0 (425 Reviews)</p>
-                    </div>
-                  </div>
-                  <div class="body-text">
-                    <p>
-                      Ethiopian Airlines, known as the "Pride of Africa," is the
-                      flagship carrier of Ethiopia. Ethiopian Airlines connects
-                      passengers to over 120 destinations globally
-                    </p>
-                  </div>
-                  <div class="body-bottom" style="padding-bottom: 5%; display: flex; justify-content: center; margin-inline: auto;">
-                    <button
-                      class="body-share m-0"
-                      onclick="window.location.href='#popup2'"
-                    >
-                      Share
-                    </button>
-                    <button
-                      class="body-remove ms-2"
+                      class="body-remove"
                       onclick="window.location.href='#popup3'"
                     >
                       Remove
@@ -1651,75 +1201,60 @@
               </div>
               <!-- card3 -->
               <div class="card1">
-                <button class="bucket" style="width: 100px">Active</button>
+                <button class="bucket" style="width: 170px">
+                  Local Market
+                </button>
                 <div class="carousel3">
                   <div class="carousel-images">
                     <img
                       class="carousel-image"
-                      src="/Front-end/images/national airways.jpeg"
+                      src="../../images/Mesobmarket.png"
+                      alt=""
+                    />
+                    <img
+                      class="carousel-image"
+                      src="../../images/spicemarket.jpeg"
+                      alt=""
+                    />
+                    <img
+                      class="carousel-image"
+                      src="../../images/wheatmarket.jpeg"
                       alt=""
                     />
                   </div>
                 </div>
                 <div class="body-div">
-                  <div class="price">
-                    <div class="left">
-                      <h6>Route:</h6>
-                      <p>Addis Ababa - Lalibela</p>
-                    </div>
-                    <div class="right">
-                      <h6>Price:</h6>
-                      <p style="font-size: 14px; font-weight: 400">
-                        <span style="text-decoration: line-through">$300</span>
-                        $250
-                      </p>
-                      <a class="map"
-                        href="https://www.google.com/maps/dir//debre+damo+hotel/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x164b857377c86f7f:0xda307876aa0a9dca?sa=X&ved=2ahUKEwjgwILz782CAxW0a_EDHRZIATMQ9Rd6BAhMEAA"
-                        >Book Now</a
-                      >
-                    </div>
-                  </div>
+                  <a class="map" href="" style="float: right">View on Map</a>
                   <div class="body-title">
-                    <p><b>National Airways</b></p>
-                    <!-- check here -->
-  
-                    <div class="review d-flex gap-1 align-items-center">
-                      <i class="fa-star fa-solid"></i>
-                      <i class="fa-star fa-solid"></i>
-                      <i class="fa-star fa-solid"></i>
-                      <i class="fa-star fa-solid"></i>
-                      <i class="fa-star fa-solid"></i>
-                      <p style="color: #4f4f4f">5.0 (425 Reviews)</p>
-                    </div>
+                    <p>
+                      <b
+                        >Merkato,
+                        <span style="font-size: 11px">Addis Ababa</span></b
+                      >
+                    </p>
                   </div>
                   <div class="body-text">
                     <p>
-                      National Airways Ethiopia, is a private airline based in
-                      Addis Ababa. It was established in 2007 and has been
-                      operating charter services since 2009.
+                      Considered as one of the largest open-air markets in
+                      Africa, Merkato in Addis Ababa is a bustling and lively
+                      market where you can find everything from spices and
+                      textiles to traditional handicrafts.
                     </p>
-                  </div>
-                  <div
-                    class="body-bottom"
-                    style="
-                      padding-bottom: 5%;
-                      display: flex;
-                      margin-inline: auto;
-                      justify-content: center;
-                    "
-                  >
-                    <button
-                      class="body-share m-0"
-                      onclick="window.location.href='#popup2'"
-                    >
-                      Share
-                    </button>
-                    <button
-                      class="body-remove ms-2"
-                      onclick="window.location.href='#popup3'"
-                    >
-                      Remove
-                    </button>
+                    <div class="body-bottom pt-5 mt-4" style="margin-left: 20%">
+                      <!-- <p>Access: Paid</p> -->
+                      <button
+                        class="body-share"
+                        onclick="window.location.href='#popup2'"
+                      >
+                        Share
+                      </button>
+                      <button
+                        class="body-remove"
+                        onclick="window.location.href='#popup3'"
+                      >
+                        Remove
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1728,12 +1263,29 @@
             <div class="card-div">
               <!-- card1 -->
               <div class="card1">
-                <button class="bucket" style="width: 100px">Active</button>
+                <button class="bucket" style="width: 196px">
+                  Restaurant & Dinning
+                </button>
                 <div class="carousel4">
                   <div class="carousel-images">
                     <img
                       class="carousel-image"
-                      src="/Front-end/images/soralodge.jpeg"
+                      src="../../images/cappuccino.png"
+                      alt=""
+                    />
+                    <img
+                      class="carousel-image"
+                      src="../../images/Breadtoast.png"
+                      alt=""
+                    />
+                    <img
+                      class="carousel-image"
+                      src="../../images/Coffehouse.png"
+                      alt=""
+                    />
+                    <img
+                      class="carousel-image"
+                      src="../../images/crossiant.jpeg"
                       alt=""
                     />
                   </div>
@@ -1742,7 +1294,7 @@
                   <div class="price">
                     <div class="left">
                       <h6>Location:</h6>
-                      <p>Lalibela</p>
+                      <p>Addis Ababa</p>
                       <a
                         href="https://www.google.com/maps/dir//debre+damo+hotel/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x164b857377c86f7f:0xda307876aa0a9dca?sa=X&ved=2ahUKEwjgwILz782CAxW0a_EDHRZIATMQ9Rd6BAhMEAA"
                         >View on Map</a
@@ -1750,47 +1302,40 @@
                     </div>
                     <div class="right">
                       <h6>Price:</h6>
-                      <p style="font-size: 14px; font-weight: 400">
-                        <span style="text-decoration: line-through">$80</span>
-                        $50/night
-                      </p>
-                      <a class="map" href="">Book Now</a>
+                      <p>From <span style="font-size: 14px">$5</span></p>
                     </div>
                   </div>
                   <div class="body-title">
-                    <p><b>Sora Lodge</b></p>
-                    <div class="review d-flex gap-1 align-items-center">
+                    <p><b>La Patisserie</b></p>
+                    <div class="review d-flex gap-1">
                       <i class="fa-star fa-solid"></i>
                       <i class="fa-star fa-solid"></i>
                       <i class="fa-star fa-solid"></i>
                       <i class="fa-star fa-solid"></i>
-                      <i class="fa-star-half fa-solid"></i>
-                      <p style="color: #4f4f4f">4.5 (800 Reviews)</p>
+                      <i class="fa-star fa-solid"></i>
+                      <p style="color: #4f4f4f">5.0 (800 Reviews)</p>
                     </div>
                   </div>
-                  <div class="body-text">
+                  <div class="body-text pt-4">
                     <p>
-                      Sora Lodge Lalibela has both traditional and modern rooms
-                      with the most spectacular views of the mountains.
+                      Cuisines <br />
+                      <span style="color: #121212"
+                        >American, Cafe, French.</span
+                      >
                     </p>
                   </div>
                   <div
-                    class="body-bottom"
-                    style="
-                      padding-top: 6.5%;
-                      display: flex;
-                      justify-content: center;
-                      margin-inline: auto;
-                    "
+                    class="body-bottom me-3"
+                    style="margin-left: 20%; padding-bottom: 5%"
                   >
                     <button
-                      class="body-share m-0"
+                      class="body-share"
                       onclick="window.location.href='#popup2'"
                     >
                       Share
                     </button>
                     <button
-                      class="body-remove ms-2"
+                      class="body-remove"
                       onclick="window.location.href='#popup3'"
                     >
                       Remove
@@ -1800,326 +1345,832 @@
               </div>
               <!-- card2 -->
               <div class="card1">
-                <button class="bucket" style="width: 100px">Booked</button>
+                <button class="bucket" style="width: 170px">
+                  Local Market
+                </button>
                 <div class="carousel5">
                   <div class="carousel-images">
-                    <img class="carousel-image" src="/Front-end/images/ethiopian_airlines.jpg" alt="" />
+                    <img
+                      class="carousel-image"
+                      src="../../images/shemamarket.jpeg"
+                      alt=""
+                    />
+                    <img
+                      class="carousel-image"
+                      src="../../images/mesob2market.jpeg"
+                      alt=""
+                    />
+                    <img
+                      class="carousel-image"
+                      src="../../images/Sifet1market.png"
+                      alt=""
+                    />
+                    <img
+                      class="carousel-image"
+                      src="../../images/sifet2market.jpeg"
+                      alt=""
+                    />
                   </div>
                 </div>
                 <div class="body-div">
-                  <div class="price">
-                    <div class="left">
-                      <h6>Route:</h6>
-                      <p>London - Addis Ababa</p>
-                    </div>
-                    <div class="right">
-                      <h6>Price:</h6>
-                      <p style="font-size: 14px; font-weight: 400">
-                        <span style="text-decoration: line-through">$900</span>
-                        $750
-                      </p>
-                    </div>
-                  </div>
+                  <a class="map" href="" style="float: right">View on Map</a>
                   <div class="body-title">
-                    <p><b>Ethiopian Airline</b></p>
-                    <div class="review d-flex gap-1 align-items-center">
-                      <i class="fa-star fa-solid"></i>
-                      <i class="fa-star fa-solid"></i>
-                      <i class="fa-star fa-solid"></i>
-                      <i class="fa-star fa-solid"></i>
-                      <i class="fa-star fa-solid"></i>
-                      <p style="color: #4f4f4f">5.0 (425 Reviews)</p>
-                    </div>
+                    <p>
+                      <b
+                        >Axum Tsion Market,
+                        <span style="font-size: 11px">Axum </span></b
+                      >
+                    </p>
                   </div>
                   <div class="body-text">
                     <p>
-                      Ethiopian Airlines, known as the "Pride of Africa," is the
-                      flagship carrier of Ethiopia. Ethiopian Airlines connects
-                      passengers to over 120 destinations globally
+                      This market is known for its traditional Ethiopian
+                      textiles, religious artifacts, and a variety of locally
+                      made goods. It provides a glimpse into the cultural and
+                      historical significance of Axum.
                     </p>
-                  </div>
-                  <div
-                    class="body-bottom"
-                    style="
-                      padding-bottom: 5%;
-                      display: flex;
-                      margin-inline: auto;
-                      justify-content: center;
-                    "
-                  >
-                    <button
-                      class="body-share m-0"
-                      onclick="window.location.href='#popup2'"
-                    >
-                      Share
-                    </button>
-                    <button
-                      class="body-remove ms-2"
-                      onclick="window.location.href='#popup3'"
-                    >
-                      Remove
-                    </button>
+                    <div class="body-bottom pt-5 mt-5" style="margin-left: 20%">
+                      <button
+                        class="body-share"
+                        onclick="window.location.href='#popup2'"
+                      >
+                        Share
+                      </button>
+                      <button
+                        class="body-remove"
+                        onclick="window.location.href='#popup3'"
+                      >
+                        Remove
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
               <!-- card3 -->
               <div class="card1">
-                <button class="bucket" style="width: 100px; background: #e41d1d">
-                  Expired
+                <button class="bucket" style="width: 196px">
+                  Attraction Center
                 </button>
                 <div class="carousel6">
                   <div class="carousel-images">
                     <img
                       class="carousel-image"
-                      src="/Front-end/images/hayat4.jpeg"
+                      src="../../images/afar1.png"
+                      alt=""
+                    />
+                    <img
+                      class="carousel-image"
+                      src="../../images/Afar2.png"
+                      alt=""
+                    />
+                    <img
+                      class="carousel-image"
+                      src="../../images/afar3.png"
+                      alt=""
+                    />
+                    <img
+                      class="carousel-image"
+                      src="../../images/afar4.png"
+                      alt=""
+                    />
+                    <img
+                      class="carousel-image"
+                      src="../../images/afar5.png"
                       alt=""
                     />
                   </div>
                 </div>
                 <div class="body-div">
-                  <div class="price">
-                    <div class="left">
-                      <h6>Location:</h6>
-                      <p>Kirkos, Addis Ababa</p>
-                      <a
-                        href="https://www.google.com/maps/dir//debre+damo+hotel/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x164b857377c86f7f:0xda307876aa0a9dca?sa=X&ved=2ahUKEwjgwILz782CAxW0a_EDHRZIATMQ9Rd6BAhMEAA"
-                        >View on Map</a
-                      >
-                    </div>
-                    <div class="right">
-                      <h6>Price:</h6>
-                      <p style="font-size: 14px; font-weight: 400">
-                        <span style="text-decoration: line-through">$120</span>
-                        $100/night
-                      </p>
-                    </div>
-                  </div>
+                  <a class="map" href="" style="float: right">View on Map</a>
                   <div class="body-title">
-                    <p><b>Hyatt-Regency Hotel</b></p>
-                    <div class="review d-flex gap-1 align-items-center">
-                      <i class="fa-star fa-solid"></i>
-                      <i class="fa-star fa-solid"></i>
-                      <i class="fa-star fa-solid"></i>
-                      <i class="fa-star fa-solid"></i>
-                      <i class="fa-star-half fa-solid"></i>
-                      <p style="color: #4f4f4f">4.5 (800 Reviews)</p>
-                    </div>
+                    <p>
+                      <b
+                        >Danakil Depression,
+                        <span style="font-size: 11px">Afar</span></b
+                      >
+                    </p>
                   </div>
                   <div class="body-text">
-                    Hyatt Regency Addis Ababa offers accommodations with a
-                    restaurant, free private parking, an outdoor swimming pool and
-                    a fitness
-                  </div>
-                  <div
-                    class="body-bottom"
-                    style="
-                      padding-top: 7%;
-                      display: flex;
-                      justify-content: center;
-                      margin-inline: auto;
-                    "
-                  >
-                    <button
-                      class="body-share m-0"
-                      onclick="window.location.href='#popup2'"
+                    <p>
+                      Venture into the extreme and alien landscape of the
+                      Danakil Depression, one of the hottest and lowest places
+                      on Earth. See the colorful mineral formations, the
+                      bubbling geysers, and the active volcano of Erta Ale.
+                    </p>
+                    <div
+                      class="body-bottom d-flex align-items-center pe-4 mt-5"
                     >
-                      Share
-                    </button>
-                    <button
-                      class="body-remove ms-2"
-                      onclick="window.location.href='#popup3'"
-                    >
-                      Remove
-                    </button>
+                      <p class="mt-2">
+                        Access:<span style="color: #006167">Paid</span>
+                      </p>
+                      <button
+                        class="body-share"
+                        onclick="window.location.href='#popup2'"
+                      >
+                        Share
+                      </button>
+                      <button
+                        class="body-remove"
+                        onclick="window.location.href='#popup3'"
+                      >
+                        Remove
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
             <!-- third div -->
-            <div class="card-div">
-              <!-- card1 -->
-              <div class="card1">
-                <button class="bucket" style="width: 100px">Active</button>
-                <div class="carousel7">
-                  <div class="carousel-images">
-                    <img
-                      class="carousel-image"
-                      src="/Front-end/images/africa.png"
-                      alt=""
-                    />
-                  </div>
-                </div>
-                <div class="body-div">
-                  <div class="price">
-                    <div class="left">
-                      <h6>Route:</h6>
-                      <p>Axum - Addis Ababa</p>
-                      
-                    </div>
-                    <div class="right">
-                      <h6>Price:</h6>
-                      <p style="font-size: 14px; font-weight: 400">
-                        <span style="text-decoration: line-through">$140</span>
-                        $110/night
-                      </p>
-                      <a class="map" href="">Book Now</a>
-                    </div>
-                  </div>
-                  <div class="body-title">
-                    <p><b>East African Aviation</b></p>
-                    <div class="review d-flex gap-1">
-                      <i class="fa-star fa-solid"></i>
-                      <i class="fa-star fa-solid"></i>
-                      <i class="fa-star fa-solid"></i>
-                      <i class="fa-star fa-solid"></i>
-                      <i class="fa-star fa-solid"></i>
-                      
-                      <p style="color: #4f4f4f">5.0 (425 Reviews)</p>
-                    </div>
-                  </div>
-                  <div class="body-text">
-                    <p>
-                      East African Aviation is the first private aviation company in Ethiopia that provides air charter, air cargo, and air ambulance transportation services all in one place.
-                    </p>
-                  </div>
-                  <div class="body-bottom mb-4">
-                    <button
-                      class="body-share"
-                      onclick="window.location.href='#popup2'"
-                    >
-                      Share
-                    </button>
-                    <button
-                      class="body-remove"
-                      onclick="window.location.href='#popup3'"
-                    >
-                      Remove
-                    </button>
-                  </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="popup-shared" id="popup10">
+      <div class="content-shared">
+        <div class="right-content1">
+          <div class="navigation pt-2 d-flex align-item-center">
+            <div class="pagename1">
+              <p>Shared with Me</p>
+            </div>
+            <div class="buttons1">
+              <button
+                class="non-active1 button1"
+                onclick="window.location.href='sharedwithme.html'"
+              >
+                Itineraries
+              </button>
+
+              <button
+                class="non-active1 button1"
+                onclick="window.location.href='#popup9'"
+              >
+                Places to Go
+              </button>
+
+              <button class="active1">Saved Deals</button>
+            </div>
+          </div>
+          <div class="filter1">
+            <p class="filterby1">Filter by</p>
+            <div class="filter_wrapper1">
+              <div class="filter-content1">
+                <input type="checkbox" name="Lodge" id="Lodge" />
+                <label for="Lodge">Lodge</label>
+              </div>
+              <div class="filter-content1">
+                <input type="checkbox" name="Flights" id="Flights" />
+                <label for="Flights">Flights</label>
+              </div>
+              <div class="filter-content1">
+                <input type="checkbox" name="Active" id="Active" />
+                <label for="Active">Active</label>
+              </div>
+              <div class="filter-content1">
+                <input type="checkbox" name="Expired" id="Expired" />
+                <label for="Expired">Expired</label>
+              </div>
+            </div>
+          </div>
+          <!-- first div -->
+          <div class="card-div">
+            <!-- card1 -->
+            <div class="card1">
+              <button class="bucket" style="width: 100px">Booked</button>
+              <div class="carousel10">
+                <div class="carousel-images">
+                  <img
+                    class="carousel-image"
+                    src="../../images/Radison_blu1.jpg"
+                    alt=""
+                  />
+                  <img
+                    class="carousel-image"
+                    src="../../images/Radison_blu2.jpeg"
+                    alt=""
+                  />
+                  <img
+                    class="carousel-image"
+                    src="../../images/Radison_blu3.jpeg"
+                    alt=""
+                  />
                 </div>
               </div>
-              <!-- card2 -->
-              <div class="card1">
-                <button class="bucket" style="width: 100px;">Active</button>
-                <div class="carousel8">
-                  <div class="carousel-images">
-                    <img class="carousel-image" src="/Front-end/images/haile4.jpeg" alt="" />
+              <div class="body-div">
+                <div class="price">
+                  <div class="left">
+                    <h6>Location:</h6>
+                    <p>Kirkos, Addis Ababa</p>
+                    <a
+                      href="https://www.google.com/maps/dir//debre+damo+hotel/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x164b857377c86f7f:0xda307876aa0a9dca?sa=X&ved=2ahUKEwjgwILz782CAxW0a_EDHRZIATMQ9Rd6BAhMEAA"
+                      >View on Map</a
+                    >
                   </div>
-                </div>
-                <div class="body-div">
-                  <div class="price">
-                    <div class="left">
-                      <h6>Location:</h6>
-                      <p>Hawassa</p>
-                      <a href="">View on Map</a>
-                    </div>
-                    <div class="right">
-                      <h6>Price:</h6>
-                      <p style="font-size: 14px; font-weight: 400">
-                        <span style="text-decoration: line-through">$130</span> $110
-                      </p>
-                      <a class="map" href="">Book Now</a>
-                    </div>
-                  </div>
-                  <div class="body-title">
-                    <p><b>Haile Resort</b></p>
-                    <div class="review d-flex gap-1">
-                      <i class="fa-star fa-solid"></i>
-                      <i class="fa-star fa-solid"></i>
-                      <i class="fa-star fa-solid"></i>
-                      <i class="fa-star fa-solid"></i>
-                      <i class="fa-star-half fa-solid"></i>
-                      <p style="color: #4f4f4f">4.5 (800 Reviews)</p>
-                    </div>
-                  </div>
-                  <div class="body-text">
-                    <p>
-                      The hotel gives a spectacular view of the lake Hawassa that blends the rich mosaic cultural with southern warm hospitality.
+                  <div class="right">
+                    <h6>Price:</h6>
+                    <p style="font-size: 14px; font-weight: 400">
+                      <span style="text-decoration: line-through"> $180</span>
+                      $150/night
                     </p>
                   </div>
-                  <div class="body-bottom mt-4 pt-2">
-                    <button
-                      class="body-share"
-                      onclick="window.location.href='#popup2'"
-                    >
-                      Share
-                    </button>
-                    <button
-                      class="body-remove"
-                      onclick="window.location.href='#popup3'"
-                    >
-                      Remove
-                    </button>
+                </div>
+                <div class="body-title">
+                  <p><b>Radisson Blu Hotel</b></p>
+                  <div class="review d-flex gap-1 align-items-center">
+                    <i class="fa-star fa-solid"></i>
+                    <i class="fa-star fa-solid"></i>
+                    <i class="fa-star fa-solid"></i>
+                    <i class="fa-star fa-solid"></i>
+                    <i class="fa-solid fa-star-half"></i>
+                    <p style="color: #4f4f4f">4.5 (800 Reviews)</p>
                   </div>
+                </div>
+                <div class="body-text">
+                  <p>
+                    The hotel has a terrace, spa center, bar and guests can
+                    enjoy a meal at the restaurant. The Rooms include deep
+                    soaking bathtubs and pillow-top beds.
+                  </p>
+                </div>
+                <div
+                  class="body-bottom"
+                  style="
+                    padding-bottom: 5%;
+                    display: flex;
+                    justify-content: center;
+                    margin-inline: auto;
+                  "
+                >
+                  <button
+                    class="body-share m-0"
+                    onclick="window.location.href='#popup2'"
+                  >
+                    Share
+                  </button>
+                  <button
+                    class="body-remove ms-2"
+                    onclick="window.location.href='#popup3'"
+                  >
+                    Remove
+                  </button>
                 </div>
               </div>
-              <!-- card3 -->
-              <div class="card1">
-                <button class="bucket" style="width: 100px; background: #e41d1d">
-                  Expired
-                </button>
-                <div class="carousel9">
-                  <div class="carousel-images">
-                    <img
-                      class="carousel-image"
-                      src="/Front-end/images/ethiopian_airlines.jpg"
-                      alt=""
-                    />
+            </div>
+            <!-- 12 -->
+            <div class="card1">
+              <button class="bucket" style="width: 100px; background: #e41d1d">
+                Expired
+              </button>
+              <div class="carousel2">
+                <div class="carousel-images">
+                  <img
+                    class="carousel-image"
+                    src="../../images/ethiopian_airlines.jpg"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="body-div">
+                <div class="price">
+                  <div class="left">
+                    <h6>Route:</h6>
+                    <p>London - Addis Ababa</p>
+                  </div>
+                  <div class="right">
+                    <h6>Price:</h6>
+                    <p style="font-size: 14px; font-weight: 400">
+                      <span style="text-decoration: line-through">$900</span>
+                      $750
+                    </p>
                   </div>
                 </div>
-                <div class="body-div">
-                  <div class="price">
-                    <div class="left">
-                      <h6>Route:</h6>
-                      <p>London - Addis Ababa</p>
-                      
-                    </div>
-                    <div class="right">
-                      <h6>Price:</h6>
-                      <p style="font-size: 14px; font-weight: 400">
-                        <span style="text-decoration: line-through">$900</span>
-                        $750/night
-                      </p>
-                    </div>
+                <div class="body-title">
+                  <p><b>Ethiopian Airline</b></p>
+                  <div class="review d-flex gap-1 align-items-center">
+                    <i class="fa-star fa-solid"></i>
+                    <i class="fa-star fa-solid"></i>
+                    <i class="fa-star fa-solid"></i>
+                    <i class="fa-star fa-solid"></i>
+                    <i class="fa-star fa-solid"></i>
+                    <p style="color: #4f4f4f">5.0 (425 Reviews)</p>
                   </div>
-                  <div class="body-title">
-                    <p><b>Ethiopian Airline</b></p>
-                    <div class="review d-flex gap-1">
-                      <i class="fa-star fa-solid"></i>
-                      <i class="fa-star fa-solid"></i>
-                      <i class="fa-star fa-solid"></i>
-                      <i class="fa-star fa-solid"></i>
-                      <i class="fa-star fa-solid"></i>
-                      
-                      <p style="color: #4f4f4f">5.0 (425 Reviews)</p>
-                    </div>
+                </div>
+                <div class="body-text">
+                  <p>
+                    Ethiopian Airlines, known as the "Pride of Africa," is the
+                    flagship carrier of Ethiopia. Ethiopian Airlines connects
+                    passengers to over 120 destinations globally
+                  </p>
+                </div>
+                <div
+                  class="body-bottom"
+                  style="
+                    padding-bottom: 5%;
+                    display: flex;
+                    justify-content: center;
+                    margin-inline: auto;
+                  "
+                >
+                  <button
+                    class="body-share m-0"
+                    onclick="window.location.href='#popup2'"
+                  >
+                    Share
+                  </button>
+                  <button
+                    class="body-remove ms-2"
+                    onclick="window.location.href='#popup3'"
+                  >
+                    Remove
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- card3 -->
+            <div class="card1">
+              <button class="bucket" style="width: 100px">Active</button>
+              <div class="carousel3">
+                <div class="carousel-images">
+                  <img
+                    class="carousel-image"
+                    src="../../images/national airways.jpeg"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="body-div">
+                <div class="price">
+                  <div class="left">
+                    <h6>Route:</h6>
+                    <p>Addis Ababa - Lalibela</p>
                   </div>
-                  <div class="body-text">
-                    Ethiopian Airlines, known as the "Pride of Africa," is the flagship carrier of Ethiopia. Ethiopian Airlines connects passengers to over 120 destinations globally
-                  </div>
-                  <div class="body-bottom mt-3">
-                    <button
-                      class="body-share"
-                      onclick="window.location.href='#popup2'"
+                  <div class="right">
+                    <h6>Price:</h6>
+                    <p style="font-size: 14px; font-weight: 400">
+                      <span style="text-decoration: line-through">$300</span>
+                      $250
+                    </p>
+                    <a
+                      class="map"
+                      href="https://www.google.com/maps/dir//debre+damo+hotel/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x164b857377c86f7f:0xda307876aa0a9dca?sa=X&ved=2ahUKEwjgwILz782CAxW0a_EDHRZIATMQ9Rd6BAhMEAA"
+                      >Book Now</a
                     >
-                      Share
-                    </button>
-                    <button
-                      class="body-remove"
-                      onclick="window.location.href='#popup3'"
-                    >
-                      Remove
-                    </button>
                   </div>
+                </div>
+                <div class="body-title">
+                  <p><b>National Airways</b></p>
+                  <!-- check here -->
+
+                  <div class="review d-flex gap-1 align-items-center">
+                    <i class="fa-star fa-solid"></i>
+                    <i class="fa-star fa-solid"></i>
+                    <i class="fa-star fa-solid"></i>
+                    <i class="fa-star fa-solid"></i>
+                    <i class="fa-star fa-solid"></i>
+                    <p style="color: #4f4f4f">5.0 (425 Reviews)</p>
+                  </div>
+                </div>
+                <div class="body-text">
+                  <p>
+                    National Airways Ethiopia, is a private airline based in
+                    Addis Ababa. It was established in 2007 and has been
+                    operating charter services since 2009.
+                  </p>
+                </div>
+                <div
+                  class="body-bottom"
+                  style="
+                    padding-bottom: 5%;
+                    display: flex;
+                    margin-inline: auto;
+                    justify-content: center;
+                  "
+                >
+                  <button
+                    class="body-share m-0"
+                    onclick="window.location.href='#popup2'"
+                  >
+                    Share
+                  </button>
+                  <button
+                    class="body-remove ms-2"
+                    onclick="window.location.href='#popup3'"
+                  >
+                    Remove
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- second div -->
+          <div class="card-div">
+            <!-- card1 -->
+            <div class="card1">
+              <button class="bucket" style="width: 100px">Active</button>
+              <div class="carousel4">
+                <div class="carousel-images">
+                  <img
+                    class="carousel-image"
+                    src="../../images/soralodge.jpeg"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="body-div">
+                <div class="price">
+                  <div class="left">
+                    <h6>Location:</h6>
+                    <p>Lalibela</p>
+                    <a
+                      href="https://www.google.com/maps/dir//debre+damo+hotel/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x164b857377c86f7f:0xda307876aa0a9dca?sa=X&ved=2ahUKEwjgwILz782CAxW0a_EDHRZIATMQ9Rd6BAhMEAA"
+                      >View on Map</a
+                    >
+                  </div>
+                  <div class="right">
+                    <h6>Price:</h6>
+                    <p style="font-size: 14px; font-weight: 400">
+                      <span style="text-decoration: line-through">$80</span>
+                      $50/night
+                    </p>
+                    <a class="map" href="">Book Now</a>
+                  </div>
+                </div>
+                <div class="body-title">
+                  <p><b>Sora Lodge</b></p>
+                  <div class="review d-flex gap-1 align-items-center">
+                    <i class="fa-star fa-solid"></i>
+                    <i class="fa-star fa-solid"></i>
+                    <i class="fa-star fa-solid"></i>
+                    <i class="fa-star fa-solid"></i>
+                    <i class="fa-star-half fa-solid"></i>
+                    <p style="color: #4f4f4f">4.5 (800 Reviews)</p>
+                  </div>
+                </div>
+                <div class="body-text">
+                  <p>
+                    Sora Lodge Lalibela has both traditional and modern rooms
+                    with the most spectacular views of the mountains.
+                  </p>
+                </div>
+                <div
+                  class="body-bottom"
+                  style="
+                    padding-top: 6.5%;
+                    display: flex;
+                    justify-content: center;
+                    margin-inline: auto;
+                  "
+                >
+                  <button
+                    class="body-share m-0"
+                    onclick="window.location.href='#popup2'"
+                  >
+                    Share
+                  </button>
+                  <button
+                    class="body-remove ms-2"
+                    onclick="window.location.href='#popup3'"
+                  >
+                    Remove
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- card2 -->
+            <div class="card1">
+              <button class="bucket" style="width: 100px">Booked</button>
+              <div class="carousel5">
+                <div class="carousel-images">
+                  <img
+                    class="carousel-image"
+                    src="../../images/ethiopian_airlines.jpg"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="body-div">
+                <div class="price">
+                  <div class="left">
+                    <h6>Route:</h6>
+                    <p>London - Addis Ababa</p>
+                  </div>
+                  <div class="right">
+                    <h6>Price:</h6>
+                    <p style="font-size: 14px; font-weight: 400">
+                      <span style="text-decoration: line-through">$900</span>
+                      $750
+                    </p>
+                  </div>
+                </div>
+                <div class="body-title">
+                  <p><b>Ethiopian Airline</b></p>
+                  <div class="review d-flex gap-1 align-items-center">
+                    <i class="fa-star fa-solid"></i>
+                    <i class="fa-star fa-solid"></i>
+                    <i class="fa-star fa-solid"></i>
+                    <i class="fa-star fa-solid"></i>
+                    <i class="fa-star fa-solid"></i>
+                    <p style="color: #4f4f4f">5.0 (425 Reviews)</p>
+                  </div>
+                </div>
+                <div class="body-text">
+                  <p>
+                    Ethiopian Airlines, known as the "Pride of Africa," is the
+                    flagship carrier of Ethiopia. Ethiopian Airlines connects
+                    passengers to over 120 destinations globally
+                  </p>
+                </div>
+                <div
+                  class="body-bottom"
+                  style="
+                    padding-bottom: 5%;
+                    display: flex;
+                    margin-inline: auto;
+                    justify-content: center;
+                  "
+                >
+                  <button
+                    class="body-share m-0"
+                    onclick="window.location.href='#popup2'"
+                  >
+                    Share
+                  </button>
+                  <button
+                    class="body-remove ms-2"
+                    onclick="window.location.href='#popup3'"
+                  >
+                    Remove
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- card3 -->
+            <div class="card1">
+              <button class="bucket" style="width: 100px; background: #e41d1d">
+                Expired
+              </button>
+              <div class="carousel6">
+                <div class="carousel-images">
+                  <img
+                    class="carousel-image"
+                    src="../../images/hayat4.jpeg"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="body-div">
+                <div class="price">
+                  <div class="left">
+                    <h6>Location:</h6>
+                    <p>Kirkos, Addis Ababa</p>
+                    <a
+                      href="https://www.google.com/maps/dir//debre+damo+hotel/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x164b857377c86f7f:0xda307876aa0a9dca?sa=X&ved=2ahUKEwjgwILz782CAxW0a_EDHRZIATMQ9Rd6BAhMEAA"
+                      >View on Map</a
+                    >
+                  </div>
+                  <div class="right">
+                    <h6>Price:</h6>
+                    <p style="font-size: 14px; font-weight: 400">
+                      <span style="text-decoration: line-through">$120</span>
+                      $100/night
+                    </p>
+                  </div>
+                </div>
+                <div class="body-title">
+                  <p><b>Hyatt-Regency Hotel</b></p>
+                  <div class="review d-flex gap-1 align-items-center">
+                    <i class="fa-star fa-solid"></i>
+                    <i class="fa-star fa-solid"></i>
+                    <i class="fa-star fa-solid"></i>
+                    <i class="fa-star fa-solid"></i>
+                    <i class="fa-star-half fa-solid"></i>
+                    <p style="color: #4f4f4f">4.5 (800 Reviews)</p>
+                  </div>
+                </div>
+                <div class="body-text">
+                  Hyatt Regency Addis Ababa offers accommodations with a
+                  restaurant, free private parking, an outdoor swimming pool and
+                  a fitness
+                </div>
+                <div
+                  class="body-bottom"
+                  style="
+                    padding-top: 7%;
+                    display: flex;
+                    justify-content: center;
+                    margin-inline: auto;
+                  "
+                >
+                  <button
+                    class="body-share m-0"
+                    onclick="window.location.href='#popup2'"
+                  >
+                    Share
+                  </button>
+                  <button
+                    class="body-remove ms-2"
+                    onclick="window.location.href='#popup3'"
+                  >
+                    Remove
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- third div -->
+          <div class="card-div">
+            <!-- card1 -->
+            <div class="card1">
+              <button class="bucket" style="width: 100px">Active</button>
+              <div class="carousel7">
+                <div class="carousel-images">
+                  <img
+                    class="carousel-image"
+                    src="../../images/africa.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="body-div">
+                <div class="price">
+                  <div class="left">
+                    <h6>Route:</h6>
+                    <p>Axum - Addis Ababa</p>
+                  </div>
+                  <div class="right">
+                    <h6>Price:</h6>
+                    <p style="font-size: 14px; font-weight: 400">
+                      <span style="text-decoration: line-through">$140</span>
+                      $110/night
+                    </p>
+                    <a class="map" href="">Book Now</a>
+                  </div>
+                </div>
+                <div class="body-title">
+                  <p><b>East African Aviation</b></p>
+                  <div class="review d-flex gap-1">
+                    <i class="fa-star fa-solid"></i>
+                    <i class="fa-star fa-solid"></i>
+                    <i class="fa-star fa-solid"></i>
+                    <i class="fa-star fa-solid"></i>
+                    <i class="fa-star fa-solid"></i>
+
+                    <p style="color: #4f4f4f">5.0 (425 Reviews)</p>
+                  </div>
+                </div>
+                <div class="body-text">
+                  <p>
+                    East African Aviation is the first private aviation company
+                    in Ethiopia that provides air charter, air cargo, and air
+                    ambulance transportation services all in one place.
+                  </p>
+                </div>
+                <div class="body-bottom mb-4">
+                  <button
+                    class="body-share"
+                    onclick="window.location.href='#popup2'"
+                  >
+                    Share
+                  </button>
+                  <button
+                    class="body-remove"
+                    onclick="window.location.href='#popup3'"
+                  >
+                    Remove
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- card2 -->
+            <div class="card1">
+              <button class="bucket" style="width: 100px">Active</button>
+              <div class="carousel8">
+                <div class="carousel-images">
+                  <img
+                    class="carousel-image"
+                    src="../../images/haile4.jpeg"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="body-div">
+                <div class="price">
+                  <div class="left">
+                    <h6>Location:</h6>
+                    <p>Hawassa</p>
+                    <a href="">View on Map</a>
+                  </div>
+                  <div class="right">
+                    <h6>Price:</h6>
+                    <p style="font-size: 14px; font-weight: 400">
+                      <span style="text-decoration: line-through">$130</span>
+                      $110
+                    </p>
+                    <a class="map" href="">Book Now</a>
+                  </div>
+                </div>
+                <div class="body-title">
+                  <p><b>Haile Resort</b></p>
+                  <div class="review d-flex gap-1">
+                    <i class="fa-star fa-solid"></i>
+                    <i class="fa-star fa-solid"></i>
+                    <i class="fa-star fa-solid"></i>
+                    <i class="fa-star fa-solid"></i>
+                    <i class="fa-star-half fa-solid"></i>
+                    <p style="color: #4f4f4f">4.5 (800 Reviews)</p>
+                  </div>
+                </div>
+                <div class="body-text">
+                  <p>
+                    The hotel gives a spectacular view of the lake Hawassa that
+                    blends the rich mosaic cultural with southern warm
+                    hospitality.
+                  </p>
+                </div>
+                <div class="body-bottom mt-4 pt-2">
+                  <button
+                    class="body-share"
+                    onclick="window.location.href='#popup2'"
+                  >
+                    Share
+                  </button>
+                  <button
+                    class="body-remove"
+                    onclick="window.location.href='#popup3'"
+                  >
+                    Remove
+                  </button>
+                </div>
+              </div>
+            </div>
+            <!-- card3 -->
+            <div class="card1">
+              <button class="bucket" style="width: 100px; background: #e41d1d">
+                Expired
+              </button>
+              <div class="carousel9">
+                <div class="carousel-images">
+                  <img
+                    class="carousel-image"
+                    src="../../images/ethiopian_airlines.jpg"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="body-div">
+                <div class="price">
+                  <div class="left">
+                    <h6>Route:</h6>
+                    <p>London - Addis Ababa</p>
+                  </div>
+                  <div class="right">
+                    <h6>Price:</h6>
+                    <p style="font-size: 14px; font-weight: 400">
+                      <span style="text-decoration: line-through">$900</span>
+                      $750/night
+                    </p>
+                  </div>
+                </div>
+                <div class="body-title">
+                  <p><b>Ethiopian Airline</b></p>
+                  <div class="review d-flex gap-1">
+                    <i class="fa-star fa-solid"></i>
+                    <i class="fa-star fa-solid"></i>
+                    <i class="fa-star fa-solid"></i>
+                    <i class="fa-star fa-solid"></i>
+                    <i class="fa-star fa-solid"></i>
+
+                    <p style="color: #4f4f4f">5.0 (425 Reviews)</p>
+                  </div>
+                </div>
+                <div class="body-text">
+                  Ethiopian Airlines, known as the "Pride of Africa," is the
+                  flagship carrier of Ethiopia. Ethiopian Airlines connects
+                  passengers to over 120 destinations globally
+                </div>
+                <div class="body-bottom mt-3">
+                  <button
+                    class="body-share"
+                    onclick="window.location.href='#popup2'"
+                  >
+                    Share
+                  </button>
+                  <button
+                    class="body-remove"
+                    onclick="window.location.href='#popup3'"
+                  >
+                    Remove
+                  </button>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    <script src="/Front-end/Js/test.js"></script>
-    <script src="/Front-end/js/placestogo.js"></script>
-    <script src="/Front-end/js/remove.js"></script>
+    </div>
+    <script src="../../Js/test.js"></script>
+    <script src="../../js/placestogo.js"></script>
+    <script src="../../js/remove.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"

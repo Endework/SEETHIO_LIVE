@@ -21,232 +21,231 @@
     />
     <!-- style sheet -->
     <style>
-      #removereson{
+      #removereson {
         display: none;
       }
     </style>
-    <link rel="stylesheet" href="/Front-end/Css/places.css" />
+    <link rel="stylesheet" href="../../Css/places.css" />
   </head>
   <body>
     <header>
-        <nav>
-          <img src="/Front-end/images/dashboard_logo.png" alt="" />
-          <ul>
-            <li class="formin" style="margin-left: 10%; width: 25%"> 
-            
-              <form class="d-flex form" role="search">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <input
-                  class="form-control me-2 px-3"
-                  type="search"
-                  placeholder="Search"
-                  aria-label="Search"
-                />
-              </form>
-            </li>
-            <li>
-              <a style="color: #fabf00" href="../Home.html">Home</a>
-            </li>
-            <li>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="19"
-                height="27"
-                viewBox="0 0 19 27"
-                fill="none"
+      <nav>
+        <img src="../../images/dashboard_logo.png" alt="" />
+        <ul>
+          <li class="formin" style="margin-left: 10%; width: 25%">
+            <form class="d-flex form" role="search">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <input
+                class="form-control me-2 px-3"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+            </form>
+          </li>
+          <li>
+            <a style="color: #fabf00" href="../Home.html">Home</a>
+          </li>
+          <li>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="19"
+              height="27"
+              viewBox="0 0 19 27"
+              fill="none"
+            >
+              <path
+                d="M15.4884 7C13.5582 7 12 5.43667 12 3.5C12 1.56333 13.5582 0 15.4884 0H15.5116C17.4418 0 19 1.56333 19 3.5C19 5.43667 17.4186 7 15.4884 7Z"
+                fill="#E41D1D"
+              />
+              <path
+                d="M16.5 21.6667L16.9 22.2C17.0657 22.4209 17.0209 22.7343 16.8 22.9C16.7135 22.9649 16.6082 23 16.5 23H0.5C0.22386 23 0 22.7761 0 22.5C0 22.3918 0.0350899 22.2865 0.0999999 22.2L0.5 21.6667V13C0.5 8.58172 4.08172 5 8.5 5C12.9183 5 16.5 8.58172 16.5 13V21.6667ZM6 24H11C11 25.3807 9.8807 26.5 8.5 26.5C7.1193 26.5 6 25.3807 6 24Z"
+                fill="#FABF00"
+              />
+            </svg>
+          </li>
+          <li class="d-flex align-items-center gap-2">
+            <a href="./Dashboard.html"><i class="fa-solid fa-user"></i></a>
+            <p class="pt-3">User Name</p>
+          </li>
+
+          <div class="d-flex align-items-center gap-2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="32"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <path
+                d="M2.05078 12.9981H7.52871C7.7077 16.2669 8.75886 19.3034 10.4535 21.879C5.98907 21.1852 2.50156 17.5383 2.05078 12.9981ZM2.05078 10.9981C2.50156 6.45785 5.98907 2.81093 10.4535 2.11719C8.75886 4.69273 7.7077 7.72928 7.52871 10.9981H2.05078ZM21.9521 10.9981H16.4741C16.2951 7.72928 15.244 4.69273 13.5494 2.11719C18.0138 2.81093 21.5013 6.45785 21.9521 10.9981ZM21.9521 12.9981C21.5013 17.5383 18.0138 21.1852 13.5494 21.879C15.244 19.3034 16.2951 16.2669 16.4741 12.9981H21.9521ZM9.53214 12.9981H14.4707C14.2991 15.7809 13.4161 18.3713 12.0014 20.5896C10.5867 18.3713 9.70375 15.7809 9.53214 12.9981ZM9.53214 10.9981C9.70375 8.21527 10.5867 5.62489 12.0014 3.40658C13.4161 5.62489 14.2991 8.21527 14.4707 10.9981H9.53214Z"
+                fill="white"
+              />
+            </svg>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle fs-4"
+                data-bs-toggle="dropdown"
+                href="#"
+                role="button"
+                aria-expanded="false"
+                >English</a
               >
-                <path
-                  d="M15.4884 7C13.5582 7 12 5.43667 12 3.5C12 1.56333 13.5582 0 15.4884 0H15.5116C17.4418 0 19 1.56333 19 3.5C19 5.43667 17.4186 7 15.4884 7Z"
-                  fill="#E41D1D"
-                />
-                <path
-                  d="M16.5 21.6667L16.9 22.2C17.0657 22.4209 17.0209 22.7343 16.8 22.9C16.7135 22.9649 16.6082 23 16.5 23H0.5C0.22386 23 0 22.7761 0 22.5C0 22.3918 0.0350899 22.2865 0.0999999 22.2L0.5 21.6667V13C0.5 8.58172 4.08172 5 8.5 5C12.9183 5 16.5 8.58172 16.5 13V21.6667ZM6 24H11C11 25.3807 9.8807 26.5 8.5 26.5C7.1193 26.5 6 25.3807 6 24Z"
-                  fill="#FABF00"
-                />
-              </svg>
-            </li>
-            <li class="d-flex align-items-center gap-2">
-              <a href="./Dashboard.html"><i class="fa-solid fa-user"></i></a>
-              <p class="pt-3">User Name</p>
-            </li>
-  
-            <div class="d-flex align-items-center gap-2">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="32"
-                height="32"
-                viewBox="0 0 24 24"
-                fill="none"
-              >
-                <path
-                  d="M2.05078 12.9981H7.52871C7.7077 16.2669 8.75886 19.3034 10.4535 21.879C5.98907 21.1852 2.50156 17.5383 2.05078 12.9981ZM2.05078 10.9981C2.50156 6.45785 5.98907 2.81093 10.4535 2.11719C8.75886 4.69273 7.7077 7.72928 7.52871 10.9981H2.05078ZM21.9521 10.9981H16.4741C16.2951 7.72928 15.244 4.69273 13.5494 2.11719C18.0138 2.81093 21.5013 6.45785 21.9521 10.9981ZM21.9521 12.9981C21.5013 17.5383 18.0138 21.1852 13.5494 21.879C15.244 19.3034 16.2951 16.2669 16.4741 12.9981H21.9521ZM9.53214 12.9981H14.4707C14.2991 15.7809 13.4161 18.3713 12.0014 20.5896C10.5867 18.3713 9.70375 15.7809 9.53214 12.9981ZM9.53214 10.9981C9.70375 8.21527 10.5867 5.62489 12.0014 3.40658C13.4161 5.62489 14.2991 8.21527 14.4707 10.9981H9.53214Z"
-                  fill="white"
-                />
-              </svg>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle fs-4"
-                  data-bs-toggle="dropdown"
-                  href="#"
-                  role="button"
-                  aria-expanded="false"
-                  >English</a
+              <ul class="dropdown-menu ps-2">
+                <div
+                  class="dropcontent d-flex"
+                  style="align-items: center; gap: 10px"
                 >
-                <ul class="dropdown-menu ps-2">
-                  <div
-                    class="dropcontent d-flex"
-                    style="align-items: center; gap: 10px"
-                  >
-                    <p class="mt-3">English (UK)</p>
-                    <input type="checkbox" / checked>
-                  </div>
+                  <p class="mt-3">English (UK)</p>
+                  <input type="checkbox" / checked>
+                </div>
+                <hr />
+                <div class="dropcontent">
+                  <p>English (US)</p>
                   <hr />
-                  <div class="dropcontent">
-                    <p>English (US)</p>
-                    <hr />
-                  </div>
-                  <div class="dropcontent">
-                    <p>Afrikaans</p>
-                    <hr />
-                  </div>
-                  <div class="dropcontent">
-                    <p>Amharic</p>
-                    <hr />
-                  </div>
-                  <div class="dropcontent">
-                    <p>Arabic</p>
-                    <hr />
-                  </div>
-                  <div class="dropcontent">
-                    <p>Bengali</p>
-                    <hr />
-                  </div>
-                  <div class="dropcontent">
-                    <p>Bulgarian</p>
-                    <hr />
-                  </div>
-                  <div class="dropcontent">
-                    <p>Catalan</p>
-                    <hr />
-                  </div>
-                  <div class="dropcontent">
-                    <p>Czech</p>
-                    <hr />
-                  </div>
-                  <div class="dropcontent">
-                    <p>Chinese</p>
-                    <hr />
-                  </div>
-                  <div class="dropcontent">
-                    <p>Danish</p>
-                    <hr />
-                  </div>
-                  <div class="dropcontent">
-                    <p>Dutch</p>
-                    <hr />
-                  </div>
-                  <div class="dropcontent">
-                    <p>Estonian</p>
-                    <hr />
-                  </div>
-                  <div class="dropcontent">
-                    <p>Finnish</p>
-                    <hr />
-                  </div>
-                  <div class="dropcontent">
-                    <p>French</p>
-                    <hr />
-                  </div>
-                  <div class="dropcontent">
-                    <p>German</p>
-                    <hr />
-                  </div>
-                  <div class="dropcontent">
-                    <p>Greek</p>
-                    <hr />
-                  </div>
-                  <div class="dropcontent">
-                    <p>Hausa</p>
-                    <hr />
-                  </div>
-                  <div class="dropcontent">
-                    <p>Hindi</p>
-                    <hr />
-                  </div>
-                  <div class="dropcontent">
-                    <p>Hungarian</p>
-                    <hr />
-                  </div>
-                  <div class="dropcontent">
-                    <p>Igbo</p>
-                    <hr />
-                  </div>
-                  <div class="dropcontent">
-                    <p>Indonesian</p>
-                    <hr />
-                  </div>
-                  <div class="dropcontent">
-                    <p>Italian</p>
-                    <hr />
-                  </div>
-                  <div class="dropcontent">
-                    <p>Japanese</p>
-                    <hr />
-                  </div>
-                  <div class="dropcontent">
-                    <p>Korean</p>
-                    <hr />
-                  </div>
-                  <div class="dropcontent">
-                    <p>Oromo</p>
-                    <hr />
-                  </div>
-                  <div class="dropcontent">
-                    <p>Polish</p>
-                    <hr />
-                  </div>
-                  <div class="dropcontent">
-                    <p>Portuguese</p>
-                    <hr />
-                  </div>
-                  <div class="dropcontent">
-                    <p>Russian</p>
-                    <hr />
-                  </div>
-                  <div class="dropcontent">
-                    <p>Spanish</p>
-                    <hr />
-                  </div>
-                  <div class="dropcontent">
-                    <p>Swahili</p>
-                    <hr />
-                  </div>
-                  <div class="dropcontent">
-                    <p>Tingrinya</p>
-                    <hr />
-                  </div>
-                  <div class="dropcontent">
-                    <p>Turkish</p>
-                    <hr />
-                  </div>
-                  <div class="dropcontent">
-                    <p>Wolof</p>
-                    <hr />
-                  </div>
-                  <div class="dropcontent">
-                    <p>Yoruba</p>
-                    <hr />
-                  </div>
-                  <div class="dropcontent">
-                    <p>Zulu</p>
-                    <hr />
-                  </div>
-                </ul>
-              </li>
-            </div>
-          </ul>
-        </nav>
-      </header>
+                </div>
+                <div class="dropcontent">
+                  <p>Afrikaans</p>
+                  <hr />
+                </div>
+                <div class="dropcontent">
+                  <p>Amharic</p>
+                  <hr />
+                </div>
+                <div class="dropcontent">
+                  <p>Arabic</p>
+                  <hr />
+                </div>
+                <div class="dropcontent">
+                  <p>Bengali</p>
+                  <hr />
+                </div>
+                <div class="dropcontent">
+                  <p>Bulgarian</p>
+                  <hr />
+                </div>
+                <div class="dropcontent">
+                  <p>Catalan</p>
+                  <hr />
+                </div>
+                <div class="dropcontent">
+                  <p>Czech</p>
+                  <hr />
+                </div>
+                <div class="dropcontent">
+                  <p>Chinese</p>
+                  <hr />
+                </div>
+                <div class="dropcontent">
+                  <p>Danish</p>
+                  <hr />
+                </div>
+                <div class="dropcontent">
+                  <p>Dutch</p>
+                  <hr />
+                </div>
+                <div class="dropcontent">
+                  <p>Estonian</p>
+                  <hr />
+                </div>
+                <div class="dropcontent">
+                  <p>Finnish</p>
+                  <hr />
+                </div>
+                <div class="dropcontent">
+                  <p>French</p>
+                  <hr />
+                </div>
+                <div class="dropcontent">
+                  <p>German</p>
+                  <hr />
+                </div>
+                <div class="dropcontent">
+                  <p>Greek</p>
+                  <hr />
+                </div>
+                <div class="dropcontent">
+                  <p>Hausa</p>
+                  <hr />
+                </div>
+                <div class="dropcontent">
+                  <p>Hindi</p>
+                  <hr />
+                </div>
+                <div class="dropcontent">
+                  <p>Hungarian</p>
+                  <hr />
+                </div>
+                <div class="dropcontent">
+                  <p>Igbo</p>
+                  <hr />
+                </div>
+                <div class="dropcontent">
+                  <p>Indonesian</p>
+                  <hr />
+                </div>
+                <div class="dropcontent">
+                  <p>Italian</p>
+                  <hr />
+                </div>
+                <div class="dropcontent">
+                  <p>Japanese</p>
+                  <hr />
+                </div>
+                <div class="dropcontent">
+                  <p>Korean</p>
+                  <hr />
+                </div>
+                <div class="dropcontent">
+                  <p>Oromo</p>
+                  <hr />
+                </div>
+                <div class="dropcontent">
+                  <p>Polish</p>
+                  <hr />
+                </div>
+                <div class="dropcontent">
+                  <p>Portuguese</p>
+                  <hr />
+                </div>
+                <div class="dropcontent">
+                  <p>Russian</p>
+                  <hr />
+                </div>
+                <div class="dropcontent">
+                  <p>Spanish</p>
+                  <hr />
+                </div>
+                <div class="dropcontent">
+                  <p>Swahili</p>
+                  <hr />
+                </div>
+                <div class="dropcontent">
+                  <p>Tingrinya</p>
+                  <hr />
+                </div>
+                <div class="dropcontent">
+                  <p>Turkish</p>
+                  <hr />
+                </div>
+                <div class="dropcontent">
+                  <p>Wolof</p>
+                  <hr />
+                </div>
+                <div class="dropcontent">
+                  <p>Yoruba</p>
+                  <hr />
+                </div>
+                <div class="dropcontent">
+                  <p>Zulu</p>
+                  <hr />
+                </div>
+              </ul>
+            </li>
+          </div>
+        </ul>
+      </nav>
+    </header>
 
     <div class="main">
       <div class="left_menu">
@@ -434,27 +433,23 @@
               <div class="carousel-images">
                 <img
                   class="carousel-image"
-                  src="/Front-end/images/fountain3.png"
+                  src="../../images/fountain3.png"
                   alt=""
                 />
                 <img
                   class="carousel-image"
-                  src="/Front-end/images/chiladababoon.png"
+                  src="../../images/chiladababoon.png"
                   alt=""
                 />
                 <img
                   class="carousel-image"
-                  src="/Front-end/images/waliya.png"
+                  src="../../images/waliya.png"
                   alt=""
                 />
+                <img class="carousel-image" src="../../images/hut.png" alt="" />
                 <img
                   class="carousel-image"
-                  src="/Front-end/images/hut.png"
-                  alt=""
-                />
-                <img
-                  class="carousel-image"
-                  src="/Front-end/images/dashen_mnt.png"
+                  src="../../images/dashen_mnt.png"
                   alt=""
                 />
               </div>
@@ -462,7 +457,12 @@
             <div class="body-div">
               <a class="map" href="" style="float: right">View on Map</a>
               <div class="body-title">
-                <p><b>Simien Mountains Park, <span style="font-size: 11px;">Amhara</span></b></p>
+                <p>
+                  <b
+                    >Simien Mountains Park,
+                    <span style="font-size: 11px">Amhara</span></b
+                  >
+                </p>
               </div>
               <div class="body-text">
                 <p>
@@ -471,8 +471,10 @@
                   escarpment, spot the endemic gelada monkeys and walia ibex,
                   and camp under the stars.
                 </p>
-                <div class="body-bottom mt-3 pt-5 d-flex align-items-center  >
-                  <p class="pt-2">Access:<span style="color: #006167;">Paid</span></p>
+                <div class="body-bottom mt-3 pt-5 d-flex align-items-center">
+                  <p class="pt-2">
+                    Access:<span style="color: #006167">Paid</span>
+                  </p>
                   <button
                     class="body-share"
                     onclick="window.location.href='#popup2'"
@@ -498,22 +500,22 @@
               <div class="carousel-images">
                 <img
                   class="carousel-image"
-                  src="/Front-end/images/Mesobinjera.png"
+                  src="../../images/Mesobinjera.png"
                   alt=""
                 />
                 <img
                   class="carousel-image"
-                  src="/Front-end/images/salad.jpeg"
+                  src="../../images/salad.jpeg"
                   alt=""
                 />
                 <img
                   class="carousel-image"
-                  src="/Front-end/images/chechebsa.jpeg"
+                  src="../../images/chechebsa.jpeg"
                   alt=""
                 />
                 <img
                   class="carousel-image"
-                  src="/Front-end/images/aynet.jpeg"
+                  src="../../images/aynet.jpeg"
                   alt=""
                 />
               </div>
@@ -530,7 +532,7 @@
                 </div>
                 <div class="right">
                   <h6>Price:</h6>
-                  <p>From <span style="font-size: 15px;">$8</span></p>
+                  <p>From <span style="font-size: 15px">$8</span></p>
                 </div>
               </div>
               <div class="body-title">
@@ -546,7 +548,7 @@
               <div class="body-text pt-4">
                 <p>
                   Cuisines <br />
-                  <span style="color: #121212;">African, Ethiopian</span>
+                  <span style="color: #121212">African, Ethiopian</span>
                 </p>
               </div>
               <div
@@ -575,17 +577,17 @@
               <div class="carousel-images">
                 <img
                   class="carousel-image"
-                  src="/Front-end/images/Mesobmarket.png"
+                  src="../../images/Mesobmarket.png"
                   alt=""
                 />
                 <img
                   class="carousel-image"
-                  src="/Front-end/images/spicemarket.jpeg"
+                  src="../../images/spicemarket.jpeg"
                   alt=""
                 />
                 <img
                   class="carousel-image"
-                  src="/Front-end/images/wheatmarket.jpeg"
+                  src="../../images/wheatmarket.jpeg"
                   alt=""
                 />
               </div>
@@ -593,7 +595,12 @@
             <div class="body-div">
               <a class="map" href="" style="float: right">View on Map</a>
               <div class="body-title">
-                <p><b>Merkato, <span style="font-size: 11px;">Addis Ababa</span></b></p>
+                <p>
+                  <b
+                    >Merkato,
+                    <span style="font-size: 11px">Addis Ababa</span></b
+                  >
+                </p>
               </div>
               <div class="body-text">
                 <p>
@@ -602,7 +609,7 @@
                   you can find everything from spices and textiles to
                   traditional handicrafts.
                 </p>
-                <div class="body-bottom mt-5 pt-3 " style="margin-left: 20%">
+                <div class="body-bottom mt-5 pt-3" style="margin-left: 20%">
                   <!-- <p>Access: Paid</p> -->
                   <button
                     class="body-share"
@@ -632,22 +639,22 @@
               <div class="carousel-images">
                 <img
                   class="carousel-image"
-                  src="/Front-end/images/cappuccino.png"
+                  src="../../images/cappuccino.png"
                   alt=""
                 />
                 <img
                   class="carousel-image"
-                  src="/Front-end/images/Breadtoast.png"
+                  src="../../images/Breadtoast.png"
                   alt=""
                 />
                 <img
                   class="carousel-image"
-                  src="/Front-end/images/Coffehouse.png"
+                  src="../../images/Coffehouse.png"
                   alt=""
                 />
                 <img
                   class="carousel-image"
-                  src="/Front-end/images/crossiant.jpeg"
+                  src="../../images/crossiant.jpeg"
                   alt=""
                 />
               </div>
@@ -664,7 +671,7 @@
                 </div>
                 <div class="right">
                   <h6>Price:</h6>
-                  <p>From <span style="font-size: 15px;">$5</span></p>
+                  <p>From <span style="font-size: 15px">$5</span></p>
                 </div>
               </div>
               <div class="body-title">
@@ -681,7 +688,7 @@
               <div class="body-text pt-4">
                 <p>
                   Cuisines <br />
-                  <span style="color: #121212;">American, Cafe, French.</span>
+                  <span style="color: #121212">American, Cafe, French.</span>
                 </p>
               </div>
               <div
@@ -710,22 +717,22 @@
               <div class="carousel-images">
                 <img
                   class="carousel-image"
-                  src="/Front-end/images/shemamarket.jpeg"
+                  src="../../images/shemamarket.jpeg"
                   alt=""
                 />
                 <img
                   class="carousel-image"
-                  src="/Front-end/images/mesob2market.jpeg"
+                  src="../../images/mesob2market.jpeg"
                   alt=""
                 />
                 <img
                   class="carousel-image"
-                  src="/Front-end/images/Sifet1market.png"
+                  src="../../images/Sifet1market.png"
                   alt=""
                 />
                 <img
                   class="carousel-image"
-                  src="/Front-end/images/sifet2market.jpeg"
+                  src="../../images/sifet2market.jpeg"
                   alt=""
                 />
               </div>
@@ -733,7 +740,12 @@
             <div class="body-div">
               <a class="map" href="" style="float: right">View on Map</a>
               <div class="body-title">
-                <p> <b>Axum Tsion Market, <span style="font-size: 11px;">Axum </span></b></p>
+                <p>
+                  <b
+                    >Axum Tsion Market,
+                    <span style="font-size: 11px">Axum </span></b
+                  >
+                </p>
               </div>
               <div class="body-text">
                 <p>
@@ -768,27 +780,27 @@
               <div class="carousel-images">
                 <img
                   class="carousel-image"
-                  src="/Front-end/images/afar1.png"
+                  src="../../images/afar1.png"
                   alt=""
                 />
                 <img
                   class="carousel-image"
-                  src="/Front-end/images/Afar2.png"
+                  src="../../images/Afar2.png"
                   alt=""
                 />
                 <img
                   class="carousel-image"
-                  src="/Front-end/images/afar3.png"
+                  src="../../images/afar3.png"
                   alt=""
                 />
                 <img
                   class="carousel-image"
-                  src="/Front-end/images/afar4.png"
+                  src="../../images/afar4.png"
                   alt=""
                 />
                 <img
                   class="carousel-image"
-                  src="/Front-end/images/afar5.png"
+                  src="../../images/afar5.png"
                   alt=""
                 />
               </div>
@@ -796,7 +808,12 @@
             <div class="body-div">
               <a class="map" href="" style="float: right">View on Map</a>
               <div class="body-title">
-                <p><b>Danakil Depression, <span style="font-size: 11px;">Afar</span></b></p>
+                <p>
+                  <b
+                    >Danakil Depression,
+                    <span style="font-size: 11px">Afar</span></b
+                  >
+                </p>
               </div>
               <div class="body-text">
                 <p>
@@ -805,8 +822,13 @@
                   the colorful mineral formations, the bubbling geysers, and the
                   active volcano of Erta Ale.
                 </p>
-                <div class="body-bottom mt-4 pt-3" style="display: flex; align-items: center;">
-                  <p class="mt-3">Access:<span style="color: #006167;">Paid</span></p>
+                <div
+                  class="body-bottom mt-4 pt-3"
+                  style="display: flex; align-items: center"
+                >
+                  <p class="mt-3">
+                    Access:<span style="color: #006167">Paid</span>
+                  </p>
                   <button
                     class="body-share"
                     onclick="window.location.href='#popup2'"
@@ -834,22 +856,22 @@
               <div class="carousel-images">
                 <img
                   class="carousel-image"
-                  src="/Front-end/images/bale1.jpeg"
+                  src="../../images/bale1.jpeg"
                   alt=""
                 />
                 <img
                   class="carousel-image"
-                  src="/Front-end/images/Bale2.jpeg"
+                  src="../../images/Bale2.jpeg"
                   alt=""
                 />
                 <img
                   class="carousel-image"
-                  src="/Front-end/images/bale3.jpeg"
+                  src="../../images/bale3.jpeg"
                   alt=""
                 />
                 <img
                   class="carousel-image"
-                  src="/Front-end/images/bale4.jpeg"
+                  src="../../images/bale4.jpeg"
                   alt=""
                 />
               </div>
@@ -857,14 +879,18 @@
             <div class="body-div">
               <a class="map" href="" style="float: right">View on Map</a>
               <div class="body-title">
-                <p><b>Bale Robe, <span style="font-size: 11px;">Bale</span></b></p>
+                <p>
+                  <b>Bale Robe, <span style="font-size: 11px">Bale</span></b>
+                </p>
               </div>
               <div class="body-text">
                 <p>
-                  In the ancient city of Bale, the Bale Robe Market is a vibrant hub of activity where you can find traditional Bale clothing, species ,and local crafts. It is a colorful market that reflects the city rich cultural heritage.
+                  In the ancient city of Bale, the Bale Robe Market is a vibrant
+                  hub of activity where you can find traditional Bale clothing,
+                  species ,and local crafts. It is a colorful market that
+                  reflects the city rich cultural heritage.
                 </p>
-                <div class="body-bottom mt-5 pt-4 " style="margin-left: 20%; ">
-                  
+                <div class="body-bottom mt-5 pt-4" style="margin-left: 20%">
                   <button
                     class="body-share"
                     onclick="window.location.href='#popup2'"
@@ -883,27 +909,29 @@
           </div>
           <!-- card2 -->
           <div class="card">
-            <button class="bucket" style="width: 170px">Attraction Center </button>
+            <button class="bucket" style="width: 170px">
+              Attraction Center
+            </button>
             <div class="carousel8">
               <div class="carousel-images">
                 <img
                   class="carousel-image"
-                  src="/Front-end/images/omo1.png"
+                  src="../../images/omo1.png"
                   alt=""
                 />
                 <img
                   class="carousel-image"
-                  src="/Front-end/images/omo2.png"
+                  src="../../images/omo2.png"
                   alt=""
                 />
                 <img
                   class="carousel-image"
-                  src="/Front-end/images/omo3.png"
+                  src="../../images/omo3.png"
                   alt=""
                 />
                 <img
                   class="carousel-image"
-                  src="/Front-end/images/omo4.png"
+                  src="../../images/omo4.png"
                   alt=""
                 />
               </div>
@@ -911,15 +939,31 @@
             <div class="body-div">
               <a class="map" href="" style="float: right">View on Map</a>
               <div class="body-title">
-                <p><b>Omo Valley ,  <span style="font-size: 11px;">South-West </span></b></p>
+                <p>
+                  <b
+                    >Omo Valley ,
+                    <span style="font-size: 11px">South-West </span></b
+                  >
+                </p>
               </div>
               <div class="body-text">
                 <p>
-                  Discover the impressive and historic complex of Fasil Ghebbi, also known as the Camelot of Africa. See the castles, palaces, and churches that were built by the emperors of the Ethiopian Empire.
-
+                  Discover the impressive and historic complex of Fasil Ghebbi,
+                  also known as the Camelot of Africa. See the castles, palaces,
+                  and churches that were built by the emperors of the Ethiopian
+                  Empire.
                 </p>
-                <div class="body-bottom mt-5 pt-3" style="display: flex; align-items: center; justify-content: space-around;">
-                  <p class="mt-3">Access:<span style="color:#006167">Paid</span></p>
+                <div
+                  class="body-bottom mt-5 pt-3"
+                  style="
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-around;
+                  "
+                >
+                  <p class="mt-3">
+                    Access:<span style="color: #006167">Paid</span>
+                  </p>
                   <button
                     class="body-share"
                     onclick="window.location.href='#popup2'"
@@ -939,27 +983,29 @@
           <!-- card3 -->
 
           <div class="card">
-            <button class="bucket" style="width: 196px">Restaurant & Dinning</button>
+            <button class="bucket" style="width: 196px">
+              Restaurant & Dinning
+            </button>
             <div class="carousel9">
               <div class="carousel-images">
                 <img
                   class="carousel-image"
-                  src="/Front-end/images/salad1.jpeg"
+                  src="../../images/salad1.jpeg"
                   alt=""
                 />
                 <img
                   class="carousel-image"
-                  src="/Front-end/images/salad2.jpeg"
+                  src="../../images/salad2.jpeg"
                   alt=""
                 />
                 <img
                   class="carousel-image"
-                  src="/Front-end/images/salad3.jpeg"
+                  src="../../images/salad3.jpeg"
                   alt=""
                 />
                 <img
                   class="carousel-image"
-                  src="/Front-end/images/salad4.jpeg"
+                  src="../../images/salad4.jpeg"
                   alt=""
                 />
               </div>
@@ -976,7 +1022,7 @@
                 </div>
                 <div class="right">
                   <h6>Price:</h6>
-                  <p>From <span style="font-size: 15px;">$30</span></p>
+                  <p>From <span style="font-size: 15px">$30</span></p>
                 </div>
               </div>
               <div class="body-title">
@@ -993,7 +1039,7 @@
               <div class="body-text pt-4">
                 <p>
                   Cuisines <br />
-                  <span style="color:#121212;">American, Cafe, French.</span>
+                  <span style="color: #121212">American, Cafe, French.</span>
                 </p>
               </div>
               <div
@@ -1021,8 +1067,8 @@
     <!-- popup for share -->
     <div id="popup2" class="overlay">
       <div class="popup_share">
-        <a class="close" href="#"
-          ><svg
+        <a class="close" href="#">
+          <svg
             xmlns="http://www.w3.org/2000/svg"
             width="36"
             height="36"
@@ -1032,8 +1078,9 @@
             <path
               d="M18 33C9.71572 33 3 26.2842 3 18C3 9.71572 9.71572 3 18 3C26.2842 3 33 9.71572 33 18C33 26.2842 26.2842 33 18 33ZM18 15.8787L13.7574 11.636L11.636 13.7574L15.8787 18L11.636 22.2426L13.7574 24.3639L18 20.1213L22.2426 24.3639L24.3639 22.2426L20.1213 18L24.3639 13.7574L22.2426 11.636L18 15.8787Z"
               fill="#006167"
-            /></svg
-        ></a>
+            />
+          </svg>
+        </a>
         <div class="content_share">
           <div class="invite">
             <p>
@@ -1214,8 +1261,11 @@
                 </li>
                 <li>
                   <label>
-                    <input type="checkbox" value="Discoveries" name="Discoveries" />New
-                    Discoveries</label
+                    <input
+                      type="checkbox"
+                      value="Discoveries"
+                      name="Discoveries"
+                    />New Discoveries</label
                   >
                 </li>
                 <li>
@@ -1326,8 +1376,8 @@
       integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
       crossorigin="anonymous"
     ></script>
-  
-    <script src="/Front-end/Js/placestogo.js"></script>
-    <script src="/Front-end/Js/remove.js"></script>
+
+    <script src="../../Js/placestogo.js"></script>
+    <script src="../../Js/remove.js"></script>
   </body>
 </html>

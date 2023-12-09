@@ -32,7 +32,7 @@ li{
 
 /* HEADER*/
 header{
-    background-image: url(/Front-end/images/bookings\ background\ image.jpeg);
+    background-image: url(../images/bookings\ background\ image.jpeg);
     display: flex;
     width: 100%;
     height: 679px;
@@ -481,7 +481,7 @@ button:hover{
     color:  #121212;
     border-radius: 15px;
     border: 2px solid var(--Secondary-Colour, #006167);
-    background-image: url('/Front-end/images/Polygon\ 10.svg'), url('/Front-end/images/Polygon\ 9.svg'), url('/Front-end/images/Polygon\ 13.svg'), url('/Front-end/images/Polygon\ 12.svg'), url('/Front-end/images/Polygon\ 11.svg'), url('/Front-end/images/Polygon\ 14.svg');
+    background-image: url('../images/Polygon\ 10.svg'), url('../images/Polygon\ 9.svg'), url('../images/Polygon\ 13.svg'), url('../images/Polygon\ 12.svg'), url('../images/Polygon\ 11.svg'), url('../images/Polygon\ 14.svg');
     background-color:#D7EFDA;
     /* Position and size of the images */
     background-position: 0% 60%,  100% 15%, 5% 0%, 100% 95%,50% 100%, 80% 5%;
