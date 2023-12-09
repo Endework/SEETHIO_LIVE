@@ -15,3 +15,5 @@ seethio/ *.env
 # Ignore database files
 # Ignore SQLite database file
 db.sqlite3
+# Ignore .env file
+.env
