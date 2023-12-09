@@ -12,3 +12,14 @@ class Flight(models.Model):
     departure_time = models.DateTimeField()
     arrival_time = models.DateTimeField()
     price = models.DecimalField(max_digits=8, decimal_places=2)
+
+# models.py
+
+class Hotel(models.Model):
+    name = models.CharField(max_length=255)
+    location = models.CharField(max_length=255)
+    price = models.DecimalField(max_digits=10, decimal_places=2)
+    # Add other relevant fields
+
+    def __str__(self):
+        return self.name

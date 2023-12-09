@@ -3,6 +3,8 @@ from django.shortcuts import render
 from django.http import JsonResponse
 from amadeus import Client, ResponseError
 from .forms import FlightSearchForm
+from .forms import HotelSearchForm
+from .models import Flight, Airport, Hotel
 
 def flights_view(request):
      return render(request, 'Html/Bookings/flight.html')
@@ -62,4 +64,18 @@ def search_flights(request):
 #     return render(request, 'search_flights.html', {'form': form})
 
 
+# views.py
 
+# def hotel_search(request):
+#     if request.method == 'POST':
+#         form = HotelSearchForm(request.POST)
+#         form.is_valid():
+#             # Use form data to query the EPS API and get hotel results
+#             # Populate the Hotel model with the API response data
+#             #Display the results in the template
+#             # ...
+#             return(request, 'Html/Bookings/lodging.html', {'form': form})
+#     else:
+#         form = HotelSearchForm()
+
+#     return render(request, 'Html/Bookings/hotel_search.html', {'form': form})
