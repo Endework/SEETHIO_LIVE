@@ -81,8 +81,10 @@ TEMPLATES = [
                 "django.template.context_processors.request",
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
-                "social_django.context_processors.login_redirect",   # ogo  add this config    # ogo added this
-                "social_django.context_processors.backends",        # ogo added this
+                'social_django.context_processors.backends',  # <-- Here
+                'social_django.context_processors.login_redirect', # <-- Here
+                #"social_django.context_processors.login_redirect",   # ogo  add this config    # ogo added this
+                #"social_django.context_processors.backends",        # ogo added this
                
             ],
         },
@@ -154,16 +156,16 @@ MEDIA_ROOT = os.path.join(BASE_DIR, "static/images")
 
 #social app custom settings added by ogo
 AUTHENTICATION_BACKENDS = [
-    'social_core.backends.facebook.FacebookOAuth2',  #add this
     'social_core.backends.google.GoogleOAuth2',       #add this
+    'social_core.backends.facebook.FacebookOAuth2',
+    
     'django.contrib.auth.backends.ModelBackend',
 ]
 #social app URLS custom settings added by ogo
-LOGIN_URL = 'login'   #add this
-LOGIN_REDIRECT_URL = '/' #'home'   #add this
-LOGOUT_URL = 'logout'   #add this
 LOGOUT_REDIRECT_URL = 'login'   #add this
-
+LOGIN_URL = 'login'
+LOGOUT_URL = 'logout'
+LOGIN_REDIRECT_URL = '/'
 #APIS keys and ID settings added by ogo
 SOCIAL_AUTH_FACEBOOK_KEY = os.environ.get('SOCIAL_AUTH_FACEBOOK_KEY')  #add this
 SOCIAL_AUTH_FACEBOOK_SECRET = os.environ.get('SOCIAL_AUTH_FACEBOOK_SECRET')   #add this
