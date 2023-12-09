@@ -66,15 +66,16 @@ def search_flights(request):
 
 # views.py
 
-def hotel_search(request):
-    if request.method == 'POST':
-        form = HotelSearchForm(request.POST)
-    if form.is_valid():
-            # Use form data to query the EPS API and get hotel results
-            # Populate the Hotel model with the API response data
-            # Display the results in the template
-            # ...
-    else:
-        form = HotelSearchForm()
+# def hotel_search(request):
+#     if request.method == 'POST':
+#         form = HotelSearchForm(request.POST)
+#         form.is_valid():
+#             # Use form data to query the EPS API and get hotel results
+#             # Populate the Hotel model with the API response data
+#             #Display the results in the template
+#             # ...
+#             return(request, 'Html/Bookings/lodging.html', {'form': form})
+#     else:
+#         form = HotelSearchForm()
 
-    return render(request, 'Html/Bookings/hotel_search.html', {'form': form})
+#     return render(request, 'Html/Bookings/hotel_search.html', {'form': form})
