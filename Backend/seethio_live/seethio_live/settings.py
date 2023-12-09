@@ -187,7 +187,7 @@ SOCIAL_AUTH_GOOGLE_SCOPE = [   #add this
 # Brevo
 EMAIL_BACKEND = "anymail.backends.sendinblue.EmailBackend"
 ANYMAIL = {
-    "SENDINBLUE_API_KEY": config("SENDINBLUE_API_KEY"),
+    "SENDIBLUE": config("SENDIBLUE"),
 }
 SENDINBLUE_API_URL = "https://api.brevo.com/v3/"
 # ANYMAIL = {

@@ -3,6 +3,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    ::placeholder{
+        text-align: center;
+        color: var(--Search-Bar-Colour, rgba(0, 0, 0, 0.50));
+    }
 }
 /* ROOT VARIABLES */
 :root{
@@ -14,6 +18,7 @@ body{
     font-family: 'Nunito', sans-serif;
     -webkit-text-size-adjust: 100%; /* Older browsers */
     text-size-adjust: 100%;  /*modern browsers*/
+  
     
 }
 a{
@@ -67,25 +72,36 @@ li{
     
 } */
 
+
 .dropdown-menu .dropdown-item{
     display: flex;
     flex-direction: column;
     align-items: flex-start !important;
     color: #121212 !important;
+    font-size: 13px !important;
+    
+    
+    
     
   
 }
+.dropdown-menu .dropdown-item {
+    text-align: center;
+}
 .dropdown-menu .dropdown-item:hover{
-    color: var(--PRIMARY-COLOUR) !important;
-    background-color: var(--Secondary-Colour) !important;
+    color: var(--Secondary-Colour) !important;
+    background: white !important;
+    
    
    
    
    
  }
- .dropdown-menu li:hover {
-    background-color: var(--Secondary-Colour) !important; 
-}
+ .navhr{
+   width: 100%; 
+   border: 0.25px solid rgb(172, 167, 167) !important;
+ }
+ 
  .dropdown-menu .tx:hover{
     border-right: 3px solid var(--PRIMARY-COLOUR);
    
@@ -140,37 +156,39 @@ li{
 
 #text {
     width: 50%;
-    padding-top: 2rem;
+    padding-top: 1rem;
     position: relative;
         
 }
 #text .top{
     position: absolute;
     top: 10%;
+    z-index: -10;
 }
 #text .bottom{
     position: absolute;
     bottom: 20%;
     right:10% ;
+    z-index: -10;
 }
 #text p{
-    width: 500px;
+    width: 650px;
     height: 200px;
     flex-shrink: 0;
     color: var(--Secondary-Colour);
-    font-size: 2.9rem;
+    font-size: 2.3rem;
     font-weight: 800;
     line-height: 96px;
-    padding: 5.5rem 1.5rem;
+    padding: 5.5rem 1rem;
 }
 #ethiopia{
     color: var(--Secondary-Colour);
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 800;
     line-height: 96px;
 }
 #Unique{
-    font-size: 3.2rem;
+    font-size: 2.8rem;
     color: var(--PRIMARY-COLOUR);
 }
 .location{
@@ -189,15 +207,7 @@ li{
   display: block;
 }
 
-::placeholder{
-color: var(--Search-Bar-Colour, rgba(0, 0, 0, 0.50)) !important;
-font-size: 14px;
-font-style: normal;
-font-weight: 400;
-line-height: 24px; /* 171.429% */
-letter-spacing: 0.15px;
-}
-/* lodge and flight */
+/* FLIGHT AND LODGE */
 header{
     position: relative;
 }
@@ -238,24 +248,10 @@ header{
     height: 78%;
     width: 100% !important;  
 }
-.room {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-}
 
-.add-room, .subtract-room {
-    cursor: pointer;
-    font-size: 1.2em;
-}
 
-.room-number {
-    font-size: 1.2em;
-    border-right: 1px solid #ccc;
-    border-left: 1px solid #ccc;
-    padding: 0 5px;
-}
+
+
 
 #lodgecontainer{
     display: block;
@@ -308,22 +304,34 @@ header{
  }
 
  .search-btn {
-    width: 120px;
-    height: 40px;
-    position: absolute; /* Add this */
-    bottom: 10px; /* Add this */
-    left: 50%; /* Add this */
-    transform: translateX(-50%); /* Add this */
+    position: absolute; 
+    bottom: 10px; 
+    left: 50%; 
+    transform: translateX(-50%); 
     background-color: #FFF;
     color: var(--Secondary-Colour);
     text-align: center;
     border: none;
     cursor: pointer;
+    display: flex;
+    width: 150px;
+    height: 56px;
+    padding: 12px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    font-size: 20px;
+    font-weight: 500;
  }
  .search-btn:hover{
     background: var(--PRIMARY-COLOUR);
 
  }
+ hr{
+    border: 1px solid black;
+    width: 100%;
+   }
 
 /* .green{
     display: none;
@@ -348,39 +356,7 @@ header{
     /* margin-left: 10%; */
     
 }
-.destination{
-    width: 20%;
-}
-.destination .dropdown{
-    border-radius: 10px;
-    border: 1px solid var(--Line-Colour, rgba(137, 137, 137, 0.50));
-    background: var(--Unsecondary-Colour, #FFF);
-    width: 70%;
-    height: 45%;
-}
-.destination a{
-    color: var(--Search-Bar-Colour, rgba(0, 0, 0, 0.50));;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 24px; /* 171.429% */
-    letter-spacing: 0.15px;
-    padding-left: 35%;
-}
-.guests{
-    width: 25%;
-    
-}
-.guests input{
-    width: 30%;
-    height: 55%;
-    flex-shrink: 0;
-    border-radius: 10px;
-    border: 1px solid var(--Line-Colour, rgba(137, 137, 137, 0.50));
-    background: var(--UNPRIMARY-COLOUR, #FFF);
-}
-.guests input::placeholder{
-    text-align: center;
-}
+
 .icon{
     display: flex;
     gap: 1%;
@@ -393,19 +369,7 @@ header{
 .fa-solid{
     color: var(--PRIMARY-COLOUR);
 }
-.guests .item{
-    display: flex;
-    flex-direction: row;
-    gap: 1%;
-}
-.adult, .children{
-    display: flex;
-    gap: 1%;
-}
 
-.room{
-    width: 9%;
-}
 .count{
     border-radius: 10px;
     border: 1px solid var(--Line-Colour, rgba(137, 137, 137, 0.50));
@@ -440,7 +404,7 @@ header{
     
 }
 .info{
-    color: var(--Text-Colour, #121212);;
+    color: var(--Text-Colour, #121212);
     font-size: 32px;
     font-weight: 500;
     line-height: 32px; /* 100% */
@@ -512,26 +476,9 @@ header{
     display: flex;
     flex-direction: row;
 }
-/* calander */
-/* .custom-datepicker {
-    position: relative;
-    display: inline-block;
-} */
-.custom-datepicker input {
-    padding-right: 15px;
-    text-align: center;
-}
-.custom-datepicker i {
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    cursor: pointer;
-    color: rgba(14, 14, 19, 0.651)
-}
-::placeholder{
-    text-align: center;
-    color: var(--Search-Bar-Colour, rgba(0, 0, 0, 0.50));
-}
+
+
+
 .flight1 form .passengers .flex-container .adult ,.children ,.infants{
     display: flex;
     flex-direction: column;
@@ -551,59 +498,144 @@ header{
     font-weight: 500;
    border: none;
 }
-.searchbutton:hover ,.searchbutton1:hover{
+.searchbutton:hover ,.searchbutton1:hover {
     color: var(--Secondary-Colour);
     background: var(--PRIMARY-COLOUR);
 }
 .searchbutton1{
     margin-left: 560px;
 }
-/* LIGHT BLUE */
-.light_blue{
-    width: 100%;
-    margin-top: 250px;
-    padding-bottom: 50px;
-    background: linear-gradient(180deg, rgba(215, 239, 218, 0.00) 0%, rgba(215, 239, 218, 0.00) 0%, rgba(215, 239, 218, 0.50) 0%), #FFF;
+.trip_planner{
+    position: relative;
+}
+
+.trip_planner form .search_btn:hover , .currency form .search_btn:hover{
+    color: var(--Secondary-Colour);
+    background: var(--PRIMARY-COLOUR);
+}
+#tourTitle{
+    color: var(--Secondary-Colour);
+}
+#tourTitle:hover{
+    color:var(--PRIMARY-COLOUR);
+}
+.trip_planner .share{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    cursor: pointer;
     
 }
 
-.light_blue .trip_planner{
+.share-icon:hover{
+    fill:var(--PRIMARY-COLOUR);
+}
+.trip_planner .share .fa-share{
+    color: var(--Secondary-Colour);
+    font-size: 2rem;
+}
+/* Trip planner Popup */
+.overlay {
+    position: fixed;
+    top: 10%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+
+  }
+  .overlay:target {
+    visibility: visible;
+    opacity: 1;
+  }
+  .popup_trip {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 70px auto;
+    padding: 25px;
+    background: linear-gradient(180deg, rgba(215, 229, 239, 0.548) 0%, #D7EFDA 100%);
+    border-radius: 5px;
+    width: 40%;
+    position: relative;
+    transition: all 1s ease-in-out;
+    color:  #121212;
     border-radius: 15px;
-    background: var(--UNPRIMARY-COLOUR, #FFF);
-    width: 75%;
-    flex-shrink: 0;
-    text-align: center;
-    margin: 10%;
-    padding: 7.5%;
-    height: 642px;
-    box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.15) !important;
+  }
   
-}
-.trip_planner p{
-    
-    text-align: center;
-    padding-inline: 2.5%;
-}
-.trip_planner h3{
-    color: var(--Secondary-Colour, #006167);
-    text-align: center;;
-    font-size: 32px;
-    font-weight: 500;
-    line-height: 32px; /* 100% */
-}
-.trip_planner h5, .trip_planner .fw-medium{
-    color: var(--Secondary-Colour, #006167);
-}
-
-.trip_input .left .destination .dropdown , .trip_input .left .interests .dropdown, .trip_input .right .traveller_type .dropdown , .trip_input .right .trip-duration input{
-    border-radius: 10px;
-    border: 2px solid var(--Line-Colour, rgba(137, 137, 137, 0.50));
-    background: var(--UNPRIMARY-COLOUR, #FFF);
-    width: 335px;
-    height: 60px;
+  .popup_trip p {
+    color:  #121212
+  }
+  .popup_trip .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--Secondary-Colour)
+  }
+  .popup_trip .close:hover  {
+    color: var(--PRIMARY-COLOUR);
+  }
+  .popup_trip .content_trip .invite #copylink:hover{
+    background: var(--PRIMARY-COLOUR);
+    color: var(--Secondary-Colour);
+  }
+  .popup_trip .content_trip {
+    max-height: 30%;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+ .popup_trip .content_trip .invite{
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+ }
+ .popup_trip .content_trip .invite .message{
+    display: none;
+ }
+ .popup_trip .content_trip .invite .message .fa-circle-check{
+    color: green;
+    margin-top: 5px;
+ }
+ .popup_trip .content_trip .invite .message p{
+    color: var(--Secondary-Colour);
+ }
+ .popup_trip .content_trip .invite #copylink{
+    display: flex;
+    width: 40%;
+    height: 15%;
+    padding: 12px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
     flex-shrink: 0;
-}
-.trip_planner button{
+    border-radius: 5px;
+    background: var(--Secondary-Colour, #006167);
+    border: none;
+    color: var(--Unsecondary-Colour);
+    font-size: 20px;
+ }
+ 
+.trip_planner form .search_btn , .search_btn1{
+    /* margin-left: 30%; */
+    margin-inline: auto;
+    margin-top: 5%;
     display: flex;
     width: 290px;
     height: 70px;
@@ -614,164 +646,141 @@ header{
     flex-shrink: 0;
     border-radius: 5px;
     background: var(--Secondary-Colour, #006167);
-    color: #FFF;;
-    font-size: 20px;
-    font-weight: 500;
-    line-height: normal;
     border: none;
-    margin: 5% 30% ;
-}
-.trip_planner button:hover
-{
-    background: #FABF00;
-    color: #006167;
-}
-.activites, .top_rated_lodge, .restaurants{
-    width: 75%;
-    flex-shrink: 0;
-    
-    margin: 10%;
-    
-}
-/* .card{
-    width: 300px !important;
-    height: 499px !important;
-    flex-shrink: 0;
-    border-radius: 15px !important;
-    
-} */
-/* .card img{
-    width: 300px !important;
-    height: 299px !important;
-    flex-shrink: 0;
-    border-radius: 15px;
-    position: relative;
-} */
-.card{
-    height: 485px !important;
-    border-radius: 15px !important;
-    background: #FFF !important;
-    box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.15) !important;
+    color: var(--Unsecondary-Colour);
+    font-weight: 500;
+    font-size: 20px;
+
 }
 
-.card img, .carousel-item img{
-    height: 230px !important;
-    border-radius: 5px 15px 5px 5px;
-}
-.bucket-list{
-    position: absolute;
-    top: 0;
-    right: 0;
-    border-radius: 5px 15px 5px 5px;
-    background: var(--Secondary-Colour, #006167);
+.currency form .search_btn{
+    border-radius: 5px;
+    background: var(--UNPRIMARY-COLOUR, #FFF);
+    border: none;
+    color: var(--Secondary-Colour);
+    margin-left: 32%;
+    margin-top: 5%;
     display: flex;
-    width: 130px;
+    width: 290px;
+    height: 70px;
+    padding: 12px 24px;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    font-size: 20px;
+
+
+}
+.container1{
+    width: 100% !important;
+    background: linear-gradient(180deg, rgba(215, 239, 218, 0.00) 0%, rgba(215, 239, 218, 0.00) 0%, rgba(215, 239, 218, 0.50) 0%), #FFF;
+    margin-top: 20%;
+    
+    
+    
+}
+.container11{
+    width: 100% !important;
+    background: linear-gradient(180deg, rgba(215, 239, 218, 0.00) 0%, rgba(215, 239, 218, 0.00) 0%, rgba(215, 239, 218, 0.50) 0%), #FFF;
+    height: 370vh;
+    
+}
+.bucket{
+    display: flex;
+    width: 190px;
     height: 40px;
     padding: 12px 24px;
     justify-content: center;
     align-items: center;
     gap: 10px;
     flex-shrink: 0;
-    color: var(--UNPRIMARY-COLOUR, #FFF);
-    font-size: 15px;
-    font-weight: 500;
-    line-height: 18px; /* 150% */
+    border-radius: 5px 15px 5px 5px;
+    margin-left:55.5%;
+    background: var(--Secondary-Colour, #006167);
     border: none;
+    color: var(--Unsecondary-Colour);
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
 }
-.bucket-list:hover
-{
-    background: #FABF00;
-    color: #006167;
-}
-.bucket-list:active, .bucket-list:focus {
-  background: var(--PRIMARY-COLOUR);
-  color: var(--Secondary-Colour);
+.bucket:hover{
+    color: var(--Secondary-Colour);
+    background: var(--PRIMARY-COLOUR);
 }
 
-.card .card-title{
-    color: var(--Secondary-Colour, #006167);;
-    font-size: 20px;
+.container1 h4, .container2 h4 {
+    color: var(--Text-Colour, #121212);
+    font-family: Nunito;
+    font-size: 32px;
+    font-style: normal;
     font-weight: 500;
-    line-height: 32px; /* 160% */
+    line-height: 32px; /* 100% */
 }
-.card .card-text{
-    color: var(--Subwords, rgba(18, 18, 18, 0.70));
-    text-align: justify;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px; /* 150% */
-    letter-spacing: 0.15px;
-}
-.card-body div{
-    display: flex;
-   
-}
-.card-body div p{
-    margin-left: 10px;
-}
-.top_rated_lodge .card img,.restaurants .card img{
-   
-    height: 225px !important;
+.trip_planner{
+    margin: 10%;
+    border-radius: 15px;
+    background: var(--UNPRIMARY-COLOUR, #FFF);
+    padding: 5% 8%;
+    box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.15);
     
 }
-.top_rated_lodge .card-body ,.restaurants .card-body{
-   
-    margin-top:10% !important ;
+.card_div{
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    gap: 2%;
+}
+.activites_to_explore , .restaurants_and_dinings, .top_rated_lodge{
+    margin: 0 10% 10% 10%;
     
 }
 
-.top{
+.featured_deals{
+    margin: 10%;
+}
+.trip_planner .card{
+    margin: 1% 1%;
+}
+.trip_planner p , .trip_planner h3{
+    text-align: center;
+}
+.trip_planner select, .trip_planner input{
+    width: 100%;
+    height: 6vh;
+    border-radius: 10px;
+    border: 2px solid var(--Line-Colour, rgba(137, 137, 137, 0.50));
+    background: var(--UNPRIMARY-COLOUR, #FFF);
+}
+.price{
+    background-color: #FABF00;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-around;
+    padding: 3% 2%;
+    width: 100%;
+    height: 15vh; 
+    line-height: 12px;
+}
+.price .left {
+    border-right: 1px solid black;
+    padding-right: 10%;
+}
+.container2{
+    width:100%;
+    background-color: white;
+    margin-top:10%;
+}
+.rivan{
+    background: var(--Secondary-Colour, #006167);
     position: relative;
 }
-
-.price-location{
-    line-height: 4px;
-    padding: 2% 2%;
+.rivan svg{
+    font-size: 5rem;
     position: absolute;
-    top: 45%;
-    /* width: 319px; */
-    width: 100%;
-    background-color: var(--PRIMARY-COLOUR, #FABF00);
-    backdrop-filter: blur(4px); 
-    height: 70px;
-    border-radius: 10px;
+    top: -50%;
+    left: 15%;
    
-}
-.price-locationtop{
-    line-height: 4px;
-    padding: 2% 2%;
-    position: absolute;
-    top: 45%;
-    width: 93.5%;
-    background-color: var(--PRIMARY-COLOUR, #FABF00);
-    backdrop-filter: blur(4px); 
-    height: 70px;
-    border-radius: 10px;
-}
- 
-.price-location .row .col .title , .price-locationtop .row .col .title{
-    color: var(--Subwords, rgba(18, 18, 18, 0.70));
-    font-family: Montserrat;
-    font-size: 12px;
-    font-weight: 400;
-   
-}
-.price-location .row .col p .price-locationtop .row .col p{
-    color: var(--color_text, #1A1A1A);
-    font-size: 14px;
-    font-weight: 400;
-/* 142.857% */
-}
-.price-location .row .col a , .price-locationtop .row .col a{
-    color: var(--Secondary-Colour, #006167);;
-    font-size: 12px;
-    font-weight: 400;
-    letter-spacing: 0.25px;
-    text-decoration-line: underline;
-}
-.white{
-    background: var(--UNPRIMARY-COLOUR, #FFF);
-    margin-top: 10%;
 }
 .rivan p{
     display: flex;
@@ -787,17 +796,6 @@ header{
     line-height: 32px; /* 160% */
     
 }
-.rivan{
-    background: var(--Secondary-Colour, #006167);
-    position: relative;
-}
-.white svg{
-    font-size: 5rem;
-    position: absolute;
-    top: -50%;
-    left: 15%;
-   
-}
 #deal1 ,#deal2{
     position: relative;
 }
@@ -809,7 +807,28 @@ header{
     filter: drop-shadow(0px 8px 10px rgba(0, 0, 0, 0.20));
 
 }
-
+.deal svg{
+    font-size: 5rem;
+    position: absolute;
+    top: -50%;
+    left: 15%;
+   
+}
+.card {
+    width: 100%;
+    box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.15);
+    border-radius: 15px;
+    position: relative;
+}
+.card-title{
+    color: var(--Secondary-Colour);
+}
+.card img{
+    width: 100%;
+    height: 50vh;
+    border-radius: 15px;
+    
+}
 .currency{
     background: var(--Secondary-Colour, #006167);
     height: 641px;
@@ -824,8 +843,7 @@ header{
     margin-bottom: 5% !important;
 
 }
-
-.currency button{
+currency button{
     display: flex;
     width: 335px;
     height: 70px;
@@ -871,6 +889,7 @@ header{
     padding-top: 8% !important;
 
 }
+/* Water drop */
 .water_drop{
     background: #EBF7EC;
     position: relative;
@@ -937,7 +956,7 @@ header{
   
   
   .popup h5{
-    margin-top: 5%;
+    margin-top: 8%;
     color:  var(--Secondary-Colour)
   }
   .popup .close {
@@ -954,7 +973,7 @@ header{
     color: var(--PRIMARY-COLOUR);
   }
   .popup .content {
-    height: 75vh;
+    height: 80vh;
     /* overflow: auto; */
     overflow: hidden;
     width: 85%;
@@ -973,16 +992,10 @@ header{
     color: var(--Secondary-Colour);
     text-decoration: underline;
   }
-  
 
-  #back{
-    position: absolute;
-    left: 12%;
-    top: 5%;
-  }
+  /* footer */
 
-
-/* FOOTER */
+  /* FOOTER */
 footer span{
     color: var(--PRIMARY-COLOUR)
 }
@@ -1015,6 +1028,7 @@ footer .help p span{
 footer{
     background-color: var(--Secondary-Colour);
     width: 100%;
+   
     
 
 }
@@ -1029,7 +1043,9 @@ footer .container{
   display: flex;
   justify-content: space-between;
 }
-
+.container .help .social-icon a:hover{
+    opacity: 0.5;
+}
 footer .container .links{
     display: flex;
     /* justify-content: space-between; */
@@ -1110,118 +1126,7 @@ footer form input{
     background-color: var(--Unsecondary-Colour) !important;
 }
 
-.download{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 10px;
-}
-.apple ,.google{
-    background-color: black;
-    border-radius: 5px;
-    text-align: center;
-    font-size: 10px;
-    padding: 5px;
-}
+
 .copyright p{
     font-family: 'Public Sans', sans-serif;
 }
-
-
-/*  RESPONSIVNESS */
-@media (max-width:1024px){
-    .container-fluid img{
-        width: 160px;
-        height: 50px;
-    }
-    .navbar .navbar-nav{
-        padding: 5px 7px 5px 0px;
-        justify-content: center;
-        align-items: center;
-        gap: 15px;
-        flex: 1 0 0;
-        border-radius: 5px 0px 0px 5px;
-        background: var(--Secondary-Colour);
-    }
-    .navbar .navbar-nav .nav-item a{
-        padding: 7px;
-        gap: 10px;
-        font-size: 19px;
-    }
-
-    #text{
-        margin-top: 0px;
-        flex-direction: column;
-        font-size: 16px;
-        line-height: 15px;
-        
-    }
-    #ethiopia{
-   
-        font-size: 2rem;
-        font-weight: 800;
-        line-height: 48px;
-    }
-    #Unique{
-        font-size: 2.3rem;
-     
-    }
-   
-    #text p{
-        width: 100%;
-        height: 100px;
-        font-size: 1.75rem;
-        line-height: 48px;
-        padding: 4rem 1rem;
-    }
-    
-    
-    .card{
-        height: auto !important;
-        border-radius: 15px !important;
-    }
-    
-    .card img, .carousel-item img{
-        height: 230px !important;
-        border-radius: 5px 15px 5px 5px;
-    }
-    .bucket-list{
-        position: absolute;
-        top: 0;
-        right: 0;
-        border-radius: 5px 15px 5px 5px;
-        background: var(--Secondary-Colour, #006167);
-        display: flex;
-        width: 130px;
-        height: 40px;
-        padding: 12px 24px;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-        flex-shrink: 0;
-        color: var(--UNPRIMARY-COLOUR, #FFF);
-        font-size: 15px;
-        font-weight: 500;
-        line-height: 18px; /* 150% */
-        border: none;
-    }
-}
-@media (max-width: 768px) {
-    #container {
-      flex-direction: column;
-    }
-  
-    #carousel, #text {
-      width: 100%;
-      
-    }
-    .lodge{
-        margin-top: 5%;
-        width: 100%;
-        position:static;
-        
-        
-    }
-    
-  }
-  

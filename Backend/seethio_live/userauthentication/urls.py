@@ -38,7 +38,7 @@ urlpatterns = [
         name="password_reset_complete",
     ),
     
-    path(
-        "subscription/", views.subscription, name="subscription"  #added by ple
-    ),
+    # path(
+    #     "subscription/", views.subscription, name="subscription"  #added by ple
+    # ),
 ]
