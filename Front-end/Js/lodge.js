@@ -71,7 +71,7 @@ setInterval(function() {
   var description = document.querySelector('.description');
   document.querySelector('.search-btn').addEventListener('click', function(event){
       event.preventDefault();
-      description.innerHTML = 'Lodge API search results/Interface';
+      // description.innerHTML = 'Lodge API search results/Interface';
   });
   
 // api pouup

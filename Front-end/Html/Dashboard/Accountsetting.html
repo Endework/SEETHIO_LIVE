@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Account Settings -Seethio</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="../../Css/Account setting.css" />
+    <!-- FONT AWESOME -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- phone number input style link -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"> -->
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header>
+      <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+          <img src="../../images/navlogo.png" alt="nav logo" />
+          <button
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+            class="navbar-toggler navbar-toggler-right"
+          >
+            <i class="fa fa-bars"></i>
+          </button>
+
+          <div id="navbarSupportedContent" class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a
+                  class="nav-link active home"
+                  aria-current="page"
+                  href="../../Html/Home.html"
+                  >Home</a
+                >
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Places to Go
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="../attractionCenter.html"
+                      >Attraction Centers</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="../Restaurantanddining.html"
+                      >Dinings</a
+                    >
+                  </li>
+                  <li><a class="dropdown-item" href="#">Local Market</a></li>
+                </ul>
+              </li>
+              <a href="../../Html/Lodge.html"></a>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  aria-current="page"
+                  href="../../Html/Lodge.html"
+                  >Lodging</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  aria-current="page"
+                  href="../../Html/Flight.html"
+                  >Flight</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  aria-current="page"
+                  href="../../Html/Ride.html"
+                  >Find Rides</a
+                >
+              </li>
+
+              <div style="display: flex; justify-content: center">
+                <li
+                  class="nav-item dropdown mt-2 pt-3 d-flex align-items-center gap-1"
+                >
+                  <a href="./Dashboard.html"
+                    ><i
+                      style="color: #fabf00"
+                      class="fa-solid fa-user mb-4"
+                    ></i>
+                  </a>
+
+                  <div class="d-flex flex-column align-items-center">
+                    <a
+                      class="nav-link dropdown-toggle pt-2"
+                      href="#"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      User Name
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a class="dropdown-item" href="./Accountsetting.html">
+                          Account Settings</a
+                        >
+                        <hr class="navhr pt-0 mt-0" />
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="./itineraries.html"
+                          >Bucketlist</a
+                        >
+                      </li>
+                      <hr class="navhr pt-0 mt-0" />
+                      <li>
+                        <a class="dropdown-item" href="./Bookings.html">
+                          Bookings History</a
+                        >
+                      </li>
+                      <hr class="navhr pt-0 mt-0" />
+                      <li>
+                        <a class="dropdown-item" href="./Grouptour.html">
+                          Group Tour</a
+                        >
+                      </li>
+                      <hr class="navhr pt-0 mt-0" />
+                      <li>
+                        <a class="dropdown-item" href="#"> Sign Out</a>
+                      </li>
+
+                      <!-- <hr class="bg-light"> -->
+
+                      <!-- <hr> -->
+
+                      <!-- <hr> -->
+                    </ul>
+                    <a
+                      class="fs-6 pt-0 mt-0 pe-4 text-decoration-underline"
+                      href="./Dashboard.html"
+                      >View profile</a
+                    >
+                  </div>
+                </li>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="hero">
+        <h1>Account Settings</h1>
+        <p>
+          Welcome to your Account Settings page, the command center for
+          tailoring your journey with us! Here, you have the tools to
+          personalize your travel preferences, manage notifications, and
+          optimize your overall user experience.
+        </p>
+      </div>
+    </header>
+    <!-- MAIN -->
+    <div class="main" id="main">
+      <a href="../../Html/Home.html" style="color: black">
+        <div class="back" onclick="window.location.href='/Dashboard.html'">
+          <i style="color: black" class="fa-solid fa-arrow-left"></i>
+          <p>Back</p>
+        </div>
+      </a>
+      <!-- PERSONAL DETAILS -->
+      <section class="sec-1">
+        <p class="title1">Personal Details</p>
+        <form action="">
+          <div class="name mt-1">
+            <div class="first">
+              <label for="fname">First Name</label>
+              <input
+                type="text"
+                name="First Name"
+                id="fname"
+                placeholder="Sarah"
+              />
+            </div>
+            <div class="last">
+              <label for="lname">Last Name</label>
+              <input
+                type="text"
+                name="Last Name"
+                id="lname"
+                placeholder="Jone"
+              />
+            </div>
+          </div>
+          <div class="username mt-1 pt-4">
+            <label for="Username ">Username </label>
+            <input
+              type="text"
+              name="Username"
+              id="Username"
+              placeholder="SarahDAdventurer"
+            />
+          </div>
+          <p class="subtitle pt-5">Contact Details</p>
+          <div class="name">
+            <div class="phone w-100">
+              <label for="Phone Number">Phone Number</label>
+              <div
+                class="check"
+                style="display: flex; flex-direction: row; align-items: center"
+              >
+                <select id="countryCode" onchange="changeCountryCode(this);">
+                  <input
+                    type="tel"
+                    name=""
+                    id="phone"
+                    placeholder="Phone Number"
+                  />
+                </select>
+              </div>
+            </div>
+            <div class="email">
+              <label for="Email Address">Email Address</label>
+              <input type="email" placeholder="Sarah@mail.com" />
+            </div>
+          </div>
+          <div class="address pt-5">
+            <label for="Address">Address</label>
+            <div class="address1">
+              <input
+                type="text"
+                name="Address"
+                id="Address1"
+                placeholder="Line 1"
+              />
+              <input
+                type="text"
+                name="Address"
+                id="Address"
+                placeholder="Line 2"
+              />
+            </div>
+            <div class="address1">
+              <input
+                type="text"
+                name="Address"
+                id="Address2"
+                placeholder="City/Province"
+              />
+              <input
+                type="text"
+                name="Address"
+                id="Address3"
+                placeholder="Country"
+              />
+            </div>
+          </div>
+          <button class="save">Save</button>
+        </form>
+      </section>
+      <!-- Login Details -->
+      <section class="sec-2">
+        <div class="login">
+          <p class="title1">Login Details</p>
+          <form action="">
+            <div class="email">
+              <label for="Email Address">Email Address</label>
+              <input type="email" name="" id="" placeholder="Sarah@mail.com" />
+            </div>
+            <div class="pass">
+              <p class="subtitle">Change Password</p>
+              <label for="Current Password">Current Password</label>
+              <input
+                type="password"
+                name=""
+                id=""
+                placeholder="Type  Password"
+              />
+            </div>
+            <div class="pass pt-5">
+              <label for="New Password pt-5">New Password</label>
+              <input
+                type="password"
+                name=""
+                id=""
+                placeholder="Type New Password"
+              />
+            </div>
+            <div class="pass pt-5">
+              <label for="Confirm New Password ">Confirm New Password</label>
+              <input
+                type="password"
+                name=""
+                id=""
+                placeholder="Re-type New Password"
+              />
+            </div>
+            <button class="save">Save</button>
+          </form>
+        </div>
+      </section>
+
+      <!-- Notification Settings -->
+      <section class="sec-3">
+        <div class="notification">
+          <p class="title1">Notification Settings</p>
+          <p>Select your preferred notification channel(s)</p>
+          <form action="">
+            <div class="email1">
+              <input type="checkbox" name="email" id="email1" />
+              <label for="email1">Email</label>
+            </div>
+            <div class="email1">
+              <input type="checkbox" name="email" id="Phone1" />
+              <label for="Phone1">Phone Number</label>
+            </div>
+            <p>Select your preferred notification Options</p>
+            <div class="email1">
+              <input type="checkbox" name="Bookings" id="Bookings" />
+              <label for="Bookings">Bookings Confirmations</label>
+            </div>
+            <div class="email1">
+              <input type="checkbox" name="Trip" id="Trip" />
+              <label for="Trip">Trip Reminders</label>
+            </div>
+            <div class="email1">
+              <input type="checkbox" name="Updates" id="Updates" />
+              <label for="Updates">SEETHIO Newsletters and Updates</label>
+            </div>
+            <p style="text-align: center; font-size: 14px">
+              (Get updated when a new tourism attraction sites that fits your
+              desire <br />
+              tour is available)
+            </p>
+            <button class="save">Save</button>
+          </form>
+        </div>
+      </section>
+
+      <!-- Payment Settings -->
+      <section class="sec-4">
+        <div class="payment">
+          <p class="title1">Payment Settings</p>
+
+          <p class="txt">Secured By</p>
+          <div class="secured">
+            <img src="../../images/mastercard-logo.png" alt="" />
+            <img src="../../images/logos_visa.svg" alt="" />
+            <img src="../../images/logos_paypal.svg" alt="" />
+          </div>
+
+          <div class="credit">
+            <div class="upper">
+              <p>MAIN</p>
+              <p class="delete">Delete</p>
+            </div>
+            <div class="creditinner">
+              <div class="row1">
+                <img src="../../images/mastercard-logo.png" alt="" />
+                <p>****</p>
+                <p>****</p>
+                <p>****</p>
+                <p>****</p>
+                <p>8490</p>
+              </div>
+              <div class="row1">
+                <p>Adekunle Chioma Adamu</p>
+                <p>Expires <br />01/24</p>
+              </div>
+            </div>
+          </div>
+          <div class="newcard">
+            <p class="newcard-title pt-3">Add New Card</p>
+            <img src="../../images/Frame-add.svg" alt="" />
+          </div>
+          <div class="cardinput">
+            <div class="card-number">
+              <label for="Card Number">Card Number</label>
+              <input type="number" placeholder="Type Card Number" />
+            </div>
+            <div class="card-number">
+              <label for="Card Name">Card Name</label>
+              <input type="number" placeholder="Type Card Name" />
+            </div>
+            <div class="card-inner">
+              <div class="card-number">
+                <label for="Card Number">Expiry Date</label>
+                <input type="number" placeholder="--/--" />
+              </div>
+              <div class="card-number">
+                <label for="Card Number">CVV</label>
+                <input type="number" placeholder="000" />
+              </div>
+            </div>
+          </div>
+          <button class="save">Save</button>
+        </div>
+      </section>
+
+      <section class="sec-5">
+        <button
+          class="delete1"
+          onclick="window.location.href='#popup1'"
+          style="text-align: center"
+        >
+          Delete Account
+        </button>
+        <button class="save" onclick="window.location.href='./Dashboard.html'">
+          Close
+        </button>
+      </section>
+    </div>
+    <!-- DELETE ACCOUNT -->
+
+    <!-- popup -->
+    <div id="popup1" class="overlay">
+      <div class="background">
+        <img id="p12" src="../../images/Polygon 12.svg" alt="" />
+        <img id="p15" src="../../images/Polygon 15.svg" alt="" />
+        <img id="p14" src="../../images/Polygon 14.svg" alt="" />
+        <img id="p16" src="../../images/Polygon 16.svg" alt="" />
+        <img id="p13" src="../../images/Polygon 13.svg" alt="" />
+        <div class="popup">
+          <svg
+            style="position: relative"
+            xmlns="http://www.w3.org/2000/svg"
+            width="210"
+            height="215"
+            viewBox="0 0 210 215"
+            fill="none"
+          >
+            <g filter="url(#filter0_d_2941_10856)">
+              <circle cx="105" cy="100" r="100" fill="white" />
+            </g>
+            <defs>
+              <filter
+                id="filter0_d_2941_10856"
+                x="0"
+                y="0"
+                width="210"
+                height="215"
+                filterUnits="userSpaceOnUse"
+                color-interpolation-filters="sRGB"
+              >
+                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <feColorMatrix
+                  in="SourceAlpha"
+                  type="matrix"
+                  values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                  result="hardAlpha"
+                />
+                <feOffset dy="10" />
+                <feGaussianBlur stdDeviation="2.5" />
+                <feComposite in2="hardAlpha" operator="out" />
+                <feColorMatrix
+                  type="matrix"
+                  values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0"
+                />
+                <feBlend
+                  mode="normal"
+                  in2="BackgroundImageFix"
+                  result="effect1_dropShadow_2941_10856"
+                />
+                <feBlend
+                  mode="normal"
+                  in="SourceGraphic"
+                  in2="effect1_dropShadow_2941_10856"
+                  result="shape"
+                />
+              </filter>
+            </defs>
+          </svg>
+          <svg
+            style="position: absolute; top: 55px; align-items: center"
+            xmlns="http://www.w3.org/2000/svg"
+            width="150"
+            height="150"
+            viewBox="0 0 150 150"
+            fill="none"
+          >
+            <path
+              d="M75 150C116.421 150 150 116.421 150 75C150 33.5786 116.421 0 75 0C33.5786 0 0 33.5786 0 75C0 116.421 33.5786 150 75 150Z"
+              fill="#FFDD67"
+            />
+            <path
+              d="M46.25 74C53.1536 74 58.75 68.4036 58.75 61.5C58.75 54.5964 53.1536 49 46.25 49C39.3464 49 33.75 54.5964 33.75 61.5C33.75 68.4036 39.3464 74 46.25 74Z"
+              fill="#664E27"
+            />
+            <path
+              d="M103.75 74C110.654 74 116.25 68.4036 116.25 61.5C116.25 54.5964 110.654 49 103.75 49C96.8464 49 91.25 54.5964 91.25 61.5C91.25 68.4036 96.8464 74 103.75 74Z"
+              fill="#664E27"
+            />
+            <path
+              d="M52.5082 114C67.0082 102 83.0082 102 97.5082 114C99.2582 115.5 100.758 113 99.5082 110.75C95.0082 102.25 86.2582 94.5 75.0082 94.5C63.7582 94.5 54.7582 102.25 50.5082 110.75C49.2582 113 50.7582 115.5 52.5082 114Z"
+              fill="#664E27"
+            />
+          </svg>
+
+          <!-- <a class="close" href="#">&times;</a> -->
+          <div class="content">
+            <p class="warning" style="text-align: center">
+              Are you sure you want to Delete your account?
+            </p>
+            <p class="tag" style="text-align: center">
+              Deleting your account will automatically erase your data on the
+              SEETHIO Platform.
+            </p>
+            <div class="buttons">
+              <button class="continue" onclick="window.location.href='#popup2'">
+                Continue
+              </button>
+              <button class="continue" onclick="window.location.href='#main'">
+                Cancel
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- popup2 -->
+
+    <div id="popup2" class="overlay">
+      <div class="background">
+        <img id="p12" src="../../images/Polygon 12.svg" alt="" />
+        <img id="p15" src="../../images/Polygon 15.svg" alt="" />
+        <img id="p14" src="../../images/Polygon 14.svg" alt="" />
+        <img id="p16" src="../../images/Polygon 16.svg" alt="" />
+        <img id="p13" src="../../images/Polygon 13.svg" alt="" />
+        <div class="popup">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="210"
+            height="215"
+            viewBox="0 0 210 215"
+            fill="none"
+          >
+            <g filter="url(#filter0_d_2941_10841)">
+              <circle cx="105" cy="100" r="100" fill="white" />
+              <path
+                d="M143.973 50.0178C142.136 48.9958 140.116 48.3459 138.028 48.1052C135.94 47.8645 133.825 48.0378 131.804 48.6151C129.783 49.1924 127.896 50.1624 126.25 51.4697C124.604 52.777 123.232 54.3959 122.213 56.2338L92.5086 109.69L75.5086 92.6898C74.0327 91.1616 72.2671 89.9427 70.3151 89.1042C68.363 88.2656 66.2635 87.8242 64.139 87.8058C62.0146 87.7873 59.9077 88.1921 57.9413 88.9966C55.975 89.8011 54.1886 90.9892 52.6863 92.4915C51.184 93.9937 49.996 95.7802 49.1915 97.7465C48.387 99.7129 47.9821 101.82 48.0006 103.944C48.0191 106.069 48.4604 108.168 49.299 110.12C50.1375 112.072 51.3564 113.838 52.8846 115.314L84.8846 147.314C87.9086 150.346 91.9886 152.01 96.1966 152.01L98.4126 151.85C100.865 151.507 103.204 150.599 105.246 149.198C107.288 147.798 108.977 145.942 110.181 143.778L150.181 71.7778C151.202 69.9414 151.851 67.9218 152.092 65.8344C152.333 63.747 152.16 61.6326 151.583 59.612C151.007 57.5914 150.038 55.7041 148.732 54.0579C147.426 52.4117 145.809 51.0389 143.973 50.0178Z"
+                fill="#006167"
+              />
+            </g>
+            <defs>
+              <filter
+                id="filter0_d_2941_10841"
+                x="0"
+                y="0"
+                width="210"
+                height="215"
+                filterUnits="userSpaceOnUse"
+                color-interpolation-filters="sRGB"
+              >
+                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <feColorMatrix
+                  in="SourceAlpha"
+                  type="matrix"
+                  values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                  result="hardAlpha"
+                />
+                <feOffset dy="10" />
+                <feGaussianBlur stdDeviation="2.5" />
+                <feComposite in2="hardAlpha" operator="out" />
+                <feColorMatrix
+                  type="matrix"
+                  values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.15 0"
+                />
+                <feBlend
+                  mode="normal"
+                  in2="BackgroundImageFix"
+                  result="effect1_dropShadow_2941_10841"
+                />
+                <feBlend
+                  mode="normal"
+                  in="SourceGraphic"
+                  in2="effect1_dropShadow_2941_10841"
+                  result="shape"
+                />
+              </filter>
+            </defs>
+          </svg>
+          <h3>Account Deleted Successfully</h3>
+          <!-- <a class="close" href="#">&times;</a> -->
+          <div class="content">
+            <p style="text-align: center">
+              You can always sign up on SEETHIO to recreate your account
+            </p>
+            <p style="text-align: center">using the sign up button</p>
+            <div class="buttons">
+              <button
+                class="continue"
+                onclick="window.location.href='/index.html'"
+              >
+                Back Home
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="water_drop">
+      <svg
+        class="left"
+        xmlns="http://www.w3.org/2000/svg"
+        width="107"
+        height="100"
+        viewBox="0 0 107 100"
+        fill="none"
+      >
+        <path
+          d="M106.187 39.1694C109.932 6.88835 69.6689 -11.5833 40.0645 8.83398L18.3051 23.8408C-6.83172 41.1768 -5.3381 74.6801 21.1126 86.815L40.1194 95.5349C66.5701 107.67 100.255 90.3055 103.434 62.896L106.187 39.1694Z"
+          fill="url(#paint0_linear_1650_6812)"
+        />
+        <defs>
+          <linearGradient
+            id="paint0_linear_1650_6812"
+            x1="115.762"
+            y1="-43.3725"
+            x2="28.0299"
+            y2="147.859"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stop-color="#00B7AF" />
+            <stop offset="0.651042" stop-color="#F2F2F2" />
+          </linearGradient>
+        </defs>
+      </svg>
+
+      <svg
+        class="top"
+        xmlns="http://www.w3.org/2000/svg"
+        width="97"
+        height="100"
+        viewBox="0 0 97 100"
+        fill="none"
+      >
+        <path
+          d="M1.3628 37.9976C1.98372 8.46891 34.5792 -9.09425 59.5822 6.62769L79.0326 18.8581C103.677 34.3545 102.458 70.6709 76.8299 84.4798L56.8965 95.2203C31.2686 109.029 0.267751 90.0737 0.879765 60.9686L1.3628 37.9976Z"
+          fill="url(#paint0_linear_1650_6810)"
+        />
+        <defs>
+          <linearGradient
+            id="paint0_linear_1650_6810"
+            x1="2.77358"
+            y1="-29.0937"
+            x2="88.2264"
+            y2="129.498"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stop-color="#00B7AF" />
+            <stop offset="0.651042" stop-color="#F2F2F2" />
+          </linearGradient>
+        </defs>
+      </svg>
+
+      <svg
+        class="right"
+        xmlns="http://www.w3.org/2000/svg"
+        width="57"
+        height="56"
+        viewBox="0 0 57 56"
+        fill="none"
+      >
+        <path
+          d="M0.505173 27.9496C0.602629 5.85125 25.1323 -7.36588 43.6418 4.70664C61.3706 16.27 60.2681 42.591 41.6344 52.6313C23.0008 62.6715 0.411827 49.1159 0.505173 27.9496Z"
+          fill="url(#paint0_linear_1650_6811)"
+        />
+        <defs>
+          <linearGradient
+            id="paint0_linear_1650_6811"
+            x1="0.731105"
+            y1="-23.2811"
+            x2="55.2689"
+            y2="77.9354"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stop-color="#00B7AF" />
+            <stop offset="0.651042" stop-color="#F2F2F2" />
+          </linearGradient>
+        </defs>
+      </svg>
+    </div>
+
+    <!-- footter -->
+    <footer>
+      <div class="container">
+        <div class="help">
+          <p class="title">Need any help?</p>
+          <p>
+            Call 24/7 for any help <br />
+            <span> +00 123 456 789</span>
+          </p>
+          <p>
+            Mail to our support team <br />
+            <span>support@Seethio.com</span>
+          </p>
+          <p>Follow us on</p>
+          <div class="social-icon">
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+            <a href=""> <i class="fa-brands fa-facebook"></i></a>
+            <a href=""> <i class="fa-brands fa-twitter"></i></a>
+            <a href=""><i class="fa-brands fa-youtube"></i></a>
+            <a href=""><i class="fa-brands fa-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="links">
+          <div>
+            <p class="title">Company</p>
+            <p>Home</p>
+            <p>Testimonials</p>
+            <p>About Us</p>
+            <p>Work with Us</p>
+            <p>Partners</p>
+          </div>
+          <div>
+            <p class="title">Support</p>
+            <p>Account</p>
+            <p>FAQ</p>
+            <p>Legal</p>
+            <p>Contact us</p>
+            <p>Privacy Policy</p>
+          </div>
+          <div>
+            <p class="title">Services</p>
+            <p>Discover place</p>
+            <p>Plan a trip</p>
+            <p>Booking</p>
+            <p>Get Deals</p>
+            <p>Currency exchange</p>
+          </div>
+        </div>
+        <!-- <div class="subscribe">
+        <p><span>Subscribe to receive new deals</span></p>
+        <div class="form">
+          <input type="text" placeholder="Email Address" />
+          <button>Send</button>
+        </div>
+      </div> -->
+      </div>
+      <div class="footer-wrapper">
+        <hr style="border: 1px solid white" />
+      </div>
+      <div class="footer">
+        <div class="logo">
+          <a href="/index.html"
+            ><img src="../images/footer_logo.png" alt=""
+          /></a>
+        </div>
+        <div class="copyright">
+          <p><span>Copyright © 2023 Kunturi Design</span></p>
+        </div>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <!-- phone number scripts -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <!-- bootstrap script -->
+    <script src="../../Js/accountsetting.js"></script>
+  </body>
+</html>

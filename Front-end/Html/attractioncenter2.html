@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Attraction center- Seethio</title>
+    <!-- fontawsome link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- bootstrap css link -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <!-- style sheet -->
+    <link rel="stylesheet" href="../Css/Attraction.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+          <img src="../images/navlogo.png" alt="nav logo" />
+          <button
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+            class="navbar-toggler navbar-toggler-right"
+          >
+            <i class="fa fa-bars"></i>
+          </button>
+
+          <div id="navbarSupportedContent" class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="./Home.html">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle home"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Places to Go
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="dropdown-item" href="./attractionCenter.html"
+                      >Attraction Centers</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="./Restaurantanddining.html"
+                      >Dinings</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="./market.html"
+                      >Local Market</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="./Lodge.html"
+                  >Lodging</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="./Flight.html"
+                  >Flight</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="./Ride.html"
+                  >Find Rides</a
+                >
+              </li>
+
+              <div style="display: flex; justify-content: center">
+                <li
+                  class="nav-item dropdown mt-2 pt-3 d-flex align-items-center gap-1"
+                >
+                  <a href="./Dashboard/Dashboard.html"
+                    ><i class="fa-solid fa-user mb-4"></i>
+                  </a>
+                  <a
+                    class="nav-link dropdown-toggle mb-4"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    User Name
+                  </a>
+                  <ul class="dropdown-menu">
+                    <div class="d-flex align-items-center tx">
+                      <i class="fa-solid fa-gear"></i>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="./Dashboard/Accountsetting.html"
+                        >
+                          Account Settings</a
+                        >
+                      </li>
+                    </div>
+                    <!-- <hr class="bg-light"> -->
+                    <div class="d-flex align-items-center tx">
+                      <i class="fa-solid fa-rectangle-list"></i>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="./Dashboard/Itineraries.html"
+                          >Bucketlist</a
+                        >
+                      </li>
+                    </div>
+                    <!-- <hr> -->
+                    <div class="d-flex align-items-center tx">
+                      <i class="fa-solid fa-book"></i>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="./Dashboard/Bookings.html"
+                        >
+                          Bookings History</a
+                        >
+                      </li>
+                    </div>
+                    <!-- <hr> -->
+                  </ul>
+                </li>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <img id="p13" src="../images/Polygon 13.svg" alt="" />
+      <img id="p9" src="../images/Polygon 9.svg" alt="" />
+      <img id="p11" src="../images/Polygon 11.svg" alt="" />
+    </header>
+
+    <div class="main">
+      <div class="right-content">
+        <h3 class="mtitle">
+          Dive into Ethiopia's Rich Heritage and Breathtaking Wonders.
+          <span style="color: #fabf00; font-size: 32px">Start here!</span>
+        </h3>
+
+        <div class="filter d-flex align-items-center">
+          <div class="filter_wrapper">
+            <p class="filterby mt-1 pt-2">Filter by</p>
+            <div class="filter-content">
+              <input type="checkbox" name="Lodge" id="Lodge" />
+              <label for="Lodge">Historical Centers</label>
+            </div>
+            <div class="filter-content">
+              <input type="checkbox" name="Flights" id="Flights" />
+              <label for="Flights">Adventure Centers</label>
+            </div>
+            <div class="filter-content">
+              <input type="checkbox" name="Flights" id="Flights" />
+              <label for="Flights">Natural Landmarks & wildlife Centers</label>
+            </div>
+            <div class="filter-content">
+              <input type="checkbox" name="Flights" id="Flights" />
+              <label for="Flights">Religious and Cultural Centers</label>
+            </div>
+          </div>
+          <div class="filterbuttons">
+            <button class="clear">Clear All</button>
+            <button class="apply">Apply</button>
+          </div>
+        </div>
+        <!-- first div -->
+        <div class="card-div">
+          <!-- card1 -->
+          <div class="card">
+            <p class="bucket">Add to Bucketlist</p>
+            <div class="carousel1">
+              <div class="carousel-images">
+                <img
+                  class="carousel-image"
+                  src="../images/alnejashi.png"
+                  alt=""
+                />
+                <img
+                  class="carousel-image"
+                  src="../images/alnejashi2.png"
+                  alt=""
+                />
+                <img
+                  class="carousel-image"
+                  src="../images/alnejashi3.png"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="body-div">
+              <div class="body-title">
+                <a
+                  href="https://www.google.com/maps/place/Negash/@13.8808252,39.5980634,16z/data=!3m1!4b1!4m6!3m5!1s0x166b696dd04f1f6d:0x8127cd29acfd426e!8m2!3d13.8800536!4d39.5983541!16zL20vMDZyeTJi?entry=ttu"
+                  >View on map</a
+                >
+                <h3 class="mt-2">
+                  Al-Nejashi Mosque, <span>Tigray</span>
+                  <span style="border-left: 1px solid #fabf00">Free $0</span>
+                </h3>
+              </div>
+              <div class="body-text">
+                <p>
+                  Experience the history and spirituality of Al Nejashi Mosque,
+                  one of the oldest mosques in Africa and the world. It is said
+                  to be the resting place of some of the first followers of
+                  Prophet Muhammad, who fled from persecution in Mecca
+                </p>
+                <p class="access">Access: <span>Free</span></p>
+              </div>
+            </div>
+          </div>
+          <!-- card2 -->
+          <div class="card">
+            <p class="bucket">Add to Bucketlist</p>
+            <div class="carousel2">
+              <div class="carousel-images">
+                <img
+                  class="carousel-image"
+                  src="../images/theater.png"
+                  alt=""
+                />
+                <img
+                  class="carousel-image"
+                  src="../images/theater2.png"
+                  alt=""
+                />
+                <img
+                  class="carousel-image"
+                  src="../images/theater3.png"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="body-div">
+              <div class="body-title">
+                <a
+                  href="https://www.google.com/maps/place/National+Museum+of+Ethiopia/@9.0380095,38.7618401,17z/data=!3m1!4b1!4m6!3m5!1s0x164b8f6135c03ef9:0x5b7c04505388426e!8m2!3d9.0380095!4d38.7618401!16s%2Fm%2F02qty6f?entry=ttu"
+                  >View on map</a
+                >
+                <h3 class="mt-2">
+                  National Museum, <span>Addis Ababa</span>
+                  <span style="border-left: 1px solid #fabf00">Free $0</span>
+                </h3>
+              </div>
+              <div class="body-text">
+                <p>
+                  Get to meet Lucy, the oldest human ancestor ever found.
+                  Discover other amazing historical and cultural artifacts, and
+                  objects inside the National museum. A must-see for any curious
+                  traveler. 
+                </p>
+                <p class="access mt-4 pt-3">Access: <span>Free</span></p>
+              </div>
+            </div>
+          </div>
+          <!-- card3 -->
+          <div class="card">
+            <p class="bucket">Add to Bucketlist</p>
+            <div class="carousel3">
+              <div class="carousel-images">
+                <img class="carousel-image" src="../images/afar3.png" alt="" />
+                <img class="carousel-image" src="../images/Afar2.png" alt="" />
+                <img class="carousel-image" src="../images/afar1.png" alt="" />
+              </div>
+            </div>
+            <div class="body-div">
+              <div class="body-title">
+                <a
+                  href="https://www.google.com/maps/place/Danakil+Desert/@12.6995328,36.4264628,6z/data=!3m1!4b1!4m6!3m5!1s0x163c16800eb6ac01:0x543b9880494d4316!8m2!3d11.8763843!4d41.9196471!16zL20vMDZ0bWoz?entry=tts"
+                  >View on map</a
+                >
+                <h3 class="mt-2">
+                  Danakil Depression, <span>Afar</span>
+                  <span style="border-left: 1px solid #fabf00">Free $0</span>
+                </h3>
+              </div>
+              <div class="body-text">
+                <p>
+                  Venture into the extreme and alien landscape of the Danakil
+                  Depression, one of the hottest and lowest places on Earth. See
+                  the colorful mineral formations, the bubbling geysers, and the
+                  active volcano of Erta Ale.
+                </p>
+                <p class="access mt-4 pt-3">Access: <span>Free</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- second div -->
+        <div class="card-div">
+          <!-- card1 -->
+          <div class="card">
+            <p class="bucket">Add to Bucketlist</p>
+            <div class="carousel10">
+              <div class="carousel-images">
+                <img
+                  class="carousel-image"
+                  src="../images/sofomer.png"
+                  alt=""
+                />
+                <img
+                  class="carousel-image"
+                  src="../images/sofomer2.png"
+                  alt=""
+                />
+                <img
+                  class="carousel-image"
+                  src="../images/sofomer3.png"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="body-div">
+              <div class="body-title">
+                <a
+                  href="https://www.google.com/maps/place/Holqa+Soof+Umar(Sof+Omar+Cave)/@6.9066847,40.8452162,17z/data=!3m1!4b1!4m6!3m5!1s0x17c96479a1bf0a9f:0x3c49c40d45686c72!8m2!3d6.9066847!4d40.8452162!16zL20vMDZ0bV8y?entry=ttu"
+                  >View on map</a
+                >
+                <h3 class="mt-2">
+                  Sof Omar Cave, <span>Bale Zone </span>
+                  <span style="border-left: 1px solid #fabf00">Free $0</span>
+                </h3>
+              </div>
+              <div class="body-text">
+                <p>
+                  Enter the longest cave system in Africa, where you can admire
+                  the natural formations, the underground river, and the sacred
+                  chambers. Sof Omar Cave is also a place of pilgrimage for the
+                  local Oromo people. 
+                </p>
+                <p class="access mt-4 pt-3">Access: <span>Free</span></p>
+              </div>
+            </div>
+          </div>
+          <!-- card2 -->
+          <div class="card">
+            <p class="bucket">Add to Bucketlist</p>
+            <div class="carousel11">
+              <div class="carousel-images">
+                <img class="carousel-image" src="../images/konso.png" alt="" />
+                <img class="carousel-image" src="../images/konso2.png" alt="" />
+                <img class="carousel-image" src="../images/konso3.png" alt="" />
+              </div>
+            </div>
+            <div class="body-div">
+              <div class="body-title">
+                <a
+                  href="https://www.google.com/maps/place/Road+to+New+York(konso)/@5.3289919,37.4013435,17z/data=!3m1!4b1!4m6!3m5!1s0x17bb4959d6d038eb:0xb691a1a6e1aa3988!8m2!3d5.3289919!4d37.4039184!16s%2Fg%2F11pzyb7hw2?entry=ttu"
+                  >View on map</a
+                >
+                <h3 class="mt-2">
+                  Hoodoos new york, <span>konso</span>
+                  <span style="border-left: 1px solid #fabf00">Free $0</span>
+                </h3>
+              </div>
+              <div class="body-text">
+                <p>
+                  Step into a living heritage site, where the Konso people have
+                  preserved their ancient traditions of terraced farming, stone
+                  walls, wooden statues, and communal houses.
+                </p>
+                <p class="access mt-4 pt-4">Access: <span>Free</span></p>
+              </div>
+            </div>
+          </div>
+          <!-- card3 -->
+          <div class="card">
+            <p class="bucket">Add to Bucketlist</p>
+            <div class="carousel12">
+              <div class="carousel-images">
+                <img
+                  class="carousel-image"
+                  src="../images/bahirdar.png"
+                  alt=""
+                />
+                <img
+                  class="carousel-image"
+                  src="../images/bahirdar2.png"
+                  alt=""
+                />
+                <img
+                  class="carousel-image"
+                  src="../images/bahirdar3.png"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="body-div">
+              <div class="body-title">
+                <a
+                  href="https://www.google.com/maps/place/Bahir+Dar,+Ethiopia/@11.5816484,37.2156108,11z/data=!3m1!4b1!4m6!3m5!1s0x1644d23307d78069:0xab0b134f632dff8!8m2!3d11.5876434!4d37.3878324!16zL20vMDVrbnQ1?entry=tts"
+                  >View on map</a
+                >
+                <h3 class="mt-2">
+                  Bahir Dar City , <span>Bahir dar</span>
+                  <span style="border-left: 1px solid #fabf00">Free $0</span>
+                </h3>
+              </div>
+              <div class="body-text">
+                <p>
+                  Enjoy the best of both worlds in Bahir Dar, a modern and
+                  vibrant city that is surrounded by natural and historical
+                  attractions. Visit the Blue Nile Falls, Lake Tana, and the
+                  monasteries. 
+                </p>
+                <p class="access mt-4 pt-3">Access: <span>Free</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- third div -->
+        <div class="card-div">
+          <!-- card1 -->
+          <div class="card">
+            <p class="bucket">Add to Bucketlist</p>
+            <div class="carousel4">
+              <div class="carousel-images">
+                <img class="carousel-image" src="../images/zebra.png" alt="" />
+                <img
+                  class="carousel-image"
+                  src="../images/nechsar2.png"
+                  alt=""
+                />
+                <img
+                  class="carousel-image"
+                  src="../images/nechsar3.png"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="body-div">
+              <div class="body-title">
+                <a
+                  href="https://www.google.com/maps/place/Nech+Sar+National+Park/@5.9335499,37.681228,17z/data=!3m1!4b1!4m6!3m5!1s0x17ba971586d86c59:0x292afdb817fd5d6!8m2!3d5.9335499!4d37.681228!16zL20vMDc3dDVk?entry=ttu"
+                  >View on map</a
+                >
+                <h3 class="mt-2">
+                  Nechisar National Park
+                  <span style="border-left: 1px solid #fabf00">Free $0</span>
+                </h3>
+              </div>
+              <div class="body-text">
+                <p>
+                  Discover the beauty and variety of Nechisar National Park,
+                  where you can see the Great Rift Valley, the two lakes of
+                  Abaya and Chamo, and the wildlife that includes zebras,
+                  crocodiles, and flamingos. 
+                </p>
+                <p class="access mt-4 pt-3">Access: <span>Free</span></p>
+              </div>
+            </div>
+          </div>
+          <!-- card2 -->
+          <div class="card">
+            <p class="bucket">Add to Bucketlist</p>
+            <div class="carousel5">
+              <div class="carousel-images">
+                <img
+                  class="carousel-image"
+                  src="../images/church1.png"
+                  alt=""
+                />
+                <img
+                  class="carousel-image"
+                  src="../images/church12.png"
+                  alt=""
+                />
+                <img
+                  class="carousel-image"
+                  src="../images/church13.png"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="body-div">
+              <div class="body-title">
+                <a
+                  href="https://www.google.com/maps/place/Holy+Trinity+Cathedral/@9.0308544,38.7664298,17z/data=!3m1!4b1!4m6!3m5!1s0x164b8588f1adbed3:0x7bf4bbfea240b9b9!8m2!3d9.0308544!4d38.7664298!16s%2Fm%2F02z7bnw?entry=ttu"
+                  >View on map</a
+                >
+                <h3 class="mt-2">
+                  HolyTrinity Cathedral, <span>Addis Ababa</span>
+                  <span style="border-left: 1px solid #fabf00">Free $0</span>
+                </h3>
+              </div>
+              <div class="body-text">
+                <p>
+                  Visit the Holy Trinity Cathedral, one of the most important
+                  and beautiful churches in Ethiopia. See the architecture, the
+                  paintings, the tombs of Emperor Haile Selassie and his wife,
+                  and the museum. 
+                </p>
+                <p class="access mt-4 pt-3">Access: <span>Free</span></p>
+              </div>
+            </div>
+          </div>
+          <!-- card3 -->
+          <div class="card">
+            <p class="bucket">Add to Bucketlist</p>
+            <div class="carousel6">
+              <div class="carousel-images">
+                <img
+                  class="carousel-image"
+                  src="../images/church2.png"
+                  alt=""
+                />
+                <img
+                  class="carousel-image"
+                  src="../images/church22.png"
+                  alt=""
+                />
+                <img
+                  class="carousel-image"
+                  src="../images/church23.png"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="body-div">
+              <div class="body-title">
+                <a
+                  href="https://www.google.com/maps/place/Debre+Libanos/@9.7119584,38.8449424,17z/data=!3m1!4b1!4m6!3m5!1s0x164947b36eafb207:0xfd0cd644dbbf1e42!8m2!3d9.7119584!4d38.8475173!16zL20vMDZ0bWx5?entry=tts"
+                  >View on map</a
+                >
+                <h3 class="mt-2">
+                  Debre Libanos Monastery
+                  <span style="border-left: 1px solid #fabf00">Free $0</span>
+                </h3>
+              </div>
+              <div class="body-text">
+                <p>
+                  Explore the Debre Libanos Monastery, one of the oldest and
+                  most revered monasteries in Ethiopia. See the church, the
+                  cave, the bridge, and the stunning views of the Jemma River
+                  Gorge. 
+                </p>
+                <p class="access mt-4 pt-3">Access: <span>Free</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Fourth div -->
+        <div class="card-div">
+          <!-- card1 -->
+          <div class="card">
+            <p class="bucket">Add to Bucketlist</p>
+            <div class="carousel7">
+              <div class="carousel-images">
+                <img class="carousel-image" src="../images/hut.png" alt="" />
+                <img class="carousel-image" src="../images/hut2.png" alt="" />
+                <img
+                  class="carousel-image"
+                  src="../images/dashen_mnt.png"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="body-div">
+              <div class="body-title">
+                <a
+                  href="https://www.google.com/maps/place/Simien+Mountains+National+Park/@13.2027138,37.8876477,17z/data=!3m1!4b1!4m6!3m5!1s0x1669c1d46d16f89d:0x770284df7312622d!8m2!3d13.2027138!4d37.8876477!16zL20vMDYzeHd4?entry=ttu"
+                  >View on map</a
+                >
+                <h3>
+                  Simien Mountains Park
+                  <span style="border-left: 1px solid #fabf00">Free $0</span>
+                </h3>
+              </div>
+              <div class="body-text">
+                <p>
+                  Experience the breathtaking scenery and wildlife of the Simien
+                  Mountains, a UNESCO World Heritage Site. Hike along the
+                  escarpment, spot the endemic gelada monkeys and walia ibex,
+                  and camp under the stars.
+                </p>
+                <p class="access mt-4 pt-3">Access: <span>Free</span></p>
+              </div>
+            </div>
+          </div>
+          <!-- card2 -->
+          <div class="card">
+            <p class="bucket">Add to Bucketlist</p>
+            <div class="carousel8">
+              <div class="carousel-images">
+                <img class="carousel-image" src="../images/tiya.png" alt="" />
+                <img class="carousel-image" src="../images/tiya2.png" alt="" />
+                <img class="carousel-image" src="../images/tiya3.png" alt="" />
+              </div>
+            </div>
+            <div class="body-div">
+              <div class="body-title">
+                <a
+                  href="https://www.google.com/maps/search/Tiya+archaeological+site/@8.4370012,38.5965907,15z/data=!3m1!4b1?entry=ttu"
+                  >View on map</a
+                >
+                <h3 class="mt-2">
+                  Tiya archaeological site
+                  <span style="border-left: 1px solid #fabf00">Free $0</span>
+                </h3>
+              </div>
+              <div class="body-text">
+                <p>
+                  Explore the mysterious and UNESCO-listed site of Tiya, where
+                  you can see the carved stelae that date back to the 12th or
+                  14th century. These stelae are believed to mark the graves of
+                  important people.
+                </p>
+                <p class="access mt-4 pt-3">Access: <span>Free</span></p>
+              </div>
+            </div>
+          </div>
+          <!-- card3 -->
+          <div class="card">
+            <p class="bucket">Add to Bucketlist</p>
+
+            <div class="carousel9">
+              <div class="carousel-images">
+                <img
+                  class="carousel-image"
+                  src="../images/Gondar-timker.png"
+                  alt=""
+                />
+                <img
+                  class="carousel-image"
+                  src="../images/timiket2.png"
+                  alt=""
+                />
+                <img
+                  class="carousel-image"
+                  src="../images/timiket3.png"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="body-div">
+              <div class="body-title">
+                <a
+                  href="https://www.google.com/maps/place/Fasilides'+Bath+-+%E1%8D%8B%E1%88%B2%E1%88%88%E1%8B%B0%E1%88%B5+%E1%8C%A5%E1%88%9D%E1%89%80%E1%89%B0+%E1%89%A3%E1%88%85%E1%88%AD/@12.6172542,37.4545471,17z/data=!3m1!4b1!4m6!3m5!1s0x1643286fe32a0a27:0x8e0dcd251e90e54b!8m2!3d12.6172542!4d37.457122!16s%2Fg%2F1pv6y7bgf?hl=en&entry=tts"
+                  >View on map</a
+                >
+                <h3 class="mt-2">
+                  Timkat Festival Epiphany
+                  <span style="border-left: 1px solid #fabf00">Free $0</span>
+                </h3>
+              </div>
+              <div class="body-text">
+                <p>
+                  Celebrate the Timkat Festival, one of the most colorful and
+                  joyful festivals in Ethiopia. It commemorates the baptism of
+                  Jesus Christ in the Jordan River. See the processions, the
+                  ceremonies, and the festivities. 
+                </p>
+                <p class="access mt-4 pt-3">Access: <span>Free</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pagenav d-flex gap-3 justify-content-center">
+          <p>Showing 2 of 2</p>
+          <i
+            style="color: rgb(19, 18, 18); cursor: pointer"
+            class="fa-solid fa-angle-left pt-1"
+            onclick="window.location.href='./attractionCenter.html'"
+          ></i>
+          <i style="color: grey" class="fa-solid fa-angle-right pt-1"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="water_drop">
+      <svg
+        class="left"
+        xmlns="http://www.w3.org/2000/svg"
+        width="107"
+        height="100"
+        viewBox="0 0 107 100"
+        fill="none"
+      >
+        <path
+          d="M106.187 39.1694C109.932 6.88835 69.6689 -11.5833 40.0645 8.83398L18.3051 23.8408C-6.83172 41.1768 -5.3381 74.6801 21.1126 86.815L40.1194 95.5349C66.5701 107.67 100.255 90.3055 103.434 62.896L106.187 39.1694Z"
+          fill="url(#paint0_linear_1650_6812)"
+        />
+        <defs>
+          <linearGradient
+            id="paint0_linear_1650_6812"
+            x1="115.762"
+            y1="-43.3725"
+            x2="28.0299"
+            y2="147.859"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stop-color="#00B7AF" />
+            <stop offset="0.651042" stop-color="#F2F2F2" />
+          </linearGradient>
+        </defs>
+      </svg>
+
+      <svg
+        class="top"
+        xmlns="http://www.w3.org/2000/svg"
+        width="97"
+        height="100"
+        viewBox="0 0 97 100"
+        fill="none"
+      >
+        <path
+          d="M1.3628 37.9976C1.98372 8.46891 34.5792 -9.09425 59.5822 6.62769L79.0326 18.8581C103.677 34.3545 102.458 70.6709 76.8299 84.4798L56.8965 95.2203C31.2686 109.029 0.267751 90.0737 0.879765 60.9686L1.3628 37.9976Z"
+          fill="url(#paint0_linear_1650_6810)"
+        />
+        <defs>
+          <linearGradient
+            id="paint0_linear_1650_6810"
+            x1="2.77358"
+            y1="-29.0937"
+            x2="88.2264"
+            y2="129.498"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stop-color="#00B7AF" />
+            <stop offset="0.651042" stop-color="#F2F2F2" />
+          </linearGradient>
+        </defs>
+      </svg>
+
+      <svg
+        class="right"
+        xmlns="http://www.w3.org/2000/svg"
+        width="57"
+        height="56"
+        viewBox="0 0 57 56"
+        fill="none"
+      >
+        <path
+          d="M0.505173 27.9496C0.602629 5.85125 25.1323 -7.36588 43.6418 4.70664C61.3706 16.27 60.2681 42.591 41.6344 52.6313C23.0008 62.6715 0.411827 49.1159 0.505173 27.9496Z"
+          fill="url(#paint0_linear_1650_6811)"
+        />
+        <defs>
+          <linearGradient
+            id="paint0_linear_1650_6811"
+            x1="0.731105"
+            y1="-23.2811"
+            x2="55.2689"
+            y2="77.9354"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stop-color="#00B7AF" />
+            <stop offset="0.651042" stop-color="#F2F2F2" />
+          </linearGradient>
+        </defs>
+      </svg>
+    </div>
+
+    <!-- footter -->
+    <footer>
+      <div class="container">
+        <div class="help">
+          <p class="title">Need any help?</p>
+          <p>
+            Call 24/7 for any help <br />
+            <span> +00 123 456 789</span>
+          </p>
+          <p>
+            Mail to our support team <br />
+            <span>support@Seethio.com</span>
+          </p>
+          <p>Follow us on</p>
+          <div class="social-icon">
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+            <a href=""> <i class="fa-brands fa-facebook"></i></a>
+            <a href=""> <i class="fa-brands fa-twitter"></i></a>
+            <a href=""><i class="fa-brands fa-youtube"></i></a>
+            <a href=""><i class="fa-brands fa-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="links">
+          <div>
+            <p class="title">Company</p>
+            <p>Home</p>
+            <p>Testimonials</p>
+            <p>About Us</p>
+            <p>Work with Us</p>
+            <p>Partners</p>
+          </div>
+          <div>
+            <p class="title">Support</p>
+            <p>Account</p>
+            <p>FAQ</p>
+            <p>Legal</p>
+            <p>Contact us</p>
+            <p>Privacy Policy</p>
+          </div>
+          <div>
+            <p class="title">Services</p>
+            <p>Discover place</p>
+            <p>Plan a trip</p>
+            <p>Booking</p>
+            <p>Get Deals</p>
+            <p>Currency exchange</p>
+          </div>
+        </div>
+        <!-- <div class="subscribe">
+            <p><span>Subscribe to receive new deals</span></p>
+            <div class="form">
+              <input type="text" placeholder="Email Address" />
+              <button>Send</button>
+            </div>
+          </div> -->
+      </div>
+      <div class="footer-wrapper">
+        <hr style="border: 1px solid white" />
+      </div>
+      <div class="footer">
+        <div class="logo">
+          <a href="/index.html"
+            ><img src="../images/footer_logo.png" alt=""
+          /></a>
+        </div>
+        <div class="copyright">
+          <p><span>Copyright © 2023 Kunturi Design</span></p>
+        </div>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../Js/restaurants.js"></script>
+  </body>
+</html>

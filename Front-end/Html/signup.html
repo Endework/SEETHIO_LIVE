@@ -1,119 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../Css/signup.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../Css/signup.css" />
     <link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-		/>
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
     <title>Sign up</title>
-</head>
-<body>
+  </head>
+  <body>
     <main>
-        <div class="left">
-            <div class="img-div"></div>
-        </div>
-        <div class="right">
-            <div class="content">
-                <div class="logo">
-                    <img src="../images/seethio_logo.png" alt="">
-                </div>
-                <h3>Explore Ethiopia</h3>
-                <h4>Create an account to get started</h4>
-                <form action="" id="myForm">
-                    <div class="half-width">
-                        <input type="text" name="firstname" id="firstname" placeholder="First Name">
-                        <input type="text" name="lastname" id="lastname" placeholder="Last Name">
-                    </div>
-                    <div class="full_width">
-                        <input type="text" name="username" id="username" placeholder="User Name (optional)">
-                        <input type="email" name="email" id="email" placeholder="Email Address">
-                        <input type="password" name="Password" id="Password" placeholder="Password">
-                        <i  class="fa-regular fa-eye-slash" id="eye"></i>
-                    </div>
-                    <div class="check">
-                        <input type="checkbox" name="checkbox" id="terms">
-                        <p>I have read and accepted SEETHIO <a href=""><span>Terms</span> $ <span>Policy</span></a></p>
-                    </div>
-                    <a href="#popup1"><input id="submit" type="button" type="submit" value="Sign Up"></a>
-                    
-                    
-                </form>
-                <div id="message"></div>
-
-                <div class="horizontal">
-                    <img src="../images/horizontal.svg" alt="">
-                    <p> Or </p>
-                    <img src="../images/horizontal.svg" alt="">
-                </div>
-                <div class="social">
-                    <a href=""><img src="../images/google.svg" alt=""></a>
-                   <a href=""><img src="../images/facebook.png" alt=""></a>
-                </div>
-                <p id="account">Already have an account?<span><a href="../Html/login.html">Login</a></span></p>
-
+      <div class="left">
+        <div class="img-div"></div>
+      </div>
+      <div class="right">
+        <div class="content">
+          <div class="logo">
+            <img src="../images/seethio_logo.png" alt="" />
+          </div>
+          <h3>Explore Ethiopia</h3>
+          <h4>Create an account to get started</h4>
+          <form action="" id="myForm">
+            <div class="half-width">
+              <input
+                type="text"
+                name="firstname"
+                id="firstname"
+                placeholder="First Name"
+              />
+              <input
+                type="text"
+                name="lastname"
+                id="lastname"
+                placeholder="Last Name"
+              />
             </div>
+            <div class="full_width">
+              <input
+                type="text"
+                name="username"
+                id="username"
+                placeholder="User Name (optional)"
+              />
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Email Address"
+              />
+              <input
+                type="password"
+                name="Password"
+                id="Password"
+                placeholder="Password"
+              />
+              <i class="fa-regular fa-eye-slash" id="eye"></i>
+            </div>
+            <div class="check">
+              <input type="checkbox" name="checkbox" id="terms" />
+              <p>
+                I have read and accepted SEETHIO
+                <a href=""><span>Terms</span> $ <span>Policy</span></a>
+              </p>
+            </div>
+            <a href="#popup1"
+              ><input id="submit" type="button" type="submit" value="Sign Up"
+            /></a>
+          </form>
+          <div id="message"></div>
+
+          <div class="horizontal">
+            <img src="../images/horizontal.svg" alt="" />
+            <p>Or</p>
+            <img src="../images/horizontal.svg" alt="" />
+          </div>
+          <div class="social">
+            <a href=""><img src="../images/google.svg" alt="" /></a>
+            <a href=""><img src="../images/facebook.png" alt="" /></a>
+          </div>
+          <p id="account">
+            Already have an account?<span
+              ><a href="../Html/login.html">Login</a></span
+            >
+          </p>
         </div>
-        <div class="ellipse">
-            <div class="green"></div>
-            <div class="yellow"></div>
-        </div>
+      </div>
+      <div class="ellipse">
+        <div class="green"></div>
+        <div class="yellow"></div>
+      </div>
     </main>
     <!-- ellipse -->
-<!-- signup successful  -->
+    <!-- signup successful  -->
 
-<div id="popup1" class="overlay">
-    <div class="popup">
+    <div id="popup1" class="overlay">
+      <div class="popup">
         <a class="close" href="#">&times;</a>
         <div class="content">
-                <div class="post">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="138" height="116" viewBox="0 0 138 116" fill="none">
-                        <ellipse cx="69" cy="58" rx="69" ry="58" fill="white"/>
-                        <path d="M104 46.125C104 43.3063 100.895 41 97.1 41H41.9C38.105 41 35 43.3063 35 46.125V76.875C35 79.6937 38.105 82 41.9 82H97.1C100.895 82 104 79.6937 104 76.875V46.125ZM97.1 46.125L69.5 58.9375L41.9 46.125H97.1ZM97.1 76.875H41.9V51.25L69.5 64.0625L97.1 51.25V76.875Z" fill="#006167"/>
-                      </svg>
-                </div>
-                <div class="content1">
-                 <h1>Sign-up compeleted</h1>
-                 <h4>Please check your email for verification code</h4>
-                 <p>Not the correct email? <a href="../Html/signup.html"><span>Change email address</span></a> </p>
-                 <button onclick="window.location.href='#popup2'">Continue Verification</button>
-                 <p>Email not received? <a href="#"><span>Resend email</span></a> </p>
-                
-                </div>
-            
-        
+          <div class="post">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="138"
+              height="116"
+              viewBox="0 0 138 116"
+              fill="none"
+            >
+              <ellipse cx="69" cy="58" rx="69" ry="58" fill="white" />
+              <path
+                d="M104 46.125C104 43.3063 100.895 41 97.1 41H41.9C38.105 41 35 43.3063 35 46.125V76.875C35 79.6937 38.105 82 41.9 82H97.1C100.895 82 104 79.6937 104 76.875V46.125ZM97.1 46.125L69.5 58.9375L41.9 46.125H97.1ZM97.1 76.875H41.9V51.25L69.5 64.0625L97.1 51.25V76.875Z"
+                fill="#006167"
+              />
+            </svg>
+          </div>
+          <div class="content1">
+            <h1>Sign-up compeleted</h1>
+            <h4>Please check your email for verification code</h4>
+            <p>
+              Not the correct email?
+              <a href="../Html/signup.html"
+                ><span>Change email address</span></a
+              >
+            </p>
+            <button onclick="window.location.href='#popup2'">
+              Continue Verification
+            </button>
+            <p>
+              Email not received? <a href="#"><span>Resend email</span></a>
+            </p>
+          </div>
         </div>
+      </div>
     </div>
-  </div>
-<!-- verification popup -->
+    <!-- verification popup -->
 
-<div id="popup2" class="overlay">
-    <div class="popup">
+    <div id="popup2" class="overlay">
+      <div class="popup">
         <a class="close" href="#">&times;</a>
         <div class="content_verify">
-             
-            <h4>Enter the 8-digits code that was sent to your mail</h4>
-            <div class="input">
-               <input type="text" name="text" id="text" class="input-text">
-               <input type="text" name="text" id="text1" class="input-text">
-               <input type="text" name="text" id="text2" class="input-text">
-               <input type="text" name="text" id="text3" class="input-text">
-               <input type="text" name="text" id="text4" class="input-text">
-               <input type="text" name="text" id="text5" class="input-text">
-               <input type="text" name="text" id="text6" class="input-text">
-               <input type="text" name="text" id="text7" class="input-text">
-            </div>
-           <a href="#">
-               <h3>RESEND CODE</h3> 
-           </a>
-            <div class="timer">
+          <h4>Enter the 8-digits code that was sent to your mail</h4>
+          <div class="input">
+            <input type="text" name="text" id="text" class="input-text" />
+            <input type="text" name="text" id="text1" class="input-text" />
+            <input type="text" name="text" id="text2" class="input-text" />
+            <input type="text" name="text" id="text3" class="input-text" />
+            <input type="text" name="text" id="text4" class="input-text" />
+            <input type="text" name="text" id="text5" class="input-text" />
+            <input type="text" name="text" id="text6" class="input-text" />
+            <input type="text" name="text" id="text7" class="input-text" />
+          </div>
+          <a href="#">
+            <h3>RESEND CODE</h3>
+          </a>
+          <div class="timer">
+            <!-- Display the countdown timer in an element -->
+            <p
+              style="
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              "
+              id="demo"
+            ></p>
 
-               <!-- Display the countdown timer in an element -->
-            <p style="display: flex; justify-content: center; align-items: center;" id="demo"></p>
-
-<!-- <script>
+            <!-- <script>
 // Set the date we're counting down to
 var countDownDate = new Date("Jan 5, 2024 15:37:25").getTime();
 
@@ -140,47 +191,41 @@ var x = setInterval(function() {
  }
 }, 1000);
 </script> -->
-    <script>
-    // Set the countdown time in seconds
-    var time = 59;
+            <script>
+              // Set the countdown time in seconds
+              var time = 59;
 
-    // Get the timer element
-    var timerElement = document.getElementById('demo');
+              // Get the timer element
+              var timerElement = document.getElementById("demo");
 
-    // Create a countdown interval
-    var countdown = setInterval(function() {
-    // Calculate minutes and seconds
-    var minutes = Math.floor(time / 60);
-    var seconds = time % 60;
+              // Create a countdown interval
+              var countdown = setInterval(function () {
+                // Calculate minutes and seconds
+                var minutes = Math.floor(time / 60);
+                var seconds = time % 60;
 
-    // Add leading zeros if necessary
-    minutes = (minutes < 10) ? '0' + minutes : minutes;
-    seconds = (seconds < 10) ? '0' + seconds : seconds;
+                // Add leading zeros if necessary
+                minutes = minutes < 10 ? "0" + minutes : minutes;
+                seconds = seconds < 10 ? "0" + seconds : seconds;
 
-    // Update the timer element text
-    timerElement.textContent = minutes + ':' + seconds;
+                // Update the timer element text
+                timerElement.textContent = minutes + ":" + seconds;
 
-    // Decrease the time
-    time--;
+                // Decrease the time
+                time--;
 
-    // Check if the countdown has finished
-    if (time < 0) {
-        // Clear the countdown interval
-        clearInterval(countdown);
-    }
-    }, 1000);
-
-    </script>            
-</div>
-            
-           
-           </div>
+                // Check if the countdown has finished
+                if (time < 0) {
+                  // Clear the countdown interval
+                  clearInterval(countdown);
+                }
+              }, 1000);
+            </script>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
 
-  
     <script src="../Js/signup.js"></script>
-</body>
-
-
+  </body>
 </html>

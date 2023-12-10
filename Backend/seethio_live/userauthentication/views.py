@@ -264,42 +264,42 @@ def google_callback(request):
     return redirect(request,'Html/Home.html') 
 
 
-# Mailchimp Settings added by ple
-api_key = settings.MAILCHIMP_API_KEY
-server = settings.MAILCHIMP_DATA_CENTER
-list_id = settings.MAILCHIMP_EMAIL_LIST_ID
+# # Mailchimp Settings added by ple
+# api_key = settings.MAILCHIMP_API_KEY
+# server = settings.MAILCHIMP_DATA_CENTER
+# list_id = settings.MAILCHIMP_EMAIL_LIST_ID
 
 
-# Subscription Logic
-def subscribe(email):
-    """
-     Contains code handling the communication to the mailchimp api
-     to create a contact/member in an audience/list.
-    """
+# # Subscription Logic
+# def subscribe(email):
+#     """
+#      Contains code handling the communication to the mailchimp api
+#      to create a contact/member in an audience/list.
+#     """
 
-    mailchimp = Client()
-    mailchimp.set_config({
-        "api_key": api_key,
-        "server": server,
-    })
+    # mailchimp = Client()
+    # mailchimp.set_config({
+    #     "api_key": api_key,
+    #     "server": server,
+    # })
 
-    member_info = {
-        "email_address": email,
-        "status": "subscribed",
-    }
+    # member_info = {
+    #     "email_address": email,
+    #     "status": "subscribed",
+    # }
 
-    try:
-        response = mailchimp.lists.add_list_member(list_id, member_info)
-        print("response: {}".format(response))
-    except ApiClientError as error:
-        print("An exception occurred: {}".format(error.text))
+#     try:
+#         response = mailchimp.lists.add_list_member(list_id, member_info)
+#         print("response: {}".format(response))
+#     except ApiClientError as error:
+#         print("An exception occurred: {}".format(error.text))
 
 
-# Views here.
-def subscription(request):
-    if request.method == "POST":
-        email = request.POST['email']
-        subscribe(email)                    # function to access mailchimp
-        messages.success(request, "Email received. thank You! ") # message
+# # Views here.
+# def subscription(request):
+#     if request.method == "POST":
+#         email = request.POST['email']
+#         subscribe(email)                    # function to access mailchimp
+#         messages.success(request, "Email received. thank You! ") # message
 
-    return render(request, "Html/Home.html")
+#     return render(request, "Html/Home.html")

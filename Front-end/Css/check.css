@@ -1,0 +1,295 @@
+
+body{
+  width: 100%;
+}
+main{
+  position: relative;
+  border-radius: 5px;
+  background: #EBF7EC;
+  border-radius: 5px;
+border: 2px solid var(--Secondary-Colour, #006167);
+  
+}
+#p12,#p13,#p14,#p15,#p16{
+position: absolute;
+}
+#p12{
+top: 30%;
+left: 5%;
+}
+#p13{
+top: 10%;
+right: 10%;
+}
+#p14{
+top:80%;
+right: 10%;
+}
+#p15{
+top:80%;
+left: 10%;
+}
+#p16{
+top: 50%;
+right: 20%;
+}
+.mainp1, .main1{
+  background: var(--UNPRIMARY-COLOUR, #FFF);
+  color: #006167;
+  width: 1000px;
+  display: flex;
+  flex-direction: column;
+  margin-inline: auto;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding-bottom: 100px;
+  padding-top: 25px;
+  
+ 
+
+
+}
+.mainp1{
+width: 600px;
+
+}
+
+.upload, .avatar{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ 
+}
+
+.upload p{
+  margin-top: 10%;
+}
+.upload {
+display: flex;
+flex-direction: column;
+
+background: #EDD6A1;
+border-radius: 100%; /* adjust this value according to your image size */
+width: 150px;
+height: 150px;
+position: relative;
+border: 1px solid #898989;
+}
+
+
+.upload img {
+padding: 4%;
+position: absolute;
+left: 11%;
+top: 11%;
+}
+.imgageselect{
+margin-top: 5%;
+display: flex;
+align-items: center;
+justify-content: space-between;
+width: 600px;
+height: 40vh;
+border-radius: 70px 70px 0px 0px;
+border: 4px solid var(--Secondary-Colour, #006167);
+background: #EBF7EC;
+position: relative;
+
+padding-inline: 10%;
+/* background-position: (5% 5% , 50% 95%, 97% 97%); */
+}
+.imgageselect p{
+display: block;
+}
+#top1, #bottom1, #middle1{
+position: absolute;
+}
+#top1{
+top:1%;
+left: 2%;
+}
+#middle1{
+top:90%;
+left: 50%;
+}
+#bottom1{
+top:80%;
+right: 2%;
+}
+.containerp1{
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+width: 500px;
+position: relative;
+}
+#back1{
+position: absolute;
+top: 2%;
+left: 31%;
+}
+.overlay {
+position: fixed;
+top: 0;
+bottom: 0;
+left: 0;
+right: 0;
+background: rgba(0, 0, 0, 0.7);
+transition: opacity 0.5s;
+visibility: hidden;
+opacity: 0;
+z-index: 100;
+}
+
+/* The overlay becomes visible when the target is :target */
+.overlay:target {
+visibility: visible;
+opacity: 1;
+}
+
+.avarta{
+  display: flex;
+  flex-direction: row;
+  gap: 75px;
+  justify-content: space-between;
+  margin-top: 20px;
+
+}
+
+.topcontent{
+  display: flex;
+align-items: center;
+text-align: center;
+gap: 50%;
+
+}
+#continue{
+ display: flex;
+ border-radius: 5px;
+ background: #006167;
+ width: 100px;
+  height: 45px;
+  padding: 4px 14px;
+  align-items: center;
+  flex-shrink: 0;
+  text-decoration: none;
+  color: #FFF;
+  font-family: Roboto;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px; /* 160% */
+  text-align: center;
+  border:none;
+}
+.topcontainer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.topcontainer1{
+  display: flex;
+  flex-direction: column;
+}
+.topcontainer p{
+  color: var(--Secondary-Colour, #006167);
+text-align: center;
+font-family: Nunito;
+font-size: 28px;
+font-style: normal;
+font-weight: 400;
+line-height: 36px; /* 112.5% */
+}
+#back{
+  position: absolute;
+}
+#back{
+  top:2%;
+  left: 20%;
+}
+
+.avarta-cont{
+  padding-top: 1%;
+  margin-top: 15%;
+}
+.avarta img {
+  width: 80px;
+  height: 80px;
+}
+#done{
+  
+width: 150px;
+height: 60px;
+padding: 4px 24px;
+justify-content: space-between;
+align-items: center;
+flex-shrink: 0;
+border-radius: 5px;
+background: var(--Secondary-Colour, #006167);
+border: none;
+color: white;
+}
+.bottom-div, .final-div{
+  display: flex;
+  gap: 30px;
+}
+.final-div{
+  align-items: center;
+  justify-content: space-around;
+}
+.containerp3{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+#save{
+ 
+width: 300px;
+height: 56px;
+padding: 4px 24px;
+justify-content: space-between;
+align-items: center;
+flex-shrink: 0;
+border-radius: 5px;
+background: var(--Secondary-Colour, #006167);
+text-align: center;
+border: none;
+display: none;
+color: white;
+
+}
+
+#mainimage {
+  max-width: 100%;
+}
+input[type=range]{
+  width: 100%;
+  
+}
+input[type=range]::-webkit-slider-thumb {
+background: #FABF00!important;
+
+
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+background: #006167 !important;
+height: 15px !important;
+
+}
+
+.cropper-modal {
+background-color: transparent !important;
+background: none !important;
+
+}
+.cropper-view-box {
+outline-color: black !important;
+
+}
+.cropper-dashed {
+border-color: black !important;
+}

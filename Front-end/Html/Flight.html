@@ -20,7 +20,7 @@
       referrerpolicy="no-referrer"
     />
 
-    <title>Flight Tour Planner</title>
+    <title>Seethio Flight finder</title>
   </head>
   <body>
     <header>
@@ -43,9 +43,9 @@
             <ul class="navbar-nav ml-auto">
               <li class="nav-item">
                 <a
-                  class="nav-link active "
+                  class="nav-link active"
                   aria-current="page"
-                  href="./API_trip_planner.html"
+                  href="./Home.html"
                   >Home</a
                 >
               </li>
@@ -61,51 +61,85 @@
                 </a>
                 <ul class="dropdown-menu">
                   <li>
-                    <a class="dropdown-item" href="#">Attraction Centers</a>
+                    <a class="dropdown-item" href="./attractionCenter.html"
+                      >Attraction Centers</a
+                    >
                   </li>
-                  <li><a class="dropdown-item" href="#">Dinings</a></li>
-                  <li><a class="dropdown-item" href="#">Local Market</a></li>
+                  <li>
+                    <a class="dropdown-item" href="./Restaurantanddining.html"
+                      >Dinings</a
+                    >
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="./market.html"
+                      >Local Market</a
+                    >
+                  </li>
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link " aria-current="page" href="#">Lodging</a>
+                <a class="nav-link" aria-current="page" href="./Lodge.html"
+                  >Lodging</a
+                >
               </li>
               <li class="nav-item">
                 <a class="nav-link home" aria-current="page" href="#">Flight</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#">Find Rides</a>
+                <a class="nav-link" aria-current="page" href="./Ride.html"
+                  >Find Rides</a
+                >
               </li>
 
               <div style="display: flex; justify-content: center">
-                <img class="w-25" src="../images/sarah_profile.svg" alt="" />
-                <li class="nav-item dropdown mt-2 pt-3">
+                <li
+                  class="nav-item dropdown mt-2 pt-3 d-flex align-items-center gap-1"
+                >
+                  <a href="./Dashboard/Dashboard.html"
+                    ><i class="fa-solid fa-user mb-4"></i>
+                  </a>
                   <a
-                    class="nav-link dropdown-toggle"
+                    class="nav-link dropdown-toggle mb-4"
                     href="#"
                     role="button"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
                   >
-                    Sarah Jone
+                    User Name
                   </a>
                   <ul class="dropdown-menu">
                     <div class="d-flex align-items-center tx">
                       <i class="fa-solid fa-gear"></i>
                       <li>
-                        <a class="dropdown-item" href="#"> Account Settings</a>
+                        <a
+                          class="dropdown-item"
+                          href="./Dashboard/Accountsetting.html"
+                        >
+                          Account Settings</a
+                        >
                       </li>
                     </div>
                     <!-- <hr class="bg-light"> -->
                     <div class="d-flex align-items-center tx">
                       <i class="fa-solid fa-rectangle-list"></i>
-                      <li><a class="dropdown-item" href="#">Bucket list</a></li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="./Dashboard/Itineraries.html"
+                          >Bucket list</a
+                        >
+                      </li>
                     </div>
                     <!-- <hr> -->
                     <div class="d-flex align-items-center tx">
                       <i class="fa-solid fa-book"></i>
                       <li>
-                        <a class="dropdown-item" href="#"> Bookings History</a>
+                        <a
+                          class="dropdown-item"
+                          href="./Dashboard/Bookings.html"
+                        >
+                          Bookings History</a
+                        >
                       </li>
                     </div>
                     <!-- <hr> -->
@@ -273,9 +307,8 @@
     <!-- LODGE AND FLIGHT -->
 
     <div class="lodge">
-      
       <button id="flightButton" type="button" class="button1">Flights</button>
-      
+
       <!-- flight -->
       <div class="flight1 containerd text-center" id="flightcontainer">
         <form action="">
@@ -380,8 +413,8 @@
             </div>
 
             <button class="search-btn">Search</button>
-        </div>
-    </form>
+          </div>
+        </form>
       </div>
     </div>
 

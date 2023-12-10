@@ -345,7 +345,7 @@ body{
     margin-block: 2rem;
 }
 
-.take_a_bold_step .individual_card .text_part a
+.take_a_bold_step .individual_card .text_part a 
 {
     text-decoration: none;
     background-color: var(--Secondary-Colour);
@@ -453,13 +453,31 @@ body{
       box-shadow: 0px 16px 24px 2px rgba(0, 0, 0, 0.14);
       transition: 0.3s ease-in-out;
   }
+  /* edited style for the subscribe button starts here */
+  /* .subscribe{
+    display: block !important;
+    text-align: center !important;
+    width: 15rem !important;
+    margin-inline: auto;
+    padding: 1rem 2.5rem !important;
+    background-color: var(--Secondary-Colour) !important;
+    color: var(--Unsecondary-Colour) !important;
+    outline: none !important;
+    border: none !important;
+    border-radius: 8px !important;
+    box-shadow: 0px 16px 24px 2px rgba(0, 0, 0, 0.14) !important;
+    transition: 0.3s ease-in-out !important;
+  } */
   
   .be_the_first .be_the_first_div form input[type = "button"]:hover
   {
       background-color: var(--PRIMARY-COLOUR);
       color: var(--Secondary-Colour);
   }
-  
+  /* .subscribe:hover{
+    background-color: var(--PRIMARY-COLOUR) !important;
+    color: var(--Secondary-Colour) !important;
+  } */
 
 
 /* CLIENT REVIEWS */
