@@ -17,7 +17,6 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.contrib.auth import views as auth_views
-from userauthentication.views import home
 from userauthentication import views
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns # new from render deploy
 
