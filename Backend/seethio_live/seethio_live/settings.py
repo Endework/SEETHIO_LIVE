@@ -189,19 +189,20 @@ SOCIAL_AUTH_GOOGLE_SCOPE = [   #add this
 # Brevo
 EMAIL_BACKEND = "anymail.backends.sendinblue.EmailBackend"
 ANYMAIL = {
-    "SENDIBLUE": config("SENDIBLUE"),
+    # "SENDIBLUE": config("SENDIBLUE"),
+     "SENDINBLUE_API_KEY": config("SENDINBLUE_API_KEY"),
 }
 SENDINBLUE_API_URL = "https://api.brevo.com/v3/"
 # ANYMAIL = {
 #     "MAILGUN_API_KEY": "<your Mailgun key>",
 # }
 # DEFAULT_FROM_EMAIL = ""
-# CRISPY_TEMPLATE_PACK = 'bootstrap4'
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 # MAILCHIMP CREDENTIALS added by ple
-MAILCHIMP_API_KEY = os.environ.get('MAILCHIMP_API_KEY')
-MAILCHIMP_DATA_CENTER = os.environ.get('MAILCHIMP_DATA_CENTER')
-MAILCHIMP_EMAIL_LIST_ID = os.environ.get('MAILCHIMP_EMAIL_LIST_ID')
+# MAILCHIMP_API_KEY = os.environ.get('MAILCHIMP_API_KEY')
+# MAILCHIMP_DATA_CENTER = os.environ.get('MAILCHIMP_DATA_CENTER')
+# MAILCHIMP_EMAIL_LIST_ID = os.environ.get('MAILCHIMP_EMAIL_LIST_ID')
 
 
 
