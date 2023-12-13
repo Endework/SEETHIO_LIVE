@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seethio Trip Itinerary</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        h2 {
+            color: #555;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 20px;
+        }
+        strong {
+            color: #007BFF;
+        }
+        form {
+            margin-bottom: 20px;
+        }
+
+        hr {
+            margin-bottom: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Seethio Trip Itinerary</h1>
+
+    <form id="itineraryForm" action="/generate-itinerary" method="post">
+        <label for="location">Select Location:</label>
+        <select name="location" id="location">
+            <option value="Addis Ababa">Addis Ababa</option>
+            <option value="Mekele">Mekele</option>
+            <option value="Lalibela">Lalibela</option>
+            <option value="Axum">Axum</option>
+            <option value="Adigrat">Adigrat</option>
+            <option value="Harar">Harar</option>
+            <option value="Bahirdar">Bahirdar</option>
+        </select><br>
+
+        <label for="tripLength">Select Trip Length:</label>
+        <select name="tripLength" id="tripLength">
+            <option value="1">1 Day</option>
+            <option value="2">2 Days</option>
+            <option value="3">3 Days</option>
+            <option value="4">4 Days</option>
+            <option value="5">5 Days</option>
+            <option value="6">6 Days</option>
+            <option value="7">7 Days</option>
+            <option value="8">8 Days</option>
+            <option value="9">9 Days</option>
+            <option value="10">10 Days</option>
+        </select><br>
+
+        <label for="tripInterest">Select Trip Interest:</label>
+        <select name="tripInterest" id="tripInterest">
+            <option value="Sights & Landmarks">Sights & Landmarks</option>
+            <option value="History">History</option>
+            <option value="Nature & Wildlife">Nature & Wildlife</option>
+            <option value="Adventure">Adventure</option>
+        </select><br>
+
+        <button type="submit">Generate Itinerary</button>
+    </form>
+
+
+    {% if itinerary %}
+        <p>🌍 Welcome to your exciting trip to {{ location }}! 🌍</p>
+        <p>Here's your personalized travel itinerary:</p>
+        <hr>
+        {% for day in itinerary %}
+            <h2>Day {{ day['Day'] }} - {{ location }} Adventures:</h2>
+            <p>🏨 Hotel: Stay at {{ day['Hotel'] }}</p>
+            <p>🍽️ Lunch: Eat at {{ day['Restaurant'] }}</p>
+            <p>🎉 Activity: {{ day['Activity'] }}</p>
+            <p>🍽️ Dinner: Have dinner at {{ day['Restaurant'] }}</p>
+            <hr>
+        {% endfor %}
+        <p>Enjoy your journey and make wonderful memories! 😊</p>
+    {% endif %}
+
+    <hr>
+
+    {% if recommended_hotels %}
+        <h2>🌟 Top 5 Hotels Around {{ location }} 🌟</h2>
+        <ul>
+            {% for hotel in recommended_hotels %}
+                <li>
+                    <strong>{{ hotel['Name'] }}</strong><br>
+                    - Star Rating: {% for _ in range(hotel['Star']) %}⭐{% endfor %} ({{ hotel['Star'] }})<br>
+                    - Price Per Night: ${{ hotel['Price'] }}<br>
+                    - Amenities: {{ hotel['Amenities'] }}
+                </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+
+    <hr>
+
+    {% if recommended_restaurants %}
+        <h2>🍽️ Top 5 Restaurants Around {{ location }} 🍽️</h2>
+        <ul>
+            {% for restaurant in recommended_restaurants %}
+                <li>
+                    <strong>{{ restaurant['Name'] }}</strong><br>
+                    - Rating: {% for _ in range(int(restaurant['Rating'])) %}⭐{% endfor %} ({{ restaurant['Rating'] }})<br>
+                    - Cuisine: {{ restaurant['Cuisine'] }}
+                </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>
