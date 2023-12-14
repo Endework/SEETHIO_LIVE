@@ -74,6 +74,7 @@ input{
 .img-div {
     width: 100%;
     height: 92%;
+    
     background-image: url('../images/login1.png');
     background-repeat: no-repeat;
     background-size: 100% 100%;
