@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../Css/FAQ.css" />
+    <!-- FONT AWESOME -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <title>Seethio FAQ</title>
+  </head>
+  <body>
+    <header>
+        <!-- Navigation bar -->
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container-fluid">
+              <img src="../images/navlogo.png" alt="nav logo" />
+              <button
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+                class="navbar-toggler navbar-toggler-right"
+              >
+                <i class="fa fa-bars"></i>
+              </button>
+    
+              <div id="navbarSupportedContent" class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto">
+                  <li class="nav-item">
+                    <a
+                      class="nav-link active "
+                      aria-current="page"
+                      href="../Html/Home.html"
+                      >Home</a
+                    >
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="#"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Discover Ethiopia
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a class="dropdown-item" href="../Html/attractionCenter.html">Attraction Centers</a>
+                      </li>
+                      <li><a class="dropdown-item" href="../Html/Restaurantanddining.html">Dinings</a></li>
+                      <li><a class="dropdown-item" href="../Html/market.html">Local Market</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="#"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Travel Planner
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Tour Itinerary</a></li>
+                      <li>
+                        <a class="dropdown-item" href="#">Currency Converter</a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="#"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Bookings
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="../Html/Flight.html">Flight</a></li>
+                      <li><a class="dropdown-item" href="../Html/Lodge.html">Lodgings</a></li>
+                      <li><a class="dropdown-item" href="#">Deals</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link dropdown-toggle home"
+                      href="#"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Resources
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Blog</a></li>
+                      <li><a class="dropdown-item" href="#">FAQ</a></li>
+                      <li><a class="dropdown-item" href="#">About Us</a></li>
+                    </ul>
+                  </li>
+    
+                  <li class="nav-item">
+                    <a class="nav-link" href="./Front-end/Html/login.html"
+                      ><button class="btn text-light me-1" type="button">
+                        LOGIN
+                      </button></a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./Front-end/Html/Signup.html"
+                      ><button
+                        class="btn btn-outline-light text-success bg-light me-1 pe-1"
+                        type="button"
+                      >
+                        SIGN UP
+                      </button></a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+      
+          <!-- header contents -->
+
+          <svg id="ell-top" xmlns="http://www.w3.org/2000/svg" width="30" height="29" viewBox="0 0 30 29" fill="none">
+            <ellipse cx="14.9471" cy="14.1933" rx="14.8065" ry="14.0781" fill="#FDD401"/>
+          </svg>
+
+
+          <svg id="ell-bottom" xmlns="http://www.w3.org/2000/svg" width="47" height="45" viewBox="0 0 47 45" fill="none">
+            <ellipse cx="23.1691" cy="22.3582" rx="23.0324" ry="21.8992" fill="#FDD401"/>
+          </svg>
+
+
+          <svg id="p-11" xmlns="http://www.w3.org/2000/svg" width="99" height="72" viewBox="0 0 99 72" fill="none">
+            <path d="M30.777 11.2923C50.0382 -8.40451 83.4344 0.594359 90.1915 27.3021L97.2408 55.1646C103.852 81.2974 79.8958 104.888 53.868 97.8744L26.7247 90.5603C0.69687 83.5469 -8.16368 51.1136 10.6829 31.8408L30.777 11.2923Z" fill="url(#paint0_linear_3518_10155)"/>
+            <defs>
+              <linearGradient id="paint0_linear_3518_10155" x1="74.7612" y1="-33.6866" x2="155.476" y2="74.6961" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#FDD401"/>
+                <stop offset="0.651042" stop-color="#F2F2F2"/>
+              </linearGradient>
+            </defs>
+          </svg>
+
+          
+          <svg id="p-13" xmlns="http://www.w3.org/2000/svg" width="66" height="64" viewBox="0 0 66 64" fill="none">
+            <path d="M60.9902 22.8174C73.4178 39.6601 61.2649 63.4597 40.3344 63.2687L25.6835 63.1351C6.82286 62.963 -5.26821 43.0089 3.30948 26.2107L9.26134 14.5548C17.839 -2.24333 41.0926 -4.14934 52.2912 11.0278L60.9902 22.8174Z" fill="url(#paint0_linear_3518_10154)"/>
+            <defs>
+              <linearGradient id="paint0_linear_3518_10154" x1="91.1798" y1="63.7326" x2="11.4274" y2="105.946" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#FDD401"/>
+                <stop offset="0.651042" stop-color="#F2F2F2"/>
+              </linearGradient>
+            </defs>
+          </svg>
+
+          <svg id="p-9" xmlns="http://www.w3.org/2000/svg" width="90" height="79" viewBox="0 0 90 79" fill="none">
+            <path d="M2.51866 52.3023C-6.52543 21.947 21.6385 -6.37046 52.0426 2.50846L85.9629 12.4142C115.081 20.9174 124.494 57.4784 103.103 78.9859L79.2726 102.946C57.8817 124.454 21.2701 115.239 12.6087 86.1683L2.51866 52.3023Z" fill="url(#paint0_linear_3518_10153)"/>
+            <defs>
+              <linearGradient id="paint0_linear_3518_10153" x1="-18.4504" y1="-18.0776" x2="127.734" y2="127.314" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#FDD401"/>
+                <stop offset="0.651042" stop-color="#F2F2F2"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <div class="blue-circle">
+
+          </div>
+
+          <div class="hero">
+            <div class="text-side" id="text">
+                <p class="hero-text active">Plan Your <br> Itinerary</p>
+                <p class="hero-text">Plan Your <br> Expenses</p>
+                <p class="hero-text">Find A Ride</p>
+            </div>
+            <div class="img-side">
+              <svg class="hero-background " xmlns="http://www.w3.org/2000/svg" width="982" height="682" viewBox="0 0 982 682" fill="none">
+                <path d="M217.455 54.1037C229.073 50.0017 241.381 47.5312 254.032 46.7616L1007.81 0.904721C1082.36 -3.63021 1153.14 50.6588 1167.82 123.62L1235.63 460.687C1250.66 535.406 1201.33 601.766 1125.45 608.907L352.265 681.675L333.487 681.524C325.285 681.458 317.033 680.687 308.825 679.22L272.233 672.681C230.295 665.186 192.534 639.065 170.498 602.305L162.172 588.417C149.191 566.763 128.385 550.132 104.291 542.15L52.1001 524.859C-2.39935 506.804 -17.9735 437.669 25.7895 408.063L41.8186 397.22C62.1065 383.495 65.3526 355.199 49.065 334.054C30.9555 310.544 37.2696 278.929 62.3566 267.503L71.4238 263.373C94.5783 252.827 105.153 227.054 96.6842 201.806L90.967 184.761C81.159 155.519 89.5957 125.127 112.471 107.295L136.058 88.9073C145.486 81.5582 156.15 75.7484 167.691 71.6737L217.455 54.1037Z" fill="#FDD401"/>
+              </svg>
+              <div class="primary">
+
+              </div>
+              <!-- water drop polygons -->
+             
+
+                <div id="carousel">
+                    <img class="carousel-image active" src="../images/FAQ1.png" alt="">
+                    <img class="carousel-image" src="../images/FAQ2.png" alt="">
+                    <img class="carousel-image" src="../images/FAQ3.png" alt="">
+                </div>
+            </div>
+        </div>
+        
+    </header>
+<section class="sec-1">
+
+  <div class="faq-line">
+    <h1>FAQ</h1>
+  </div>
+    <div class="FAQ">
+        <h2 class="text-center">Hi, how can we help you?</h2>
+        <div class="search">
+            <div class="search-input"><input type="text" placeholder="Search for questions"></div>
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <!-- <div class="qua"></div> -->
+        <div class="outer">
+            <div class="qna mt-5">
+                <button class="question">What are the key attractions in Ethiopia? <span class="dropdown-icon">▼</span></button>
+                <div class="answer">
+                  <b>Aksum</b>: Known as the land of Queen Sheba. <br>
+                  <b>Lalibela</b>: Famous for its rock-hewn churches.  <br>
+                  <b>Gondar</b>: Often referred to as the “Camelot of Africa.”  <br>
+                  <b>Harar</b>: An ancient walled city.  <br>
+                  <b>Omo Valley</b>: Renowned for its diverse and decorated tribes.  <br>
+                  <b>Gheralta Mountains</b>: Featuring sharp peaks rising from a semi-desert landscape.  <br>
+                  <b>Danakil Depression</b>: Home to salt caravans and otherworldly landscapes.  <br>
+                  You can click this link to check out another attraction site:    <br>
+                  
+                </div>
+            </div>
+            <div class="qna">
+                <button class="question">What experiences can travelers have in Ethiopia? <span class="dropdown-icon">▼</span></button>
+                <div class="answer">
+                  Ethiopia is rich in cultural experiences where you can explore culturally rich sites, nature experiences where you can discover diverse ecosystems and wildlife. Culinary experiences to satisfy your appetite for adventure and educational tours to immerse yourself in paleontological and geological wonders.
+                </div>
+            </div>
+            <div class="qna">
+                <button class="question">How can I extend my visa if I overstay in Ethiopia?<span class="dropdown-icon">▼</span></button>
+                <div class="answer">
+                  You can extend your visa by visiting the Department of Immigration or applying online through Ethiopia Immigration Services.
+                </div>
+            </div>
+            <div class="qna">
+                <button class="question">What currency is used in Ethiopia? <span class="dropdown-icon">▼</span></button>
+                <div class="answer">
+                  The currency used throughout the country is the Ethiopian birr. Mastercard and Visa are used at top-end hotels and restaurants in tourist areas but do not expect to rely on them. ATMs will be found in most larger cities within the country dispensing local currency.
+
+                </div>
+            </div>
+            <div class="qna">
+                <button class="question">Can I use my country’s currency in Ethiopia? <span class="dropdown-icon">▼</span></button>
+                <div class="answer">
+                  No! But through our currency converter feature you get to know the conversion rate and locate a bank closer to you where you can convert your local currency to Ethiopian Birr (ETB) for transactions within the country.
+                </div>
+            </div>
+            <div class="qna">
+                <button class="question">Is photography allowed in Ethiopia? <span class="dropdown-icon">▼</span></button>
+                <div class="answer">
+                  Yes, photography is generally allowed, but be respectful of local customs and privacy.
+
+                </div>
+            </div>
+            <div class="qna">
+                <button class="question">What language is spoken in Ethiopia?<span class="dropdown-icon">▼</span></button>
+                <div class="answer">
+                  The official language of Ethiopians is Amharic but languages like English, French, and Arabic are also spoken by many residents of the country.
+
+                </div>
+            </div>
+            <div class="qna">
+                <button class="question">When is the best time to travel to Ethiopia? <span class="dropdown-icon">▼</span></button>
+                <div class="answer">
+                  Yes, a visa is required when traveling to Ethiopia and can be obtained before entering the country or on arrival at Addis Ababa Bole International Airport. It is recommended that you obtain a visa prior to arrival to avoid possible complications. Traveling with a valid passport is mandatory, also your passport must be valid for at least 6 months beyond the date you expect to leave Ethiopia.
+
+                </div>
+            </div>
+            <div class="qna">
+                <button class="question">Do I need a visa and passport to travel to Ethiopia?<span class="dropdown-icon">▼</span></button>
+                <div class="answer">
+                  The best time to travel to Ethiopia is between October and June as this is the dry season in the country. The landscape will be lush and green while temperatures will be moderate and comfortable. 
+
+                </div>
+            </div>
+            <div class="qna">
+                <button class="question">Is there transportation within Ethiopia?<span class="dropdown-icon">▼</span></button>
+                <div class="answer">
+                  Ethiopia has many avenues for getting around the country. Between the major cities, a plane can be taken for convenience. Buses are very common for intercity traveling, while cities are also well-serviced by taxis. 
+
+                </div>
+            </div>
+            <div class="qna">
+                <button class="question">Is Ethiopia a family friendly destination? <span class="dropdown-icon">▼</span></button>
+                <div class="answer">
+                  Yes, Although it’s more suited to the adventurous family, it would definitely be the trip of a lifetime. The strong influences of Christianity and Islam are a substantial part of this country's historical significance and while not a safari destination, its varied flora and fauna are held in high esteem by nature-loving travelers.    
+
+                </div>
+            </div>
+            <div class="qna mb-5">
+                <button class="question">What vaccinations are required or suggested for travel to Ethiopia? <span class="dropdown-icon">▼</span></button>
+                <div class="answer">
+                  There are no compulsory vaccinations required for Ethiopia, however, we recommend you consult with your local travel clinic for the most up-to-date recommendations, particularly in regard to malaria prophylactics. Proof of yellow fever vaccination is required if you are coming from or have transited through an airport of a country where yellow fever occurs.
+
+
+                </div>
+            </div>
+        </div>
+        
+        
+     </div> 
+     <div class="help">
+      <p>Still need help?</p>
+      <button>Contact us</button>
+     </div>
+</section>
+ 
+
+    <!-- Water drop -->
+    <div class="water_drop">
+      <svg
+        class="left"
+        xmlns="http://www.w3.org/2000/svg"
+        width="107"
+        height="100"
+        viewBox="0 0 107 100"
+        fill="none"
+      >
+        <path
+          d="M106.187 39.1694C109.932 6.88835 69.6689 -11.5833 40.0645 8.83398L18.3051 23.8408C-6.83172 41.1768 -5.3381 74.6801 21.1126 86.815L40.1194 95.5349C66.5701 107.67 100.255 90.3055 103.434 62.896L106.187 39.1694Z"
+          fill="url(#paint0_linear_1650_6812)"
+        />
+        <defs>
+          <linearGradient
+            id="paint0_linear_1650_6812"
+            x1="115.762"
+            y1="-43.3725"
+            x2="28.0299"
+            y2="147.859"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stop-color="#00B7AF" />
+            <stop offset="0.651042" stop-color="#F2F2F2" />
+          </linearGradient>
+        </defs>
+      </svg>
+
+      <svg
+        class="top"
+        xmlns="http://www.w3.org/2000/svg"
+        width="97"
+        height="100"
+        viewBox="0 0 97 100"
+        fill="none"
+      >
+        <path
+          d="M1.3628 37.9976C1.98372 8.46891 34.5792 -9.09425 59.5822 6.62769L79.0326 18.8581C103.677 34.3545 102.458 70.6709 76.8299 84.4798L56.8965 95.2203C31.2686 109.029 0.267751 90.0737 0.879765 60.9686L1.3628 37.9976Z"
+          fill="url(#paint0_linear_1650_6810)"
+        />
+        <defs>
+          <linearGradient
+            id="paint0_linear_1650_6810"
+            x1="2.77358"
+            y1="-29.0937"
+            x2="88.2264"
+            y2="129.498"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stop-color="#00B7AF" />
+            <stop offset="0.651042" stop-color="#F2F2F2" />
+          </linearGradient>
+        </defs>
+      </svg>
+
+      <svg
+        class="right"
+        xmlns="http://www.w3.org/2000/svg"
+        width="57"
+        height="56"
+        viewBox="0 0 57 56"
+        fill="none"
+      >
+        <path
+          d="M0.505173 27.9496C0.602629 5.85125 25.1323 -7.36588 43.6418 4.70664C61.3706 16.27 60.2681 42.591 41.6344 52.6313C23.0008 62.6715 0.411827 49.1159 0.505173 27.9496Z"
+          fill="url(#paint0_linear_1650_6811)"
+        />
+        <defs>
+          <linearGradient
+            id="paint0_linear_1650_6811"
+            x1="0.731105"
+            y1="-23.2811"
+            x2="55.2689"
+            y2="77.9354"
+            gradientUnits="userSpaceOnUse"
+          >
+            <stop stop-color="#00B7AF" />
+            <stop offset="0.651042" stop-color="#F2F2F2" />
+          </linearGradient>
+        </defs>
+      </svg>
+    </div>
+
+    <!-- footter -->
+    <footer>
+      <div class="container">
+        <div class="help">
+          <p class="title">Need any help?</p>
+          <p>
+            Call 24/7 for any help <br />
+            <span> +00 123 456 789</span>
+          </p>
+          <p>
+            Mail to our support team <br />
+            <span>support@Seethio.com</span>
+          </p>
+          <p>Follow us on</p>
+          <div class="social-icon">
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+            <a href=""> <i class="fa-brands fa-facebook"></i></a>
+            <a href=""> <i class="fa-brands fa-twitter"></i></a>
+            <a href=""><i class="fa-brands fa-youtube"></i></a>
+            <a href=""><i class="fa-brands fa-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="links">
+          <div>
+            <p class="title">Company</p>
+            <p>Home</p>
+            <p>Testimonials</p>
+            <p>About Us</p>
+            <p>Work with Us</p>
+            <p>Partners</p>
+          </div>
+          <div>
+            <p class="title">Support</p>
+            <p>Account</p>
+            <p>FAQ</p>
+            <p>Legal</p>
+            <p>Contact us</p>
+            <p>Privacy Policy</p>
+          </div>
+          <div>
+            <p class="title">Services</p>
+            <p>Discover place</p>
+            <p>Plan a trip</p>
+            <p>Booking</p>
+            <p>Get Deals</p>
+            <p>Currency exchange</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-wrapper">
+        <hr style="border: 1px solid white" />
+      </div>
+      <div class="footer">
+        <div class="logo">
+          <a href="/index.html"
+            ><img src="../images/footer_logo.png" alt=""
+          /></a>
+        </div>
+        <div class="copyright">
+          <p><span>Copyright © 2023 Kunturi Design</span></p>
+        </div>
+      </div>
+    </footer>
+   <script src="../Js/FAQ.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
