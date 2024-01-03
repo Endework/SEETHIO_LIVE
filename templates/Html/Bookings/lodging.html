@@ -1,0 +1,10 @@
+
+s{% if hotels %}
+    <h2>Search Results</h2>
+    <ul>
+      {% for hotel in hotels %}
+        <li>{{ hotel.name }} - {{ hotel.location }} - {{ hotel.price }}</li>
+        <!-- Add other fields as needed -->
+      {% endfor %}
+    </ul>
+  {% endif %}
